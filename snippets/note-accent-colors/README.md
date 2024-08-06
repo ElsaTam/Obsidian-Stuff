@@ -5,6 +5,16 @@ This snippet provides 6 css classes to add a custom accent color on specific not
 Download the `note-accent-colors.css` file and add it to your snippets.
 Please reffer to the [Obsidian documentation](https://help.obsidian.md/Extending+Obsidian/CSS+snippets) to see how to install a css snippet.
 
+# Usage
+
+Add one of the following css class to the property of a note:
+- note-acent-1
+- note-acent-2
+- note-acent-3
+- note-acent-4
+- note-acent-5
+- note-acent-6
+
 # Screenshots with default colors (default obisidian theme)
 
 ![note-accent-1](screenshots/note-accent-1.jpg)
