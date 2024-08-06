@@ -1,0 +1,409 @@
+/* @settings
+
+name: Different list styles
+id: different-list-styles
+settings:
+    - 
+        id: general-settings
+        title: General
+        type: heading
+        level: 1
+        collapsed: false
+    -
+        id: list-style-enable-active-line
+        title: Enable changes even on active line
+        description: If enabled, the custom numbering/bullet will also be changed on the active line in live preview, which might make it harder to see and manipulate the underlying markdown.
+        type: class-toggle
+    -
+        id: list-style-enable-color
+        title: Use custom color
+        type: class-toggle
+        default: true;
+    - 
+        id: list-style-color
+        title: Numbering and bullets custom color
+        type: variable-themed-color
+        opacity: false
+        format: hex
+        default-light: '#ababab'
+        default-dark: '#666666'
+    -
+        id: list-style-enable-bullet-font
+        title: Use custom font for the bullets
+        type: class-toggle
+        default: false
+    - 
+        id: list-style-bullet-font
+        title: Custom bullet font
+        type: variable-text
+        default: Arial, sans-serif
+    - 
+        id: ol-settings
+        title: Ordered lists
+        type: heading
+        level: 1
+        collapsed: true
+    - 
+        id: ol-settings-info-text
+        title: Information
+        description: "Choose the style of the numbering for each depth. Lists deeper than 6 nested lists will use the default obsidian marker.<br>You can find the description of the styles [here](https://www.w3schools.com/cssref/pr_list-style-type.php)."
+        type: info-text
+        markdown: true
+    - 
+        id: list-number-style-type-1
+        title: Style depth 1
+        type: variable-select
+        allowEmpty: false
+        default: decimal
+        options:
+            - decimal
+            - decimal-leading-zero
+            - lower-roman
+            - upper-roman
+            - lower-greek
+            - lower-latin
+            - upper-latin
+            - armenian
+            - georgian
+            - lower-alpha
+            - upper-alpha
+            - none
+    - 
+        id: list-number-style-type-2
+        title: Style depth 2
+        type: variable-select
+        allowEmpty: false
+        default: lower-alpha
+        options:
+            - decimal
+            - decimal-leading-zero
+            - lower-roman
+            - upper-roman
+            - lower-greek
+            - lower-latin
+            - upper-latin
+            - armenian
+            - georgian
+            - lower-alpha
+            - upper-alpha
+            - none
+    - 
+        id: list-number-style-type-3
+        title: Style depth 3
+        type: variable-select
+        allowEmpty: false
+        default: lower-roman
+        options:
+            - decimal
+            - decimal-leading-zero
+            - lower-roman
+            - upper-roman
+            - lower-greek
+            - lower-latin
+            - upper-latin
+            - armenian
+            - georgian
+            - lower-alpha
+            - upper-alpha
+            - none
+    - 
+        id: list-number-style-type-4
+        title: Style depth 4
+        type: variable-select
+        allowEmpty: false
+        default: decimal
+        options:
+            - decimal
+            - decimal-leading-zero
+            - lower-roman
+            - upper-roman
+            - lower-greek
+            - lower-latin
+            - upper-latin
+            - armenian
+            - georgian
+            - lower-alpha
+            - upper-alpha
+            - none
+    - 
+        id: list-number-style-type-5
+        title: Style depth 5
+        type: variable-select
+        allowEmpty: false
+        default: lower-alpha
+        options:
+            - decimal
+            - decimal-leading-zero
+            - lower-roman
+            - upper-roman
+            - lower-greek
+            - lower-latin
+            - upper-latin
+            - armenian
+            - georgian
+            - lower-alpha
+            - upper-alpha
+            - none
+    - 
+        id: list-number-style-type-6
+        title: Style depth 6
+        type: variable-select
+        allowEmpty: false
+        default: lower-roman
+        options:
+            - decimal
+            - decimal-leading-zero
+            - lower-roman
+            - upper-roman
+            - lower-greek
+            - lower-latin
+            - upper-latin
+            - armenian
+            - georgian
+            - lower-alpha
+            - upper-alpha
+            - none
+    - 
+        id: ul-settings
+        title: Unordered lists
+        type: heading
+        level: 1
+        collapsed: true
+    - 
+        id: ul-settings-info-text
+        title: Information
+        description: "Choose the style of the bullet for each depth. Lists deeper than 6 nested lists will use the default obsidian marker.<br>You can find a list of unicode character for geometric shapes [here](https://en.wikipedia.org/wiki/Geometric_Shapes_(Unicode_block))."
+        type: info-text
+        markdown: true
+    - 
+        id: list-bullet-style-type-1
+        title: Style depth 1
+        type: variable-text
+        default: ●
+        quotes: true
+    - 
+        id: list-bullet-style-type-2
+        title: Style depth 2
+        type: variable-text
+        default: ○
+        quotes: true
+    - 
+        id: list-bullet-style-type-3
+        title: Style depth 3
+        type: variable-text
+        default: ■
+        quotes: true
+    - 
+        id: list-bullet-style-type-4
+        title: Style depth 4
+        type: variable-text
+        default: ●
+        quotes: true
+    - 
+        id: list-bullet-style-type-5
+        title: Style depth 5
+        type: variable-text
+        default: ○
+        quotes: true
+    - 
+        id: list-bullet-style-type-6
+        title: Style depth 6
+        type: variable-text
+        default: ■
+        quotes: true
+
+*/
+
+
+body.theme-light {
+    --list-style-color: '#ababab';
+}
+body.theme-dark {
+    --list-style-color: '#666666';
+}
+
+body {
+    /* [OL] ORDERED LISTS */
+    --list-number-style-type-1: decimal;
+    --list-number-style-type-2: lower-alpha;
+    --list-number-style-type-3: lower-roman;
+    --list-number-style-type-4: decimal;
+    --list-number-style-type-5: lower-alpha;
+    --list-number-style-type-6: lower-roman;
+
+    /* [UL] UNORDERED LISTS */
+    --list-bullet-style-type-1: "●";
+    --list-bullet-style-type-2: "○︎";
+    --list-bullet-style-type-3: "■";
+    --list-bullet-style-type-4: "●";
+    --list-bullet-style-type-5: "○︎";
+    --list-bullet-style-type-6: "■";
+
+    --list-style-bullet-font: "Arial", "sans-serif";
+}
+
+body.list-style-enable-color {
+    --list-marker-color: var(--list-style-color);
+}
+
+
+body.list-style-enable-bullet-font {
+    & .list-bullet::after {
+        font-family: var(--list-style-bullet-font);
+    }
+}
+
+/* ============================================== */
+/* ========= Set style for reading view ========= */
+/* ============================================== */
+
+.markdown-preview-view {
+    /* [OL] Change list-style-type */
+    & ol { list-style-type: var(--list-number-style-type-1); }
+    & li ol { list-style-type: var(--list-number-style-type-2); }
+    & li li ol { list-style-type: var(--list-number-style-type-3); }
+    & li li li ol { list-style-type: var(--list-number-style-type-4); }
+    & li li li li ol { list-style-type: var(--list-number-style-type-5); }
+    & li li li li li ol { list-style-type: var(--list-number-style-type-6); }
+    & li li li li li li ol { list-style-type: normal; }
+
+
+    /* [UL] Change ::after pseudo-element */
+    & .list-bullet::after {
+        --list-bullet-radius: 0;
+        background-color: unset;
+        width: unset;
+        height: unset;
+    }
+    & ul > li > .list-bullet::after { content: var(--list-bullet-style-type-1) "\00a0"; }
+    & li ul > li > .list-bullet::after { content: var(--list-bullet-style-type-2) "\00a0"; }
+    & li li ul > li > .list-bullet::after { content: var(--list-bullet-style-type-3) "\00a0"; }
+    & li li li ul > li > .list-bullet::after { content: var(--list-bullet-style-type-4) "\00a0"; }
+    & li li li li ul > li > .list-bullet::after { content: var(--list-bullet-style-type-5) "\00a0"; }
+    & li li li li li ul > li > .list-bullet::after { content: var(--list-bullet-style-type-6) "\00a0"; }
+    & li li li li li li ul > li > .list-bullet::after {
+        content: '\200B';
+        --list-bullet-radius: 50%;
+        background-color: var(--list-marker-color);;
+        width: var(--list-bullet-size);
+        height: var(--list-bullet-size);
+    }
+}
+
+
+/* ============================================== */
+/* ========= Set style for live preview  ======== */
+/* ============================================== */
+
+.markdown-source-view.is-live-preview {
+    
+    /* --- [OL] Set counter for level n+1 to 0 every time we create a new item at level n --- */
+    /* ---      Increment the counter of level n every time we create a new item at level n --- */
+    & { counter-reset: listdepth1; }
+    & .HyperMD-list-line-1 {
+        & .list-number::after {
+            content: "";
+            counter-increment: listdepth1;
+        }
+        & { counter-reset: listdepth2; }
+    }
+    & .HyperMD-list-line-2 {
+        & .list-number::after {
+            content: "";
+            counter-increment: listdepth2;
+        }
+        & { counter-reset: listdepth3; }
+    }
+    & .HyperMD-list-line-3 {
+        & .list-number::after {
+            content: "";
+            counter-increment: listdepth3;
+        }
+        & { counter-reset: listdepth4; }
+    }
+    & .HyperMD-list-line-4 {
+        & .list-number::after {
+            content: "";
+            counter-increment: listdepth4;
+        }
+        & { counter-reset: listdepth5; }
+    }
+    & .HyperMD-list-line-5 {
+        & .list-number::after {
+            content: "";
+            counter-increment: listdepth5;
+        }
+        & { counter-reset: listdepth6; }
+    }
+    & .HyperMD-list-line-6 {
+        & .list-number::after {
+            content: "";
+            counter-increment: listdepth6;
+        }
+    }
+}
+
+body.list-style-enable-active-line .markdown-source-view.is-live-preview .cm-line,
+body:not(.list-style-enable-active-line) .markdown-source-view.is-live-preview .cm-line:not(.cm-active) {
+    /* [OL] */
+    &.HyperMD-list-line-1,
+    &.HyperMD-list-line-2,
+    &.HyperMD-list-line-3,
+    &.HyperMD-list-line-4,
+    &.HyperMD-list-line-5,
+    &.HyperMD-list-line-6
+    {
+        /* --- Hide the default numbering --- */
+        & .list-number {
+            visibility: hidden;
+            font-size: 0;
+        }
+        /* --- Prepare the style of the new numbering on ::after pseudo-element --- */
+        & .list-number::after {
+            visibility: visible;
+            font-size: var(--font-text-size);
+        }
+    }
+    
+    /* [UL] */
+    &.HyperMD-list-line-1,
+    &.HyperMD-list-line-2,
+    &.HyperMD-list-line-3,
+    &.HyperMD-list-line-4,
+    &.HyperMD-list-line-5,
+    &.HyperMD-list-line-6
+    {
+        /* --- Hide the default bullet --- */
+        & .list-bullet {
+            visibility: hidden;
+        }
+        /* --- Prepare the style of the new bullet on ::after pseudo-element --- */
+        & .list-bullet::after {
+            visibility: visible;
+            --list-bullet-radius: 0;
+            background-color: unset;
+            width: unset;
+            height: unset;
+        }
+    }
+
+
+    /* --- [OL] Set the content of the ::after pseudo-element
+                according to the correct list-style-type and counter --- */
+    &.HyperMD-list-line-1 .list-number::after { content: counter(listdepth1, var(--list-number-style-type-1)) ".\00a0"; }
+    &.HyperMD-list-line-2 .list-number::after { content: counter(listdepth2, var(--list-number-style-type-2)) ".\00a0"; }
+    &.HyperMD-list-line-3 .list-number::after { content: counter(listdepth3, var(--list-number-style-type-3)) ".\00a0"; }
+    &.HyperMD-list-line-4 .list-number::after { content: counter(listdepth4, var(--list-number-style-type-4)) ".\00a0"; }
+    &.HyperMD-list-line-5 .list-number::after { content: counter(listdepth5, var(--list-number-style-type-5)) ".\00a0"; }
+    &.HyperMD-list-line-6 .list-number::after { content: counter(listdepth6, var(--list-number-style-type-6)) ".\00a0"; }
+
+    
+    /* --- [UL] Set the content of the ::after pseudo-element
+                according to the correct list-style-type --- */
+    &.HyperMD-list-line-1 .list-bullet::after { content: var(--list-bullet-style-type-1) "\00a0"; }
+    &.HyperMD-list-line-2 .list-bullet::after { content: var(--list-bullet-style-type-2) "\00a0"; }
+    &.HyperMD-list-line-3 .list-bullet::after { content: var(--list-bullet-style-type-3) "\00a0"; }
+    &.HyperMD-list-line-4 .list-bullet::after { content: var(--list-bullet-style-type-4) "\00a0"; }
+    &.HyperMD-list-line-5 .list-bullet::after { content: var(--list-bullet-style-type-5) "\00a0"; }
+    &.HyperMD-list-line-6 .list-bullet::after { content: var(--list-bullet-style-type-6) "\00a0"; }
+}
