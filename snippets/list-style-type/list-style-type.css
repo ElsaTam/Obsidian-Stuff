@@ -11,7 +11,7 @@ settings:
         collapsed: false
     -
         id: list-style-enable-active-line
-        title: Enable changes even on active line
+        title: Enable changes on active line
         description: If enabled, the custom numbering/bullet will also be changed on the active line in live preview, which might make it harder to see and manipulate the underlying markdown.
         type: class-toggle
     -
@@ -24,19 +24,14 @@ settings:
         title: Numbering and bullets custom color
         type: variable-themed-color
         opacity: false
-        format: hex
+        format: rgb-values
         default-light: '#ababab'
         default-dark: '#666666'
     -
-        id: list-style-enable-bullet-font
-        title: Use custom font for the bullets
+        id: list-style-enable-bold
+        title: Bold numbering and bullets
         type: class-toggle
         default: false
-    - 
-        id: list-style-bullet-font
-        title: Custom bullet font
-        type: variable-text
-        default: Arial, sans-serif
     - 
         id: ol-settings
         title: Ordered lists
@@ -45,7 +40,7 @@ settings:
         collapsed: true
     - 
         id: ol-settings-info-text
-        title: Information
+        title: Style depth
         description: "Choose the style of the numbering for each depth. Lists deeper than 6 nested lists will use the default obsidian marker.<br>You can find the description of the styles [here](https://www.w3schools.com/cssref/pr_list-style-type.php)."
         type: info-text
         markdown: true
@@ -169,9 +164,19 @@ settings:
         type: heading
         level: 1
         collapsed: true
+    -
+        id: list-style-enable-bullet-font
+        title: Use custom font for the bullets
+        type: class-toggle
+        default: false
+    - 
+        id: list-style-bullet-font
+        title: Custom bullet font
+        type: variable-text
+        default: Arial, sans-serif
     - 
         id: ul-settings-info-text
-        title: Information
+        title: Style depth
         description: "Choose the style of the bullet for each depth. Lists deeper than 6 nested lists will use the default obsidian marker.<br>You can find a list of unicode character for geometric shapes [here](https://en.wikipedia.org/wiki/Geometric_Shapes_(Unicode_block))."
         type: info-text
         markdown: true
@@ -216,10 +221,10 @@ settings:
 
 
 body.theme-light {
-    --list-style-color: '#ababab';
+    --list-style-color: 171, 171, 171;
 }
 body.theme-dark {
-    --list-style-color: '#666666';
+    --list-style-color: 102, 102, 102;
 }
 
 body {
@@ -242,14 +247,25 @@ body {
     --list-style-bullet-font: "Arial", "sans-serif";
 }
 
+
+/* ============================================== */
+/* =========== Bullet general styling =========== */
+/* ============================================== */
+
 body.list-style-enable-color {
-    --list-marker-color: var(--list-style-color);
+    --list-marker-color: rgb(var(--list-style-color));
+    --indentation-guide-color: rgba(var(--list-style-color), 0.15);
 }
 
+body.list-style-enable-bullet-font .list-bullet::after {
+    font-family: var(--list-style-bullet-font);
+}
 
-body.list-style-enable-bullet-font {
-    & .list-bullet::after {
-        font-family: var(--list-style-bullet-font);
+body.list-style-enable-bold {
+    & .list-bullet,
+    & .list-number,
+    & ol > li::marker {
+        font-weight: bold;
     }
 }
 
