@@ -16,6 +16,6 @@ If you would like to be contacted in case I update a snippet, so you can downloa
 
 # Contact
 
-<img src="https://cdn.jsdelivr.net/gh/Readme-Workflows/Readme-Icons@main/icons/octicons/IssueOpened.svg" style="width:1em; position:relative; top:0.12em;"> Open an issue in the repo. Please, specify the snippet you want to ask something about.
+<img src="https://cdn.jsdelivr.net/gh/Readme-Workflows/Readme-Icons@main/icons/octicons/IssueOpened.svg" style="width:1em; vertical-align:midle;"> Open an issue in the repo. Please, specify the snippet you want to ask something about.
 
-<img src="https://skillicons.dev/icons?i=discord" style="width:1em; position:relative; top:0.12em;"/> Tag me with `@Kapirklaa` in the official Obsidian Discord server.
+<img src="https://skillicons.dev/icons?i=discord" style="width:1em; vertical-align:midle;"/> Tag me with `@Kapirklaa` in the official Obsidian Discord server.
