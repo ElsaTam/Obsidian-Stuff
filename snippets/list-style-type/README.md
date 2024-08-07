@@ -22,6 +22,7 @@ Following features are available:
 - [x] Choose your own set of 6 numberings styles for ordered list;
 - [x] Choose your own set of 6 bullet characters for unoredered list;
 - [x] Make the numberings and bullets bold;
+- [x] Make the numberings and bullets glow;
 - [x] Choose a specific font for the bullets (unordered list) in case your text font-family scales the unicode characters in an undesired way;
 - [x] Enable or disable the styling on the active line on live preview mode.
 
@@ -57,6 +58,12 @@ By default, the active line is not affected by the change of numbering/bullet. T
 ![active line disabled](screenshots/active-line.jpg)
 
 This behavior can be changed and the styling can be enabled on active line from the style settings.
+
+### Glow
+
+You can enable a soft glow for your numbering and bullets. It will use the color of the numvering/bullets.
+
+![glow](screenshots/glow.jpg)
 
 ### Bullet font
 
