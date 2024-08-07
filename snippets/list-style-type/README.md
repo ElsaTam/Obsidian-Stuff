@@ -61,7 +61,7 @@ This behavior can be changed and the styling can be enabled on active line from 
 
 ### Glow
 
-You can enable a soft glow for your numbering and bullets. It will use the color of the numvering/bullets.
+You can enable a soft glow for your numbering and bullets.
 
 ![glow](screenshots/glow.jpg)
 
