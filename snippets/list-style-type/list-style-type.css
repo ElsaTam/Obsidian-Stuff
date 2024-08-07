@@ -36,7 +36,7 @@ settings:
         id: list-style-enable-glow
         title: Glow numbering and bullets
         type: class-toggle
-        default: true
+        default: false
     - 
         id: ol-settings
         title: Ordered lists
@@ -331,7 +331,9 @@ body.list-style-enable-glow .view-content {
     
     /* --- [OL] Set counter for level n+1 to 0 every time we create a new item at level n --- */
     /* ---      Increment the counter of level n every time we create a new item at level n --- */
-    & { counter-reset: listdepth1; }
+    &, & .cm-line:not(.HyperMD-list-line):has(+ .HyperMD-list-line) {
+        counter-reset: listdepth1 listdepth2 listdepth3 listdepth4 listdepth5 listdepth6;
+    }
     & .HyperMD-list-line-1 {
         & .list-number::after {
             content: "";
