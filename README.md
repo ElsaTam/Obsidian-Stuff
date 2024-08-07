@@ -16,6 +16,9 @@ If you would like to be contacted in case I update a snippet, so you can downloa
 
 # Contact
 
+> [!NOTE]
+> :fr: I am french, so English is not my first language. I apologize for the mistakes I make and I hope I stay understandable. If you would like to offer a better translation, do not hesitate.
+
 <img src="https://cdn.jsdelivr.net/gh/Readme-Workflows/Readme-Icons@main/icons/octicons/IssueOpened.svg" style="width:1em; vertical-align:midle;"> Open an issue in the repo. Please, specify the snippet you want to ask something about.
 
 <img src="https://skillicons.dev/icons?i=discord" style="width:1em; vertical-align:midle;"/> Tag me with `@Kapirklaa` in the official Obsidian Discord server.
