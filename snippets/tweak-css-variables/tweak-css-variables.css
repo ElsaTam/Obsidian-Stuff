@@ -1043,7 +1043,7 @@ settings:
         type: variable-themed-color
         format: hex
         default-light: '#e0e0e0'
-        default-light: '#363636'
+        default-dark: '#363636'
     -
         id: custom-divider-color-hover
         title: Color hover
