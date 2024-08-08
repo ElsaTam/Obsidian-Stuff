@@ -57,7 +57,7 @@ Expose the css variables with the Style Setting plugin.
   - [ ] Workspace
 - Misc
   - [x] Collapse icons
-  - [ ] Dragging
+  - [x] Dragging
   - [ ] Footnotes
   - [ ] Graph
   - [ ] Icons

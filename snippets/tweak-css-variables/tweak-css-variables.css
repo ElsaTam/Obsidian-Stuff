@@ -1098,6 +1098,34 @@ settings:
         type: variable-color
         format: hex
         default: '#8a5cf5'
+        
+    -
+        id: header-misc-collapse-icons
+        title: Collapse icons
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: use-custom-settings-dragging
+        title: Use custom dragging
+        type: class-toggle
+        default: false
+    -
+        id: custom-drag-ghost-background
+        title: Drag ghost background
+        description: "--drag-ghost-background"
+        type: variable-color
+        format: hex
+        default: '#000000d9'
+        opacity: true
+    -
+        id: custom-drag-ghost-text-color
+        title: Drag ghost text color
+        description: "--drag-ghost-text-color"
+        type: variable-color
+        format: hex
+        default: '#ffffff'
+        opacity: true
 */
 
 
@@ -1529,6 +1557,17 @@ body {
         &.use-custom-settings-collapse-icons {
             --collapse-icon-color-collapsed: var(--custom-collapse-icon-color-collapsed);
             --collapse-icon-color: var(--custom-collapse-icon-color);
+        }
+    }
+
+    /* Dragging */
+    & {
+        --custom-drag-ghost-background: #000000d9;
+        --custom-drag-ghost-text-color: #ffffff;
+
+        &.use-custom-settings-dragging {
+            --drag-ghost-background: var(--custom-drag-ghost-background);
+            --drag-ghost-text-color: var(--custom-drag-ghost-text-color);
         }
     }
 }
