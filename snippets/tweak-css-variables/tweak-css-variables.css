@@ -1019,6 +1019,53 @@ settings:
 
 
     -
+        id: header-layout
+        title: Layout
+        type: heading
+        level: 1
+        collapsed: true
+
+    -
+        id: header-layout-dividers
+        title: Dividers between panes
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: use-custom-settings-dividers
+        title: Use custom dividers
+        type: class-toggle
+        default: false
+    -
+        id: custom-divider-color
+        title: Color
+        description: "--divider-color"
+        type: variable-themed-color
+        format: hex
+        default-light: '#e0e0e0'
+        default-light: '#363636'
+    -
+        id: custom-divider-color-hover
+        title: Color hover
+        description: "--divider-color-hover"
+        type: variable-color
+        format: hex
+        default: '#8a5cf5'
+    -
+        id: custom-divider-width
+        title: Width (px)
+        description: "--divider-width"
+        type: variable-number
+        default: 1
+        format: px
+    
+
+
+
+
+
+
+    -
         id: header-misc
         title: Miscellaneous
         type: heading
@@ -1441,6 +1488,28 @@ body {
             --dialog-width: var(--custom-dialog-width);
             --dialog-max-width: var(--custom-dialog-max-width);
             --dialog-max-height: var(--custom-dialog-max-height);
+        }
+    }
+}
+
+/* Layout */
+body {
+    /* Dividers between panes */
+    & {
+        --custom-divider-color-hover: #8a5cf5;
+        --custom-divider-width: 1px;
+        &.theme-light {
+            --custom-divider-color: #e0e0e0;/* --color-base-30 */
+        }
+        &.theme-dark {
+            --custom-divider-color: #363636;
+        }
+
+        &.use-custom-settings-dividers {
+            --divider-color: var(--custom-divider-color);
+            --divider-color-hover: var(--custom-divider-color-hover);
+            --divider-width: var(--custom-divider-width);
+            --divider-width-hover: calc(var(--divider-width) + 2px);
         }
     }
 }

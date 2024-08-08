@@ -42,7 +42,7 @@ Expose the css variables with the Style Setting plugin.
   - [ ] Modals
   - [ ] Popovers
 - Layout
-  - [ ] Dividers
+  - [x] Dividers
   - [ ] File layout
   - [ ] Horizontal rules
   - [ ] Z-index
