@@ -15,6 +15,12 @@ settings:
         description: If enabled, the custom numbering/bullet will also be changed on the active line in live preview, which might make it harder to see and manipulate the underlying markdown.
         type: class-toggle
     -
+        id: list-style-enable-font-color
+        title: Use font color
+        description: "Doesn't work if you enable \"Use custom font\""
+        type: class-toggle
+        default: true;
+    -
         id: list-style-enable-color
         title: Use custom color
         type: class-toggle
@@ -180,6 +186,31 @@ settings:
         type: variable-text
         default: Arial, sans-serif
     - 
+        id: ul-settings-unique-bullet
+        title: One bullet to rule them all
+        description: "Use the same bullet for any level"
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: list-style-enable-unique-bullet
+        title: Enable
+        type: class-toggle
+        default: false
+    - 
+        id: list-bullet-style-type-unique
+        title: Marker
+        type: variable-text
+        default: "-"
+        quotes: true
+    - 
+        id: ul-settings-depth-bullet
+        title: One bullet by depth
+        description: "Doesn't work if \"One bullet to rule them all\" is enabled."
+        type: heading
+        level: 2
+        collapsed: true
+    - 
         id: ul-settings-info-text
         title: Style depth
         description: "Choose the style of the bullet for each depth. Lists deeper than 6 nested lists will use the default obsidian marker.<br>You can find a list of unicode character for geometric shapes [here](https://en.wikipedia.org/wiki/Geometric_Shapes_(Unicode_block))."
@@ -187,37 +218,37 @@ settings:
         markdown: true
     - 
         id: list-bullet-style-type-1
-        title: Style depth 1
+        title: Marker depth 1
         type: variable-text
         default: ●
         quotes: true
     - 
         id: list-bullet-style-type-2
-        title: Style depth 2
+        title: Marker depth 2
         type: variable-text
         default: ○
         quotes: true
     - 
         id: list-bullet-style-type-3
-        title: Style depth 3
+        title: Marker depth 3
         type: variable-text
         default: ■
         quotes: true
     - 
         id: list-bullet-style-type-4
-        title: Style depth 4
+        title: Marker depth 4
         type: variable-text
         default: ●
         quotes: true
     - 
         id: list-bullet-style-type-5
-        title: Style depth 5
+        title: Marker depth 5
         type: variable-text
         default: ○
         quotes: true
     - 
         id: list-bullet-style-type-6
-        title: Style depth 6
+        title: Marker depth 6
         type: variable-text
         default: ■
         quotes: true
@@ -248,6 +279,7 @@ body {
     --list-bullet-style-type-4: "●";
     --list-bullet-style-type-5: "○︎";
     --list-bullet-style-type-6: "■";
+    --list-bullet-style-type-unique: "-";
 
     --list-style-bullet-font: "Arial", "sans-serif";
 }
@@ -257,6 +289,9 @@ body {
 /* =========== Bullet general styling =========== */
 /* ============================================== */
 
+body:not(.list-style-enable-color).list-style-enable-font-color .view-content {
+    --list-marker-color: var(--text-normal);
+}
 body.list-style-enable-color .view-content {
     --list-marker-color: rgb(var(--list-style-color));
     --indentation-guide-color: rgba(var(--list-style-color), 0.15);
@@ -289,8 +324,8 @@ body.list-style-enable-glow .view-content {
 /* ========= Set style for reading view ========= */
 /* ============================================== */
 
+/* [OL] Change list-style-type */
 .markdown-preview-view {
-    /* [OL] Change list-style-type */
     & ol { list-style-type: var(--list-number-style-type-1); }
     & li ol { list-style-type: var(--list-number-style-type-2); }
     & li li ol { list-style-type: var(--list-number-style-type-3); }
@@ -298,9 +333,17 @@ body.list-style-enable-glow .view-content {
     & li li li li ol { list-style-type: var(--list-number-style-type-5); }
     & li li li li li ol { list-style-type: var(--list-number-style-type-6); }
     & li li li li li li ol { list-style-type: normal; }
+}
 
-
-    /* [UL] Change ::after pseudo-element */
+/* [UL] Change ::after pseudo-element */
+body.list-style-enable-unique-bullet .markdown-preview-view .list-bullet::after {
+    content: var(--list-bullet-style-type-unique) "\00a0";
+    --list-bullet-radius: 0;
+    background-color: unset;
+    width: unset;
+    height: unset;
+}
+body:not(.list-style-enable-unique-bullet) .markdown-preview-view {
     & .list-bullet::after {
         --list-bullet-radius: 0;
         background-color: unset;
@@ -327,10 +370,10 @@ body.list-style-enable-glow .view-content {
 /* ========= Set style for live preview  ======== */
 /* ============================================== */
 
+/* --- [OL] Set counter for level n+1 to 0 every time we create a new item at level n --- */
+/* ---      Increment the counter of level n every time we create a new item at level n --- */
 .markdown-source-view.is-live-preview {
     
-    /* --- [OL] Set counter for level n+1 to 0 every time we create a new item at level n --- */
-    /* ---      Increment the counter of level n every time we create a new item at level n --- */
     &, & .cm-line:not(.HyperMD-list-line):has(+ .HyperMD-list-line) {
         counter-reset: listdepth1 listdepth2 listdepth3 listdepth4 listdepth5 listdepth6;
     }
@@ -377,9 +420,9 @@ body.list-style-enable-glow .view-content {
     }
 }
 
+/* [OL] */
 body.list-style-enable-active-line .markdown-source-view.is-live-preview .cm-line,
 body:not(.list-style-enable-active-line) .markdown-source-view.is-live-preview .cm-line:not(.cm-active) {
-    /* [OL] */
     &.HyperMD-list-line-1,
     &.HyperMD-list-line-2,
     &.HyperMD-list-line-3,
@@ -398,46 +441,82 @@ body:not(.list-style-enable-active-line) .markdown-source-view.is-live-preview .
             font-size: var(--font-text-size);
         }
     }
-    
-    /* [UL] */
-    &.HyperMD-list-line-1,
-    &.HyperMD-list-line-2,
-    &.HyperMD-list-line-3,
-    &.HyperMD-list-line-4,
-    &.HyperMD-list-line-5,
-    &.HyperMD-list-line-6
-    {
-        /* --- Hide the default bullet --- */
-        & .list-bullet {
-            visibility: hidden;
-        }
-        /* --- Prepare the style of the new bullet on ::after pseudo-element --- */
-        & .list-bullet::after {
-            visibility: visible;
-            --list-bullet-radius: 0;
-            background-color: unset;
-            width: unset;
-            height: unset;
-        }
-    }
 
-
-    /* --- [OL] Set the content of the ::after pseudo-element
-                according to the correct list-style-type and counter --- */
+    /* --- Set the content of the ::after pseudo-element
+           according to the correct list-style-type and counter --- */
     &.HyperMD-list-line-1 .list-number::after { content: counter(listdepth1, var(--list-number-style-type-1)) ".\00a0"; }
     &.HyperMD-list-line-2 .list-number::after { content: counter(listdepth2, var(--list-number-style-type-2)) ".\00a0"; }
     &.HyperMD-list-line-3 .list-number::after { content: counter(listdepth3, var(--list-number-style-type-3)) ".\00a0"; }
     &.HyperMD-list-line-4 .list-number::after { content: counter(listdepth4, var(--list-number-style-type-4)) ".\00a0"; }
     &.HyperMD-list-line-5 .list-number::after { content: counter(listdepth5, var(--list-number-style-type-5)) ".\00a0"; }
     &.HyperMD-list-line-6 .list-number::after { content: counter(listdepth6, var(--list-number-style-type-6)) ".\00a0"; }
+}
 
-    
-    /* --- [UL] Set the content of the ::after pseudo-element
-                according to the correct list-style-type --- */
-    &.HyperMD-list-line-1 .list-bullet::after { content: var(--list-bullet-style-type-1) "\00a0"; }
-    &.HyperMD-list-line-2 .list-bullet::after { content: var(--list-bullet-style-type-2) "\00a0"; }
-    &.HyperMD-list-line-3 .list-bullet::after { content: var(--list-bullet-style-type-3) "\00a0"; }
-    &.HyperMD-list-line-4 .list-bullet::after { content: var(--list-bullet-style-type-4) "\00a0"; }
-    &.HyperMD-list-line-5 .list-bullet::after { content: var(--list-bullet-style-type-5) "\00a0"; }
-    &.HyperMD-list-line-6 .list-bullet::after { content: var(--list-bullet-style-type-6) "\00a0"; }
+/* [UL] Unique bullet */
+body.list-style-enable-unique-bullet {
+    /* It is ok changing the line */
+    &.list-style-enable-active-line .markdown-source-view.is-live-preview .cm-line,
+    &:not(.list-style-enable-active-line) .markdown-source-view.is-live-preview .cm-line:not(.cm-active) {
+        &.HyperMD-list-line {
+            /* --- Hide the default bullet --- */
+            & .list-bullet {
+                visibility: hidden;
+            }
+            /* --- Prepare the style of the new bullet on ::after pseudo-element --- */
+            & .list-bullet::after {
+                content: var(--list-bullet-style-type-unique) "\00a0";
+                visibility: visible;
+                --list-bullet-radius: 0;
+                background-color: unset;
+                width: unset;
+                height: unset;
+            }
+        }
+    }
+}
+/* [UL] Bullet per depth */
+body:not(.list-style-enable-unique-bullet) {
+    /* It is ok changing the line */
+    &.list-style-enable-active-line .markdown-source-view.is-live-preview .cm-line,
+    &:not(.list-style-enable-active-line) .markdown-source-view.is-live-preview .cm-line:not(.cm-active) {
+
+        &.HyperMD-list-line-1,
+        &.HyperMD-list-line-2,
+        &.HyperMD-list-line-3,
+        &.HyperMD-list-line-4,
+        &.HyperMD-list-line-5,
+        &.HyperMD-list-line-6
+        {
+            /* --- Hide the default bullet --- */
+            & .list-bullet {
+                visibility: hidden;
+            }
+            /* --- Prepare the style of the new bullet on ::after pseudo-element --- */
+            & .list-bullet::after {
+                visibility: visible;
+                --list-bullet-radius: 0;
+                background-color: unset;
+                width: unset;
+                height: unset;
+            }
+        }
+
+        /* --- Set the content of the ::after pseudo-element
+            according to the correct list-style-type --- */
+        &.HyperMD-list-line-1 .list-bullet::after { content: var(--list-bullet-style-type-1) "\00a0"; }
+        &.HyperMD-list-line-2 .list-bullet::after { content: var(--list-bullet-style-type-2) "\00a0"; }
+        &.HyperMD-list-line-3 .list-bullet::after { content: var(--list-bullet-style-type-3) "\00a0"; }
+        &.HyperMD-list-line-4 .list-bullet::after { content: var(--list-bullet-style-type-4) "\00a0"; }
+        &.HyperMD-list-line-5 .list-bullet::after { content: var(--list-bullet-style-type-5) "\00a0"; }
+        &.HyperMD-list-line-6 .list-bullet::after { content: var(--list-bullet-style-type-6) "\00a0"; }
+    }
+}
+
+
+/* Change box-shadow for text-shadow */
+.markdown-preview-view li.is-collapsed .list-bullet::after,
+body.list-style-enable-active-line .markdown-source-view.is-live-preview .cm-line:not(.cm-active) .cm-fold-indicator:hover ~ .cm-formatting-list .list-bullet:after,
+body:not(.list-style-enable-active-line) .markdown-source-view.is-live-preview .cm-line .cm-fold-indicator:hover ~ .cm-formatting-list .list-bullet:after {
+    box-shadow: unset;
+    text-shadow: var(--list-marker-color) 0 0 4px;
 }

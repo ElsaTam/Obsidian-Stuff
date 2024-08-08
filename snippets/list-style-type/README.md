@@ -20,7 +20,9 @@ The snippet is best used with [Style Setting plugin](https://github.com/mgmeyers
 Following features are available:
 - [x] Color the numberings, bullets, and indentation guide;
 - [x] Choose your own set of 6 numberings styles for ordered list;
-- [x] Choose your own set of 6 bullet characters for unoredered list;
+- [x] Choose your own set of 6 bullet characters for unordered list;
+- [x] Choose only one unique bullet for all unordered list depths;
+- [x] Choose the color of the numbering/bullets (including normal text color);
 - [x] Make the numberings and bullets bold;
 - [x] Make the numberings and bullets glow;
 - [x] Choose a specific font for the bullets (unordered list) in case your text font-family scales the unicode characters in an undesired way;
