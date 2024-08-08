@@ -38,8 +38,8 @@ Expose the css variables with the Style Setting plugin.
   - [x] Sliders
   - [x] Toggles
 - Modals
+  - [x] Dialogs
   - [ ] Modals
-  - [ ] Dialogs
   - [ ] Popovers
 - Layout
   - [ ] Dividers
@@ -57,7 +57,6 @@ Expose the css variables with the Style Setting plugin.
   - [ ] Workspace
 - Misc
   - [x] Collapse icons
-  - [ ] Cursor
   - [ ] Dragging
   - [ ] Footnotes
   - [ ] Graph

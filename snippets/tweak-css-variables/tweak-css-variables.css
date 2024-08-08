@@ -969,6 +969,56 @@ settings:
 
 
     -
+        id: header-modals
+        title: Modals and other windows
+        type: heading
+        level: 1
+        collapsed: true
+
+    -
+        id: header-modals-dialogs
+        title: Dialogs
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: use-custom-settings-dialogs
+        title: Use custom dialogs
+        type: class-toggle
+        default: false
+    -
+        id: custom-dialog-width
+        title: Width (px)
+        description: "--dialog-width"
+        type: variable-number
+        default: 560
+        format: px
+    -
+        id: custom-dialog-max-width
+        title: Max width (vw)
+        description: "--dialog-max-width"
+        type: variable-number-slider
+        default: 80
+        min: 0
+        max: 100
+        format: vw
+    -
+        id: custom-dialog-max-height
+        title: Max height (vh)
+        description: "--dialog-max-height"
+        type: variable-number-slider
+        default: 85
+        min: 0
+        max: 100
+        format: vh
+    
+
+
+
+
+
+
+    -
         id: header-misc
         title: Miscellaneous
         type: heading
@@ -981,6 +1031,11 @@ settings:
         type: heading
         level: 2
         collapsed: true
+    -
+        id: use-custom-settings-collapse-icons
+        title: Use custom collapse icons
+        type: class-toggle
+        default: false
     -
         id: custom-collapse-icon-color
         title: Color
@@ -1370,6 +1425,22 @@ body {
             & .checkbox-container.is-enabled {
                 background-color: var(--custom-toggle-background-color);
             }
+        }
+    }
+}
+
+/* Modals */
+body {
+    /* Dialogs */
+    & {
+        --custom-dialog-width: 560px;
+        --custom-dialog-max-width: 80vw;
+        --custom-dialog-max-height: 85vh;
+
+        &.use-custom-settings-dialogs {
+            --dialog-width: var(--custom-dialog-width);
+            --dialog-max-width: var(--custom-dialog-max-width);
+            --dialog-max-height: var(--custom-dialog-max-height);
         }
     }
 }
