@@ -10,6 +10,7 @@ settings:
         type: heading
         level: 1
         collapsed: true
+
     -
         id: header-blockquotes
         title: Blockquotes
@@ -183,6 +184,7 @@ settings:
         opacity: true
         default-light: '#00000000'
         default-dark: '#00000000'
+
     -
         id: header-callouts-colors
         title: Colors
@@ -194,7 +196,7 @@ settings:
         title: default
         description: "--callout-default"
         type: variable-themed-color
-        format: hex
+        format: rgb-values
         opacity: true
         default-light: '#086ddd'
         default-dark: '#027aff'
@@ -203,7 +205,7 @@ settings:
         title: bug
         description: "--callout-bug"
         type: variable-themed-color
-        format: hex
+        format: rgb-values
         opacity: true
         default-light: '#e93147'
         default-dark: '#fb464c'
@@ -212,7 +214,7 @@ settings:
         title: error
         description: "--callout-error"
         type: variable-themed-color
-        format: hex
+        format: rgb-values
         opacity: true
         default-light: '#e93147'
         default-dark: '#fb464c'
@@ -221,7 +223,7 @@ settings:
         title: example
         description: "--callout-example"
         type: variable-themed-color
-        format: hex
+        format: rgb-values
         opacity: true
         default-light: '#7852ee'
         default-dark: '#a882ff'
@@ -230,7 +232,7 @@ settings:
         title: fail
         description: "--callout-fail"
         type: variable-themed-color
-        format: hex
+        format: rgb-values
         opacity: true
         default-light: '#e93147'
         default-dark: '#fb464c'
@@ -239,7 +241,7 @@ settings:
         title: important
         description: "--callout-important"
         type: variable-themed-color
-        format: hex
+        format: rgb-values
         opacity: true
         default-light: '#00bfbc'
         default-dark: '#53dfdd'
@@ -248,7 +250,7 @@ settings:
         title: info
         description: "--callout-info"
         type: variable-themed-color
-        format: hex
+        format: rgb-values
         opacity: true
         default-light: '#086ddd'
         default-dark: '#027aff'
@@ -257,7 +259,7 @@ settings:
         title: question
         description: "--callout-question"
         type: variable-themed-color
-        format: hex
+        format: rgb-values
         opacity: true
         default-light: '#ec7500'
         default-dark: '#e9973f'
@@ -266,7 +268,7 @@ settings:
         title: quote
         description: "--callout-quote"
         type: variable-themed-color
-        format: hex
+        format: rgb-values
         opacity: true
         default-light: '#9e9e9e'
         default-dark: '#9e9e9e'
@@ -275,7 +277,7 @@ settings:
         title: success
         description: "--callout-success"
         type: variable-themed-color
-        format: hex
+        format: rgb-values
         opacity: true
         default-light: '#08b94e'
         default-dark: '#44cf6e'
@@ -284,7 +286,7 @@ settings:
         title: summary
         description: "--callout-summary"
         type: variable-themed-color
-        format: hex
+        format: rgb-values
         opacity: true
         default-light: '#00bfbc'
         default-dark: '#53dfdd'
@@ -293,7 +295,7 @@ settings:
         title: tip
         description: "--callout-tip"
         type: variable-themed-color
-        format: hex
+        format: rgb-values
         opacity: true
         default-light: '#00bfbc'
         default-dark: '#53dfdd'
@@ -302,7 +304,7 @@ settings:
         title: todo
         description: "--callout-todo"
         type: variable-themed-color
-        format: hex
+        format: rgb-values
         opacity: true
         default-light: '#086ddd'
         default-dark: '#027aff'
@@ -311,7 +313,7 @@ settings:
         title: warning
         description: "--callout-warning"
         type: variable-themed-color
-        format: hex
+        format: rgb-values
         opacity: true
         default-light: '#ec7500'
         default-dark: '#e9973f'
@@ -354,6 +356,7 @@ settings:
         opacity: true
         default-light: '#e0e0e0'
         default-dark: '#363636'
+
     -
         id: header-canvas-palette
         title: Palette
@@ -365,7 +368,7 @@ settings:
         title: Color 1
         description: "--canvas-color-1"
         type: variable-themed-color
-        format: hex
+        format: rgb-values
         opacity: true
         default-light: '#e93147'
         default-dark: '#fb464c'
@@ -374,7 +377,7 @@ settings:
         title: Color 2
         description: "--canvas-color-2"
         type: variable-themed-color
-        format: hex
+        format: rgb-values
         opacity: true
         default-light: '#ec7500'
         default-dark: '#e9973f'
@@ -383,7 +386,7 @@ settings:
         title: Color 3
         description: "--canvas-color-3"
         type: variable-themed-color
-        format: hex
+        format: rgb-values
         opacity: true
         default-light: '#e0ac00'
         default-dark: '#e0de71'
@@ -392,7 +395,7 @@ settings:
         title: Color 4
         description: "--canvas-color-4"
         type: variable-themed-color
-        format: hex
+        format: rgb-values
         opacity: true
         default-light: '#08b94e'
         default-dark: '#44cf6e'
@@ -401,14 +404,170 @@ settings:
         title: Color 5
         description: "--canvas-color-5"
         type: variable-themed-color
-        format: hex
+        format: rgb-values
         opacity: true
         default-light: '#00bfbc'
         default-dark: '#53dfdd'
     -
         id: custom-canvas-color-6
-        title: Color 56
+        title: Color 6
         description: "--canvas-color-6"
+        type: variable-themed-color
+        format: rgb-values
+        opacity: true
+        default-light: '#7852ee'
+        default-dark: '#a882ff'
+
+    -
+        id: header-code
+        title: Code
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: use-custom-settings-code
+        title: Use custom code
+        type: class-toggle
+        default: false
+    -
+        id: custom-code-white-space
+        title: White space
+        description: "--code-white-space"
+        type: variable-select
+        default: pre-wrap
+        options:
+            - normal
+            - nowrap
+            - pre
+            - pre-wrap
+            - pre-line
+            - break-spaces
+            - collapse balance
+            - preserve nowrap
+    -
+        id: custom-code-radius
+        title: Radius (px)
+        description: "--code-radius"
+        type: variable-number
+        default: 4
+        format: px
+    -
+        id: custom-code-size
+        title: Font size (px)
+        description: "--code-size"
+        type: variable-number
+        default: 0.875
+        format: em
+    -
+        id: custom-code-background
+        title: Background
+        description: "--code-background"
+        type: variable-themed-color
+        format: hex
+        opacity: true
+        default-light: '#fafafa'
+        default-dark: '#242424'
+
+    -
+        id: header-code-highlighting
+        title: Syntax highlighting
+        type: heading
+        level: 3
+        collapsed: true
+    -
+        id: custom-code-normal
+        title: Normal
+        description: "--code-normal"
+        type: variable-themed-color
+        format: hex
+        opacity: true
+        default-light: '#ababab'
+        default-dark: '#b3b3b3'
+    -
+        id: custom-code-comment
+        title: Comment
+        description: "--code-comment"
+        type: variable-themed-color
+        format: hex
+        opacity: true
+        default-light: '#5c5c5c'
+        default-dark: '#666666'
+    -
+        id: custom-code-function
+        title: Function
+        description: "--code-function"
+        type: variable-themed-color
+        format: hex
+        opacity: true
+        default-light: '#e0ac00'
+        default-dark: '#e0de71'
+    -
+        id: custom-code-important
+        title: Important
+        description: "--code-important"
+        type: variable-themed-color
+        format: hex
+        opacity: true
+        default-light: '#ec7500'
+        default-dark: '#e9973f'
+    -
+        id: custom-code-keyword
+        title: Keyword
+        description: "--code-keyword"
+        type: variable-themed-color
+        format: hex
+        opacity: true
+        default-light: '#d53984'
+        default-dark: '#fa99cd'
+    -
+        id: custom-code-operator
+        title: Operator
+        description: "--code-operator"
+        type: variable-themed-color
+        format: hex
+        opacity: true
+        default-light: '#e93147'
+        default-dark: '#fb464c'
+    -
+        id: custom-code-property
+        title: Property
+        description: "--code-property"
+        type: variable-themed-color
+        format: hex
+        opacity: true
+        default-light: '#00bfbc'
+        default-dark: '#53dfdd'
+    -
+        id: custom-code-punctuation
+        title: Punctuation
+        description: "--code-punctuation"
+        type: variable-themed-color
+        format: hex
+        opacity: true
+        default-light: '#5c5c5c'
+        default-dark: '#b3b3b3'
+    -
+        id: custom-code-string
+        title: String
+        description: "--code-string"
+        type: variable-themed-color
+        format: hex
+        opacity: true
+        default-light: '#08b94e'
+        default-dark: '#44cf6e'
+    -
+        id: custom-code-tag
+        title: Tag
+        description: "--code-tag"
+        type: variable-themed-color
+        format: hex
+        opacity: true
+        default-light: '#e93147'
+        default-dark: '#fb464c'
+    -
+        id: custom-code-value
+        title: Value
+        description: "--code-value"
         type: variable-themed-color
         format: hex
         opacity: true
@@ -464,6 +623,11 @@ settings:
         default-light: '#222222'
         default-dark: '#dadada'
 
+
+
+
+
+
         
     -
         id: header-inputs
@@ -476,6 +640,7 @@ settings:
         title: Use custom inputs
         type: class-toggle
         default: false
+
     -
         id: header-inputs-general
         title: General
@@ -509,6 +674,7 @@ settings:
         type: variable-number
         default: 1
         format: px
+
     -
         id: header-inputs-buttons
         title: Buttons
@@ -522,6 +688,7 @@ settings:
         type: variable-number
         default: 5
         format: px
+
     -
         id: header-inputs-checkboxes
         title: Checkboxes
@@ -554,10 +721,9 @@ settings:
         id: custom-checkbox-color
         title: Color
         description: "--checkbox-color"
-        type: variable-themed-color
+        type: variable-color
         format: hex
-        default-light: '#8a5cf5'
-        default-dark: '#8a5cf5'
+        default: '#8a5cf5'
     -
         id: custom-checkbox-border-color
         title: Border color
@@ -587,6 +753,7 @@ settings:
         format: hex
         default-light: '#5c5c5c'
         default-dark: '#b3b3b3'
+
     -
         id: header-inputs-dropdowns
         title: Dropdowns
@@ -629,6 +796,7 @@ settings:
         format: hex
         default-light: '#ffffff'
         default-dark: '#1e1e1e'
+
     -
         id: header-inputs-sliders
         title: Sliders
@@ -695,6 +863,7 @@ settings:
         format: hex
         default-light: '#e0e0e0'
         default-dark: '#363636'
+
     -
         id: header-inputs-toggles
         title: Toggles
@@ -705,10 +874,9 @@ settings:
         id: custom-toggle-background-color
         title: Track background
         description: "unofficial"
-        type: variable-themed-color
+        type: variable-color
         format: hex
-        default-light: '#8a5cf5'
-        default-dark: '#8a5cf5'
+        default: '#8a5cf5'
     -
         id: custom-toggle-border-width
         title: Border width (px)
@@ -744,6 +912,7 @@ settings:
         type: variable-number
         default: 18
         format: px
+
     -
         id: header-inputs-toggles-thumb
         title: Thumb
@@ -792,6 +961,41 @@ settings:
         type: variable-number
         default: 15
         format: px
+    
+
+
+
+
+
+
+    -
+        id: header-misc
+        title: Miscellaneous
+        type: heading
+        level: 1
+        collapsed: true
+        
+    -
+        id: header-misc-collapse-icons
+        title: Collapse icons
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: custom-collapse-icon-color
+        title: Color
+        description: "--collapse-icon-color"
+        type: variable-themed-color
+        format: hex
+        default-light: '#ababab'
+        default-dark: '#666666'
+    -
+        id: custom-collapse-icon-color-collapsed
+        title: Color collapsed
+        description: "--collapse-icon-color-collapsed"
+        type: variable-color
+        format: hex
+        default: '#8a5cf5'
 */
 
 
@@ -938,6 +1142,60 @@ body {
             --canvas-dot-pattern: var(--custom-canvas-dot-pattern);
         }
     }
+
+    /* Code */
+    & {
+        --custom-code-white-space: pre-wrap;
+        --custom-code-radius: 4px;
+        --custom-code-size: 0.875em;
+
+        &.theme-light {
+            --custom-code-background: #fafafa;  /* --color-base-10 */
+            --custom-code-normal: #ababab;      /* --color-base-70 */
+            --custom-code-comment: #5c5c5c;     /* --color-base-50 */
+            --custom-code-function: #e0ac00;    /* --color-yellow */
+            --custom-code-important: #ec7500;   /* --color-orange */
+            --custom-code-keyword: #d53984;     /* --color-pink */
+            --custom-code-operator: #e93147;    /* --color-red */
+            --custom-code-property: #00bfbc;    /* --color-cyan */
+            --custom-code-punctuation: #5c5c5c; /* --color-base-70 */
+            --custom-code-string: #08b94e;      /* --color-green */
+            --custom-code-tag: #e93147;         /* --color-red */
+            --custom-code-value: #7852ee;       /* --color-purple */
+        }
+        &.theme-dark {
+            --custom-code-background: #242424;
+            --custom-code-normal: #b3b3b3;
+            --custom-code-comment: #666666;
+            --custom-code-function: #e0de71;
+            --custom-code-important: #e9973f;
+            --custom-code-keyword: #fa99cd;
+            --custom-code-operator: #fb464c;
+            --custom-code-property: #53dfdd;
+            --custom-code-punctuation: #b3b3b3;
+            --custom-code-string: #44cf6e;
+            --custom-code-tag: #fb464c;
+            --custom-code-value: #a882ff;
+        }
+
+        &.use-custom-settings-code {
+            --code-white-space: var(--custom-code-white-space);
+            --code-radius: var(--custom-code-radius);
+            --code-size: var(--custom-code-size);
+            --code-background: var(--custom-code-background);
+            --code-normal: var(--custom-code-normal);
+            --code-comment: var(--custom-code-comment);
+            --code-function: var(--custom-code-function);
+            --code-important: var(--custom-code-important);
+            --code-keyword: var(--custom-code-keyword);
+            --code-operator: var(--custom-code-operator);
+            --code-property: var(--custom-code-property);
+            --code-punctuation: var(--custom-code-punctuation);
+            --code-string: var(--custom-code-string);
+            --code-tag: var(--custom-code-tag);
+            --code-value: var(--custom-code-value);
+        }
+    }
 }
 
 /* Typography */
@@ -992,15 +1250,14 @@ body {
         --custom-checkbox-size: 16px;
         --custom-checkbox-margin-inline-start: 0.85em;
         --custom-checklist-done-decoration: line-through;
+        --custom-checkbox-color: #8a5cf5;
         &.theme-light {
             --custom-checkbox-marker-color: #ffffff;
-            --custom-checkbox-color: #8a5cf5;
             --custom-checkbox-border-color: #ababab;
             --custom-checklist-done-color: #5c5c5c;
         }
         &.theme-dark {
             --custom-checkbox-marker-color: #1e1e1e;
-            --custom-checkbox-color: #8a5cf5;
             --custom-checkbox-border-color: #666666;
             --custom-checklist-done-color: #b3b3b3;
         }
@@ -1113,6 +1370,25 @@ body {
             & .checkbox-container.is-enabled {
                 background-color: var(--custom-toggle-background-color);
             }
+        }
+    }
+}
+
+/* Misc */
+body {
+    /* Collapse icons */
+    & {
+        --custom-collapse-icon-color-collapsed: #8a5cf5; /* --color-accent */
+        &.theme-light {
+            --custom-collapse-icon-color: #ababab; /* --color-base-50 */
+        }
+        &.theme-dark {
+            --custom-collapse-icon-color: #666666;
+        }
+
+        &.use-custom-settings-collapse-icons {
+            --collapse-icon-color-collapsed: var(--custom-collapse-icon-color-collapsed);
+            --collapse-icon-color: var(--custom-collapse-icon-color);
         }
     }
 }

@@ -14,7 +14,7 @@ Expose the css variables with the Style Setting plugin.
   - [x] Blockquotes
   - [x] Callouts
   - [x] Canvas
-  - [ ] Code
+  - [x] Code
   - [ ] Embeds
   - [ ] Tables
 - Typography
@@ -56,7 +56,7 @@ Expose the css variables with the Style Setting plugin.
   - [ ] Window frame
   - [ ] Workspace
 - Misc
-  - [ ] Collapse icons
+  - [x] Collapse icons
   - [ ] Cursor
   - [ ] Dragging
   - [ ] Footnotes
