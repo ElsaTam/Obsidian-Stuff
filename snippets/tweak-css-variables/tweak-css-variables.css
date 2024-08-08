@@ -574,6 +574,120 @@ settings:
         default-light: '#7852ee'
         default-dark: '#a882ff'
 
+    -
+        id: header-embeds
+        title: Embeds
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: use-custom-settings-embeds
+        title: Use custom embeds
+        type: class-toggle
+        default: false
+    -
+        id: custom-embed-max-height
+        title: Max height (px)
+        description: "--embed-max-height"
+        type: variable-number
+        default: 4000
+        format: px
+    -
+        id: custom-embed-canvas-max-height
+        title: Canvas max height (px)
+        description: "--embed-canvas-max-height"
+        type: variable-number
+        default: 400
+        format: px
+    -
+        id: custom-embed-border-width
+        title: Border width (px)
+        description: "--embed-border-start/end/top/bottom (width)"
+        type: variable-number
+        default: 2
+        format: px
+    -
+        id: custom-embed-border-color
+        title: color
+        description: "--embed-border-start/end/top/bottom (color)"
+        type: variable-color
+        format: hex
+        default: '#8a5cf5'
+    -
+        id: custom-embed-border-start-style
+        title: style
+        description: "--embed-border-start (style)"
+        type: variable-select
+        default: solid
+        options:
+            - none
+            - hidden
+            - dotted
+            - dashed
+            - solid
+            - double
+            - groove
+            - ridge
+            - inset
+            - outset
+    -
+        id: custom-embed-border-end-style
+        title: style
+        description: "--embed-border-end (style)"
+        type: variable-select
+        default: none
+        options:
+            - none
+            - hidden
+            - dotted
+            - dashed
+            - solid
+            - double
+            - groove
+            - ridge
+            - inset
+            - outset
+    -
+        id: custom-embed-border-top-style
+        title: style
+        description: "--embed-border-top (style)"
+        type: variable-select
+        default: none
+        options:
+            - none
+            - hidden
+            - dotted
+            - dashed
+            - solid
+            - double
+            - groove
+            - ridge
+            - inset
+            - outset
+    -
+        id: custom-embed-border-bottom-style
+        title: style
+        description: "--embed-border-bottom (style)"
+        type: variable-select
+        default: none
+        options:
+            - none
+            - hidden
+            - dotted
+            - dashed
+            - solid
+            - double
+            - groove
+            - ridge
+            - inset
+            - outset
+    -
+        id: custom-embed-padding
+        title: Padding
+        description: "--embed-padding"
+        type: variable-text
+        default: 0 0 0 24px
+
 
 
 
@@ -1324,6 +1438,41 @@ body {
             --code-string: var(--custom-code-string);
             --code-tag: var(--custom-code-tag);
             --code-value: var(--custom-code-value);
+        }
+    }
+
+    /* Embeds */
+    & {
+        --custom-embed-max-height: 4000px;
+        --custom-embed-canvas-max-height: 400px;
+        --custom-embed-border-width: 2px;
+        --custom-embed-border-color: #8a5cf5;
+        --custom-embed-border-start-style: solid;
+        --custom-embed-border-end-style: none;
+        --custom-embed-border-top-style: none;
+        --custom-embed-border-bottom-style: none;
+        --custom-embed-padding: 0 0 0 24px;
+
+        &.use-custom-settings-embeds {
+            --embed-max-height: var(--custom-embed-max-height);
+            --embed-canvas-max-height: var(--custom-embed-canvas-max-height);
+            --embed-border-start:
+                var(--custom-embed-border-width)
+                var(--custom-embed-border-start-style)
+                var(--custom-embed-border-color);
+            --embed-border-end:
+                var(--custom-embed-border-width)
+                var(--custom-embed-border-end-style)
+                var(--custom-embed-border-color);
+            --embed-border-top:
+                var(--custom-embed-border-width)
+                var(--custom-embed-border-top-style)
+                var(--custom-embed-border-color);
+            --embed-border-bottom:
+                var(--custom-embed-border-width)
+                var(--custom-embed-border-bottom-style)
+                var(--custom-embed-border-color);
+            --embed-padding: var(--custom-embed-padding);
         }
     }
 }

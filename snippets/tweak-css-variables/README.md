@@ -15,7 +15,7 @@ Expose the css variables with the Style Setting plugin.
   - [x] Callouts
   - [x] Canvas
   - [x] Code
-  - [ ] Embeds
+  - [x] Embeds
   - [ ] Tables
 - Typography
   - [ ] General
