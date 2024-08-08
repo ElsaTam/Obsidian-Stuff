@@ -440,14 +440,8 @@ settings:
         min: 100
         max: 800
     -
-        id: settings-typography-bold
-        title: Bold
-        type: heading
-        level: 2
-        collapsed: true
-    -
         id: custom-bold-modifier
-        title: Weight modifier
+        title: Bold weight modifier
         description: "--bold-modifier"
         type: variable-number-slider
         default: 200
@@ -455,8 +449,16 @@ settings:
         max: 400
     -
         id: custom-bold-color
-        title: Color
+        title: Bold color
         description: "--bold-color"
+        type: variable-themed-color
+        format: hex
+        default-light: '#222222'
+        default-dark: '#dadada'
+    -
+        id: custom-caret-color
+        title: Caret color
+        description: "--caret-color"
         type: variable-themed-color
         format: hex
         default-light: '#222222'
@@ -940,15 +942,24 @@ body {
 
 /* Typography */
 body {
+
+    /* General */
+    --custom-font-weight: 400;
     --custom-bold-modifier: 200;
-    &.theme-light { --custom-bold-color: #222222; }
-    &.theme-dark { --custom-bold-color: #dadada; }
+    &.theme-light {
+        --custom-bold-color: #222222; /* --color-base-100 */
+        --custom-caret-color: #222222; /* --color-base-100 */
+    }
+    &.theme-dark {
+        --custom-bold-color: #dadada;
+        --custom-caret-color: #dadada;
+    }
 
     &.use-custom-settings-typography {
         --font-weight: var(--custom-font-weight);
-        /* Bold */
         --bold-modifier: var(--custom-bold-modifier);
         --bold-color: var(--custom-bold-color);
+        --caret-color: var(--custom-caret-color);
     }
 }
 
