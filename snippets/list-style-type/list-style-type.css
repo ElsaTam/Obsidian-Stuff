@@ -44,6 +44,24 @@ settings:
         type: class-toggle
         default: false
     - 
+        id: indent-settings
+        title: Indentation
+        type: heading
+        level: 1
+        collapsed: true
+    -
+        id: list-style-indent-size
+        title: Indentation size (em)
+        type: variable-number
+        default: 2.25
+        format: em
+    -
+        id: list-style-indent-editing-size
+        title: Editing indent (em)
+        type: variable-number
+        default: 0.75
+        format: em
+    - 
         id: ol-settings
         title: Ordered lists
         type: heading
@@ -264,6 +282,11 @@ body.theme-dark {
 }
 
 body {
+    --list-style-indent-size: 2.25em;
+    --list-indent: var(--list-style-indent-size);
+    --list-style-indent-editing-size: 0.75em;
+    --list-indent-editing: var(--list-style-indent-editing-size);
+    --indentation-guide-editing-indent: calc(var(--list-indent-editing) + 0.1em);
     /* [OL] ORDERED LISTS */
     --list-number-style-type-1: decimal;
     --list-number-style-type-2: lower-alpha;

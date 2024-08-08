@@ -26,7 +26,8 @@ Following features are available:
 - [x] Make the numberings and bullets bold;
 - [x] Make the numberings and bullets glow;
 - [x] Choose a specific font for the bullets (unordered list) in case your text font-family scales the unicode characters in an undesired way;
-- [x] Enable or disable the styling on the active line on live preview mode.
+- [x] Enable or disable the styling on the active line on live preview mode;
+- [x] Control indentations. 
 
 ## Showcase
 
