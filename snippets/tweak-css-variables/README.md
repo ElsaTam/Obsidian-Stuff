@@ -13,7 +13,7 @@ Expose the css variables with the Style Setting plugin.
 - Containers
   - [x] Blockquotes
   - [x] Callouts
-  - [ ] Canvas
+  - [x] Canvas
   - [ ] Code
   - [ ] Embeds
   - [ ] Tables

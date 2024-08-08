@@ -65,12 +65,18 @@ settings:
         opacity: true
         default-light: '#00000000'
         default-dark: '#00000000'
+
     -
         id: header-callouts
         title: Callouts
         type: heading
         level: 2
         collapsed: true
+    -
+        id: use-custom-settings-callouts
+        title: Use custom callouts
+        type: class-toggle
+        default: false
     -
         id: custom-callout-border-width
         title: Border width (px)
@@ -309,6 +315,109 @@ settings:
         opacity: true
         default-light: '#ec7500'
         default-dark: '#e9973f'
+
+    -
+        id: header-canvas
+        title: Canvas
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: use-custom-settings-canvas
+        title: Use custom canvas
+        type: class-toggle
+        default: false
+    -
+        id: custom-canvas-background
+        title: Background
+        description: "--canvas-background"
+        type: variable-themed-color
+        format: hex
+        opacity: true
+        default-light: '#ffffff'
+        default-dark: '#1e1e1e'
+    -
+        id: custom-canvas-card-label-color
+        title: Card label color
+        description: "--canvas-card-label-color"
+        type: variable-themed-color
+        format: hex
+        opacity: true
+        default-light: '#ababab'
+        default-dark: '#666666'
+    -
+        id: custom-canvas-dot-pattern
+        title: Dot pattern
+        description: "--canvas-dot-pattern"
+        type: variable-themed-color
+        format: hex
+        opacity: true
+        default-light: '#e0e0e0'
+        default-dark: '#363636'
+    -
+        id: header-canvas-palette
+        title: Palette
+        type: heading
+        level: 3
+        collapsed: true
+    -
+        id: custom-canvas-color-1
+        title: Color 1
+        description: "--canvas-color-1"
+        type: variable-themed-color
+        format: hex
+        opacity: true
+        default-light: '#e93147'
+        default-dark: '#fb464c'
+    -
+        id: custom-canvas-color-2
+        title: Color 2
+        description: "--canvas-color-2"
+        type: variable-themed-color
+        format: hex
+        opacity: true
+        default-light: '#ec7500'
+        default-dark: '#e9973f'
+    -
+        id: custom-canvas-color-3
+        title: Color 3
+        description: "--canvas-color-3"
+        type: variable-themed-color
+        format: hex
+        opacity: true
+        default-light: '#e0ac00'
+        default-dark: '#e0de71'
+    -
+        id: custom-canvas-color-4
+        title: Color 4
+        description: "--canvas-color-4"
+        type: variable-themed-color
+        format: hex
+        opacity: true
+        default-light: '#08b94e'
+        default-dark: '#44cf6e'
+    -
+        id: custom-canvas-color-5
+        title: Color 5
+        description: "--canvas-color-5"
+        type: variable-themed-color
+        format: hex
+        opacity: true
+        default-light: '#00bfbc'
+        default-dark: '#53dfdd'
+    -
+        id: custom-canvas-color-6
+        title: Color 56
+        description: "--canvas-color-6"
+        type: variable-themed-color
+        format: hex
+        opacity: true
+        default-light: '#7852ee'
+        default-dark: '#a882ff'
+
+
+
+
     
 
     -
@@ -755,7 +864,7 @@ body {
             --custom-callout-warning: 233, 151, 63;
         }
 
-        &.use-custom-settings-blockquote {
+        &.use-custom-settings-callouts {
             --callout-border-width: var(--custom-callout-border-width);
             --callout-border-opacity: var(--custom-callout-border-opacity);
             --callout-padding:
@@ -787,6 +896,44 @@ body {
             --callout-todo: var(--custom-callout-todo);
             --callout-warning: var(--custom-callout-warning);
             --callout-quote: var(--custom-callout-quote);
+        }
+    }
+
+    /* Canvas */
+    & {
+        &.theme-light {
+            --custom-canvas-background: #ffffff; /* --color-base-00 */
+            --custom-canvas-card-label-color: #ababab; /* --color-base-50 */
+            --custom-canvas-color-1: 233, 49, 71;  /* --color-red-rgb    */
+            --custom-canvas-color-2: 236, 117, 0;  /* --color-orange-rgb */
+            --custom-canvas-color-3: 224, 172, 0;  /* --color-yellow-rgb */
+            --custom-canvas-color-4: 8, 185, 78;   /* --color-green-rgb  */
+            --custom-canvas-color-5: 0, 191, 188;  /* --color-cyan-rgb   */
+            --custom-canvas-color-6: 120, 82, 238; /* --color-purple-rgb */
+            --custom-canvas-dot-pattern: #e0e0e0; /* --color-base-30 */;
+        }
+        &.theme-dark {
+            --custom-canvas-background: #1e1e1e;
+            --custom-canvas-card-label-color: #666666;
+            --custom-canvas-color-1: 251, 70, 76;
+            --custom-canvas-color-2: 233, 151, 63;
+            --custom-canvas-color-3: 224, 222, 113;
+            --custom-canvas-color-4: 68, 207, 110;
+            --custom-canvas-color-5: 83, 223, 221;
+            --custom-canvas-color-6: 168, 130, 255;
+            --custom-canvas-dot-pattern: #363636;
+        }
+
+        &.use-custom-settings-canvas {
+            --canvas-background: var(--custom-canvas-background);
+            --canvas-card-label-color: var(--custom-canvas-card-label-color);
+            --canvas-color-1: var(--custom-canvas-color-1);
+            --canvas-color-2: var(--custom-canvas-color-2);
+            --canvas-color-3: var(--custom-canvas-color-3);
+            --canvas-color-4: var(--custom-canvas-color-4);
+            --canvas-color-5: var(--custom-canvas-color-5);
+            --canvas-color-6: var(--custom-canvas-color-6);
+            --canvas-dot-pattern: var(--custom-canvas-dot-pattern);
         }
     }
 }
