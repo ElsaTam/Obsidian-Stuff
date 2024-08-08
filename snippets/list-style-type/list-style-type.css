@@ -19,12 +19,12 @@ settings:
         title: Use font color
         description: "Doesn't work if you enable \"Use custom font\""
         type: class-toggle
-        default: true;
+        default: false
     -
         id: list-style-enable-color
         title: Use custom color
         type: class-toggle
-        default: true;
+        default: false
     - 
         id: list-style-color
         title: Numbering and bullets custom color
