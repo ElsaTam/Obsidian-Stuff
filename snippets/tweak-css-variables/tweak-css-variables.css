@@ -1,0 +1,627 @@
+/* @settings
+
+name: Tweak CSS variables
+id: tweak-css-variables
+settings:
+
+    -
+        id: header-containers
+        title: Containers
+        type: heading
+        level: 1
+        collapsed: true
+    -
+        id: header-blockquote
+        title: Blockquotes
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: use-custom-settings-blockquote
+        title: Use custom blockquotes
+        type: class-toggle
+        default: false
+    -
+        id: custom-blockquote-border-thickness
+        title: Border thickness (px)
+        description: "--blockquote-border-thickness"
+        type: variable-number-slider
+        default: 2
+        min: 0
+        max: 20
+        format: px
+    - 
+        id: custom-blockquote-border-color
+        title: Border color
+        description: "--blockquote-border-color"
+        type: variable-themed-color
+        format: hex
+        default-light: '#8a5cf5'
+        default-dark: '#8a5cf5'
+    -
+        id: custom-blockquote-font-style
+        title: Font style
+        description: "--blockquote-font-style"
+        type: variable-select
+        default: normal
+        options:
+            - normal
+            - italic
+            - oblique
+    -
+        id: custom-blockquote-color
+        title: Color
+        description: "--blockquote-color"
+        type: variable-themed-color
+        format: hex
+        default-light: '#222222'
+        default-dark: '#dadada'
+    -
+        id: custom-blockquote-background-color
+        title: Background color
+        description: "--blockquote-background-color"
+        type: variable-themed-color
+        format: hex
+        opacity: true
+        default-light: '#00000000'
+        default-dark: '#00000000'
+    
+
+    -
+        id: header-typography
+        title: Typography
+        type: heading
+        level: 1
+        collapsed: true
+    -
+        id: use-custom-settings-typography
+        title: Use custom typography
+        type: class-toggle
+        default: false
+    -
+        id: custom-font-weight
+        title: Font weight
+        description: "--font-weight"
+        type: variable-number-slider
+        default: 400
+        min: 100
+        max: 800
+    -
+        id: settings-typography-bold
+        title: Bold
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: custom-bold-modifier
+        title: Weight modifier
+        description: "--bold-modifier"
+        type: variable-number-slider
+        default: 200
+        min: 0
+        max: 400
+    -
+        id: custom-bold-color
+        title: Color
+        description: "--bold-color"
+        type: variable-themed-color
+        format: hex
+        default-light: '#222222'
+        default-dark: '#dadada'
+
+        
+    -
+        id: header-inputs
+        title: Inputs
+        type: heading
+        level: 1
+        collapsed: true
+    -
+        id: use-custom-settings-inputs
+        title: Use custom inputs
+        type: class-toggle
+        default: false
+    -
+        id: header-inputs-general
+        title: General
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: custom-input-height
+        title: Height
+        description: "--input-height"
+        type: variable-number
+        default: 30
+        format: px
+    -
+        id: custom-input-radius
+        title: Radius
+        description: "--input-radius"
+        type: variable-number
+        default: 5
+        format: px
+    -
+        id: custom-input-font-weight
+        title: Font weight
+        description: "--input-font-weight"
+        type: variable-number
+        default: 400
+    -
+        id: custom-input-border-width
+        title: Border width
+        description: "--input-border-width"
+        type: variable-number
+        default: 1
+        format: px
+    -
+        id: header-inputs-buttons
+        title: Buttons
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: custom-button-radius
+        title: Radius (px)
+        description: "--button-radius"
+        type: variable-number
+        default: 5
+        format: px
+    -
+        id: header-inputs-checkboxes
+        title: Checkboxes
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: custom-checkbox-radius
+        title: Radius (px)
+        description: "--checkbox-radius"
+        type: variable-number
+        default: 4
+        format: px
+    -
+        id: custom-checkbox-size
+        title: Size (px)
+        description: "--checkbox-size"
+        type: variable-number
+        default: 16
+        format: px
+    -
+        id: custom-checkbox-marker-color
+        title: Marker color
+        description: "--checkbox-marker-color"
+        type: variable-themed-color
+        format: hex
+        default-light: '#ffffff'
+        default-dark: '#1e1e1e'
+    -
+        id: custom-checkbox-color
+        title: Color
+        description: "--checkbox-color"
+        type: variable-themed-color
+        format: hex
+        default-light: '#8a5cf5'
+        default-dark: '#8a5cf5'
+    -
+        id: custom-checkbox-border-color
+        title: Border color
+        description: "--checkbox-border-color"
+        type: variable-themed-color
+        format: hex
+        default-light: '#ababab'
+        default-dark: '#666666'
+    -
+        id: custom-checkbox-margin-inline-start
+        title: Margin inline start (em)
+        description: "--checkbox-margin-inline-start"
+        type: variable-number
+        default: 0.85
+        format: em
+    -
+        id: custom-checklist-done-decoration
+        title: Checklist done decoration
+        description: "--checklist-done-decoration"
+        type: variable-text
+        default: line-through
+    -
+        id: custom-checklist-done-color
+        title: Checklist done color
+        description: "--checklist-done-color"
+        type: variable-themed-color
+        format: hex
+        default-light: '#5c5c5c'
+        default-dark: '#b3b3b3'
+    -
+        id: header-inputs-dropdowns
+        title: Dropdowns
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: custom-dropdown-padding-top
+        title: Padding top (em)
+        description: "--dropdown-padding (top)"
+        type: variable-number
+        default: 0
+        format: em
+    -
+        id: custom-dropdown-padding-right
+        title: Padding right (em)
+        description: "--dropdown-padding (right)"
+        type: variable-number
+        default: 1.9
+        format: em
+    -
+        id: custom-dropdown-padding-bottom
+        title: Padding bottom (em)
+        description: "--dropdown-padding (bottom)"
+        type: variable-number
+        default: 0
+        format: em
+    -
+        id: custom-dropdown-padding-left
+        title: Padding left (em)
+        description: "--dropdown-padding (left)"
+        type: variable-number
+        default: 0.8
+        format: em
+    -
+        id: custom-dropdown-background
+        title: Background
+        description: "--dropdown-background"
+        type: variable-themed-color
+        format: hex
+        default-light: '#ffffff'
+        default-dark: '#1e1e1e'
+    -
+        id: header-inputs-sliders
+        title: Sliders
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: custom-slider-thumb-border-width
+        title: Thumb border width (px)
+        description: "--slider-thumb-border-width"
+        type: variable-number
+        default: 1
+        format: px
+    -
+        id: custom-slider-thumb-border-color
+        title: Thumb border color
+        description: "--slider-thumb-border-color"
+        type: variable-themed-color
+        format: hex
+        default-light: '#d4d4d4'
+        default-dark: '#3f3f3f'
+    -
+        id: custom-slider-thumb-height
+        title: Thumb height (px)
+        description: "--slider-thumb-height"
+        type: variable-number
+        default: 18
+        format: px
+    -
+        id: custom-slider-thumb-width
+        title: Thumb width (px)
+        description: "--slider-thumb-width"
+        type: variable-number
+        default: 18
+        format: px
+    -
+        id: custom-slider-thumb-y
+        title: Thumb y (px)
+        description: "--slider-thumb-y"
+        type: variable-number
+        default: -6
+        format: px
+    -
+        id: custom-slider-thumb-radius
+        title: Thumb radius (%)
+        description: "--slider-thumb-radius"
+        type: variable-number-slider
+        default: 50
+        min: 0
+        max: 50
+        format: "%"
+    -
+        id: custom-slider-track-height
+        title: Track height (px)
+        description: "--slider-track-height"
+        type: variable-number
+        default: 3
+        format: px
+    -
+        id: custom-slider-track-background
+        title: Track background
+        description: "--slider-track-background"
+        type: variable-themed-color
+        format: hex
+        default-light: '#e0e0e0'
+        default-dark: '#363636'
+    -
+        id: header-inputs-toggles
+        title: Toggles
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: custom-toggle-background-color
+        title: Track background
+        description: "unofficial"
+        type: variable-themed-color
+        format: hex
+        default-light: '#8a5cf5'
+        default-dark: '#8a5cf5'
+    -
+        id: custom-toggle-border-width
+        title: Border width (px)
+        description: "--toggle-border-width"
+        type: variable-number
+        default: 2
+        format: px
+    -
+        id: custom-toggle-s-border-width
+        title: Small border width (px)
+        description: "--toggle-s-border-width"
+        type: variable-number
+        default: 2
+        format: px
+    -
+        id: custom-toggle-width
+        title: Width (px)
+        description: "--toggle-width"
+        type: variable-number
+        default: 40
+        format: px
+    -
+        id: custom-toggle-s-width
+        title: Small width (px)
+        description: "--toggle-s-width"
+        type: variable-number
+        default: 34
+        format: px
+    -
+        id: custom-toggle-radius
+        title: Radius (px)
+        description: "--toggle-radius"
+        type: variable-number
+        default: 18
+        format: px
+    -
+        id: header-inputs-toggles-thumb
+        title: Thumb
+        type: heading
+        level: 3
+        collapsed: true
+    -
+        id: custom-toggle-thumb-color
+        title: Color
+        description: "--toggle-thumb-color"
+        type: variable-color
+        format: hex
+        default: '#ffffff'
+    -
+        id: custom-toggle-thumb-radius
+        title: Radius (px)
+        description: "--toggle-thumb-radius"
+        type: variable-number
+        default: 18
+        format: px
+    -
+        id: custom-toggle-thumb-height
+        title: Height (px)
+        description: "--toggle-thumb-height"
+        type: variable-number
+        default: 18
+        format: px
+    -
+        id: custom-toggle-thumb-width
+        title: Width (px)
+        description: "--toggle-thumb-width"
+        type: variable-number
+        default: 18
+        format: px
+    -
+        id: custom-toggle-s-thumb-width
+        title: Small width (px)
+        description: "--toggle-s-thumb-width"
+        type: variable-number
+        default: 15
+        format: px
+    -
+        id: custom-toggle-s-thumb-height
+        title: Small height (px)
+        description: "--toggle-s-thumb-height"
+        type: variable-number
+        default: 15
+        format: px
+*/
+
+
+/* Blockquotes */
+body {
+    --custom-blockquote-border-thickness: 2px;
+    --custom-blockquote-border-color: #8a5cf5;
+    --custom-blockquote-font-style: normal;
+    --custom-blockquote-background-color: #00000000;
+    &.theme-light { --custom-blockquote-color: #222222; }
+    &.theme-dark { --custom-blockquote-color: #dadada; }
+
+    &.use-custom-settings-blockquote {
+        --blockquote-border-thickness: var(--custom-blockquote-border-thickness);
+        --blockquote-border-color: var(--custom-blockquote-border-color);
+        --blockquote-font-style: var(--custom-blockquote-font-style);
+        --blockquote-color: var(--custom-blockquote-color);
+        --blockquote-background-color: var(--custom-blockquote-background-color);
+    }
+}
+
+/* Typography */
+body {
+    --custom-bold-modifier: 200;
+    &.theme-light { --custom-bold-color: #222222; }
+    &.theme-dark { --custom-bold-color: #dadada; }
+
+    &.use-custom-settings-typography {
+        --font-weight: var(--custom-font-weight);
+        /* Bold */
+        --bold-modifier: var(--custom-bold-modifier);
+        --bold-color: var(--custom-bold-color);
+    }
+}
+
+/* Inputs */
+body {
+    --custom-input-height: 30px;
+    --custom-input-radius: 5px;
+    --custom-input-font-weight: 200;
+    --custom-input-border-width: 1px;
+
+    &.use-custom-settings-inputs {
+        --input-height: var(--custom-input-height);
+        --input-radius: var(--custom-input-radius);
+        --input-font-weight: var(--custom-input-font-weight);
+        --input-border-width: var(--custom-input-border-width);
+    }
+
+    /* Buttons */
+    & {
+        --custom-button-radius: 5px;
+
+        &.use-custom-settings-inputs {
+            --button-radius: var(--custom-button-radius);
+        }
+    }
+
+    /* Checkboxes */
+    & {
+        --custom-checkbox-radius: 4px;
+        --custom-checkbox-size: 16px;
+        --custom-checkbox-margin-inline-start: 0.85em;
+        --custom-checklist-done-decoration: line-through;
+        &.theme-light {
+            --custom-checkbox-marker-color: #ffffff;
+            --custom-checkbox-color: #8a5cf5;
+            --custom-checkbox-border-color: #ababab;
+            --custom-checklist-done-color: #5c5c5c;
+        }
+        &.theme-dark {
+            --custom-checkbox-marker-color: #1e1e1e;
+            --custom-checkbox-color: #8a5cf5;
+            --custom-checkbox-border-color: #666666;
+            --custom-checklist-done-color: #b3b3b3;
+        }
+
+        &.use-custom-settings-inputs {
+            --checkbox-radius: var(--custom-checkbox-radius);
+            --checkbox-size: var(--custom-checkbox-size);
+            --checkbox-marker-color: var(--custom-checkbox-marker-color);
+            --checkbox-color: var(--custom-checkbox-color);
+            --checkbox-color-hover: hsl(from var(--checkbox-color) calc(h - 2) calc(s * 1.02 / 1.01) calc(l * 1.15 / 1.1075));
+            --checkbox-border-color: var(--custom-checkbox-border-color);
+            --checkbox-margin-inline-start: var(--custom-checkbox-margin-inline-start);
+            --checklist-done-decoration: var(--custom-checklist-done-decoration);
+            --checklist-done-color: var(--custom-checklist-done-color);
+            &.theme-light {
+                --checkbox-border-color-hover: hsl(from var(--checkbox-border-color) h s calc(l * 36 / 67));
+            }
+            &.theme-dark {
+                --checkbox-border-color-hover: hsl(from var(--checkbox-border-color) h s calc(l * 40 / 85));
+            }
+        }
+    }
+
+    /* Dropdowns */
+    & {
+        --custom-dropdown-padding-top: 0;
+        --custom-dropdown-padding-right: 1.9em;
+        --custom-dropdown-padding-bottom: 0;
+        --custom-dropdown-padding-left: 0.8em;
+        &.theme-light {
+            --custom-dropdown-background: #ffffff; /* --color-base-00 */
+        }
+        &.theme-dark {
+            --custom-dropdown-background: #1e1e1e;
+        }
+
+        &.use-custom-settings-inputs {
+            --dropdown-background: var(--custom-dropdown-background);
+            --dropdown-padding:
+                var(--custom-dropdown-padding-top)
+                var(--custom-dropdown-padding-right)
+                var(--custom-dropdown-padding-bottom)
+                var(--custom-dropdown-padding-left);
+            &.theme-light {
+                --dropdown-background-hover: hsl(from var(--dropdown-background) h s calc(l * 98 / 100)); /* --color-base-10 */
+            }
+            &.theme-dark {
+                --dropdown-background-hover: hsl(from var(--dropdown-background) h s calc(l * 14 / 12));
+            }
+        }
+    }
+
+    /* Sliders */
+    & {
+        --custom-slider-thumb-border-width: 1px;
+        --custom-slider-thumb-height: 18px;
+        --custom-slider-thumb-width: 18px;
+        --custom-slider-thumb-y: -6px;
+        --custom-slider-thumb-radius: 50%;
+        --custom-slider-track-height: 3px;
+        &.theme-light {
+            --custom-slider-thumb-border-color: #d4d4d4; /* --color-base-35 */
+            --custom-slider-track-background: #e0e0e0; /* --color-base-30 */
+        }
+        &.theme-dark {
+            --custom-slider-thumb-border-color: #3f3f3f;
+            --custom-slider-track-background: #363636;
+        }
+
+        &.use-custom-settings-inputs {
+            --slider-thumb-border-width: var(--custom-slider-thumb-border-width);
+            --slider-thumb-height: var(--custom-slider-thumb-height);
+            --slider-thumb-width: var(--custom-slider-thumb-width);
+            --slider-thumb-y: var(--custom-slider-thumb-y);
+            --slider-thumb-radius: var(--custom-slider-thumb-radius);
+            --slider-track-height: var(--custom-slider-track-height);
+            --slider-thumb-border-color: var(--custom-slider-thumb-border-color);
+            --slider-track-background: var(--custom-slider-track-background);
+        }
+    }
+
+    /* Toggles */
+    & {
+        --custom-toggle-border-width: 2px;
+        --custom-toggle-width: 40px;
+        --custom-toggle-radius: 18px;
+        --custom-toggle-thumb-color: white;
+        --custom-toggle-thumb-radius: 18px;
+        --custom-toggle-thumb-height: 18px;
+        --custom-toggle-thumb-width: 18px;
+        --custom-toggle-s-border-width: 2px;
+        --custom-toggle-s-width: 34px;
+        --custom-toggle-s-thumb-height: 15px;
+        --custom-toggle-s-thumb-width: 15px;
+        --custom-toggle-background-color: #8a5cf5; /* --color-accent-1 */
+
+        &.use-custom-settings-inputs {
+            --toggle-border-width: var(--custom-toggle-border-width);
+            --toggle-width: var(--custom-toggle-width);
+            --toggle-radius: var(--custom-toggle-radius);
+            --toggle-thumb-color: var(--custom-toggle-thumb-color);
+            --toggle-thumb-radius: var(--custom-toggle-thumb-radius);
+            --toggle-thumb-height: var(--custom-toggle-thumb-height);
+            --toggle-thumb-width: var(--custom-toggle-thumb-width);
+            --toggle-s-border-width: var(--custom-toggle-s-border-width);
+            --toggle-s-width: var(--custom-toggle-s-width);
+            --toggle-s-thumb-height: var(--custom-toggle-s-thumb-height);
+            --toggle-s-thumb-width: var(--custom-toggle-s-thumb-width);
+
+            & .checkbox-container.is-enabled {
+                background-color: var(--custom-toggle-background-color);
+            }
+        }
+    }
+}
