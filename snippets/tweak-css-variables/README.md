@@ -25,7 +25,6 @@ Expose the css variables with the Style Setting plugin.
   - [x] Font weights
   - [x] Headings
   - [x] Inline title
-  - [ ] Italic
   - [ ] Line heights
   - [ ] Links
   - [ ] Lists

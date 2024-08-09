@@ -715,11 +715,19 @@ settings:
     -
         id: custom-bold-color
         title: Bold color
-        description: "--bold-color"
+        description: "--bold-color, default inherit"
         type: variable-themed-color
         format: hex
-        default-light: '#222222'
-        default-dark: '#dadada'
+        default-light: '#'
+        default-dark: '#'
+    -
+        id: custom-italic-color
+        title: Italic color
+        description: "--italic-color, default inherit"
+        type: variable-themed-color
+        format: hex
+        default-light: '#'
+        default-dark: '#'
     -
         id: custom-caret-color
         title: Caret color
@@ -2481,11 +2489,9 @@ body {
         --custom-font-weight: 400;
         --custom-bold-modifier: 200;
         &.theme-light {
-            --custom-bold-color: #222222; /* --color-base-100 */
             --custom-caret-color: #222222; /* --color-base-100 */
         }
         &.theme-dark {
-            --custom-bold-color: #dadada;
             --custom-caret-color: #dadada;
         }
 
@@ -2493,6 +2499,7 @@ body {
             --font-weight: var(--custom-font-weight);
             --bold-modifier: var(--custom-bold-modifier);
             --bold-color: var(--custom-bold-color);
+            --italic-color: var(--custom-italic-color);
             --caret-color: var(--custom-caret-color);
         }
     }
