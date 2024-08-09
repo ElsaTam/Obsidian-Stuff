@@ -44,7 +44,7 @@ Expose the css variables with the Style Setting plugin.
   - [x] Dividers
   - [x] File layout
   - [x] Horizontal rules
-  - [ ] Z-index
+  - [x] Z-index
   - [ ] PDF view
   - [ ] Ribbon
   - [ ] Scrollbars

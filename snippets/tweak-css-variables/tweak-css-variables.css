@@ -1856,6 +1856,78 @@ settings:
             - start
             - center
             - end
+        
+    -
+        id: header-misc-layer
+        title: Layers (z-index)
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: use-custom-settings-layer
+        title: Use custom z-index
+        type: class-toggle
+        default: false
+    -
+        id: custom-layer-cover
+        title: Cover
+        description: "--layer-cover"
+        type: variable-number
+        default: 5
+    -
+        id: custom-layer-sidedock
+        title: Sidedock
+        description: "--layer-sidedock"
+        type: variable-number
+        default: 10
+    -
+        id: custom-layer-status-bar
+        title: Status bar
+        description: "--layer-status-bar"
+        type: variable-number
+        default: 15
+    -
+        id: custom-layer-popover
+        title: Popover
+        description: "--layer-popover"
+        type: variable-number
+        default: 30
+    -
+        id: custom-layer-slides
+        title: Slides
+        description: "--layer-slides"
+        type: variable-number
+        default: 45
+    -
+        id: custom-layer-modal
+        title: Modal
+        description: "--layer-modal"
+        type: variable-number
+        default: 50
+    -
+        id: custom-layer-notice
+        title: Notice
+        description: "--layer-notice"
+        type: variable-number
+        default: 60
+    -
+        id: custom-layer-menu
+        title: Menu
+        description: "--layer-menu"
+        type: variable-number
+        default: 65
+    -
+        id: custom-layer-tooltip
+        title: Tooltip
+        description: "--layer-tooltip"
+        type: variable-number
+        default: 70
+    -
+        id: custom-layer-dragged-item
+        title: Tooltip
+        description: "--layer-dragged-item"
+        type: variable-number
+        default: 80
     
 
 
@@ -2888,6 +2960,33 @@ body {
                 var(--custom-file-header-border-style)
                 var(--custom-file-header-border-color);
             --file-header-justify: var(--custom-file-header-justify);
+        }
+    }
+    
+    /* Z-index */
+    & {
+        --custom-layer-cover: 5;
+        --custom-layer-sidedock: 10;
+        --custom-layer-status-bar: 15;
+        --custom-layer-popover: 30;
+        --custom-layer-slides: 45;
+        --custom-layer-modal: 50;
+        --custom-layer-notice: 60;
+        --custom-layer-menu: 65;
+        --custom-layer-tooltip: 70;
+        --custom-layer-dragged-item: 80;
+
+        &.use-custom-settings-layer {
+            --layer-cover: var(--custom-layer-cover);
+            --layer-sidedock: var(--custom-layer-sidedock);
+            --layer-status-bar: var(--custom-layer-status-bar);
+            --layer-popover: var(--custom-layer-popover);
+            --layer-slides: var(--custom-layer-slides);
+            --layer-modal: var(--custom-layer-modal);
+            --layer-notice: var(--custom-layer-notice);
+            --layer-menu: var(--custom-layer-menu);
+            --layer-tooltip: var(--custom-layer-tooltip);
+            --layer-dragged-item: var(--custom-layer-dragged-item);
         }
     }
 }
