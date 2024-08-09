@@ -2704,13 +2704,13 @@ settings:
         
     -
         id: header-tab
-        title: Tab
+        title: Tabs
         type: heading
         level: 2
         collapsed: true
     -
         id: use-custom-settings-tab
-        title: Use custom tab
+        title: Use custom tabs
         type: class-toggle
         default: false
     -
@@ -2847,6 +2847,82 @@ settings:
         type: variable-number
         default: 320
         format: px
+        
+    -
+        id: header-tab-stacked
+        title: Stacked tabs
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: use-custom-settings-tab-stacked
+        title: Use custom stacked tabs
+        type: class-toggle
+        default: false
+    -
+        id: custom-tab-stacked-pane-width
+        title: Pane width (px)
+        description: "--tab-stacked-pane-width"
+        type: variable-number
+        default: 700
+        format: px
+    -
+        id: custom-tab-stacked-header-width
+        title: Header width (px)
+        description: "--tab-stacked-header-width"
+        type: variable-number
+        default: 40
+        format: px
+    -
+        id: custom-tab-stacked-font-size
+        title: Font size (px)
+        description: "--tab-stacked-font-size"
+        type: variable-number
+        default: 13
+        format: px
+    -
+        id: custom-tab-stacked-font-weight
+        title: Font weight
+        description: "--tab-stacked-font-weight"
+        type: variable-number
+        default: 400
+    -
+        id: custom-tab-stacked-text-align
+        title: Text align
+        description: "--tab-stacked-text-align"
+        type: variable-select
+        default: start
+        options:
+            - start
+            - end
+            - left
+            - right
+            - center
+            - justify
+            - justify-all
+            - match-parent
+    -
+        id: custom-tab-stacked-text-transform
+        title: Text transform
+        description: "--tab-stacked-text-transform"
+        type: variable-text
+        default: rotate(0deg)
+    -
+        id: custom-tab-stacked-text-writing-mode
+        title: Text writing mode
+        description: "--tab-stacked-text-writing-mode"
+        type: variable-select
+        default: vertical-lr
+        options:
+            - horizontal-tb
+            - vertical-rl
+            - vertical-lr
+    -
+        id: custom-tab-stacked-shadow
+        title: Shadow
+        description: "--tab-stacked-shadow"
+        type: variable-text
+        default: -8px 0 8px 0 rgba(0, 0, 0, 0.05)
 
 
         
@@ -5198,6 +5274,29 @@ body {
             --tab-radius-active: var(--custom-tab-radius-active);
             --tab-width: var(--custom-tab-width);
             --tab-max-width: var(--custom-tab-max-width);
+        }
+    }
+
+    /* Stacked tabs */
+    & {
+        --custom-tab-stacked-pane-width: 700px;
+        --custom-tab-stacked-header-width: 40px;
+        --custom-tab-stacked-font-size: 13px;
+        --custom-tab-stacked-font-weight: 400;
+        --custom-tab-stacked-text-align: start;
+        --custom-tab-stacked-text-transform: rotate(0deg);
+        --custom-tab-stacked-text-writing-mode: vertical-lr;
+        --custom-tab-stacked-shadow: -8px 0 8px 0 rgba(0, 0, 0, 0.05);
+
+        &.use-custom-settings-tab-stacked {
+            --tab-stacked-pane-width: var(--custom-tab-stacked-pane-width);
+            --tab-stacked-header-width: var(--custom-tab-stacked-header-width);
+            --tab-stacked-font-size: var(--custom-tab-stacked-font-size);
+            --tab-stacked-font-weight: var(--custom-tab-stacked-font-weight);
+            --tab-stacked-text-align: var(--custom-tab-stacked-text-align);
+            --tab-stacked-text-transform: var(--custom-tab-stacked-text-transform);
+            --tab-stacked-text-writing-mode: var(--custom-tab-stacked-text-writing-mode);
+            --tab-stacked-shadow: var(--custom-tab-stacked-shadow);
         }
     }
 }
