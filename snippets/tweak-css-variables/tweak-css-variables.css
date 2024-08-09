@@ -4,6 +4,66 @@ name: Tweak CSS variables
 id: tweak-css-variables
 settings:
 
+
+    -
+        id: header-base
+        title: Base variables
+        type: heading
+        level: 1
+        collapsed: true
+        
+    -
+        id: header-radius
+        title: Radiuses
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: use-custom-settings-radius
+        title: Use custom radiuses
+        type: class-toggle
+        default: false
+    -
+        id: custom-radius-s
+        title: Radius S (px)
+        description: "--radius-s"
+        type: variable-number
+        default: 4
+        format: px
+    -
+        id: custom-radius-m
+        title: Radius M (px)
+        description: "--radius-m"
+        type: variable-number
+        default: 8
+        format: px
+    -
+        id: custom-radius-l
+        title: Radius L (px)
+        description: "--radius-l"
+        type: variable-number
+        default: 12
+        format: px
+    -
+        id: custom-radius-xl
+        title: Radius XL (px)
+        description: "--radius-xl"
+        type: variable-number
+        default: 16
+        format: px
+
+
+
+
+
+
+
+
+
+
+
+
+
     -
         id: header-containers
         title: Containers
@@ -3638,47 +3698,74 @@ settings:
         default-dark: '#555555"
         
     -
-        id: header-radius
-        title: Radiuses
+        id: header-search
+        title: Search
         type: heading
         level: 2
         collapsed: true
     -
-        id: use-custom-settings-radius
-        title: Use custom radiuses
+        id: use-custom-settings-search
+        title: Use custom search
         type: class-toggle
         default: false
     -
-        id: custom-radius-s
-        title: Radius S (px)
-        description: "--radius-s"
+        id: custom-search-clear-button-color
+        title: Clear button color
+        description: "--search-clear-button-color"
+        type: variable-themed-color
+        format: hex
+        default-light: '#5c5c5c"
+        default-dark: '#b3b3b3"
+    -
+        id: custom-search-clear-button-size
+        title: Clear button size (px)
+        description: "--search-clear-button-size"
         type: variable-number
-        default: 4
+        default: 13
         format: px
     -
-        id: custom-radius-m
-        title: Radius M (px)
-        description: "--radius-m"
+        id: custom-search-icon-color
+        title: Icon color
+        description: "--search-icon-color"
+        type: variable-themed-color
+        format: hex
+        default-light: '#5c5c5c"
+        default-dark: '#b3b3b3"
+    -
+        id: custom-search-icon-size
+        title: Icon size (px)
+        description: "--search-icon-size"
         type: variable-number
-        default: 8
+        default: 18
         format: px
     -
-        id: custom-radius-l
-        title: Radius L (px)
-        description: "--radius-l"
-        type: variable-number
-        default: 12
-        format: px
-    -
-        id: custom-radius-xl
-        title: Radius XL (px)
-        description: "--radius-xl"
-        type: variable-number
-        default: 16
-        format: px
+        id: custom-search-result-background
+        title: Result background
+        description: "--search-result-background"
+        type: variable-themed-color
+        format: hex
+        default-light: '#ffffff"
+        default-dark: '#1e1e1e"
         
 */
 
+/* Base */
+body {
+    /* Radiuses */
+    & {
+        --custom-radius-s: 4px;
+        --custom-radius-m: 8px;
+        --custom-radius-l: 12px;
+        --custom-radius-xl: 16px;
+
+        &.use-custom-settings-radius {
+            --radius-s: var(--custom-radius-s);
+            --radius-m: var(--custom-radius-m);
+            --radius-l: var(--custom-radius-l);
+            --radius-xl: var(--custom-radius-xl);
+        }
+    }
+}
 
 /* Containers */
 body {
@@ -4997,18 +5084,28 @@ body {
         }
     }
 
-    /* Radiuses */
+    /* Search */
     & {
-        --custom-radius-s: 4px;
-        --custom-radius-m: 8px;
-        --custom-radius-l: 12px;
-        --custom-radius-xl: 16px;
+        --custom-search-clear-button-size: 13px;
+        --custom-search-icon-size: 18px;
 
-        &.use-custom-settings-radius {
-            --radius-s: var(--custom-radius-s);
-            --radius-m: var(--custom-radius-m);
-            --radius-l: var(--custom-radius-l);
-            --radius-xl: var(--custom-radius-xl);
+        &.theme-light {
+            --custom-search-clear-button-color: #5c5c5c; /* --color-base-70 */
+            --custom-search-icon-color: #5c5c5c; /* --color-base-70 */
+            --custom-search-result-background: #ffffff; /* --color-base-00 */
+        }
+        &.theme-dark {
+            --custom-search-clear-button-color: #b3b3b3; /* --color-base-70 */
+            --custom-search-icon-color: #b3b3b3; /* --color-base-70 */
+            --custom-search-result-background: #1e1e1e; /* --color-base-00 */
+        }
+
+        &.use-custom-settings-search {
+            --search-clear-button-color: var(--custom-search-clear-button-color);
+            --search-clear-button-size: var(--custom-search-clear-button-size);
+            --search-icon-color: var(--custom-search-icon-color);
+            --search-icon-size: var(--custom-search-icon-size);
+            --search-result-background: var(--custom-search-result-background);
         }
     }
 }
