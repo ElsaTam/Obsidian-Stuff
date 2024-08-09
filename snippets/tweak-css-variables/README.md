@@ -22,7 +22,7 @@ Expose the css variables with the Style Setting plugin.
   - [x] Font sizes
     - [x] Relative font sizes
     - [x] UI font sizes
-  - [ ] Font weights
+  - [x] Font weights
   - [ ] Headings
   - [x] Bold
   - [ ] Italic
