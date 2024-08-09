@@ -19,9 +19,9 @@ Expose the css variables with the Style Setting plugin.
   - [ ] Tables
 - Typography
   - [ ] General
-  - [ ] Font sizes
-    - [ ] Relative font sizes
-    - [ ] UI font sizes
+  - [x] Font sizes
+    - [x] Relative font sizes
+    - [x] UI font sizes
   - [ ] Font weights
   - [ ] Headings
   - [x] Bold
@@ -43,7 +43,7 @@ Expose the css variables with the Style Setting plugin.
   - [ ] Popovers
 - Layout
   - [x] Dividers
-  - [ ] File layout
+  - [x] File layout
   - [ ] Horizontal rules
   - [ ] Z-index
   - [ ] PDF view

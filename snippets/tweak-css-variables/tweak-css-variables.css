@@ -737,6 +737,67 @@ settings:
         default-light: '#222222'
         default-dark: '#dadada'
 
+    -
+        id: header-font-sizes
+        title: Font sizes
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: use-custom-settings-font-sizes
+        title: Use custom font sizes
+        type: class-toggle
+        default: false
+    -
+        id: custom-font-smallest
+        title: Smallest (em)
+        description: "--font-smallest"
+        type: variable-number
+        default: 0.8
+        format: em
+    -
+        id: custom-font-smaller
+        title: Smaller (em)
+        description: "--font-smaller"
+        type: variable-number
+        default: 0.875
+        format: em
+    -
+        id: custom-font-small
+        title: Small (em)
+        description: "--font-small"
+        type: variable-number
+        default: 0.933
+        format: em
+    -
+        id: custom-font-ui-smaller
+        title: UI smaller (px)
+        description: "--font-ui-smaller"
+        type: variable-number
+        default: 12
+        format: px
+    -
+        id: custom-font-ui-small
+        title: UI small (px)
+        description: "--font-ui-small"
+        type: variable-number
+        default: 13
+        format: px
+    -
+        id: custom-font-ui-medium
+        title: UI medium (px)
+        description: "--font-ui-medium"
+        type: variable-number
+        default: 15
+        format: px
+    -
+        id: custom-font-ui-large
+        title: UI large (px)
+        description: "--font-ui-large"
+        type: variable-number
+        default: 20
+        format: px
+
 
 
 
@@ -1568,22 +1629,45 @@ body {
 body {
 
     /* General */
-    --custom-font-weight: 400;
-    --custom-bold-modifier: 200;
-    &.theme-light {
-        --custom-bold-color: #222222; /* --color-base-100 */
-        --custom-caret-color: #222222; /* --color-base-100 */
-    }
-    &.theme-dark {
-        --custom-bold-color: #dadada;
-        --custom-caret-color: #dadada;
+    & {
+        --custom-font-weight: 400;
+        --custom-bold-modifier: 200;
+        &.theme-light {
+            --custom-bold-color: #222222; /* --color-base-100 */
+            --custom-caret-color: #222222; /* --color-base-100 */
+        }
+        &.theme-dark {
+            --custom-bold-color: #dadada;
+            --custom-caret-color: #dadada;
+        }
+
+        &.use-custom-settings-typography {
+            --font-weight: var(--custom-font-weight);
+            --bold-modifier: var(--custom-bold-modifier);
+            --bold-color: var(--custom-bold-color);
+            --caret-color: var(--custom-caret-color);
+        }
     }
 
-    &.use-custom-settings-typography {
-        --font-weight: var(--custom-font-weight);
-        --bold-modifier: var(--custom-bold-modifier);
-        --bold-color: var(--custom-bold-color);
-        --caret-color: var(--custom-caret-color);
+    /* Font sizes */
+    & {
+        --custom-font-smallest: 0.8em;
+        --custom-font-smaller: 0.875em;
+        --custom-font-small: 0.933em;
+        --custom-font-ui-smaller: 12px;
+        --custom-font-ui-small: 13px;
+        --custom-font-ui-medium: 15px;
+        --custom-font-ui-large: 20px;
+
+        &.use-custom-settings-font-sizes {
+            --font-smallest: var(--custom-font-smallest);
+            --font-smaller: var(--custom-font-smaller);
+            --font-small: var(--custom-font-small);
+            --font-ui-smaller: var(--custom-font-ui-smaller);
+            --font-ui-small: var(--custom-font-ui-small);
+            --font-ui-medium: var(--custom-font-ui-medium);
+            --font-ui-large: var(--custom-font-ui-large);
+        }
     }
 }
 
