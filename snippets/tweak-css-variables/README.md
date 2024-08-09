@@ -40,7 +40,7 @@ Expose the css variables with the Style Setting plugin.
 - Modals
   - [x] Dialogs
   - [x] Modals
-  - [ ] Popovers
+  - [x] Popovers
 - Layout
   - [x] Dividers
   - [x] File layout

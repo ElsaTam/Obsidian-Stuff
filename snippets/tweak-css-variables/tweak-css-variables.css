@@ -2074,6 +2074,61 @@ settings:
         type: variable-number
         default: 280
         format: px
+
+    -
+        id: header-modals-popovers
+        title: Popovers - file previews
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: use-custom-settings-popovers
+        title: Use custom popovers
+        type: class-toggle
+        default: false
+    -
+        id: custom-popover-width
+        title: Width (px)
+        description: "--popover-width"
+        type: variable-number
+        default: 450
+        format: px
+    -
+        id: custom-popover-height
+        title: Height (px)
+        description: "--popover-height"
+        type: variable-number
+        default: 400
+        format: px
+    -
+        id: custom-popover-max-height
+        title: Max height (vh)
+        description: "--popover-max-height"
+        type: variable-number
+        default: 95
+        format: vh
+    -
+        id: custom-popover-pdf-width
+        title: PDF width (px)
+        description: "--popover-pdf-width"
+        type: variable-number
+        default: 450
+        format: px
+    -
+        id: custom-popover-pdf-height
+        title: PDF height (px)
+        description: "--popover-pdf-height"
+        type: variable-number
+        default: 400
+        format: px
+    -
+        id: custom-popover-font-size
+        title: Font size (px)
+        description: "--popover-font-size"
+        type: variable-number
+        default: 16
+        format: px
+    
     
 
 
@@ -4166,6 +4221,24 @@ body {
             --modal-border-color: var(--custom-modal-border-color);
             --modal-radius: var(--custom-modal-radius);
             --modal-community-sidebar-width: var(--custom-modal-community-sidebar-width);
+        }
+    }
+
+    & {
+        --custom-popover-width: 450px;
+        --custom-popover-height: 400px;
+        --custom-popover-max-height: 95vh;
+        --custom-popover-pdf-width: 450px;
+        --custom-popover-pdf-height: 400px;
+        --custom-popover-font-size: 16px;
+
+        &.use-custom-settings-popovers {
+            --popover-width: var(--custom-popover-width);
+            --popover-height: var(--custom-popover-height);
+            --popover-max-height: var(--custom-popover-max-height);
+            --popover-pdf-width: var(--custom-popover-pdf-width);
+            --popover-pdf-height: var(--custom-popover-pdf-height);
+            --popover-font-size: var(--custom-popover-font-size);
         }
     }
 }
