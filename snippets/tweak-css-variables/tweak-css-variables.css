@@ -1172,6 +1172,93 @@ settings:
         type: variable-number
         default: 1
         format: px
+
+    -
+        id: header-layout-file-layout
+        title: File layout
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: use-custom-settings-file-layout
+        title: Use custom file layout
+        type: class-toggle
+        default: false
+    -
+        id: custom-file-line-width
+        title: Line width (px)
+        description: "--file-line-width"
+        type: variable-number
+        default: 700
+        format: px
+    -
+        id: custom-file-folding-offset
+        title: Folding offset (px)
+        description: "--file-folding-offset"
+        type: variable-number
+        default: 24
+        format: px
+    -
+        id: custom-file-margins
+        title: Margins
+        description: "--file-margins"
+        type: variable-text
+        default: 32px 32px 32px 32px
+    -
+        id: custom-file-header-font-size
+        title: Header font size (px)
+        description: "--file-header-font-size"
+        type: variable-number
+        default: 13
+        format: px
+    -
+        id: custom-file-header-font-weight
+        title: Header font weight
+        description: "--file-header-font-weight"
+        type: variable-number
+        default: 400
+    -
+        id: custom-file-header-border-width
+        title: Border width (px)
+        description: "--file-header-border (width)"
+        type: variable-number
+        default: 1
+        format: px
+    -
+        id: custom-file-header-border-style
+        title: Border style (px)
+        description: "--file-header-border (style)"
+        type: variable-select
+        default: solid
+        options:
+            - none
+            - hidden
+            - dotted
+            - dashed
+            - solid
+            - double
+            - groove
+            - ridge
+            - inset
+            - outset
+    -
+        id: custom-file-header-border-color
+        title: Color
+        description: "--file-header-border (color)"
+        type: variable-color
+        format: hex
+        default: '#00000000'
+        opacity: true
+    -
+        id: custom-file-header-justify
+        title: Border style (px)
+        description: "--file-header-justify"
+        type: variable-select
+        default: center
+        options:
+            - start
+            - center
+            - end
     
 
 
@@ -1687,6 +1774,32 @@ body {
             --divider-color-hover: var(--custom-divider-color-hover);
             --divider-width: var(--custom-divider-width);
             --divider-width-hover: calc(var(--divider-width) + 2px);
+        }
+    }
+
+    /* File layout */
+    & {
+        --custom-file-line-width: 700px;
+        --custom-file-folding-offset: 24px;
+        --custom-file-margins: 32px 32px 32px 32px;
+        --custom-file-header-font-size: 13px;
+        --custom-file-header-font-weight: 400;
+        --custom-file-header-border-width: 1px;
+        --custom-file-header-border-style: solid;
+        --custom-file-header-border-color: #00000000;
+        --custom-file-header-justify: center;
+
+        &.use-custom-settings-file-layout {
+            --file-line-width: var(--custom-file-line-width);
+            --file-folding-offset: var( --custom-file-folding-offset);
+            --file-margins: var(--custom-file-margins);
+            --file-header-font-size: var(--custom-file-header-font-size);
+            --file-header-font-weight: var(--custom-file-header-font-weight);
+            --file-header-border:
+                var(--custom-file-header-border-width)
+                var(--custom-file-header-border-style)
+                var(--custom-file-header-border-color);
+            --file-header-justify: var(--custom-file-header-justify);
         }
     }
 }
