@@ -3954,6 +3954,91 @@ settings:
         description: "--status-bar-radius"
         type: variable-text
         default: 8px 0 0 0
+        
+    -
+        id: header-status-sync
+        title: Sync
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: use-custom-settings-sync
+        title: Use custom sync
+        type: class-toggle
+        default: false
+    -
+        id: custom-sync-avatar-color-current-user
+        title: Color current user
+        description: "--sync-avatar-color-current-user"
+        type: variable-themed-color
+        format: hex
+        default-light: '#00000000"
+        default-dark: '#00000000"
+        opacity: true
+    -
+        id: custom-sync-avatar-color-1
+        title: Coler 1
+        description: "--sync-avatar-color-1
+        type: variable-themed-color
+        format: hex
+        default-light: '#e93147"
+        default-dark: '#fb464c"
+    -
+        id: custom-sync-avatar-color-2
+        title: Coler 2
+        description: "--sync-avatar-color-2
+        type: variable-themed-color
+        format: hex
+        default-light: '#ec7500"
+        default-dark: '#e9973f"
+    -
+        id: custom-sync-avatar-color-3
+        title: Coler 3
+        description: "--sync-avatar-color-3
+        type: variable-themed-color
+        format: hex
+        default-light: '#e0ac00"
+        default-dark: '#e0de71"
+    -
+        id: custom-sync-avatar-color-4
+        title: Coler 4
+        description: "--sync-avatar-color-4
+        type: variable-themed-color
+        format: hex
+        default-light: '#08b94e"
+        default-dark: '#44cf6e"
+    -
+        id: custom-sync-avatar-color-5
+        title: Coler 5
+        description: "--sync-avatar-color-5
+        type: variable-themed-color
+        format: hex
+        default-light: '#00bfbc"
+        default-dark: '#53dfdd"
+    -
+        id: custom-sync-avatar-color-6
+        title: Coler 6
+        description: "--sync-avatar-color-6
+        type: variable-themed-color
+        format: hex
+        default-light: '#086ddd"
+        default-dark: '#027aff"
+    -
+        id: custom-sync-avatar-color-7
+        title: Coler 7
+        description: "--sync-avatar-color-7
+        type: variable-themed-color
+        format: hex
+        default-light: '#7852ee"
+        default-dark: '#a882ff"
+    -
+        id: custom-sync-avatar-color-8
+        title: Coler 8
+        description: "--sync-avatar-color-8
+        type: variable-themed-color
+        format: hex
+        default-light: '#d53984"
+        default-dark: '#fa99cd"
     
         
 */
@@ -5390,6 +5475,44 @@ body {
             --status-bar-font-size: var(--custom-status-bar-font-size);
             --status-bar-text-color: var(--custom-status-bar-text-color);
             --status-bar-radius: var(--custom-status-bar-radius);
+        }
+    }
+
+    /* Sync */
+    & {
+        --custom-sync-avatar-color-current-user: transparent;
+
+        &.theme-light {
+            --custom-sync-avatar-color-1: #e93147; /* --color-red */
+            --custom-sync-avatar-color-2: #ec7500; /* --color-orange */
+            --custom-sync-avatar-color-3: #e0ac00; /* --color-yellow */
+            --custom-sync-avatar-color-4: #08b94e; /* --color-green */
+            --custom-sync-avatar-color-5: #00bfbc; /* --color-cya */
+            --custom-sync-avatar-color-6: #086ddd; /* --color-blue */
+            --custom-sync-avatar-color-7: #7852ee; /* --color-purple */
+            --custom-sync-avatar-color-8: #d53984; /* --color-pink */
+        }
+        &.theme-dark {
+            --custom-sync-avatar-color-1: #fb464c;
+            --custom-sync-avatar-color-2: #e9973f;
+            --custom-sync-avatar-color-3: #e0de71;
+            --custom-sync-avatar-color-4: #44cf6e;
+            --custom-sync-avatar-color-5: #53dfdd;
+            --custom-sync-avatar-color-6: #027aff;
+            --custom-sync-avatar-color-7: #a882ff;
+            --custom-sync-avatar-color-8: #fa99cd;
+        }
+
+        &.use-custom-settings-sync {
+            --sync-avatar-color-current-user: var(--custom-sync-avatar-color-current-user);
+            --sync-avatar-color-1: var(--custom-sync-avatar-color-1);
+            --sync-avatar-color-2: var(--custom-sync-avatar-color-2);
+            --sync-avatar-color-3: var(--custom-sync-avatar-color-3);
+            --sync-avatar-color-4: var(--custom-sync-avatar-color-4);
+            --sync-avatar-color-5: var(--custom-sync-avatar-color-5);
+            --sync-avatar-color-6: var(--custom-sync-avatar-color-6);
+            --sync-avatar-color-7: var(--custom-sync-avatar-color-7);
+            --sync-avatar-color-8: var(--custom-sync-avatar-color-8);
         }
     }
 }

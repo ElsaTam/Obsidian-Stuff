@@ -69,7 +69,7 @@ Expose the css variables with the Style Setting plugin.
   - [x] Prompts
   - [x] Search
   - [x] Status bar
-  - [ ] Sync
+  - [x] Sync
   - [ ] Vault profile
   - [ ] Vault name
 
