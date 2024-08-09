@@ -1239,6 +1239,74 @@ settings:
         type: variable-number
         default: 600
 
+    -
+        id: header-inline-title
+        title: Inline title
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: use-custom-settings-inline-title
+        title: Use custom headings
+        type: class-toggle
+        default: false
+    -
+        id: custom-inline-title-color
+        title: Color
+        description: "--inline-title-color, default inherit"
+        type: variable-themed-color
+        format: hex
+        default-light: '#'
+        default-dark: '#'
+    -
+        id: custom-inline-title-font
+        title: Font family
+        description: "--inline-title-font"
+        type: variable-text
+        default: ''
+    -
+        id: custom-inline-title-line-height
+        title: Line height
+        description: "--inline-title-line-height"
+        type: variable-number
+        default: 1.2
+    -
+        id: custom-inline-title-size
+        title: Size (em)
+        description: "--inline-title-size"
+        type: variable-number
+        default: 1.802
+        format: em
+    -
+        id: custom-inline-title-style
+        title: Font style
+        description: "--inline-title-style"
+        type: variable-select
+        default: normal
+        options:
+            - normal
+            - italic
+            - oblique
+    -
+        id: custom-inline-title-variant
+        title: Font variant
+        description: "--inline-title-variant"
+        type: variable-text
+        default: normal
+    -
+        id: custom-inline-title-weight
+        title: Weight
+        description: "--inline-title-weight"
+        type: variable-number
+        default: 700
+    -
+        id: custom-inline-title-margin-bottom
+        title: Margin bottom (em)
+        description: "--inline-title-margin-bottom"
+        type: variable-number
+        default: 0.5
+        format: em
+
 
 
 
@@ -2566,6 +2634,27 @@ body {
             --h4-weight: var(--custom-h4-weight);
             --h5-weight: var(--custom-h5-weight);
             --h6-weight: var(--custom-h6-weight);
+        }
+    }
+
+    /* Inline title */
+    & {
+        --custom-inline-title-line-height: 1.2;
+        --custom-inline-title-size: var(--h1-size);
+        --custom-inline-title-style: var(--h1-style);
+        --custom-inline-title-variant: var(--h1-variant);
+        --custom-inline-title-weight: var(--h1-weight);
+        --custom-inline-title-margin-bottom: 0.5em;
+
+        &.use-custom-settings-inline-title {
+            --inline-title-color: var(--custom-inline-title-color);
+            --inline-title-font: var(--custom-inline-title-font);
+            --inline-title-line-height: var(--custom-inline-title-line-height);
+            --inline-title-size: var(--custom-inline-title-size);
+            --inline-title-style: var(--custom-inline-title-style);
+            --inline-title-variant: var(--custom-inline-title-variant);
+            --inline-title-weight: var(--custom-inline-title-weight);
+            --inline-title-margin-bottom: var(--custom-inline-title-margin-bottom);
         }
     }
 }

@@ -24,7 +24,7 @@ Expose the css variables with the Style Setting plugin.
     - [x] UI font sizes
   - [x] Font weights
   - [x] Headings
-  - [x] Bold
+  - [x] Inline title
   - [ ] Italic
   - [ ] Line heights
   - [ ] Links
@@ -61,7 +61,6 @@ Expose the css variables with the Style Setting plugin.
   - [x] Graph
   - [x] Icons
   - [x] Indentation guide
-  - [ ] Inline title
   - [ ] File navigator
   - [ ] Metadata
   - [ ] Multi-select pills
