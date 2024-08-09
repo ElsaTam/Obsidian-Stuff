@@ -66,7 +66,7 @@ Expose the css variables with the Style Setting plugin.
   - [x] Multi-select pills
   - [x] Prompts
   - [x] Radiuses
-  - [ ] Search
+  - [x] Search
   - [ ] Status bar
   - [ ] Sync
   - [ ] Vault profile
