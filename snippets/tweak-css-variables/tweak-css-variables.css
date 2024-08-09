@@ -882,6 +882,363 @@ settings:
         type: variable-number
         default: 900
 
+    -
+        id: header-headings
+        title: Headings
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: use-custom-settings-headings
+        title: Use custom headings
+        type: class-toggle
+        default: false
+    -
+        id: custom-heading-formatting
+        title: Heading formatting
+        description: "--heading-formatting"
+        type: variable-themed-color
+        format: hex
+        default-light: '#ababab'
+        default-dark: '#666666'
+    -
+        id: custom-heading-spacing
+        title: Heading spacing (rem)
+        description: "--heading-spacing"
+        type: variable-number
+        default: 2.5
+        format: rem
+    -
+        id: header-headings-h1
+        title: H1
+        type: heading
+        level: 3
+        collapsed: true
+    -
+        id: custom-h1-color
+        title: Color
+        description: "--h1-color, default inherit"
+        type: variable-themed-color
+        format: hex
+        default-light: '#'
+        default-dark: '#'
+    -
+        id: custom-h1-font
+        title: Font family
+        description: "--h1-font"
+        type: variable-text
+        default: ''
+    -
+        id: custom-h1-line-height
+        title: Line height
+        description: "--h1-line-height"
+        type: variable-number
+        default: 1.2
+    -
+        id: custom-h1-size
+        title: Size (em)
+        description: "--h1-size"
+        type: variable-number
+        default: 1.802
+        format: em
+    -
+        id: custom-h1-style
+        title: Font style
+        description: "--h1-style"
+        type: variable-select
+        default: normal
+        options:
+            - normal
+            - italic
+            - oblique
+    -
+        id: custom-h1-variant
+        title: Font variant
+        description: "--h1-variant"
+        type: variable-text
+        default: normal
+    -
+        id: custom-h1-weight
+        title: Weight
+        description: "--h1-weight"
+        type: variable-number
+        default: 700
+    -
+        id: header-headings-h2
+        title: H2
+        type: heading
+        level: 3
+        collapsed: true
+    -
+        id: custom-h2-color
+        title: Color
+        description: "--h2-color, default inherit"
+        type: variable-themed-color
+        format: hex
+        default-light: '#'
+        default-dark: '#'
+    -
+        id: custom-h2-font
+        title: Font family
+        description: "--h2-font"
+        type: variable-text
+        default: ''
+    -
+        id: custom-h2-line-height
+        title: Line height
+        description: "--h2-line-height"
+        type: variable-number
+        default: 1.2
+    -
+        id: custom-h2-size
+        title: Size (em)
+        description: "--h2-size"
+        type: variable-number
+        default: 1.602
+        format: em
+    -
+        id: custom-h2-style
+        title: Font style
+        description: "--h2-style"
+        type: variable-select
+        default: normal
+        options:
+            - normal
+            - italic
+            - oblique
+    -
+        id: custom-h2-variant
+        title: Font variant
+        description: "--h2-variant"
+        type: variable-text
+        default: normal
+    -
+        id: custom-h2-weight
+        title: Weight
+        description: "--h2-weight"
+        type: variable-number
+        default: 600
+    -
+        id: header-headings-h3
+        title: H3
+        type: heading
+        level: 3
+        collapsed: true
+    -
+        id: custom-h3-color
+        title: Color
+        description: "--h3-color, default inherit"
+        type: variable-themed-color
+        format: hex
+        default-light: '#'
+        default-dark: '#'
+    -
+        id: custom-h3-font
+        title: Font family
+        description: "--h3-font"
+        type: variable-text
+        default: ''
+    -
+        id: custom-h3-line-height
+        title: Line height
+        description: "--h3-line-height"
+        type: variable-number
+        default: 1.3
+    -
+        id: custom-h3-size
+        title: Size (em)
+        description: "--h3-size"
+        type: variable-number
+        default: 1.424
+        format: em
+    -
+        id: custom-h3-style
+        title: Font style
+        description: "--h3-style"
+        type: variable-select
+        default: normal
+        options:
+            - normal
+            - italic
+            - oblique
+    -
+        id: custom-h3-variant
+        title: Font variant
+        description: "--h3-variant"
+        type: variable-text
+        default: normal
+    -
+        id: custom-h3-weight
+        title: Weight
+        description: "--h3-weight"
+        type: variable-number
+        default: 600
+    -
+        id: header-headings-h4
+        title: H4
+        type: heading
+        level: 3
+        collapsed: true
+    -
+        id: custom-h4-color
+        title: Color
+        description: "--h4-color, default inherit"
+        type: variable-themed-color
+        format: hex
+        default-light: '#'
+        default-dark: '#'
+    -
+        id: custom-h4-font
+        title: Font family
+        description: "--h4-font"
+        type: variable-text
+        default: ''
+    -
+        id: custom-h4-line-height
+        title: Line height
+        description: "--h4-line-height"
+        type: variable-number
+        default: 1.4
+    -
+        id: custom-h4-size
+        title: Size (em)
+        description: "--h4-size"
+        type: variable-number
+        default: 1.266
+        format: em
+    -
+        id: custom-h4-style
+        title: Font style
+        description: "--h4-style"
+        type: variable-select
+        default: normal
+        options:
+            - normal
+            - italic
+            - oblique
+    -
+        id: custom-h4-variant
+        title: Font variant
+        description: "--h4-variant"
+        type: variable-text
+        default: normal
+    -
+        id: custom-h4-weight
+        title: Weight
+        description: "--h4-weight"
+        type: variable-number
+        default: 600
+    -
+        id: header-headings-h5
+        title: H5
+        type: heading
+        level: 3
+        collapsed: true
+    -
+        id: custom-h5-color
+        title: Color
+        description: "--h5-color, default inherit"
+        type: variable-themed-color
+        format: hex
+        default-light: '#'
+        default-dark: '#'
+    -
+        id: custom-h5-font
+        title: Font family
+        description: "--h5-font"
+        type: variable-text
+        default: ''
+    -
+        id: custom-h5-line-height
+        title: Line height
+        description: "--h5-line-height"
+        type: variable-number
+        default: 1.5
+    -
+        id: custom-h5-size
+        title: Size (em)
+        description: "--h5-size"
+        type: variable-number
+        default: 1.123
+        format: em
+    -
+        id: custom-h5-style
+        title: Font style
+        description: "--h5-style"
+        type: variable-select
+        default: normal
+        options:
+            - normal
+            - italic
+            - oblique
+    -
+        id: custom-h5-variant
+        title: Font variant
+        description: "--h5-variant"
+        type: variable-text
+        default: normal
+    -
+        id: custom-h5-weight
+        title: Weight
+        description: "--h5-weight"
+        type: variable-number
+        default: 600
+    -
+        id: header-headings-h6
+        title: H6
+        type: heading
+        level: 3
+        collapsed: true
+    -
+        id: custom-h6-color
+        title: Color
+        description: "--h6-color, default inherit"
+        type: variable-themed-color
+        format: hex
+        default-light: '#'
+        default-dark: '#'
+    -
+        id: custom-h6-font
+        title: Font family
+        description: "--h6-font"
+        type: variable-text
+        default: ''
+    -
+        id: custom-h6-line-height
+        title: Line height
+        description: "--h6-line-height"
+        type: variable-number
+        default: 1.5
+    -
+        id: custom-h6-size
+        title: Size (em)
+        description: "--h6-size"
+        type: variable-number
+        default: 1
+        format: em
+    -
+        id: custom-h6-style
+        title: Font style
+        description: "--h6-style"
+        type: variable-select
+        default: normal
+        options:
+            - normal
+            - italic
+            - oblique
+    -
+        id: custom-h6-variant
+        title: Font variant
+        description: "--h6-variant"
+        type: variable-text
+        default: normal
+    -
+        id: custom-h6-weight
+        title: Weight
+        description: "--h6-weight"
+        type: variable-number
+        default: 600
+
 
 
 
@@ -1855,6 +2212,95 @@ body {
             --font-bold: var(--custom-font-bold);
             --font-extrabold: var(--custom-font-extrabold);
             --font-black: var(--custom-font-black);
+        }
+    }
+
+    /* Headings */
+    & {
+        --custom-heading-spacing: 2.5rem;
+        --custom-h1-line-height: 1.2;
+        --custom-h2-line-height: 1.2;
+        --custom-h3-line-height: 1.3;
+        --custom-h4-line-height: 1.4;
+        --custom-h5-line-height: 1.5;
+        --custom-h6-line-height: 1.5;
+        --custom-h1-size: 1.802em;
+        --custom-h2-size: 1.602em;
+        --custom-h3-size: 1.424em;
+        --custom-h4-size: 1.266em;
+        --custom-h5-size: 1.125em;
+        --custom-h6-size: 1em;
+        --custom-h1-style: normal;
+        --custom-h2-style: normal;
+        --custom-h3-style: normal;
+        --custom-h4-style: normal;
+        --custom-h5-style: normal;
+        --custom-h6-style: normal;
+        --custom-h1-variant: normal;
+        --custom-h2-variant: normal;
+        --custom-h3-variant: normal;
+        --custom-h4-variant: normal;
+        --custom-h5-variant: normal;
+        --custom-h6-variant: normal;
+        --custom-h1-weight: 700;
+        --custom-h2-weight: 600;
+        --custom-h3-weight: 600;
+        --custom-h4-weight: 600;
+        --custom-h5-weight: 600;
+        --custom-h6-weight: 600;
+
+        &.theme-light {
+            --custom-heading-formatting: #ababab; /* --color-base-50 */
+        }
+        &.theme-dark {
+            --custom-heading-formatting: #666666;
+        }
+
+        &.use-custom-settings-headings {
+            --heading-formatting: var(--custom-heading-formatting);
+            --heading-spacing: var(--custom-heading-spacing);
+            --h1-color: var(--custom-h1-color);
+            --h2-color: var(--custom-h2-color);
+            --h3-color: var(--custom-h3-color);
+            --h4-color: var(--custom-h4-color);
+            --h5-color: var(--custom-h5-color);
+            --h6-color: var(--custom-h6-color);
+            --h1-font: var(--custom-h1-font);
+            --h2-font: var(--custom-h2-font);
+            --h3-font: var(--custom-h3-font);
+            --h4-font: var(--custom-h4-font);
+            --h5-font: var(--custom-h5-font);
+            --h6-font: var(--custom-h6-font);
+            --h1-line-height: var(--custom-h1-line-height);
+            --h2-line-height: var(--custom-h2-line-height);
+            --h3-line-height: var(--custom-h3-line-height);
+            --h4-line-height: var(--custom-h4-line-height);
+            --h5-line-height: var(--custom-h5-line-height);
+            --h6-line-height: var(--custom-h6-line-height);
+            --h1-size: var(--custom-h1-size);
+            --h2-size: var(--custom-h2-size);
+            --h3-size: var(--custom-h3-size);
+            --h4-size: var(--custom-h4-size);
+            --h5-size: var(--custom-h5-size);
+            --h6-size: var(--custom-h6-size);
+            --h1-style: var(--custom-h1-style);
+            --h2-style: var(--custom-h2-style);
+            --h3-style: var(--custom-h3-style);
+            --h4-style: var(--custom-h4-style);
+            --h5-style: var(--custom-h5-style);
+            --h6-style: var(--custom-h6-style);
+            --h1-variant: var(--custom-h1-variant);
+            --h2-variant: var(--custom-h2-variant);
+            --h3-variant: var(--custom-h3-variant);
+            --h4-variant: var(--custom-h4-variant);
+            --h5-variant: var(--custom-h5-variant);
+            --h6-variant: var(--custom-h6-variant);
+            --h1-weight: var(--custom-h1-weight);
+            --h2-weight: var(--custom-h2-weight);
+            --h3-weight: var(--custom-h3-weight);
+            --h4-weight: var(--custom-h4-weight);
+            --h5-weight: var(--custom-h5-weight);
+            --h6-weight: var(--custom-h6-weight);
         }
     }
 }
