@@ -705,14 +705,6 @@ settings:
         type: class-toggle
         default: false
     -
-        id: custom-font-weight
-        title: Font weight
-        description: "--font-weight"
-        type: variable-number-slider
-        default: 400
-        min: 100
-        max: 800
-    -
         id: custom-bold-modifier
         title: Bold weight modifier
         description: "--bold-modifier"
@@ -748,6 +740,12 @@ settings:
         title: Use custom font sizes
         type: class-toggle
         default: false
+    -
+        id: header-font-sizes-generic
+        title: Generic font sizes
+        type: heading
+        level: 3
+        collapsed: true
     -
         id: custom-font-smallest
         title: Smallest (em)
@@ -797,6 +795,92 @@ settings:
         type: variable-number
         default: 20
         format: px
+    -
+        id: header-font-sizes-secific
+        title: Specific font sizes
+        type: heading
+        level: 3
+        collapsed: true
+    -
+        id: custom-font-text-size
+        title: Text (px)
+        description: "--font-text-size"
+        type: variable-number
+        default: 16
+        format: px
+    -
+        id: custom-footnote-size
+        title: Footnote (em)
+        description: "--footnote-size"
+        type: variable-number
+        default: 0.875
+        format: em
+
+    -
+        id: header-font-weights
+        title: Font weights
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: use-custom-settings-font-weights
+        title: Use custom font weights
+        type: class-toggle
+        default: false
+    -
+        id: custom-font-thin
+        title: thin
+        description: "--font-thin"
+        type: variable-number
+        default: 100
+    -
+        id: custom-font-extralight
+        title: extralight
+        description: "--font-extralight"
+        type: variable-number
+        default: 200
+    -
+        id: custom-font-light
+        title: light
+        description: "--font-light"
+        type: variable-number
+        default: 300
+    -
+        id: custom-font-normal
+        title: normal
+        description: "--font-normal, cascading to --font-weight"
+        type: variable-number
+        default: 400
+    -
+        id: custom-font-medium
+        title: medium
+        description: "--font-medium"
+        type: variable-number
+        default: 500
+    -
+        id: custom-font-semibold
+        title: semibold
+        description: "--font-semibold"
+        type: variable-number
+        default: 600
+    -
+        id: custom-font-bold
+        title: bold
+        description: "--font-bold"
+        type: variable-number
+        default: 700
+    -
+        id: custom-font-extrabold
+        title: extrabold
+        description: "--font-extrabold"
+        type: variable-number
+        default: 800
+    -
+        id: custom-font-black
+        title: black
+        description: "--font-black"
+        type: variable-number
+        default: 900
 
 
 
@@ -1388,6 +1472,80 @@ settings:
         format: hex
         default: '#ffffff'
         opacity: true
+        
+    -
+        id: header-misc-graphs
+        title: Graphs
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: use-custom-settings-graphs
+        title: Use custom graphs
+        type: class-toggle
+        default: false
+    -
+        id: custom-graph-controls-width
+        title: Controls width
+        description: "--graph-controls-width"
+        type: variable-number
+        default: 240
+        format: px
+    -
+        id: custom-graph-text
+        title: Text color
+        description: "--graph-text"
+        type: variable-themed-color
+        format: hex
+        default-light: '#222222'
+        default-dark: '#dadada'
+    -
+        id: custom-graph-line
+        title: Line color
+        description: "--graph-line"
+        type: variable-themed-color
+        format: hex
+        default-light: '#d4d4d4'
+        default-dark: '#3f3f3f'
+    -
+        id: custom-graph-node
+        title: Node color
+        description: "--graph-node"
+        type: variable-themed-color
+        format: hex
+        default-light: '#5c5c5c'
+        default-dark: '#b3b3b3'
+    -
+        id: custom-graph-node-unresolved
+        title: Unresolved node color
+        description: "--graph-node-unresolved"
+        type: variable-themed-color
+        format: hex
+        default-light: '#ababab'
+        default-dark: '#666666'
+    -
+        id: custom-graph-node-focused
+        title: Node focused
+        description: "--graph-node-focused"
+        type: variable-color
+        format: hex
+        default: '#8a5cf5'
+    -
+        id: custom-graph-node-tag
+        title: Tag node color
+        description: "--graph-node-tag"
+        type: variable-themed-color
+        format: hex
+        default-light: '#08b94e'
+        default-dark: '#44cf6e'
+    -
+        id: custom-graph-node-attachment
+        title: Attachment node color
+        description: "--graph-node-attachment"
+        type: variable-themed-color
+        format: hex
+        default-light: '#e0ac00'
+        default-dark: '#e0de71'
 */
 
 
@@ -1659,6 +1817,9 @@ body {
         --custom-font-ui-medium: 15px;
         --custom-font-ui-large: 20px;
 
+        --custom-font-text-size: 16px;
+        --custom-footnote-size: 0.875em;
+
         &.use-custom-settings-font-sizes {
             --font-smallest: var(--custom-font-smallest);
             --font-smaller: var(--custom-font-smaller);
@@ -1667,6 +1828,33 @@ body {
             --font-ui-small: var(--custom-font-ui-small);
             --font-ui-medium: var(--custom-font-ui-medium);
             --font-ui-large: var(--custom-font-ui-large);
+            --font-text-size: var(--custom-font-text-size);
+            --footnote-siz: var(--custom-footnote-size);
+        }
+    }
+
+    /* Font weights */
+    & {
+        --custom-font-thin: 100;
+        --custom-font-extralight: 200;
+        --custom-font-light: 300;
+        --custom-font-normal: 400;
+        --custom-font-medium: 500;
+        --custom-font-semibold: 600;
+        --custom-font-bold: 700;
+        --custom-font-extrabold: 800;
+        --custom-font-black: 900;
+
+        &.use-custom-settings-font-weights {
+            --font-thin: var(--custom-font-thin);
+            --font-extralight: var(--custom-font-extralight);
+            --font-light: var(--custom-font-light);
+            --font-normal: var(--custom-font-normal);
+            --font-medium: var(--custom-font-medium);
+            --font-semibold: var(--custom-font-semibold);
+            --font-bold: var(--custom-font-bold);
+            --font-extrabold: var(--custom-font-extrabold);
+            --font-black: var(--custom-font-black);
         }
     }
 }
@@ -1914,6 +2102,39 @@ body {
         &.use-custom-settings-dragging {
             --drag-ghost-background: var(--custom-drag-ghost-background);
             --drag-ghost-text-color: var(--custom-drag-ghost-text-color);
+        }
+    }
+
+    /* Graphs */
+    & {
+        --custom-graph-controls-width: 240px;
+        --custom-graph-node-focused: #8a5cf5;
+        &.theme-light {
+            --custom-graph-text: #222222; /* --color-base-100 */
+            --custom-graph-line: #d4d4d4; /* --color-base-35  */
+            --custom-graph-node: #5c5c5c; /* --color-base-70  */
+            --custom-graph-node-unresolved: #ababab; /* --color-base-50 */
+            --custom-graph-node-tag: #08b94e; /* --color-green */
+            --custom-graph-node-attachment: #e0ac00; /* --color-yellow */
+        }
+        &.theme-dark {
+            --custom-graph-text: #dadada;
+            --custom-graph-line: #3f3f3f;
+            --custom-graph-node: #b3b3b3;
+            --custom-graph-node-unresolved: #666666;
+            --custom-graph-node-tag: #44cf6e;
+            --custom-graph-node-attachment: #e0de71;
+        }
+
+        &.use-custom-settings-graphs {
+            --graph-controls-width: var(--custom-graph-controls-width);
+            --graph-node-focused: var(--custom-graph-node-focused);
+            --graph-text: var(--custom-graph-text);
+            --graph-line: var(--custom-graph-line);
+            --graph-node: var(--custom-graph-node);
+            --graph-node-unresolved: var(--custom-graph-node-unresolved);
+            --graph-node-tag: var(--custom-graph-node-tag);
+            --graph-node-attachment: var(--custom-graph-node-attachment);
         }
     }
 }
