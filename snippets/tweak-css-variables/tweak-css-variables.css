@@ -1642,6 +1642,25 @@ settings:
         collapsed: true
 
     -
+        id: header-layout-general
+        title: General
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: use-custom-settings-layout-general
+        title: Use custom general layout settings
+        type: class-toggle
+        default: false
+    -
+        id: custom-header-height
+        title: Header height (px)
+        description: "--header-height"
+        type: variable-number
+        default: 40
+        format: px
+
+    -
         id: header-layout-dividers
         title: Dividers between panes
         type: heading
@@ -1903,6 +1922,33 @@ settings:
         format: hex
         default-light: '#e0ac00'
         default-dark: '#e0de71'
+        
+    -
+        id: header-misc-hr
+        title: Horizontal rules (hr)
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: use-custom-settings-hr
+        title: Use custom horizontal rules
+        type: class-toggle
+        default: false
+    -
+        id: custom-hr-color
+        title: Color
+        description: "--hr-color"
+        type: variable-themed-color
+        format: hex
+        default-light: '#e0e0e0'
+        default-dark: '#363636'
+    -
+        id: custom-hr-thickness
+        title: Thickness (px)
+        description: "--hr-thickness"
+        type: variable-number
+        default: 2
+        format: px
 */
 
 
@@ -2476,6 +2522,15 @@ body {
 
 /* Layout */
 body {
+    /* General */
+    & {
+        --custom-header-height: 40px;
+
+        &.use-custom-settings-layout-general {
+            --header-height: var(--custom-header-height);
+        }
+    }
+
     /* Dividers between panes */
     & {
         --custom-divider-color-hover: #8a5cf5;
@@ -2581,6 +2636,22 @@ body {
             --graph-node-unresolved: var(--custom-graph-node-unresolved);
             --graph-node-tag: var(--custom-graph-node-tag);
             --graph-node-attachment: var(--custom-graph-node-attachment);
+        }
+    }
+
+    /* Horizontal rules */
+    & {
+        --custom-hr-thickness: 2px;
+        &.theme-light {
+            --custom-hr-color: #e0e0e0; /* --color-base-30 */
+        }
+        &.theme-dark {
+            --custom-hr-color: #363636;
+        }
+
+        &.use-custom-settings-hr {
+            --hr-color: var(--custom-hr-color);
+            --hr-thickness: var(--custom-hr-thickness)
         }
     }
 }
