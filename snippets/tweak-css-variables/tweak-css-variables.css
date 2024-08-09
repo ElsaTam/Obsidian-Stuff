@@ -2408,6 +2408,47 @@ settings:
         description: "--pdf-thumbnail-shadow"
         type: variable-text
         default: 0 0 0 1px rgba(0, 0, 0, 0.15), 0 2px 8px rgba(0, 0, 0, 0.2)
+        
+    -
+        id: header-ribbon
+        title: Ribbon
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: use-custom-settings-ribbon
+        title: Use custom ribbon
+        type: class-toggle
+        default: false
+    -
+        id: custom-ribbon-background
+        title: Background
+        description: "--ribbon-background"
+        type: variable-themed-color
+        format: hex
+        default-light: '#f6f6f6'
+        default-dark: '#262626'
+    -
+        id: custom-ribbon-background-collapsed
+        title: Background collapsed
+        description: "--ribbon-background-collapsed"
+        type: variable-themed-color
+        format: hex
+        default-light: '#ffffff'
+        default-dark: '#1e1e1e'
+    -
+        id: custom-ribbon-width
+        title: Width (px)
+        description: "--ribbon-width"
+        type: variable-number
+        default: 44
+        format: px
+    -
+        id: custom-ribbon-padding
+        title: Padding
+        description: "--ribbon-padding"
+        type: variable-text
+        default: 8px 4px 12px
     
 
 
@@ -4445,6 +4486,27 @@ body {
             --pdf-spread-shadow: var(--custom-pdf-spread-shadow);
             --pdf-sidebar-background: var(--custom-pdf-sidebar-background);
             --pdf-thumbnail-shadow: var(--custom-pdf-thumbnail-shadow);
+        }
+    }
+
+    & {
+        --custom-ribbon-width: 44px;
+        --custom-ribbon-padding: 8px 4px 12px;
+
+        &.theme-light {
+            --custom-ribbon-background: #f6f6f6; /* --color-base-20 */
+            --custom-ribbon-background-collapsed: #ffffff; /* --color-base-00 */
+        }
+        &.theme-dark {
+            --custom-ribbon-background: #262626;
+            --custom-ribbon-background-collapsed: #1e1e1e;
+        }
+
+        &.use-custom-settings-ribbon {
+            --ribbon-background: var(--custom-ribbon-background);
+            --ribbon-background-collapsed: var(--custom-ribbon-background-collapsed);
+            --ribbon-width: var(--custom-ribbon-width);
+            --ribbon-padding: var(--custom-ribbon-padding);
         }
     }
 }
