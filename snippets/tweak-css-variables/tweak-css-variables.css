@@ -3557,6 +3557,46 @@ settings:
         default-light: '#bdbdbd"
         default-dark: '#555555"
         
+    -
+        id: header-radius
+        title: Radiuses
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: use-custom-settings-radius
+        title: Use custom radiuses
+        type: class-toggle
+        default: false
+    -
+        id: custom-radius-s
+        title: Radius S (px)
+        description: "--radius-s"
+        type: variable-number
+        default: 4
+        format: px
+    -
+        id: custom-radius-m
+        title: Radius M (px)
+        description: "--radius-m"
+        type: variable-number
+        default: 8
+        format: px
+    -
+        id: custom-radius-l
+        title: Radius L (px)
+        description: "--radius-l"
+        type: variable-number
+        default: 12
+        format: px
+    -
+        id: custom-radius-xl
+        title: Radius XL (px)
+        description: "--radius-xl"
+        type: variable-number
+        default: 16
+        format: px
+        
 */
 
 
@@ -4832,6 +4872,21 @@ body {
             --prompt-max-height: var(--custom-prompt-max-height);
             --prompt-border-width: var(--custom-prompt-border-width);
             --prompt-border-color: var(--custom-prompt-border-color);
+        }
+    }
+
+    /* Radiuses */
+    & {
+        --custom-radius-s: 4px;
+        --custom-radius-m: 8px;
+        --custom-radius-l: 12px;
+        --custom-radius-xl: 16px;
+
+        &.use-custom-settings-radius {
+            --radius-s: var(--custom-radius-s);
+            --radius-m: var(--custom-radius-m);
+            --radius-l: var(--custom-radius-l);
+            --radius-xl: var(--custom-radius-xl);
         }
     }
 }
