@@ -1325,6 +1325,109 @@ settings:
         default: 0.5
         format: em
 
+    -
+        id: header-links
+        title: Links
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: use-custom-settings-links
+        title: Use custom headings
+        type: class-toggle
+        default: false
+    -
+        id: custom-link-color
+        title: Color
+        description: "--link-color and --link-color-hover"
+        type: variable-color
+        format: hex
+        default: '#8a5cf5'
+    -
+        id: custom-link-decoration
+        title: Decoration line
+        description: "--link-decoration"
+        type: variable-text
+        default: underline
+    -
+        id: custom-link-decoration-hover
+        title: Decoration line, hover
+        description: "--link-decoration-hover"
+        type: variable-text
+        default: underline
+    -
+        id: custom-link-decoration-thickness
+        title: Decoration thickness
+        description: "--link-decoration-thickness"
+        type: variable-text
+        default: auto
+    -
+        id: custom-link-weight
+        title: Weight
+        description: "--link-weight"
+        type: variable-text
+        default: inherit
+    -
+        id: custom-link-external-color
+        title: External color
+        description: "--link-external-color and --link-external-color-hover"
+        type: variable-color
+        format: hex
+        default: '#8a5cf5'
+    -
+        id: custom-link-external-decoration
+        title: External decoration line
+        description: "--link-external-decoration"
+        type: variable-text
+        default: underline
+    -
+        id: custom-link-external-decoration-hover
+        title: External decoration line, hover
+        description: "--link-external-decoration-hover"
+        type: variable-text
+        default: underline
+    -
+        id: custom-link-external-filter
+        title: External filter
+        description: "--link-external-filter"
+        type: variable-text
+        default: none
+    -
+        id: custom-link-unresolved-color
+        title: Unresolved color
+        description: "--link-unresolved-color"
+        type: variable-color
+        format: hex
+        default: '#8a5cf5'
+    -
+        id: custom-link-unresolved-opacity
+        title: Unresolved opacity
+        description: "--link-unresolved-opacity"
+        type: variable-number-slider
+        default: 0.7
+        min: 0
+        max: 1
+    -
+        id: custom-link-unresolved-filter
+        title: Unresolved filter
+        description: "--link-unresolved-filter"
+        type: variable-text
+        default: none
+    -
+        id: custom-link-unresolved-decoration-style
+        title: Unresolved decoration style
+        description: "--link-unresolved-decoration-style"
+        type: variable-text
+        default: solid
+    -
+        id: custom-link-unresolved-decoration-color
+        title: Unresolved decoration color
+        description: "--link-unresolved-decoration-color"
+        type: variable-color
+        format: hex
+        default: '#8a5cf5'
+        opacity: true
+
 
 
 
@@ -2748,6 +2851,43 @@ body {
             --inline-title-variant: var(--custom-inline-title-variant);
             --inline-title-weight: var(--custom-inline-title-weight);
             --inline-title-margin-bottom: var(--custom-inline-title-margin-bottom);
+        }
+    }
+
+    /* Links */
+    & {
+        --custom-link-color: #8a5cf5;
+        --custom-link-decoration: underline;
+        --custom-link-decoration-hover: underline;
+        --custom-link-decoration-thickness: auto;
+        --custom-link-weight: inherit;
+        --custom-link-external-color: #8a5cf5;
+        --custom-link-external-decoration: underline;
+        --custom-link-external-decoration-hover: underline;
+        --custom-link-external-filter: none;
+        --custom-link-unresolved-color: #8a5cf5;
+        --custom-link-unresolved-opacity: 0.7;
+        --custom-link-unresolved-filter: none;
+        --custom-link-unresolved-decoration-style: solid;
+        --custom-link-unresolved-decoration-color: #8a5cf54d;
+
+        &.use-custom-settings-links {
+            --link-color: var(--custom-link-color);
+            --link-color-hover: hsl(from var(--link-color) calc(h - 3) calc(s * 1.02) calc(l * 1.15));
+            --link-decoration: var(--custom-link-decoration);
+            --link-decoration-hover: var(--custom-link-decoration-hover);
+            --link-decoration-thickness: var(--custom-link-decoration-thickness);
+            --link-weight: var(--custom-link-weight);
+            --link-external-color: var(--custom-link-external-color);
+            --link-external-color-hover: hsl(from var(--link-external-color) calc(h - 3) calc(s * 1.02) calc(l * 1.15));
+            --link-external-decoration: var(--custom-link-external-decoration);
+            --link-external-decoration-hover: var(--custom-link-external-decoration-hover);
+            --link-external-filter: var(--custom-link-external-filter);
+            --link-unresolved-color: var(--custom-link-unresolved-color);
+            --link-unresolved-opacity: var(--custom-link-unresolved-opacity);
+            --link-unresolved-filter: var(--custom-link-unresolved-filter);
+            --link-unresolved-decoration-style: var(--custom-link-unresolved-decoration-style);
+            --link-unresolved-decoration-color: var(--custom-link-unresolved-decoration-color);
         }
     }
 }
