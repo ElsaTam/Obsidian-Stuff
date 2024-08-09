@@ -59,7 +59,7 @@ Expose the css variables with the Style Setting plugin.
   - [x] Collapse icons
   - [x] Dragging
   - [x] Graph
-  - [ ] Icons
+  - [x] Icons
   - [ ] Identation guide
   - [ ] Inline title
   - [ ] File navigator

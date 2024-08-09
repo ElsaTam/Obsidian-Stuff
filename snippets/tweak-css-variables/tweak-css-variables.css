@@ -1949,6 +1949,160 @@ settings:
         type: variable-number
         default: 2
         format: px
+        
+    -
+        id: header-misc-icons
+        title: Icons
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: use-custom-settings-icons
+        title: Use custom icons
+        type: class-toggle
+        default: false
+    -
+        id: header-misc-icons-generic
+        title: Generic sizes
+        type: heading
+        level: 3
+        collapsed: true
+    -
+        id: custom-icon-xs
+        title: Size XS (px)
+        description: "--icon-xs"
+        type: variable-number
+        default: 14
+        format: px
+    -
+        id: custom-icon-s
+        title: Size S (px)
+        description: "--icon-s"
+        type: variable-number
+        default: 16
+        format: px
+    -
+        id: custom-icon-m
+        title: Size M (px)
+        description: "--icon-m"
+        type: variable-number
+        default: 18
+        format: px
+    -
+        id: custom-icon-l
+        title: Size L (px)
+        description: "--icon-l"
+        type: variable-number
+        default: 18
+        format: px
+    -
+        id: custom-icon-xl
+        title: Size XL (px)
+        description: "--icon-xl"
+        type: variable-number
+        default: 32
+        format: px
+    -
+        id: custom-icon-xs-stroke-width
+        title: Stroke width XS (px)
+        description: "--icon-xs-stroke-width"
+        type: variable-number
+        default: 2
+        format: px
+    -
+        id: custom-icon-s-stroke-width
+        title: Stroke width S (px)
+        description: "--icon-s-stroke-width"
+        type: variable-number
+        default: 2
+        format: px
+    -
+        id: custom-icon-m-stroke-width
+        title: Stroke width M (px)
+        description: "--icon-m-stroke-width"
+        type: variable-number
+        default: 1.75
+        format: px
+    -
+        id: custom-icon-l-stroke-width
+        title: Stroke width L (px)
+        description: "--icon-l-stroke-width"
+        type: variable-number
+        default: 1.75
+        format: px
+    -
+        id: custom-icon-xl
+        title: Stroke width XL (px)
+        description: "--icon-xl-stroke-width"
+        type: variable-number
+        default: 1.25
+        format: px
+    -
+        id: header-misc-icons-specific
+        title: Specific sizes
+        type: heading
+        level: 3
+        collapsed: true
+    -
+        id: custom-icon-size
+        title: Icon size (px)
+        description: "--icon-size"
+        type: variable-number
+        default: 18
+        format: px
+    -
+        id: custom-icon-stroke
+        title: Icon stroke width (px)
+        description: "--icon-stroke"
+        type: variable-number
+        default: 1.75
+        format: px
+    -
+        id: custom-clickable-icon-radius
+        title: Clickable icon radius (px)
+        description: "--clickable-icon-radius"
+        type: variable-number
+        default: 4
+        format: px
+    -
+        id: header-misc-icons-colors
+        title: Colors
+        type: heading
+        level: 3
+        collapsed: true
+    -
+        id: custom-icon-color
+        title: Icon color
+        description: "--icon-color and --icon-opacity"
+        type: variable-themed-color
+        format: rgb-split
+        default-light: rgba(92, 92, 92, 0.85)
+        default-dark: rgba(179, 179, 179, 0.85)
+        opacity: true
+    -
+        id: custom-icon-color-hover
+        title: Icon color hover
+        description: "--icon-color-hover and --icon-opacity-hover"
+        type: variable-themed-color
+        format: rgb-split
+        default-light: rgba(92, 92, 92, 1)
+        default-dark: rgba(179, 179, 179, 1)
+        opacity: true
+    -
+        id: custom-icon-color-active
+        title: Icon color active
+        description: "--icon-color-active and --icon-opacity-active"
+        type: variable-color
+        format: rgb-split
+        default: '#8a5cf5'
+    -
+        id: custom-icon-color-focused
+        title: Icon color focused
+        description: "--icon-color-focused"
+        type: variable-themed-color
+        format: hex
+        default-light: '#222222"
+        default-dark: '#dadada"
 */
 
 
@@ -2652,6 +2806,85 @@ body {
         &.use-custom-settings-hr {
             --hr-color: var(--custom-hr-color);
             --hr-thickness: var(--custom-hr-thickness)
+        }
+    }
+
+    /* Icons */
+    & {
+        --custom-icon-xs: 14px;
+        --custom-icon-s: 16px;
+        --custom-icon-m: 18px;
+        --custom-icon-l: 18px;
+        --custom-icon-xl: 32px;
+        --custom-icon-xs-stroke-width: 2px;
+        --custom-icon-s-stroke-width: 2px;
+        --custom-icon-m-stroke-width: 1.75px;
+        --custom-icon-l-stroke-width: 1.75px;
+        --custom-icon-xl-stroke-width: 1.25px;
+        --custom-icon-size: 18px;
+        --custom-icon-stroke: 1.75px;
+        --custom-clickable-icon-radius: 4px;
+        --custom-icon-color-active-r: 138;
+        --custom-icon-color-active-g: 92;
+        --custom-icon-color-active-b: 245;
+        --custom-icon-color-active-a: 1;
+
+        &.theme-light {
+            --custom-icon-color-r: 92; /* --color-base-70 */
+            --custom-icon-color-g: 92;
+            --custom-icon-color-b: 92;
+            --custom-icon-color-a: 0.85;
+            --custom-icon-color-hover-r: 92; /* --color-base-70 */
+            --custom-icon-color-hover-g: 92;
+            --custom-icon-color-hover-b: 92;
+            --custom-icon-color-hover-a: 1;
+            --custom-icon-color-focused: #222222; /* --color-base-100 */
+        }
+        &.theme-dark {
+            --custom-icon-color-r: 179;
+            --custom-icon-color-g: 179;
+            --custom-icon-color-b: 179;
+            --custom-icon-color-a: 0.85;
+            --custom-icon-color-hover-r: 179;
+            --custom-icon-color-hover-g: 179;
+            --custom-icon-color-hover-b: 179;
+            --custom-icon-color-hover-a: 1;
+            --custom-icon-color-focused: #dadada;
+        }
+
+        &.use-custom-settings-icons {
+            --icon-xs: var(--custom-icon-xs);
+            --icon-s: var(--custom-icon-s);
+            --icon-m: var(--custom-icon-m);
+            --icon-l: var(--custom-icon-l);
+            --icon-xl: var(--custom-icon-xl);
+            --icon-xs-stroke-width: var(--custom-icon-xs-stroke-width);
+            --icon-s-stroke-width: var(--custom-icon-s-stroke-width);
+            --icon-m-stroke-width: var(--custom-icon-m-stroke-width);
+            --icon-l-stroke-width: var(--custom-icon-l-stroke-width);
+            --icon-xl-stroke-width: var(--custom-icon-xl-stroke-width);
+            --icon-size: var(--custom-icon-size);
+            --icon-stroke: var(--custom-icon-stroke);
+            --clickable-icon-radius: var(--custom-clickable-icon-radius);
+            --icon-opacity: var(--custom-icon-color-a);
+            --icon-color: rgb(
+                var(--custom-icon-color-r),
+                var(--custom-icon-color-g),
+                var(--custom-icon-color-b)
+            );
+            --icon-opacity-hover: var(--custom-icon-color-hover-a);
+            --icon-color-hover: rgb(
+                var(--custom-icon-color-hover-r),
+                var(--custom-icon-color-hover-g),
+                var(--custom-icon-color-hover-b)
+            );
+            --icon-opacity-active: var(--custom-icon-color-active-a);
+            --icon-color-active: rgb(
+                var(--custom-icon-color-active-r),
+                var(--custom-icon-color-active-g),
+                var(--custom-icon-color-active-b)
+            );
+            --icon-color-focused: var(--custom-icon-color-focused);
         }
     }
 }
