@@ -28,6 +28,7 @@ Expose the css variables with the Style Setting plugin.
   - [x] Line heights
   - [x] Links
   - [x] Lists
+  - [x] Paragraphs
   - [ ] Tags
 - Inputs
   - [x] General
@@ -63,7 +64,6 @@ Expose the css variables with the Style Setting plugin.
   - [x] File navigator
   - [x] Metadata
   - [x] Multi-select pills
-  - [ ] Paragraphs
   - [ ] Prompts
   - [ ] Radiuses
   - [ ] Search
