@@ -2229,7 +2229,7 @@ settings:
             - end
         
     -
-        id: header-misc-layer
+        id: header-layer
         title: Layers (z-index)
         type: heading
         level: 2
@@ -2299,9 +2299,64 @@ settings:
         description: "--layer-dragged-item"
         type: variable-number
         default: 80
+        
+    -
+        id: header-pdf
+        title: PDF view
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: use-custom-settings-pdf
+        title: Use custom PDF view
+        type: class-toggle
+        default: false
+    -
+        id: custom-pdf-background
+        title: PDF background
+        description: "--pdf-background"
+        type: variable-themed-color
+        format: hex
+        default-light: '#ffffff'
+        default-dark: '#1e1e1e'
+    -
+        id: custom-pdf-page-background
+        title: Page background
+        description: "--pdf-page-background"
+        type: variable-themed-color
+        format: hex
+        default-light: '#ffffff'
+        default-dark: '#1e1e1e'
+    -
+        id: custom-pdf-shadow
+        title: Shadow
+        description: "--pdf-shadow"
+        type: variable-text
+        default: 0 0 0 1px rgba(0, 0, 0, 0.05), 0 2px 8px rgba(0, 0, 0, 0.1)
+    -
+        id: custom-pdf-spread-shadow
+        title: Spread shadow
+        description: "--pdf-spread-shadow"
+        type: variable-text
+        default: 0 0 0 1px rgba(0, 0, 0, 0.05)
+    -
+        id: custom-pdf-sidebar-background
+        title: Sidebar background
+        description: "--pdf-sidebar-background"
+        type: variable-themed-color
+        format: hex
+        default-light: '#ffffff'
+        default-dark: '#1e1e1e'
+    -
+        id: custom-pdf-thumbnail-shadow
+        title: Shadow
+        description: "--pdf-thumbnail-shadow"
+        type: variable-text
+        default: 0 0 0 1px rgba(0, 0, 0, 0.15), 0 2px 8px rgba(0, 0, 0, 0.2)
     
 
 
+        
 
 
 
@@ -4195,6 +4250,33 @@ body {
             --layer-menu: var(--custom-layer-menu);
             --layer-tooltip: var(--custom-layer-tooltip);
             --layer-dragged-item: var(--custom-layer-dragged-item);
+        }
+    }
+
+    /* PDF view */
+    & {
+        --custom-pdf-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05), 0 2px 8px rgba(0, 0, 0, 0.1);
+        --custom-pdf-spread-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05);
+        --custom-pdf-thumbnail-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15), 0 2px 8px rgba(0, 0, 0, 0.2);
+
+        &.theme-light {
+            --custom-pdf-background: #ffffff; /* --color-base-00 */
+            --custom-pdf-page-background: #ffffff; /* --color-base-00 */
+            --custom-pdf-sidebar-background: #ffffff; /* --color-base-00 */
+        }
+        &.theme-dark {
+            --custom-pdf-background: #1e1e1e;
+            --custom-pdf-page-background: #1e1e1e;
+            --custom-pdf-sidebar-background: #1e1e1e;
+        }
+
+        &.use-custom-settings-pdf {
+            --pdf-background: var(--custom-pdf-background);
+            --pdf-page-background: var(--custom-pdf-page-background);
+            --pdf-shadow: var(--custom-pdf-shadow);
+            --pdf-spread-shadow: var(--custom-pdf-spread-shadow);
+            --pdf-sidebar-background: var(--custom-pdf-sidebar-background);
+            --pdf-thumbnail-shadow: var(--custom-pdf-thumbnail-shadow);
         }
     }
 }
