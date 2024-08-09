@@ -708,10 +708,8 @@ settings:
         id: custom-bold-modifier
         title: Bold weight modifier
         description: "--bold-modifier"
-        type: variable-number-slider
+        type: variable-number
         default: 200
-        min: 0
-        max: 400
     -
         id: custom-bold-color
         title: Bold color
@@ -736,6 +734,18 @@ settings:
         format: hex
         default-light: '#222222'
         default-dark: '#dadada'
+    -
+        id: custom-line-height-normal
+        title: Line height, normal
+        description: "--line-height-normal"
+        type: variable-number
+        default: 1.5
+    -
+        id: custom-line-height-tight
+        title: Line height, tight
+        description: "--line-height-tight"
+        type: variable-number
+        default: 1.3
 
     -
         id: header-font-sizes
@@ -2560,6 +2570,8 @@ body {
     & {
         --custom-font-weight: 400;
         --custom-bold-modifier: 200;
+        --custom-line-height-normal: 1.5;
+        --custom-line-height-tight: 1.3;
         &.theme-light {
             --custom-caret-color: #222222; /* --color-base-100 */
         }
@@ -2573,6 +2585,8 @@ body {
             --bold-color: var(--custom-bold-color);
             --italic-color: var(--custom-italic-color);
             --caret-color: var(--custom-caret-color);
+            --line-height-normal: var(--custom-line-height-normal);
+            --line-height-tight: var(--custom-line-height-tight);
         }
     }
 
