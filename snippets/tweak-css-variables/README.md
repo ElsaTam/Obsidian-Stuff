@@ -48,7 +48,7 @@ Expose the css variables with the Style Setting plugin.
   - [x] Z-index
   - [x] PDF view
   - [x] Ribbon
-  - [ ] Scrollbars
+  - [x] Scrollbars
   - [ ] Layout sizing
   - [ ] Sidebar
   - [ ] Tabs

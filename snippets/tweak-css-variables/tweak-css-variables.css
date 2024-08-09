@@ -2449,6 +2449,45 @@ settings:
         description: "--ribbon-padding"
         type: variable-text
         default: 8px 4px 12px
+        
+    -
+        id: header-scrollbar
+        title: Scrollbars
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: use-custom-settings-scrollbar
+        title: Use custom scrollbars
+        type: class-toggle
+        default: false
+    -
+        id: custom-scrollbar-active-thumb-bg
+        title: Scrollbar active thumb background
+        description: "--scrollbar-active-thumb-bg"
+        type: variable-themed-color
+        format: hex
+        default-light: '#00000033'
+        default-dark: '#ffffff33'
+        opacity: true
+    -
+        id: custom-scrollbar-bg
+        title: Scrollbar background
+        description: "--scrollbar-bg"
+        type: variable-themed-color
+        format: hex
+        default-light: '#0000000d'
+        default-dark: '#ffffff0d'
+        opacity: true
+    -
+        id: custom-scrollbar-thumb-bg
+        title: Scrollbar thumb background
+        description: "--scrollbar-thumb-bg"
+        type: variable-themed-color
+        format: hex
+        default-light: '#0000001a'
+        default-dark: '#ffffff1a'
+        opacity: true
     
 
 
@@ -4507,6 +4546,27 @@ body {
             --ribbon-background-collapsed: var(--custom-ribbon-background-collapsed);
             --ribbon-width: var(--custom-ribbon-width);
             --ribbon-padding: var(--custom-ribbon-padding);
+        }
+    }
+
+    /* Scrollbars */
+    & {
+        &.theme-light {
+            --custom-scrollbar-active-thumb-bg: #00000033;
+            --custom-scrollbar-bg: #0000000d;
+            --custom-scrollbar-thumb-bg: #0000001a;
+        }
+        &.theme-dark {
+            --custom-scrollbar-active-thumb-bg: #ffffff33;
+            --custom-scrollbar-bg: #ffffff0d;
+            --custom-scrollbar-thumb-bg: #ffffff1a;
+        }
+
+        &.use-custom-settings-scrollbar {
+            
+            --scrollbar-active-thumb-bg: var(--custom-scrollbar-active-thumb-bg);
+            --scrollbar-bg: var(--custom-scrollbar-bg);
+            --scrollbar-thumb-bg: var(--custom-scrollbar-thumb-bg);
         }
     }
 }
