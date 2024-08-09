@@ -60,7 +60,7 @@ Expose the css variables with the Style Setting plugin.
   - [x] Dragging
   - [x] Graph
   - [x] Icons
-  - [ ] Identation guide
+  - [x] Indentation guide
   - [ ] Inline title
   - [ ] File navigator
   - [ ] Metadata

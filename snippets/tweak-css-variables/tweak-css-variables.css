@@ -2103,6 +2103,71 @@ settings:
         format: hex
         default-light: '#222222"
         default-dark: '#dadada"
+        
+    -
+        id: header-misc-indentation-guide
+        title: Indentation guides
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: use-custom-settings-indentation-guide
+        title: Use custom indentation guides
+        type: class-toggle
+        default: false
+    -
+        id: custom-indentation-guide-width
+        title: Width (px)
+        description: "--indentation-guide-width"
+        type: variable-number
+        default: 1
+        format: px
+    -
+        id: custom-indentation-guide-width-active
+        title: Width active (px)
+        description: "--indentation-guide-width-active"
+        type: variable-number
+        default: 1
+        format: px
+    -
+        id: custom-indentation-guide-editing-indent
+        title: Editing indent (em)
+        description: "--indentation-guide-editing-indent"
+        type: variable-number
+        default: 0.85
+        format: em
+    -
+        id: custom-indentation-guide-reading-indent
+        title: Reading indent (em)
+        description: "--indentation-guide-reading-indent"
+        type: variable-number
+        default: -0.85
+        format: em
+    -
+        id: custom-indentation-guide-source-indent
+        title: Source indent (em)
+        description: "--indentation-guide-source-indent"
+        type: variable-number
+        default: 0.25
+        format: em
+    -
+        id: custom-indentation-guide-color
+        title: Color
+        description: "--indentation-guide-color"
+        type: variable-themed-color
+        format: hex
+        default-light: '#0000001f"
+        default-dark: '#ffffff1f"
+        opacity: true
+    -
+        id: custom-indentation-guide-color-active
+        title: Color active
+        description: "--indentation-guide-color-active"
+        type: variable-themed-color
+        format: hex
+        default-light: '#0000004d"
+        default-dark: '#ffffff4d"
+        opacity: true
 */
 
 
@@ -2885,6 +2950,34 @@ body {
                 var(--custom-icon-color-active-b)
             );
             --icon-color-focused: var(--custom-icon-color-focused);
+        }
+    }
+
+    /* Indentation */
+    & {
+        --custom-indentation-guide-width: 1px;
+        --custom-indentation-guide-width-active: 1px;
+        --custom-indentation-guide-editing-indent: 0.85em;
+        --custom-indentation-guide-reading-indent: -0.85em;
+        --custom-indentation-guide-source-indent: 0.25em;
+
+        &.theme-light {
+            --custom-indentation-guide-color: #0000001f;
+            --custom-indentation-guide-color-active: #0000004d;
+        }
+        &.theme-dark {
+            --custom-indentation-guide-color: #ffffff1f;
+            --custom-indentation-guide-color-active: #ffffff4d;
+        }
+
+        &.use-custom-settings-indentation-guide {
+            --indentation-guide-width: var(--custom-indentation-guide-width);
+            --indentation-guide-width-active: var(--custom-indentation-guide-width-active);
+            --indentation-guide-color: var(--custom-indentation-guide-color);
+            --indentation-guide-color-active: var(--custom-indentation-guide-color-active);
+            --indentation-guide-editing-indent: var(--custom-indentation-guide-editing-indent);
+            --indentation-guide-reading-indent: var(--custom-indentation-guide-reading-indent);
+            --indentation-guide-source-indent: var(--custom-indentation-guide-source-indent);
         }
     }
 }
