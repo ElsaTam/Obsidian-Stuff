@@ -2050,7 +2050,7 @@ settings:
         format: px
     
 
-        
+
 
 
 
@@ -3241,8 +3241,131 @@ settings:
         type: variable-number
         default: 13
         format: px
-    
-    
+        
+    -
+        id: header-misc-pills
+        title: Pills
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: use-custom-settings-pills
+        title: Use custom pills
+        type: class-toggle
+        default: false
+    -
+        id: custom-pill-color
+        title: Color
+        description: "--pill-color"
+        type: variable-themed-color
+        format: hex
+        default-light: '#5c5c5c"
+        default-dark: '#b3b3b3"
+    -
+        id: custom-pill-color-hover
+        title: Color, hover
+        description: "--pill-color-hover"
+        type: variable-themed-color
+        format: hex
+        default-light: '#222222"
+        default-dark: '#dadada"
+    -
+        id: custom-pill-color-remove
+        title: Color, remove
+        description: "--pill-color-remove"
+        type: variable-themed-color
+        format: hex
+        default-light: '#ababab"
+        default-dark: '#666666"
+    -
+        id: custom-pill-color-remove-hover
+        title: Color, remove + hover
+        description: "--pill-color-remove-hover"
+        type: variable-themed-color
+        format: hex
+        default-light: '#9873f7"
+        default-dark: '#9873f7"
+    -
+        id: custom-pill-decoration
+        title: Decoration
+        description: "--pill-decoration"
+        type: variable-text
+        default: none
+    -
+        id: custom-pill-decoration-hover
+        title: Decoration, hover
+        description: "--pill-decoration-hover"
+        type: variable-text
+        default: none
+    -
+        id: custom-pill-background
+        title: Background
+        description: "--pill-background"
+        type: variable-themed-color
+        format: hex
+        default-light: '#00000000"
+        default-dark: '#00000000"
+        opacity: true
+    -
+        id: custom-pill-background-hover
+        title: Background, hover
+        description: "--pill-background-hover"
+        type: variable-themed-color
+        format: hex
+        default-light: '#00000000"
+        default-dark: '#00000000"
+        opacity: true
+    -
+        id: custom-pill-border-color
+        title: Border color
+        description: "--pill-border-color"
+        type: variable-themed-color
+        format: hex
+        default-light: '#e0e0e0"
+        default-dark: '#363636"
+    -
+        id: custom-pill-border-color-hover
+        title: Border color, hover
+        description: "--pill-border-color-hover"
+        type: variable-themed-color
+        format: hex
+        default-light: '#d4d4d4"
+        default-dark: '#3f3f3f"
+    -
+        id: custom-pill-border-width
+        title: Border width (px)
+        description: "--pill-border-width"
+        type: variable-number
+        default: 1
+        format: px
+    -
+        id: custom-pill-padding-x
+        title: Padding X (em)
+        description: "--pill-padding-x"
+        type: variable-number
+        default: 0.65
+        format: em
+    -
+        id: custom-pill-padding-y
+        title: Padding Y (em)
+        description: "--pill-padding-y"
+        type: variable-number
+        default: 0.25
+        format: em
+    -
+        id: custom-pill-radius
+        title: Radius (em)
+        description: "--pill-radius"
+        type: variable-number
+        default: 2
+        format: em
+    -
+        id: custom-pill-weight
+        title: Weight
+        description: "--pill-weight"
+        type: variable-text
+        default: inherit
+        
 */
 
 
@@ -4390,6 +4513,53 @@ body {
             --metadata-input-background-active: var(--custom-metadata-input-background-active);
             --metadata-sidebar-label-font-size: var(--custom-metadata-sidebar-label-font-size);
             --metadata-sidebar-input-font-size: var(--custom-metadata-sidebar-input-font-size);
+        }
+    }
+
+    /* Multi-select pills */
+    & {
+        --custom-pill-color-remove-hover: #9873f7;
+        --custom-pill-decoration: none;
+        --custom-pill-decoration-hover: none;
+        --custom-pill-background: transparent;
+        --custom-pill-background-hover: transparent;
+        --custom-pill-border-width: 1px;
+        --custom-pill-padding-x: 0.65em;
+        --custom-pill-padding-y: 0.25em;
+        --custom-pill-radius: 2em;
+        --custom-pill-weight: inherit;
+
+        &.theme-light {
+            --custom-pill-color: #5c5c5c; /* --color-base-70 */
+            --custom-pill-color-hover: #222222; /* --color-base-100 */
+            --custom-pill-color-remove: #ababab; /* --color-base-50 */
+            --custom-pill-border-color: #e0e0e0; /* --color-base-30 */
+            --custom-pill-border-color-hover: #d4d4d4; /* --color-base-35 */
+        }
+        &.theme-dark {
+            --custom-pill-color: #b3b3b3;
+            --custom-pill-color-hover: #dadada;
+            --custom-pill-color-remove: #666666;
+            --custom-pill-border-color: #363636;
+            --custom-pill-border-color-hover: #3f3f3f;
+        }
+
+        &.use-custom-settings-pills {
+            --pill-color: var(--custom-pill-color);
+            --pill-color-hover: var(--custom-pill-color-hover);
+            --pill-color-remove: var(--custom-pill-color-remove);
+            --pill-color-remove-hover: var(--custom-pill-color-remove-hover);
+            --pill-decoration: var(--custom-pill-decoration);
+            --pill-decoration-hover: var(--custom-pill-decoration-hover);
+            --pill-background: var(--custom-pill-background);
+            --pill-background-hover: var(--custom-pill-background-hover);
+            --pill-border-color: var(--custom-pill-border-color);
+            --pill-border-color-hover: var(--custom-pill-border-color-hover);
+            --pill-border-width: var(--custom-pill-border-width);
+            --pill-padding-x: var(--custom-pill-padding-x);
+            --pill-padding-y: var(--custom-pill-padding-y);
+            --pill-radius: var(--custom-pill-radius);
+            --pill-weight: var(--custom-pill-weight);
         }
     }
 }
