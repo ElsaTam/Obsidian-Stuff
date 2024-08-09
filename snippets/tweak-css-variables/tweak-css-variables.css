@@ -1960,9 +1960,97 @@ settings:
         min: 0
         max: 100
         format: vh
+
+    -
+        id: header-modals-modals
+        title: Modals
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: use-custom-settings-modals
+        title: Use custom modals
+        type: class-toggle
+        default: false
+    -
+        id: custom-modal-background
+        title: Background
+        description: "--modal-background"
+        type: variable-themed-color
+        format: hex
+        default-light: '#ffffff'
+        default-dark: '#1e1e1e'
+    -
+        id: custom-modal-width
+        title: Width (vw)
+        description: "--modal-width"
+        type: variable-number-slider
+        default: 90
+        min: 0
+        max: 100
+        format: vw
+    -
+        id: custom-modal-height
+        title: Height (vh)
+        description: "--modal-height"
+        type: variable-number-slider
+        default: 85
+        min: 0
+        max: 100
+        format: vh
+    -
+        id: custom-modal-max-width
+        title: Max width (px)
+        description: "--modal-max-width"
+        type: variable-number
+        default: 1100
+        format: px
+    -
+        id: custom-modal-max-height
+        title: Max height (px)
+        description: "--modal-max-height"
+        type: variable-number
+        default: 1000
+        format: px
+    -
+        id: custom-modal-max-width-narrow
+        title: Max width narrow (px)
+        description: "--modal-max-width-narrow"
+        type: variable-number
+        default: 800
+        format: px
+    -
+        id: custom-modal-border-width
+        title: Border width (px)
+        description: "--modal-border-width"
+        type: variable-number
+        default: 1
+        format: px
+    -
+        id: custom-modal-border-color
+        title: Border color
+        description: "--modal-border-color"
+        type: variable-themed-color
+        format: hex
+        default-light: '#bdbdbd'
+        default-dark: '#555555'
+    -
+        id: custom-modal-radius
+        title: Radius (px)
+        description: "--modal-radius"
+        type: variable-number
+        default: 12
+        format: px
+    -
+        id: custom-modal-community-sidebar-width
+        title: Community sidebar width (px)
+        description: "--modal-community-sidebar-width"
+        type: variable-number
+        default: 280
+        format: px
     
 
-
+        
 
 
 
@@ -3829,6 +3917,40 @@ body {
             --dialog-width: var(--custom-dialog-width);
             --dialog-max-width: var(--custom-dialog-max-width);
             --dialog-max-height: var(--custom-dialog-max-height);
+        }
+    }
+
+    /* Modals - e.g. settings, community themes, community plugins */
+    & {
+        --custom-modal-width: 90vw;
+        --custom-modal-height: 85vh;
+        --custom-modal-max-width: 1100px;
+        --custom-modal-max-height: 1000px;
+        --custom-modal-max-width-narrow: 800px;
+        --custom-modal-border-width: 1px;
+        --custom-modal-radius: 12px;
+        --custom-modal-community-sidebar-width: 280px;
+
+        &.theme-light {
+            --custom-modal-background: #ffffff; /* --color-base-00 */
+            --custom-modal-border-color: #bdbdbd; /* --color-base-40 */
+        }
+        &.theme-dark {
+            --custom-modal-background: #1e1e1e;
+            --custom-modal-border-color: #555555;
+        }
+
+        &.use-custom-settings-modals {
+            --modal-background: var(--custom-modal-background);
+            --modal-width: var(--custom-modal-width);
+            --modal-height: var(--custom-modal-height);
+            --modal-max-width: var(--custom-modal-max-width);
+            --modal-max-height: var(--custom-modal-max-height);
+            --modal-max-width-narrow: var(--custom-modal-max-width-narrow);
+            --modal-border-width: var(--custom-modal-border-width);
+            --modal-border-color: var(--custom-modal-border-color);
+            --modal-radius: var(--custom-modal-radius);
+            --modal-community-sidebar-width: var(--custom-modal-community-sidebar-width);
         }
     }
 }
