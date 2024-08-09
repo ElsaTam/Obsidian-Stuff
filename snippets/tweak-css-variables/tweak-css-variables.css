@@ -51,6 +51,123 @@ settings:
         type: variable-number
         default: 16
         format: px
+        
+    -
+        id: header-size
+        title: Layout sizing - for padding and margins
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: use-custom-settings-size
+        title: Use custom layout sizing
+        type: class-toggle
+        default: false
+    -
+        id: custom-size-2-1
+        title: Size 2-1 (px)
+        description: "--size-2-1"
+        type: variable-number
+        default: 2
+        format: px
+    -
+        id: custom-size-2-2
+        title: Size 2-2 (px)
+        description: "--size-2-2"
+        type: variable-number
+        default: 4
+        format: px
+    -
+        id: custom-size-2-3
+        title: Size 2-3 (px)
+        description: "--size-2-3"
+        type: variable-number
+        default: 6
+        format: px
+    -
+        id: custom-size-4-1
+        title: Size 4-1 (px)
+        description: "--size-4-1"
+        type: variable-number
+        default: 4
+        format: px
+    -
+        id: custom-size-4-2
+        title: Size 4-2 (px)
+        description: "--size-4-2"
+        type: variable-number
+        default: 8
+        format: px
+    -
+        id: custom-size-4-3
+        title: Size 4-3 (px)
+        description: "--size-4-3"
+        type: variable-number
+        default: 12
+        format: px
+    -
+        id: custom-size-4-4
+        title: Size 4-4 (px)
+        description: "--size-4-4"
+        type: variable-number
+        default: 16
+        format: px
+    -
+        id: custom-size-4-5
+        title: Size 4-5 (px)
+        description: "--size-4-5"
+        type: variable-number
+        default: 20
+        format: px
+    -
+        id: custom-size-4-6
+        title: Size 4-6 (px)
+        description: "--size-4-6"
+        type: variable-number
+        default: 24
+        format: px
+    -
+        id: custom-size-4-8
+        title: Size 4-8 (px)
+        description: "--size-4-8"
+        type: variable-number
+        default: 32
+        format: px
+    -
+        id: custom-size-4-9
+        title: Size 4-9 (px)
+        description: "--size-4-9"
+        type: variable-number
+        default: 36
+        format: px
+    -
+        id: custom-size-4-10
+        title: Size 4-10 (px)
+        description: "--size-4-10"
+        type: variable-number
+        default: 40
+        format: px
+    -
+        id: custom-size-4-12
+        title: Size 4-12 (px)
+        description: "--size-4-12"
+        type: variable-number
+        default: 48
+        format: px
+    -
+        id: custom-size-4-16
+        title: Size 4-16 (px)
+        description: "--size-4-16"
+        type: variable-number
+        default: 67
+        format: px
+    -
+        id: custom-size-4-18
+        title: Size 4-18 (px)
+        description: "--size-4-18"
+        type: variable-number
+        default: 72
+        format: px
 
 
 
@@ -3763,6 +3880,43 @@ body {
             --radius-m: var(--custom-radius-m);
             --radius-l: var(--custom-radius-l);
             --radius-xl: var(--custom-radius-xl);
+        }
+    }
+
+    /* Layout sizing - for padding and margins */
+    & {
+        --custom-size-2-1: 2px;
+        --custom-size-2-2: 4px;
+        --custom-size-2-3: 6px;
+        --custom-size-4-1: 4px;
+        --custom-size-4-2: 8px;
+        --custom-size-4-3: 12px;
+        --custom-size-4-4: 16px;
+        --custom-size-4-5: 20px;
+        --custom-size-4-6: 24px;
+        --custom-size-4-8: 32px;
+        --custom-size-4-9: 36px;
+        --custom-size-4-10: 40px;
+        --custom-size-4-12: 48px;
+        --custom-size-4-16: 64px;
+        --custom-size-4-18: 72px;
+
+        &.use-custom-settings-size {
+            --size-2-1: var(--custom-size-2-1);
+            --size-2-2: var(--custom-size-2-2);
+            --size-2-3: var(--custom-size-2-3);
+            --size-4-1: var(--custom-size-4-1);
+            --size-4-2: var(--custom-size-4-2);
+            --size-4-3: var(--custom-size-4-3);
+            --size-4-4: var(--custom-size-4-4);
+            --size-4-5: var(--custom-size-4-5);
+            --size-4-6: var(--custom-size-4-6);
+            --size-4-8: var(--custom-size-4-8);
+            --size-4-9: var(--custom-size-4-9);
+            --size-4-10: var(--custom-size-4-10);
+            --size-4-12: var(--custom-size-4-12);
+            --size-4-16: var(--custom-size-4-16);
+            --size-4-18: var(--custom-size-4-18);
         }
     }
 }

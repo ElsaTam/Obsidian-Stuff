@@ -10,6 +10,9 @@ Expose the css variables with the Style Setting plugin.
 
 # Advancement
 
+- Base variables
+  - [x] Radiuses
+  - [x] Layout sizing
 - Containers
   - [x] Blockquotes
   - [x] Callouts
@@ -49,7 +52,6 @@ Expose the css variables with the Style Setting plugin.
   - [x] PDF view
   - [x] Ribbon
   - [x] Scrollbars
-  - [ ] Layout sizing
   - [ ] Sidebar
   - [ ] Tabs
   - [ ] Stacked tabs
@@ -65,7 +67,6 @@ Expose the css variables with the Style Setting plugin.
   - [x] Metadata
   - [x] Multi-select pills
   - [x] Prompts
-  - [x] Radiuses
   - [x] Search
   - [ ] Status bar
   - [ ] Sync
