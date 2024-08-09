@@ -3900,6 +3900,62 @@ settings:
         default-light: '#ffffff"
         default-dark: '#1e1e1e"
         
+    -
+        id: header-status-bar
+        title: Search
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: use-custom-settings-status-bar
+        title: Use custom status bar
+        type: class-toggle
+        default: false
+    -
+        id: custom-status-bar-background
+        title: Background
+        description: "--status-bar-background"
+        type: variable-themed-color
+        format: hex
+        default-light: '#f6f6f6"
+        default-dark: '#262626"
+    -
+        id: custom-status-bar-text-color
+        title: Text color
+        description: "--status-bar-text-color"
+        type: variable-themed-color
+        format: hex
+        default-light: '#5c5c5c"
+        default-dark: '#b3b3b3"
+    -
+        id: custom-status-bar-border-color
+        title: Border color
+        description: "--status-bar-border-color"
+        type: variable-themed-color
+        format: hex
+        default-light: '#e0e0e0"
+        default-dark: '#363636"
+    -
+        id: custom-status-bar-border-width
+        title: Border width
+        description: "--status-bar-border-width"
+        type: variable-text
+        default: 1px 0 0 1px
+    -
+        id: custom-status-bar-font-size
+        title: Font size (px)
+        description: "--status-bar-font-size"
+        type: variable-number
+        default: 12
+        format: px
+    -
+        id: custom-status-bar-radius
+        title: Radius
+        description: "--status-bar-radius"
+        type: variable-text
+        default: 8px 0 0 0
+    
+        
 */
 
 /* Base */
@@ -5307,6 +5363,33 @@ body {
             --search-icon-color: var(--custom-search-icon-color);
             --search-icon-size: var(--custom-search-icon-size);
             --search-result-background: var(--custom-search-result-background);
+        }
+    }
+
+    /* Status bar */
+    & {
+        --custom-status-bar-border-width: 1px 0 0 1px;
+        --custom-status-bar-font-size: 12px;
+        --custom-status-bar-radius: 8px 0 0 0;
+        
+        &.theme-light {
+            --custom-status-bar-background: #f6f6f6; /* --color-base-20 */
+            --custom-status-bar-border-color: #e0e0e0; /* --color-base-30 */
+            --custom-status-bar-text-color: #5c5c5c; /* --color-base-70 */
+        }
+        &.theme-dark {
+            --custom-status-bar-background: #262626;
+            --custom-status-bar-border-color: #363636;
+            --custom-status-bar-text-color: #b3b3b3;
+        }
+
+        &.use-custom-settings-status-bar {
+            --status-bar-background: var(--custom-status-bar-background);
+            --status-bar-border-color: var(--custom-status-bar-border-color);
+            --status-bar-border-width: var(--custom-status-bar-border-width);
+            --status-bar-font-size: var(--custom-status-bar-font-size);
+            --status-bar-text-color: var(--custom-status-bar-text-color);
+            --status-bar-radius: var(--custom-status-bar-radius);
         }
     }
 }
