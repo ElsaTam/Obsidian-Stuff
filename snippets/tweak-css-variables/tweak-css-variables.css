@@ -2424,7 +2424,7 @@ settings:
         collapsed: true
         
     -
-        id: header-misc-collapse-icons
+        id: header-collapse-icons
         title: Collapse icons
         type: heading
         level: 2
@@ -2451,7 +2451,7 @@ settings:
         default: '#8a5cf5'
         
     -
-        id: header-misc-collapse-icons
+        id: header-collapse-icons
         title: Collapse icons
         type: heading
         level: 2
@@ -2479,7 +2479,7 @@ settings:
         opacity: true
         
     -
-        id: header-misc-graphs
+        id: header-graphs
         title: Graphs
         type: heading
         level: 2
@@ -2553,7 +2553,7 @@ settings:
         default-dark: '#e0de71'
         
     -
-        id: header-misc-hr
+        id: header-hr
         title: Horizontal rules (hr)
         type: heading
         level: 2
@@ -2580,7 +2580,7 @@ settings:
         format: px
         
     -
-        id: header-misc-icons
+        id: header-icons
         title: Icons
         type: heading
         level: 2
@@ -2591,7 +2591,7 @@ settings:
         type: class-toggle
         default: false
     -
-        id: header-misc-icons-generic
+        id: header-icons-generic
         title: Generic sizes
         type: heading
         level: 3
@@ -2667,7 +2667,7 @@ settings:
         default: 1.25
         format: px
     -
-        id: header-misc-icons-specific
+        id: header-icons-specific
         title: Specific sizes
         type: heading
         level: 3
@@ -2694,7 +2694,7 @@ settings:
         default: 4
         format: px
     -
-        id: header-misc-icons-colors
+        id: header-icons-colors
         title: Colors
         type: heading
         level: 3
@@ -2734,7 +2734,7 @@ settings:
         default-dark: '#dadada"
         
     -
-        id: header-misc-indentation-guide
+        id: header-indentation-guide
         title: Indentation guides
         type: heading
         level: 2
@@ -2799,7 +2799,7 @@ settings:
         opacity: true
         
     -
-        id: header-misc-nav
+        id: header-nav
         title: File navigator
         type: heading
         level: 2
@@ -2810,7 +2810,7 @@ settings:
         type: class-toggle
         default: false
     -
-        id: header-misc-nav-item
+        id: header-nav-item
         title: Items
         type: heading
         level: 3
@@ -2949,7 +2949,7 @@ settings:
             - collapse balance
             - preserve nowrap
     -
-        id: header-misc-nav-indent
+        id: header-nav-indent
         title: Indentation guides and collapse icons
         type: heading
         level: 3
@@ -2986,7 +2986,7 @@ settings:
         default-light: '#ababab"
         default-dark: '#666666"
     -
-        id: header-misc-nav-headings
+        id: header-nav-headings
         title: Headings
         type: heading
         level: 3
@@ -3037,7 +3037,7 @@ settings:
         default: 500
         
     -
-        id: header-misc-metadata
+        id: header-metadata
         title: Metadata
         type: heading
         level: 2
@@ -3048,7 +3048,7 @@ settings:
         type: class-toggle
         default: false
     -
-        id: header-misc-metadata-global
+        id: header-metadata-global
         title: Global
         type: heading
         level: 3
@@ -3097,7 +3097,7 @@ settings:
             - none
             - contents
     -
-        id: header-misc-metadata-layout
+        id: header-metadata-layout
         title: Layout
         type: heading
         level: 3
@@ -3122,7 +3122,7 @@ settings:
         default: 3
         format: px
     -
-        id: header-misc-metadata-borders
+        id: header-metadata-borders
         title: Borders
         type: heading
         level: 3
@@ -3183,7 +3183,7 @@ settings:
         default: 0
         format: px
     -
-        id: header-misc-metadata-property
+        id: header-metadata-property
         title: Properties
         type: heading
         level: 3
@@ -3243,7 +3243,7 @@ settings:
         default-dark: '#ffffff13"
         opacity: true
     -
-        id: header-misc-metadata-label
+        id: header-metadata-label
         title: Labels
         type: heading
         level: 3
@@ -3303,7 +3303,7 @@ settings:
         default: 9
         format: em
     -
-        id: header-misc-metadata-input
+        id: header-metadata-input
         title: Inputs
         type: heading
         level: 3
@@ -3358,7 +3358,7 @@ settings:
         default-dark: '#ffffff13"
         opacity: true
     -
-        id: header-misc-metadata-sidebar
+        id: header-metadata-sidebar
         title: Sidebar
         type: heading
         level: 3
@@ -3379,7 +3379,7 @@ settings:
         format: px
         
     -
-        id: header-misc-pills
+        id: header-pills
         title: Pills
         type: heading
         level: 2
@@ -3501,6 +3501,61 @@ settings:
         description: "--pill-weight"
         type: variable-text
         default: inherit
+        
+    -
+        id: header-prompts
+        title: Prompts - e.g. quick switcher, command palette
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: use-custom-settings-prompts
+        title: Use custom prompts
+        type: class-toggle
+        default: false
+    -
+        id: custom-prompt-input-height
+        title: Input height (px)
+        description: "--prompt-input-height"
+        type: variable-number
+        default: 40
+        format: px
+    -
+        id: custom-prompt-width
+        title: Width (px)
+        description: "--prompt-width"
+        type: variable-number
+        default: 700
+        format: px
+    -
+        id: custom-prompt-max-width
+        title: Max width (vw)
+        description: "--prompt-max-width"
+        type: variable-number
+        default: 80
+        format: vw
+    -
+        id: custom-prompt-max-height
+        title: Max height (vh)
+        description: "--prompt-max-height"
+        type: variable-number
+        default: 70
+        format: vh
+    -
+        id: custom-prompt-border-width
+        title: Border width (px)
+        description: "--prompt-border-width"
+        type: variable-number
+        default: 1
+        format: px
+    -
+        id: custom-prompt-border-color
+        title: Border color
+        description: "--prompt-border-color"
+        type: variable-themed-color
+        format: hex
+        default-light: '#bdbdbd"
+        default-dark: '#555555"
         
 */
 
@@ -4752,6 +4807,31 @@ body {
             --pill-padding-y: var(--custom-pill-padding-y);
             --pill-radius: var(--custom-pill-radius);
             --pill-weight: var(--custom-pill-weight);
+        }
+    }
+
+    /* Prompts - e.g. quick switcher, command palette */
+    & {
+        --custom-prompt-input-height: 40px;
+        --custom-prompt-width: 700px;
+        --custom-prompt-max-width: 80vw;
+        --custom-prompt-max-height: 70vh;
+        --custom-prompt-border-width: 1px;
+        
+        &.theme-light {
+            --custom-prompt-border-color: #bdbdbd; /* --color-base-40 */
+        }
+        &.theme-dark {
+            --custom-prompt-border-color: #555555;
+        }
+
+        &.use-custom-settings-prompts {
+            --prompt-input-height: var(--custom-prompt-input-height);
+            --prompt-width: var(--custom-prompt-width);
+            --prompt-max-width: var(--custom-prompt-max-width);
+            --prompt-max-height: var(--custom-prompt-max-height);
+            --prompt-border-width: var(--custom-prompt-border-width);
+            --prompt-border-color: var(--custom-prompt-border-color);
         }
     }
 }

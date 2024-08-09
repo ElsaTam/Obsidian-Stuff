@@ -18,7 +18,7 @@ Expose the css variables with the Style Setting plugin.
   - [x] Embeds
   - [ ] Tables
 - Typography
-  - [ ] General
+  - [x] General
   - [x] Font sizes
     - [x] Relative font sizes
     - [x] UI font sizes
@@ -30,14 +30,14 @@ Expose the css variables with the Style Setting plugin.
   - [x] Lists
   - [x] Paragraphs
   - [ ] Tags
-- Inputs
+- [x] Inputs
   - [x] General
   - [x] Buttons
   - [x] Checkboxes
   - [x] Dropdowns
   - [x] Sliders
   - [x] Toggles
-- Modals
+- [x] Modals
   - [x] Dialogs
   - [x] Modals
   - [x] Popovers
@@ -64,7 +64,7 @@ Expose the css variables with the Style Setting plugin.
   - [x] File navigator
   - [x] Metadata
   - [x] Multi-select pills
-  - [ ] Prompts
+  - [x] Prompts
   - [ ] Radiuses
   - [ ] Search
   - [ ] Status bar
