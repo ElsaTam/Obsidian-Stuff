@@ -2573,6 +2573,244 @@ settings:
         default-light: '#0000004d"
         default-dark: '#ffffff4d"
         opacity: true
+        
+    -
+        id: header-misc-nav
+        title: File navigator
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: use-custom-settings-nav
+        title: Use custom file navigator
+        type: class-toggle
+        default: false
+    -
+        id: header-misc-nav-item
+        title: Items
+        type: heading
+        level: 3
+        collapsed: true
+    -
+        id: custom-nav-item-size
+        title: Item size (px)
+        description: "--nav-item-size"
+        type: variable-number
+        default: 13
+        format: px
+    -
+        id: custom-nav-item-color
+        title: Item color
+        description: "--nav-item-color"
+        type: variable-themed-color
+        format: hex
+        default-light: '#5c5c5c"
+        default-dark: '#b3b3b3"
+    -
+        id: custom-nav-item-color-hover
+        title: Item color, hover
+        description: "--nav-item-color-hover"
+        type: variable-themed-color
+        format: hex
+        default-light: '#222222"
+        default-dark: '#dadada"
+    -
+        id: custom-nav-item-color-active
+        title: Item color, active
+        description: "--nav-item-color-active"
+        type: variable-themed-color
+        format: hex
+        default-light: '#222222"
+        default-dark: '#dadada"
+    -
+        id: custom-nav-item-color-selected
+        title: Item color, selected
+        description: "--nav-item-color-selected"
+        type: variable-themed-color
+        format: hex
+        default-light: '#222222"
+        default-dark: '#dadada"
+    -
+        id: custom-nav-item-color-highlighted
+        title: Item color, highlighted
+        description: "--nav-item-color-highlighted"
+        type: variable-themed-color
+        format: hex
+        default-light: '#8a5cf5"
+        default-dark: '#8a5cf5"
+    -
+        id: custom-nav-item-background-hover
+        title: Item background, hover
+        description: "--nav-item-background-hover"
+        type: variable-themed-color
+        format: hex
+        default-light: '#00000013"
+        default-dark: '#ffffff13"
+        opacity: true
+    -
+        id: custom-nav-item-background-active
+        title: Item background, active
+        description: "--nav-item-background-active"
+        type: variable-themed-color
+        format: hex
+        default-light: '#00000013"
+        default-dark: '#ffffff13"
+        opacity: true
+    -
+        id: custom-nav-item-background-selected
+        title: Item background, selected
+        description: "--nav-item-background-selected"
+        type: variable-themed-color
+        format: hex
+        default-light: '#8a5cf526"
+        default-dark: '#8a5cf526"
+        opacity: true
+    -
+        id: custom-nav-item-padding
+        title: Item padding
+        description: "--nav-item-padding"
+        type: variable-text
+        default: 4px 8px 4px 8px
+    -
+        id: custom-nav-item-parent-padding
+        title: Item parent padding
+        description: "--nav-item-parent-padding"
+        type: variable-text
+        default: 4px 8px 4px 8px
+    -
+        id: custom-nav-item-children-padding-start
+        title: Item children padding start (px)
+        description: "--nav-item-children-padding-start"
+        type: variable-number
+        default: 4
+        format: px
+    -
+        id: custom-nav-item-children-margin-start
+        title: Item children margin start (px)
+        description: "--nav-item-children-margin-start"
+        type: variable-number
+        default: 12
+        format: px
+    -
+        id: custom-nav-item-weight
+        title: Item weight
+        description: "--nav-item-weight"
+        type: variable-text
+        default: inherit
+    -
+        id: custom-nav-item-weight-hover
+        title: Item weight, hover
+        description: "--nav-item-weight-hover"
+        type: variable-text
+        default: inherit
+    -
+        id: custom-nav-item-weight-active
+        title: Item weight, active
+        description: "--nav-item-weight-active"
+        type: variable-text
+        default: inherit
+    -
+        id: custom-nav-item-white-space
+        title: Item white space
+        description: "--nav-item-white-space"
+        type: variable-select
+        default: pre
+        options:
+            - normal
+            - nowrap
+            - pre
+            - pre-wrap
+            - pre-line
+            - break-spaces
+            - collapse balance
+            - preserve nowrap
+    -
+        id: header-misc-nav-indent
+        title: Indentation guides and collapse icons
+        type: heading
+        level: 3
+        collapsed: true
+    -
+        id: custom-nav-indentation-guide-width
+        title: Indentation guides width (px)
+        description: "--nav-indentation-guide-width"
+        type: variable-number
+        default: 1
+        format: px
+    -
+        id: custom-nav-indentation-guide-color
+        title: Indentation guides color
+        description: "--nav-indentation-guide-color"
+        type: variable-themed-color
+        format: hex
+        default-light: '#0000001f"
+        default-dark: '#ffffff1f"
+    -
+        id: custom-nav-collapse-icon-color
+        title: Collapse icon color
+        description: "--nav-collapse-icon-color"
+        type: variable-themed-color
+        format: hex
+        default-light: '#ababab"
+        default-dark: '#666666"
+    -
+        id: custom-nav-collapse-icon-color-collapsed
+        title: Collapse icon color, collapsed
+        description: "--nav-collapse-icon-color-collapsed"
+        type: variable-themed-color
+        format: hex
+        default-light: '#ababab"
+        default-dark: '#666666"
+    -
+        id: header-misc-nav-headings
+        title: Headings
+        type: heading
+        level: 3
+        collapsed: true
+    -
+        id: custom-nav-heading-color
+        title: Headings color
+        description: "--nav-heading-color"
+        type: variable-themed-color
+        format: hex
+        default-light: '#222222"
+        default-dark: '#dadada"
+    -
+        id: custom-nav-heading-color-hover
+        title: Headings color, hover
+        description: "--nav-heading-color-hover"
+        type: variable-themed-color
+        format: hex
+        default-light: '#222222"
+        default-dark: '#dadada"
+    -
+        id: custom-nav-heading-color-collapsed
+        title: Headings color, collapsed
+        description: "--nav-heading-color-collapsed"
+        type: variable-themed-color
+        format: hex
+        default-light: '#ababab"
+        default-dark: '#666666"
+    -
+        id: custom-nav-heading-color-collapsed-hover
+        title: Headings color, collapsed + hover
+        description: "--nav-heading-color-collapsed-hover"
+        type: variable-themed-color
+        format: hex
+        default-light: '#ababab"
+        default-dark: '#b3b3b3"
+    -
+        id: custom-nav-heading-weight
+        title: Headings weight
+        description: "--nav-heading-weight"
+        type: variable-number
+        default: 500
+    -
+        id: custom-nav-heading-weight-hover
+        title: Headings weight, hover
+        description: "--nav-heading-weight-hover"
+        type: variable-number
+        default: 500
 */
 
 
@@ -3517,6 +3755,85 @@ body {
             --indentation-guide-editing-indent: var(--custom-indentation-guide-editing-indent);
             --indentation-guide-reading-indent: var(--custom-indentation-guide-reading-indent);
             --indentation-guide-source-indent: var(--custom-indentation-guide-source-indent);
+        }
+    }
+
+    /* File navigator */
+    & {
+        --custom-nav-item-size: 13px;
+        --custom-nav-item-color-highlighted: #8a5cf5;
+        --custom-nav-item-background-selected: #8a5cf526;
+        --custom-nav-item-padding: 4px 8px 4px 8px;
+        --custom-nav-item-parent-padding: 4px 8px 4px 8px;
+        --custom-nav-item-children-padding-start: 4px;
+        --custom-nav-item-children-margin-start: 12px;
+        --custom-nav-item-weight: inherit;
+        --custom-nav-item-weight-hover: inherit;
+        --custom-nav-item-weight-active: inherit;
+        --custom-nav-item-white-space: pre;
+        --custom-nav-indentation-guide-width: 1px;
+        --custom-nav-heading-weight: 500;
+        --custom-nav-heading-weight-hover: 500;
+
+        &.theme-light {
+            --custom-nav-item-color: #5c5c5c; /* --color-base-70 */
+            --custom-nav-item-color-hover: #222222; /* --color-base-100 */
+            --custom-nav-item-color-active: #222222; /* --color-base-100 */
+            --custom-nav-item-color-selected: #222222; /* --color-base-100 */
+            --custom-nav-item-background-hover: #00000013; /* rgba(var(--mono-rgb-100), 0.075) */
+            --custom-nav-item-background-active: #00000013; /* rgba(var(--mono-rgb-100), 0.075) */
+            --custom-nav-indentation-guide-color: #0000001f; /* rgba(var(--mono-rgb-100), 0.12) */
+            --custom-nav-collapse-icon-color: #ababab; /* --color-base-50 */
+            --custom-nav-collapse-icon-color-collapsed: #ababab; /* --color-base-50 */
+            --custom-nav-heading-color: #222222; /* --color-base-100 */
+            --custom-nav-heading-color-hover: #222222; /* --color-base-100 */
+            --custom-nav-heading-color-collapsed: #ababab; /* --color-base-50 */
+            --custom-nav-heading-color-collapsed-hover: #5c5c5c; /* --color-base-70 */
+        }
+        &.theme-dark {
+            --custom-nav-item-color: #b3b3b3; /* --color-base-70 */
+            --custom-nav-item-color-hover: #dadada; /* --color-base-100 */
+            --custom-nav-item-color-active: #dadada; /* --color-base-100 */
+            --custom-nav-item-color-selected: #dadada; /* --color-base-100 */
+            --custom-nav-item-background-hover: #ffffff13; /* rgba(var(--mono-rgb-100), 0.075) */
+            --custom-nav-item-background-active: #ffffff13; /* rgba(var(--mono-rgb-100), 0.075) */
+            --custom-nav-indentation-guide-color: #ffffff1f; /* rgba(var(--mono-rgb-100), 0.12) */
+            --custom-nav-collapse-icon-color: #666666; /* --color-base-50 */
+            --custom-nav-collapse-icon-color-collapsed: #666666; /* --color-base-50 */
+            --custom-nav-heading-color: #dadada; /* --color-base-100 */
+            --custom-nav-heading-color-hover: #dadada; /* --color-base-100 */
+            --custom-nav-heading-color-collapsed: #666666; /* --color-base-50 */
+            --custom-nav-heading-color-collapsed-hover: #b3b3b3; /* --color-base-70 */
+        }
+
+        &.use-custom-settings-nav {
+            --nav-item-size: var(--custom-nav-item-size); 
+            --nav-item-color: var(--custom-nav-item-color);
+            --nav-item-color-hover: var(--custom-nav-item-color-hover);
+            --nav-item-color-active: var(--custom-nav-item-color-active);
+            --nav-item-color-selected: var(--custom-nav-item-color-selected);
+            --nav-item-color-highlighted: var(--custom-nav-item-color-highlighted); 
+            --nav-item-background-hover: var(--custom-nav-item-background-hover);
+            --nav-item-background-active: var(--custom-nav-item-background-active);
+            --nav-item-background-selected: var(--custom-nav-item-background-selected); 
+            --nav-item-padding: var(--custom-nav-item-padding); 
+            --nav-item-parent-padding: var(--custom-nav-item-parent-padding); 
+            --nav-item-children-padding-start: var(--custom-nav-item-children-padding-start); 
+            --nav-item-children-margin-start: var(--custom-nav-item-children-margin-start); 
+            --nav-item-weight: var(--custom-nav-item-weight); 
+            --nav-item-weight-hover: var(--custom-nav-item-weight-hover); 
+            --nav-item-weight-active: var(--custom-nav-item-weight-active); 
+            --nav-item-white-space: var(--custom-nav-item-white-space); 
+            --nav-indentation-guide-width: var(--custom-nav-indentation-guide-width);
+            --nav-indentation-guide-color: var(--custom-nav-indentation-guide-color);
+            --nav-collapse-icon-color: var(--custom-nav-collapse-icon-color);
+            --nav-collapse-icon-color-collapsed: var(--custom-nav-collapse-icon-color-collapsed);
+            --nav-heading-color: var(--custom-nav-heading-color);
+            --nav-heading-color-hover: var(--custom-nav-heading-color-hover);
+            --nav-heading-color-collapsed: var(--custom-nav-heading-color-collapsed);
+            --nav-heading-color-collapsed-hove: var(--custom-nav-heading-color-collapsed-hove);
+            --nav-heading-weight: var(--custom-nav-heading-weight); 
+            --nav-heading-weight-hover: var(--custom-nav-heading-weight-hover); 
         }
     }
 }
