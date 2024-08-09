@@ -2811,6 +2811,350 @@ settings:
         description: "--nav-heading-weight-hover"
         type: variable-number
         default: 500
+        
+    -
+        id: header-misc-metadata
+        title: Metadata
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: use-custom-settings-metadata
+        title: Use custom metadata
+        type: class-toggle
+        default: false
+    -
+        id: header-misc-metadata-global
+        title: Global
+        type: heading
+        level: 3
+        collapsed: true
+    -
+        id: custom-metadata-background
+        title: Background
+        description: "--metadata-background"
+        type: variable-themed-color
+        format: hex
+        default-light: '#00000000"
+        default-dark: '#00000000"
+        opacity: true
+    -
+        id: custom-metadata-display-reading
+        title: Display, reading view
+        description: "--metadata-display-reading"
+        type: variable-select
+        default: block
+        options:
+            - block
+            - inline
+            - inline-block
+            - flex
+            - inline-flex
+            - grid
+            - inline-grid
+            - flow-root
+            - none
+            - contents
+    -
+        id: custom-metadata-display-editing
+        title: Display, editing view
+        description: "--metadata-display-editing"
+        type: variable-select
+        default: block
+        options:
+            - block
+            - inline
+            - inline-block
+            - flex
+            - inline-flex
+            - grid
+            - inline-grid
+            - flow-root
+            - none
+            - contents
+    -
+        id: header-misc-metadata-layout
+        title: Layout
+        type: heading
+        level: 3
+        collapsed: true
+    -
+        id: custom-metadata-max-width
+        title: Max width (write the unit)
+        description: "--metadata-max-width"
+        type: variable-text
+        default: none
+    -
+        id: custom-metadata-padding
+        title: Padding
+        description: "--metadata-padding"
+        type: variable-text
+        default: 8px 0
+    -
+        id: custom-metadata-gap
+        title: Gap (px)
+        description: "--metadata-gap"
+        type: variable-number
+        default: 3
+        format: px
+    -
+        id: header-misc-metadata-borders
+        title: Borders
+        type: heading
+        level: 3
+        collapsed: true
+    -
+        id: custom-metadata-border-color
+        title: Border color
+        description: "--metadata-border-color"
+        type: variable-themed-color
+        format: hex
+        default-light: '#e0e0e0"
+        default-dark: '#363636"
+    -
+        id: custom-metadata-border-radius
+        title: Border radius (px)
+        description: "--metadata-border-radius"
+        type: variable-number
+        default: 0
+        format: px
+    -
+        id: custom-metadata-border-width
+        title: Border width (px)
+        description: "--metadata-border-width"
+        type: variable-number
+        default: 0
+        format: px
+    -
+        id: custom-metadata-divider-color
+        title: Divider color
+        description: "--metadata-divider-color"
+        type: variable-themed-color
+        format: hex
+        default-light: '#e0e0e0"
+        default-dark: '#363636"
+    -
+        id: custom-metadata-divider-color-hover
+        title: Divider color, hover
+        description: "--metadata-divider-color-hover"
+        type: variable-themed-color
+        format: hex
+        default-light: '#00000000"
+        default-dark: '#00000000"
+        opacity: true
+    -
+        id: custom-metadata-divider-color-focus
+        title: Divider color, focus
+        description: "--metadata-divider-color-focus"
+        type: variable-themed-color
+        format: hex
+        default-light: '#00000000"
+        default-dark: '#00000000"
+        opacity: true
+    -
+        id: custom-metadata-divider-width
+        title: Divider width (px)
+        description: "--metadata-divider-width"
+        type: variable-number
+        default: 0
+        format: px
+    -
+        id: header-misc-metadata-property
+        title: Properties
+        type: heading
+        level: 3
+        collapsed: true
+    -
+        id: custom-metadata-property-padding
+        title: Property padding (write your own units)
+        description: "--metadata-property-padding"
+        type: variable-text
+        default: 0
+    -
+        id: custom-metadata-property-radius
+        title: Property radius (px)
+        description: "--metadata-property-radius"
+        type: variable-number
+        default: 6
+        format: px
+    -
+        id: custom-metadata-property-radius-hover
+        title: Property radius, hover (px)
+        description: "--metadata-property-radius-hover"
+        type: variable-number
+        default: 6
+        format: px
+    -
+        id: custom-metadata-property-radius-focus
+        title: Property radius, focus (px)
+        description: "--metadata-property-radius-focus"
+        type: variable-number
+        default: 6
+        format: px
+    -
+        id: custom-metadata-property-background
+        title: Property background
+        description: "--metadata-property-background"
+        type: variable-themed-color
+        format: hex
+        default-light: '#00000000"
+        default-dark: '#00000000"
+        opacity: true
+    -
+        id: custom-metadata-property-background-hover
+        title: Property background, hover
+        description: "--metadata-property-background-hover"
+        type: variable-themed-color
+        format: hex
+        default-light: '#00000000"
+        default-dark: '#00000000"
+        opacity: true
+    -
+        id: custom-metadata-property-background-active
+        title: Property background, active
+        description: "--metadata-property-background-active"
+        type: variable-themed-color
+        format: hex
+        default-light: '#00000013"
+        default-dark: '#ffffff13"
+        opacity: true
+    -
+        id: header-misc-metadata-label
+        title: Labels
+        type: heading
+        level: 3
+        collapsed: true
+    -
+        id: custom-metadata-label-background-hover
+        title: Label background, hover
+        description: "--metadata-label-background-hover"
+        type: variable-themed-color
+        format: hex
+        default-light: '#00000000"
+        default-dark: '#00000000"
+        opacity: true
+    -
+        id: custom-metadata-label-background-active
+        title: Label background, active
+        description: "--metadata-label-background-active"
+        type: variable-themed-color
+        format: hex
+        default-light: '#00000013"
+        default-dark: '#ffffff13"
+        opacity: true
+    -
+        id: custom-metadata-label-font-size
+        title: Label font size (em)
+        description: "--metadata-label-font-size"
+        type: variable-number
+        default: 0.875
+        format: em
+    -
+        id: custom-metadata-label-font-weight
+        title: Label font weight
+        description: "--metadata-label-font-weight"
+        type: variable-text
+        default: inherit
+    -
+        id: custom-metadata-label-text-color
+        title: Label text color
+        description: "--metadata-label-text-color"
+        type: variable-themed-color
+        format: hex
+        default-light: '#5c5c5c"
+        default-dark: '#b3b3b3"
+    -
+        id: custom-metadata-label-text-color-hover
+        title: Label text color, hover
+        description: "--metadata-label-text-color-hover"
+        type: variable-themed-color
+        format: hex
+        default-light: '#5c5c5c"
+        default-dark: '#b3b3b3"
+    -
+        id: custom-metadata-label-width
+        title: Label width (em)
+        description: "--metadata-label-width"
+        type: variable-number
+        default: 9
+        format: em
+    -
+        id: header-misc-metadata-input
+        title: Inputs
+        type: heading
+        level: 3
+        collapsed: true
+    -
+        id: custom-metadata-input-height
+        title: Input height (px)
+        description: "--metadata-input-height"
+        type: variable-number
+        default: 28
+        format: px
+    -
+        id: custom-metadata-input-text-color
+        title: Input text color
+        description: "--metadata-input-text-color"
+        type: variable-themed-color
+        format: hex
+        default-light: '#222222"
+        default-dark: '#dadada"
+    -
+        id: custom-metadata-input-font-size
+        title: Input font size (em)
+        description: "--metadata-input-font-size"
+        type: variable-number
+        default: 0.875
+        format: em
+    -
+        id: custom-metadata-input-background
+        title: Input background
+        description: "--metadata-input-background"
+        type: variable-themed-color
+        format: hex
+        default-light: '#00000000"
+        default-dark: '#00000000"
+        opacity: true
+    -
+        id: custom-metadata-input-background-hover
+        title: Input background, hover
+        description: "--metadata-input-background-hover"
+        type: variable-themed-color
+        format: hex
+        default-light: '#00000000"
+        default-dark: '#00000000"
+        opacity: true
+    -
+        id: custom-metadata-input-background-active
+        title: Input background, active
+        description: "--metadata-input-background-active"
+        type: variable-themed-color
+        format: hex
+        default-light: '#00000013"
+        default-dark: '#ffffff13"
+        opacity: true
+    -
+        id: header-misc-metadata-sidebar
+        title: Sidebar
+        type: heading
+        level: 3
+        collapsed: true
+    -
+        id: custom-metadata-sidebar-label-font-size
+        title: Sidebar label font size (px)
+        description: "--metadata-sidebar-label-font-size"
+        type: variable-number
+        default: 13
+        format: px
+    -
+        id: custom-metadata-sidebar-input-font-size
+        title: Sidebar input font size (px)
+        description: "--metadata-sidebar-input-font-size"
+        type: variable-number
+        default: 13
+        format: px
+    
+    
 */
 
 
@@ -3834,6 +4178,96 @@ body {
             --nav-heading-color-collapsed-hove: var(--custom-nav-heading-color-collapsed-hove);
             --nav-heading-weight: var(--custom-nav-heading-weight); 
             --nav-heading-weight-hover: var(--custom-nav-heading-weight-hover); 
+        }
+    }
+
+    /* Metadata */
+    & {
+        --custom-metadata-background: #00000000;
+        --custom-metadata-display-reading: block;
+        --custom-metadata-display-editing: block;
+        --custom-metadata-max-width: none;
+        --custom-metadata-padding: 8px 0;
+        --custom-metadata-border-radius: 0;
+        --custom-metadata-border-width: 0;
+        --custom-metadata-divider-color-hover: #00000000;
+        --custom-metadata-divider-color-focus: #00000000;
+        --custom-metadata-divider-width: 0;
+        --custom-metadata-gap: 3px;
+        --custom-metadata-property-padding: 0;
+        --custom-metadata-property-radius: 6px;
+        --custom-metadata-property-radius-hover: 6px;
+        --custom-metadata-property-radius-focus: 6px;
+        --custom-metadata-property-background: #00000000;
+        --custom-metadata-property-background-hover: #00000000;
+        --custom-metadata-label-background-hover: #00000000;
+        --custom-metadata-label-font-size: 0.875em;
+        --custom-metadata-label-font-weight: inherit;
+        --custom-metadata-label-width: 9em;
+        --custom-metadata-input-height: 28px;
+        --custom-metadata-input-font-size: 0.875em;
+        --custom-metadata-input-background: #00000000;
+        --custom-metadata-input-background-hover: #00000000;
+        --custom-metadata-sidebar-label-font-size: 13px;
+        --custom-metadata-sidebar-input-font-size: 13px;
+
+        &.theme-light {
+            --custom-metadata-border-color: #e0e0e0; /* --color-base-30 */
+            --custom-metadata-divider-color: #e0e0e0; /* --color-base-30 */
+            --custom-metadata-property-background-active: #00000013; /* rgba(var(--mono-rgb-100), 0.075) */
+            --custom-metadata-label-background-active: #00000013; /* rgba(var(--mono-rgb-100), 0.075) */
+            --custom-metadata-label-text-color: #5c5c5c; /* --color-base-70 */
+            --custom-metadata-label-text-color-hover: #5c5c5c; /* --color-base-70 */
+            --custom-metadata-input-text-color: #222222; /* --color-base-100 */
+            --custom-metadata-input-background-active: #00000013; /* rgba(var(--mono-rgb-100), 0.075) */
+        }
+        &.theme-dark {
+            --custom-metadata-border-color: #363636;
+            --custom-metadata-divider-color: #363636;
+            --custom-metadata-property-background-active: #ffffff13;
+            --custom-metadata-label-background-active: #ffffff13;
+            --custom-metadata-label-text-color: #b3b3b3;
+            --custom-metadata-label-text-color-hover: #b3b3b3;
+            --custom-metadata-input-text-color: #dadada;
+            --custom-metadata-input-background-active: #ffffff13;
+        }
+
+        &.use-custom-settings-metadata {
+            --metadata-background: var(--custom-metadata-background);
+            --metadata-display-reading: var(--custom-metadata-display-reading);
+            --metadata-display-editing: var(--custom-metadata-display-editing);
+            --metadata-max-width: var(--custom-metadata-max-width);
+            --metadata-padding: var(--custom-metadata-padding);
+            --metadata-border-color: var(--custom-metadata-border-color);
+            --metadata-border-radius: var(--custom-metadata-border-radius);
+            --metadata-border-width: var(--custom-metadata-border-width);
+            --metadata-divider-color: var(--custom-metadata-divider-color);
+            --metadata-divider-color-hover: var(--custom-metadata-divider-color-hover);
+            --metadata-divider-color-focus: var(--custom-metadata-divider-color-focus);
+            --metadata-divider-width: var(--custom-metadata-divider-width);
+            --metadata-gap: var(--custom-metadata-gap);
+            --metadata-property-padding: var(--custom-metadata-property-padding);
+            --metadata-property-radius: var(--custom-metadata-property-radius);
+            --metadata-property-radius-hover: var(--custom-metadata-property-radius-hover);
+            --metadata-property-radius-focus: var(--custom-metadata-property-radius-focus);
+            --metadata-property-background: var(--custom-metadata-property-background);
+            --metadata-property-background-hover: var(--custom-metadata-property-background-hover);
+            --metadata-property-background-active: var(--custom-metadata-property-background-active);
+            --metadata-label-background-hover: var(--custom-metadata-label-background-hover);
+            --metadata-label-background-active: var(--custom-metadata-label-background-active);
+            --metadata-label-font-size: var(--custom-metadata-label-font-size);
+            --metadata-label-font-weight: var(--custom-metadata-label-font-weight);
+            --metadata-label-text-color: var(--custom-metadata-label-text-color);
+            --metadata-label-text-color-hover: var(--custom-metadata-label-text-color-hover);
+            --metadata-label-width: var(--custom-metadata-label-width);
+            --metadata-input-height: var(--custom-metadata-input-height);
+            --metadata-input-text-color: var(--custom-metadata-input-text-color);
+            --metadata-input-font-size: var(--custom-metadata-input-font-size);
+            --metadata-input-background: var(--custom-metadata-input-background);
+            --metadata-input-background-hover: var(--custom-metadata-input-background-hover);
+            --metadata-input-background-active: var(--custom-metadata-input-background-active);
+            --metadata-sidebar-label-font-size: var(--custom-metadata-sidebar-label-font-size);
+            --metadata-sidebar-input-font-size: var(--custom-metadata-sidebar-input-font-size);
         }
     }
 }
