@@ -2701,7 +2701,152 @@ settings:
             - flow-root
             - none
             - contents
-    
+        
+    -
+        id: header-tab
+        title: Tab
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: use-custom-settings-tab
+        title: Use custom tab
+        type: class-toggle
+        default: false
+    -
+        id: custom-tab-background-active
+        title: Background active
+        description: "--tab-background-active"
+        type: variable-themed-color
+        format: hex
+        default-light: '#ffffff'
+        default-dark: '#1e1e1e'
+    -
+        id: custom-tab-text-color
+        title: Text color
+        description: "--tab-text-color"
+        type: variable-themed-color
+        format: hex
+        default-light: '#ababab'
+        default-dark: '#666666'
+    -
+        id: custom-tab-text-color-active
+        title: Text color, active
+        description: "--tab-text-color-active"
+        type: variable-themed-color
+        format: hex
+        default-light: '#5c5c5c'
+        default-dark: '#b3b3b3'
+    -
+        id: custom-tab-text-color-focused
+        title: Text color, focused
+        description: "--tab-text-color-focused"
+        type: variable-themed-color
+        format: hex
+        default-light: '#5c5c5c'
+        default-dark: '#b3b3b3'
+    -
+        id: custom-tab-text-color-focused-active
+        title: Text color, focused active
+        description: "--tab-text-color-focused-active"
+        type: variable-themed-color
+        format: hex
+        default-light: '#5c5c5c'
+        default-dark: '#b3b3b3'
+    -
+        id: custom-tab-text-color-focused-highlighted
+        title: Text color, focused highlighted
+        description: "--tab-text-color-focused-highlighted"
+        type: variable-themed-color
+        format: hex
+        default-light: '#8a5cf5'
+        default-dark: '#8a5cf5'
+    -
+        id: custom-tab-text-color-focused-active-current
+        title: Text color, focused active current
+        description: "--tab-text-color-focused-active-current"
+        type: variable-themed-color
+        format: hex
+        default-light: '#222222'
+        default-dark: '#dadada'
+    -
+        id: custom-tab-font-size
+        title: Font size (px)
+        description: "--tab-font-size"
+        type: variable-number
+        default: 13
+        format: px
+    -
+        id: custom-tab-font-weight
+        title: Font weight
+        description: "--tab-font-weight"
+        type: variable-text
+        default: inherit
+    -
+        id: custom-tab-container-background
+        title: Container background
+        description: "--tab-container-background"
+        type: variable-themed-color
+        format: hex
+        default-light: '#f6f6f6'
+        default-dark: '#262626'
+    -
+        id: custom-tab-divider-color
+        title: Divider color
+        description: "--tab-divider-color"
+        type: variable-themed-color
+        format: hex
+        default-light: '#d4d4d4'
+        default-dark: '#3f3f3f'
+    -
+        id: custom-tab-outline-color
+        title: Outline color
+        description: "--tab-outline-color"
+        type: variable-themed-color
+        format: hex
+        default-light: '#e0e0e0'
+        default-dark: '#363636'
+    -
+        id: custom-tab-outline-width
+        title: Outline width (px)
+        description: "--tab-outline-width"
+        type: variable-number
+        default: 1
+        format: px
+    -
+        id: custom-tab-curve
+        title: Curve (px)
+        description: "--tab-curve"
+        type: variable-number
+        default: 6
+        format: px
+    -
+        id: custom-tab-radius
+        title: Radius (px)
+        description: "--tab-radius"
+        type: variable-number
+        default: 4
+        format: px
+    -
+        id: custom-tab-radius-active
+        title: Radius, active
+        description: "--tab-radius-active"
+        type: variable-text
+        default: 6px 6px 0 0
+    -
+        id: custom-tab-width
+        title: Width (px)
+        description: "--tab-width"
+        type: variable-number
+        default: 200
+        format: px
+    -
+        id: custom-tab-max-width
+        title: Max width (px)
+        description: "--tab-max-width"
+        type: variable-number
+        default: 320
+        format: px
 
 
         
@@ -3023,8 +3168,8 @@ settings:
         description: "--icon-color-focused"
         type: variable-themed-color
         format: hex
-        default-light: '#222222"
-        default-dark: '#dadada"
+        default-light: "#222222"
+        default-dark: "#dadada"
         
     -
         id: header-indentation-guide
@@ -3078,8 +3223,8 @@ settings:
         description: "--indentation-guide-color"
         type: variable-themed-color
         format: hex
-        default-light: '#0000001f"
-        default-dark: '#ffffff1f"
+        default-light: "#0000001f"
+        default-dark: "#ffffff1f"
         opacity: true
     -
         id: custom-indentation-guide-color-active
@@ -3087,8 +3232,8 @@ settings:
         description: "--indentation-guide-color-active"
         type: variable-themed-color
         format: hex
-        default-light: '#0000004d"
-        default-dark: '#ffffff4d"
+        default-light: "#0000004d"
+        default-dark: "#ffffff4d"
         opacity: true
         
     -
@@ -3121,48 +3266,48 @@ settings:
         description: "--nav-item-color"
         type: variable-themed-color
         format: hex
-        default-light: '#5c5c5c"
-        default-dark: '#b3b3b3"
+        default-light: "#5c5c5c"
+        default-dark: "#b3b3b3"
     -
         id: custom-nav-item-color-hover
         title: Item color, hover
         description: "--nav-item-color-hover"
         type: variable-themed-color
         format: hex
-        default-light: '#222222"
-        default-dark: '#dadada"
+        default-light: "#222222"
+        default-dark: "#dadada"
     -
         id: custom-nav-item-color-active
         title: Item color, active
         description: "--nav-item-color-active"
         type: variable-themed-color
         format: hex
-        default-light: '#222222"
-        default-dark: '#dadada"
+        default-light: "#222222"
+        default-dark: "#dadada"
     -
         id: custom-nav-item-color-selected
         title: Item color, selected
         description: "--nav-item-color-selected"
         type: variable-themed-color
         format: hex
-        default-light: '#222222"
-        default-dark: '#dadada"
+        default-light: "#222222"
+        default-dark: "#dadada"
     -
         id: custom-nav-item-color-highlighted
         title: Item color, highlighted
         description: "--nav-item-color-highlighted"
         type: variable-themed-color
         format: hex
-        default-light: '#8a5cf5"
-        default-dark: '#8a5cf5"
+        default-light: "#8a5cf5"
+        default-dark: "#8a5cf5"
     -
         id: custom-nav-item-background-hover
         title: Item background, hover
         description: "--nav-item-background-hover"
         type: variable-themed-color
         format: hex
-        default-light: '#00000013"
-        default-dark: '#ffffff13"
+        default-light: "#00000013"
+        default-dark: "#ffffff13"
         opacity: true
     -
         id: custom-nav-item-background-active
@@ -3170,8 +3315,8 @@ settings:
         description: "--nav-item-background-active"
         type: variable-themed-color
         format: hex
-        default-light: '#00000013"
-        default-dark: '#ffffff13"
+        default-light: "#00000013"
+        default-dark: "#ffffff13"
         opacity: true
     -
         id: custom-nav-item-background-selected
@@ -3179,8 +3324,8 @@ settings:
         description: "--nav-item-background-selected"
         type: variable-themed-color
         format: hex
-        default-light: '#8a5cf526"
-        default-dark: '#8a5cf526"
+        default-light: "#8a5cf526"
+        default-dark: "#8a5cf526"
         opacity: true
     -
         id: custom-nav-item-padding
@@ -3260,24 +3405,24 @@ settings:
         description: "--nav-indentation-guide-color"
         type: variable-themed-color
         format: hex
-        default-light: '#0000001f"
-        default-dark: '#ffffff1f"
+        default-light: "#0000001f"
+        default-dark: "#ffffff1f"
     -
         id: custom-nav-collapse-icon-color
         title: Collapse icon color
         description: "--nav-collapse-icon-color"
         type: variable-themed-color
         format: hex
-        default-light: '#ababab"
-        default-dark: '#666666"
+        default-light: "#ababab"
+        default-dark: "#666666"
     -
         id: custom-nav-collapse-icon-color-collapsed
         title: Collapse icon color, collapsed
         description: "--nav-collapse-icon-color-collapsed"
         type: variable-themed-color
         format: hex
-        default-light: '#ababab"
-        default-dark: '#666666"
+        default-light: "#ababab"
+        default-dark: "#666666"
     -
         id: header-nav-headings
         title: Headings
@@ -3290,32 +3435,32 @@ settings:
         description: "--nav-heading-color"
         type: variable-themed-color
         format: hex
-        default-light: '#222222"
-        default-dark: '#dadada"
+        default-light: "#222222"
+        default-dark: "#dadada"
     -
         id: custom-nav-heading-color-hover
         title: Headings color, hover
         description: "--nav-heading-color-hover"
         type: variable-themed-color
         format: hex
-        default-light: '#222222"
-        default-dark: '#dadada"
+        default-light: "#222222"
+        default-dark: "#dadada"
     -
         id: custom-nav-heading-color-collapsed
         title: Headings color, collapsed
         description: "--nav-heading-color-collapsed"
         type: variable-themed-color
         format: hex
-        default-light: '#ababab"
-        default-dark: '#666666"
+        default-light: "#ababab"
+        default-dark: "#666666"
     -
         id: custom-nav-heading-color-collapsed-hover
         title: Headings color, collapsed + hover
         description: "--nav-heading-color-collapsed-hover"
         type: variable-themed-color
         format: hex
-        default-light: '#ababab"
-        default-dark: '#b3b3b3"
+        default-light: "#ababab"
+        default-dark: "#b3b3b3"
     -
         id: custom-nav-heading-weight
         title: Headings weight
@@ -3352,8 +3497,8 @@ settings:
         description: "--metadata-background"
         type: variable-themed-color
         format: hex
-        default-light: '#00000000"
-        default-dark: '#00000000"
+        default-light: "#00000000"
+        default-dark: "#00000000"
         opacity: true
     -
         id: custom-metadata-display-reading
@@ -3426,8 +3571,8 @@ settings:
         description: "--metadata-border-color"
         type: variable-themed-color
         format: hex
-        default-light: '#e0e0e0"
-        default-dark: '#363636"
+        default-light: "#e0e0e0"
+        default-dark: "#363636"
     -
         id: custom-metadata-border-radius
         title: Border radius (px)
@@ -3448,16 +3593,16 @@ settings:
         description: "--metadata-divider-color"
         type: variable-themed-color
         format: hex
-        default-light: '#e0e0e0"
-        default-dark: '#363636"
+        default-light: "#e0e0e0"
+        default-dark: "#363636"
     -
         id: custom-metadata-divider-color-hover
         title: Divider color, hover
         description: "--metadata-divider-color-hover"
         type: variable-themed-color
         format: hex
-        default-light: '#00000000"
-        default-dark: '#00000000"
+        default-light: "#00000000"
+        default-dark: "#00000000"
         opacity: true
     -
         id: custom-metadata-divider-color-focus
@@ -3465,8 +3610,8 @@ settings:
         description: "--metadata-divider-color-focus"
         type: variable-themed-color
         format: hex
-        default-light: '#00000000"
-        default-dark: '#00000000"
+        default-light: "#00000000"
+        default-dark: "#00000000"
         opacity: true
     -
         id: custom-metadata-divider-width
@@ -3514,8 +3659,8 @@ settings:
         description: "--metadata-property-background"
         type: variable-themed-color
         format: hex
-        default-light: '#00000000"
-        default-dark: '#00000000"
+        default-light: "#00000000"
+        default-dark: "#00000000"
         opacity: true
     -
         id: custom-metadata-property-background-hover
@@ -3523,8 +3668,8 @@ settings:
         description: "--metadata-property-background-hover"
         type: variable-themed-color
         format: hex
-        default-light: '#00000000"
-        default-dark: '#00000000"
+        default-light: "#00000000"
+        default-dark: "#00000000"
         opacity: true
     -
         id: custom-metadata-property-background-active
@@ -3532,8 +3677,8 @@ settings:
         description: "--metadata-property-background-active"
         type: variable-themed-color
         format: hex
-        default-light: '#00000013"
-        default-dark: '#ffffff13"
+        default-light: "#00000013"
+        default-dark: "#ffffff13"
         opacity: true
     -
         id: header-metadata-label
@@ -3547,8 +3692,8 @@ settings:
         description: "--metadata-label-background-hover"
         type: variable-themed-color
         format: hex
-        default-light: '#00000000"
-        default-dark: '#00000000"
+        default-light: "#00000000"
+        default-dark: "#00000000"
         opacity: true
     -
         id: custom-metadata-label-background-active
@@ -3556,8 +3701,8 @@ settings:
         description: "--metadata-label-background-active"
         type: variable-themed-color
         format: hex
-        default-light: '#00000013"
-        default-dark: '#ffffff13"
+        default-light: "#00000013"
+        default-dark: "#ffffff13"
         opacity: true
     -
         id: custom-metadata-label-font-size
@@ -3578,16 +3723,16 @@ settings:
         description: "--metadata-label-text-color"
         type: variable-themed-color
         format: hex
-        default-light: '#5c5c5c"
-        default-dark: '#b3b3b3"
+        default-light: "#5c5c5c"
+        default-dark: "#b3b3b3"
     -
         id: custom-metadata-label-text-color-hover
         title: Label text color, hover
         description: "--metadata-label-text-color-hover"
         type: variable-themed-color
         format: hex
-        default-light: '#5c5c5c"
-        default-dark: '#b3b3b3"
+        default-light: "#5c5c5c"
+        default-dark: "#b3b3b3"
     -
         id: custom-metadata-label-width
         title: Label width (em)
@@ -3614,8 +3759,8 @@ settings:
         description: "--metadata-input-text-color"
         type: variable-themed-color
         format: hex
-        default-light: '#222222"
-        default-dark: '#dadada"
+        default-light: "#222222"
+        default-dark: "#dadada"
     -
         id: custom-metadata-input-font-size
         title: Input font size (em)
@@ -3629,8 +3774,8 @@ settings:
         description: "--metadata-input-background"
         type: variable-themed-color
         format: hex
-        default-light: '#00000000"
-        default-dark: '#00000000"
+        default-light: "#00000000"
+        default-dark: "#00000000"
         opacity: true
     -
         id: custom-metadata-input-background-hover
@@ -3638,8 +3783,8 @@ settings:
         description: "--metadata-input-background-hover"
         type: variable-themed-color
         format: hex
-        default-light: '#00000000"
-        default-dark: '#00000000"
+        default-light: "#00000000"
+        default-dark: "#00000000"
         opacity: true
     -
         id: custom-metadata-input-background-active
@@ -3647,8 +3792,8 @@ settings:
         description: "--metadata-input-background-active"
         type: variable-themed-color
         format: hex
-        default-light: '#00000013"
-        default-dark: '#ffffff13"
+        default-light: "#00000013"
+        default-dark: "#ffffff13"
         opacity: true
     -
         id: header-metadata-sidebar
@@ -3688,32 +3833,32 @@ settings:
         description: "--pill-color"
         type: variable-themed-color
         format: hex
-        default-light: '#5c5c5c"
-        default-dark: '#b3b3b3"
+        default-light: "#5c5c5c"
+        default-dark: "#b3b3b3"
     -
         id: custom-pill-color-hover
         title: Color, hover
         description: "--pill-color-hover"
         type: variable-themed-color
         format: hex
-        default-light: '#222222"
-        default-dark: '#dadada"
+        default-light: "#222222"
+        default-dark: "#dadada"
     -
         id: custom-pill-color-remove
         title: Color, remove
         description: "--pill-color-remove"
         type: variable-themed-color
         format: hex
-        default-light: '#ababab"
-        default-dark: '#666666"
+        default-light: "#ababab"
+        default-dark: "#666666"
     -
         id: custom-pill-color-remove-hover
         title: Color, remove + hover
         description: "--pill-color-remove-hover"
         type: variable-themed-color
         format: hex
-        default-light: '#9873f7"
-        default-dark: '#9873f7"
+        default-light: "#9873f7"
+        default-dark: "#9873f7"
     -
         id: custom-pill-decoration
         title: Decoration
@@ -3732,8 +3877,8 @@ settings:
         description: "--pill-background"
         type: variable-themed-color
         format: hex
-        default-light: '#00000000"
-        default-dark: '#00000000"
+        default-light: "#00000000"
+        default-dark: "#00000000"
         opacity: true
     -
         id: custom-pill-background-hover
@@ -3741,8 +3886,8 @@ settings:
         description: "--pill-background-hover"
         type: variable-themed-color
         format: hex
-        default-light: '#00000000"
-        default-dark: '#00000000"
+        default-light: "#00000000"
+        default-dark: "#00000000"
         opacity: true
     -
         id: custom-pill-border-color
@@ -3750,16 +3895,16 @@ settings:
         description: "--pill-border-color"
         type: variable-themed-color
         format: hex
-        default-light: '#e0e0e0"
-        default-dark: '#363636"
+        default-light: "#e0e0e0"
+        default-dark: "#363636"
     -
         id: custom-pill-border-color-hover
         title: Border color, hover
         description: "--pill-border-color-hover"
         type: variable-themed-color
         format: hex
-        default-light: '#d4d4d4"
-        default-dark: '#3f3f3f"
+        default-light: "#d4d4d4"
+        default-dark: "#3f3f3f"
     -
         id: custom-pill-border-width
         title: Border width (px)
@@ -3847,8 +3992,8 @@ settings:
         description: "--prompt-border-color"
         type: variable-themed-color
         format: hex
-        default-light: '#bdbdbd"
-        default-dark: '#555555"
+        default-light: "#bdbdbd"
+        default-dark: "#555555"
         
     -
         id: header-search
@@ -3867,8 +4012,8 @@ settings:
         description: "--search-clear-button-color"
         type: variable-themed-color
         format: hex
-        default-light: '#5c5c5c"
-        default-dark: '#b3b3b3"
+        default-light: "#5c5c5c"
+        default-dark: "#b3b3b3"
     -
         id: custom-search-clear-button-size
         title: Clear button size (px)
@@ -3882,8 +4027,8 @@ settings:
         description: "--search-icon-color"
         type: variable-themed-color
         format: hex
-        default-light: '#5c5c5c"
-        default-dark: '#b3b3b3"
+        default-light: "#5c5c5c"
+        default-dark: "#b3b3b3"
     -
         id: custom-search-icon-size
         title: Icon size (px)
@@ -3897,8 +4042,8 @@ settings:
         description: "--search-result-background"
         type: variable-themed-color
         format: hex
-        default-light: '#ffffff"
-        default-dark: '#1e1e1e"
+        default-light: "#ffffff"
+        default-dark: "#1e1e1e"
         
     -
         id: header-status-bar
@@ -3917,24 +4062,24 @@ settings:
         description: "--status-bar-background"
         type: variable-themed-color
         format: hex
-        default-light: '#f6f6f6"
-        default-dark: '#262626"
+        default-light: "#f6f6f6"
+        default-dark: "#262626"
     -
         id: custom-status-bar-text-color
         title: Text color
         description: "--status-bar-text-color"
         type: variable-themed-color
         format: hex
-        default-light: '#5c5c5c"
-        default-dark: '#b3b3b3"
+        default-light: "#5c5c5c"
+        default-dark: "#b3b3b3"
     -
         id: custom-status-bar-border-color
         title: Border color
         description: "--status-bar-border-color"
         type: variable-themed-color
         format: hex
-        default-light: '#e0e0e0"
-        default-dark: '#363636"
+        default-light: "#e0e0e0"
+        default-dark: "#363636"
     -
         id: custom-status-bar-border-width
         title: Border width
@@ -3972,8 +4117,8 @@ settings:
         description: "--sync-avatar-color-current-user"
         type: variable-themed-color
         format: hex
-        default-light: '#00000000"
-        default-dark: '#00000000"
+        default-light: "#00000000"
+        default-dark: "#00000000"
         opacity: true
     -
         id: custom-sync-avatar-color-1
@@ -3981,64 +4126,64 @@ settings:
         description: "--sync-avatar-color-1
         type: variable-themed-color
         format: hex
-        default-light: '#e93147"
-        default-dark: '#fb464c"
+        default-light: "#e93147"
+        default-dark: "#fb464c"
     -
         id: custom-sync-avatar-color-2
         title: Coler 2
-        description: "--sync-avatar-color-2
+        description: "--sync-avatar-color-2"
         type: variable-themed-color
         format: hex
-        default-light: '#ec7500"
-        default-dark: '#e9973f"
+        default-light: "#ec7500"
+        default-dark: "#e9973f"
     -
         id: custom-sync-avatar-color-3
         title: Coler 3
         description: "--sync-avatar-color-3
         type: variable-themed-color
         format: hex
-        default-light: '#e0ac00"
-        default-dark: '#e0de71"
+        default-light: "#e0ac00"
+        default-dark: "#e0de71"
     -
         id: custom-sync-avatar-color-4
         title: Coler 4
         description: "--sync-avatar-color-4
         type: variable-themed-color
         format: hex
-        default-light: '#08b94e"
-        default-dark: '#44cf6e"
+        default-light: "#08b94e"
+        default-dark: "#44cf6e"
     -
         id: custom-sync-avatar-color-5
         title: Coler 5
         description: "--sync-avatar-color-5
         type: variable-themed-color
         format: hex
-        default-light: '#00bfbc"
-        default-dark: '#53dfdd"
+        default-light: "#00bfbc"
+        default-dark: "#53dfdd"
     -
         id: custom-sync-avatar-color-6
         title: Coler 6
         description: "--sync-avatar-color-6
         type: variable-themed-color
         format: hex
-        default-light: '#086ddd"
-        default-dark: '#027aff"
+        default-light: "#086ddd"
+        default-dark: "#027aff"
     -
         id: custom-sync-avatar-color-7
         title: Coler 7
         description: "--sync-avatar-color-7
         type: variable-themed-color
         format: hex
-        default-light: '#7852ee"
-        default-dark: '#a882ff"
+        default-light: "#7852ee"
+        default-dark: "#a882ff"
     -
         id: custom-sync-avatar-color-8
         title: Coler 8
         description: "--sync-avatar-color-8
         type: variable-themed-color
         format: hex
-        default-light: '#d53984"
-        default-dark: '#fa99cd"
+        default-light: "#d53984"
+        default-dark: "#fa99cd"
     
         
 */
@@ -4996,6 +5141,63 @@ body {
         &.use-custom-settings-sidebar {
             --sidebar-markdown-font-size: var(--custom-sidebar-markdown-font-size);
             --sidebar-tab-text-display: var(--custom-sidebar-tab-text-display);
+        }
+    }
+    
+    /* Tabs */
+    & {
+        --custom-tab-text-color-focused-highlighted: #8a5cf5;
+        --custom-tab-font-size: 13px;
+        --custom-tab-font-weight: inherit;
+        --custom-tab-outline-width: 1px;
+        --custom-tab-curve: 6px;
+        --custom-tab-radius: 4px;
+        --custom-tab-radius-active: 6px 6px 0 0;
+        --custom-tab-width: 200px;
+        --custom-tab-max-width: 320px;
+
+        &.theme-light {
+            --custom-tab-background-active: #ffffff; /* --color-base-00 */
+            --custom-tab-text-color: #ababab; /* --color-base-50 */
+            --custom-tab-text-color-active: #5c5c5c; /* --color-base-70 */
+            --custom-tab-text-color-focused: #5c5c5c; /* --color-base-70 */
+            --custom-tab-text-color-focused-active: #5c5c5c; /* --color-base-70 */
+            --custom-tab-text-color-focused-active-current: #222222; /* --color-base-100 */
+            --custom-tab-container-background: #f6f6f6; /* --color-base-20 */
+            --custom-tab-divider-color: #d4d4d4; /* --color-base-35 */
+            --custom-tab-outline-color: #e0e0e0; /* --color-base-30 */
+        }
+        &.theme-dark {
+            --custom-tab-background-active: #1e1e1e;
+            --custom-tab-text-color: #666666;
+            --custom-tab-text-color-active: #b3b3b3;
+            --custom-tab-text-color-focused: #b3b3b3;
+            --custom-tab-text-color-focused-active: #b3b3b3;
+            --custom-tab-text-color-focused-active-current: #dadada;
+            --custom-tab-container-background: #262626;
+            --custom-tab-divider-color: #3f3f3f;
+            --custom-tab-outline-color: #363636;
+        }
+
+        &.use-custom-settings-tab {
+            --tab-background-active: var(--custom-tab-background-active);
+            --tab-text-color: var(--custom-tab-text-color);
+            --tab-text-color-active: var(--custom-tab-text-color-active);
+            --tab-text-color-focused: var(--custom-tab-text-color-focused);
+            --tab-text-color-focused-active: var(--custom-tab-text-color-focused-active);
+            --tab-text-color-focused-highlighted: var(--custom-tab-text-color-focused-highlighted);
+            --tab-text-color-focused-active-current: var(--custom-tab-text-color-focused-active-current);
+            --tab-font-size: var(--custom-tab-font-size);
+            --tab-font-weight: var(--custom-tab-font-weight);
+            --tab-container-background: var(--custom-tab-container-background);
+            --tab-divider-color: var(--custom-tab-divider-color);
+            --tab-outline-color: var(--custom-tab-outline-color);
+            --tab-outline-width: var(--custom-tab-outline-width);
+            --tab-curve: var(--custom-tab-curve);
+            --tab-radius: var(--custom-tab-radius);
+            --tab-radius-active: var(--custom-tab-radius-active);
+            --tab-width: var(--custom-tab-width);
+            --tab-max-width: var(--custom-tab-max-width);
         }
     }
 }

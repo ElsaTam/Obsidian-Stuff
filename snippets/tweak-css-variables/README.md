@@ -53,7 +53,7 @@ Expose the css variables with the Style Setting plugin.
   - [x] Ribbon
   - [x] Scrollbars
   - [x] Sidebar
-  - [ ] Tabs
+  - [x] Tabs
   - [ ] Stacked tabs
   - [ ] Window frame
   - [ ] Workspace
