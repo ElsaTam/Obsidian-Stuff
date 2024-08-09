@@ -52,7 +52,7 @@ Expose the css variables with the Style Setting plugin.
   - [x] PDF view
   - [x] Ribbon
   - [x] Scrollbars
-  - [ ] Sidebar
+  - [x] Sidebar
   - [ ] Tabs
   - [ ] Stacked tabs
   - [ ] Window frame

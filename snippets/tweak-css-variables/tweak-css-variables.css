@@ -2665,6 +2665,42 @@ settings:
         default-light: '#0000001a'
         default-dark: '#ffffff1a'
         opacity: true
+        
+    -
+        id: header-sidebar
+        title: Sidebar
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: use-custom-settings-sidebar
+        title: Use custom sidebar
+        type: class-toggle
+        default: false
+    -
+        id: custom-sidebar-markdown-font-size
+        title: Markdown font size (px)
+        description: "--sidebar-markdown-font-size"
+        type: variable-number
+        default: 14.4
+        format: px
+    -
+        id: custom-sidebar-tab-text-display
+        title: Tab text display
+        description: "--sidebar-tab-text-display"
+        type: variable-select
+        default: none
+        options:
+            - block
+            - inline
+            - inline-block
+            - flex
+            - inline-flex
+            - grid
+            - inline-grid
+            - flow-root
+            - none
+            - contents
     
 
 
@@ -4808,6 +4844,17 @@ body {
             --scrollbar-active-thumb-bg: var(--custom-scrollbar-active-thumb-bg);
             --scrollbar-bg: var(--custom-scrollbar-bg);
             --scrollbar-thumb-bg: var(--custom-scrollbar-thumb-bg);
+        }
+    }
+    
+    /* Sidebar */
+    & {
+        --custom-sidebar-markdown-font-size: 14.4px;
+        --custom-sidebar-tab-text-display: none;
+
+        &.use-custom-settings-sidebar {
+            --sidebar-markdown-font-size: var(--custom-sidebar-markdown-font-size);
+            --sidebar-tab-text-display: var(--custom-sidebar-tab-text-display);
         }
     }
 }
