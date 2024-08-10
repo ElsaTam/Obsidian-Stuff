@@ -56,7 +56,7 @@ Expose the css variables with the Style Setting plugin.
   - [x] Tabs
   - [x] Stacked tabs
   - [x] Window frame
-  - [ ] Workspace
+  - [x] Workspace
 - [x] Misc
   - [x] Collapse icons
   - [x] Dragging

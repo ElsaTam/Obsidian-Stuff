@@ -4855,6 +4855,27 @@ settings:
         format: hex
         default-light: "#222222"
         default-dark: "#dadada"
+        
+    -
+        id: header-status-workspace
+        title: Workspace
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: use-custom-settings-workspace
+        title: Use custom workspace
+        type: class-toggle
+        default: false
+    -
+        id: custom-workspace-background-translucent
+        title: Color
+        description: "--workspace-background-translucent
+        type: variable-themed-color
+        format: hex
+        default-light: "#ffffff99"
+        default-dark: "#00000099"
+        opacity: true
     
         
         
@@ -6055,6 +6076,20 @@ body {
             --titlebar-text-color: var(--custom-titlebar-text-color);
             --titlebar-text-color-focused: var(--custom-titlebar-text-color-focused);
             --titlebar-text-weight: var(--custom-titlebar-text-weight);
+        }
+    }
+    
+    /* Workspace */
+    & {
+        &.theme-light {
+            --custom-workspace-background-translucent: #ffffff99; /* rgba(var(--mono-rgb-0), 0.6) */
+        }
+        &.theme-dark {
+            --custom-workspace-background-translucent: #00000099;
+        }
+
+        &.use-custom-settings-workspace {
+            --workspace-background-translucent: var(--custom-workspace-background-translucent);
         }
     }
 }
