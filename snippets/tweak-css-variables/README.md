@@ -57,7 +57,7 @@ Expose the css variables with the Style Setting plugin.
   - [x] Stacked tabs
   - [x] Window frame
   - [ ] Workspace
-- Misc
+- [x] Misc
   - [x] Collapse icons
   - [x] Dragging
   - [x] Graph
@@ -71,7 +71,7 @@ Expose the css variables with the Style Setting plugin.
   - [x] Status bar
   - [x] Sync
   - [x] Vault profile
-  - [ ] Vault name
+  - [x] Vault name
 
 # Screenshots
 

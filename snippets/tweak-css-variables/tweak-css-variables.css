@@ -4822,6 +4822,39 @@ settings:
         format: hex
         default-light: "#222222"
         default-dark: "#dadada"
+        
+    -
+        id: header-status-vault-name
+        title: Vault name
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: use-custom-settings-vault-name
+        title: Use custom vault name
+        type: class-toggle
+        default: false
+    -
+        id: custom-vault-name-font-size
+        title: Font size (px)
+        description: "--vault-name-font-size"
+        type: variable-number
+        default: 13
+        format: px
+    -
+        id: custom-vault-name-font-weight
+        title: Font weight
+        description: "--vault-name-font-weight"
+        type: variable-number
+        default: 500
+    -
+        id: custom-vault-name-color
+        title: Color
+        description: "--vault-name-color
+        type: variable-themed-color
+        format: hex
+        default-light: "#222222"
+        default-dark: "#dadada"
     
         
         
@@ -6561,6 +6594,24 @@ body {
             --vault-profile-font-weight: var(--custom-vault-profile-font-weight);
             --vault-profile-color: var(--custom-vault-profile-color);
             --vault-profile-color-hover: var(--custom-vault-profile-color-hover);
+        }
+    }
+    
+    /* Vault name */
+    & {
+        --custom-vault-name-font-size: 13px;
+        --custom-vault-name-font-weight: 500;
+        &.theme-light {
+            --custom-vault-name-color: #222222; /* --color-base-100 */
+        }
+        &.theme-dark {
+            --custom-vault-name-color: #dadada;
+        }
+
+        &.use-custom-settings-vault-name {
+            --vault-name-font-size: var(--custom-vault-name-font-size);
+            --vault-name-font-weight: var(--custom-vault-name-font-weight);
+            --vault-name-color: var(--custom-vault-name-color);
         }
     }
 }
