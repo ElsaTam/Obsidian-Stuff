@@ -605,10 +605,9 @@ settings:
         id: kpr-blockquote-border-color
         title: Border color
         description: "--blockquote-border-color"
-        type: variable-themed-color
+        type: variable-color
         format: hex
-        default-light: '#8a5cf5'
-        default-dark: '#8a5cf5'
+        default: '#8a5cf5'
     -
         id: kpr-blockquote-font-style
         title: Font style
@@ -837,11 +836,10 @@ settings:
         id: kpr-callout-quote
         title: quote
         description: "--callout-quote"
-        type: variable-themed-color
+        type: variable-color
         format: rgb-values
         opacity: true
-        default-light: '#9e9e9e'
-        default-dark: '#9e9e9e'
+        default: '#9e9e9e'
     -
         id: kpr-callout-success
         title: success
@@ -1462,10 +1460,9 @@ settings:
         id: kpr-table-selection
         title: Selection
         description: "--table-selection"
-        type: variable-themed-color
+        type: variable-color
         format: hex
-        default-light: '#8a5cf51a'
-        default-dark: '#8a5cf51a'
+        default: '#8a5cf51a'
         opacity: true
     -
         id: kpr-table-selection-blend-mode-theme-light
@@ -1521,10 +1518,9 @@ settings:
         id: kpr-table-selection-border-color
         title: Selection border color
         description: "--table-selection-border-color"
-        type: variable-themed-color
+        type: variable-color
         format: hex
-        default-light: '#9873f7'
-        default-dark: '#9873f7'
+        default: '#9873f7'
     -
         id: kpr-table-selection-border-width
         title: Selection border width (px)
@@ -1558,10 +1554,9 @@ settings:
         id: kpr-table-drag-handle-background-active
         title: Drag handle background, active
         description: "--table-drag-handle-background-active"
-        type: variable-themed-color
+        type: variable-color
         format: hex
-        default-light: '#9873f7'
-        default-dark: '#9873f7'
+        default: '#9873f7'
     -
         id: kpr-table-drag-handle-color
         title: Drag handle color
@@ -1574,10 +1569,9 @@ settings:
         id: kpr-table-drag-handle-color-active
         title: Drag handle color, active
         description: "--table-drag-handle-color-active"
-        type: variable-themed-color
+        type: variable-color
         format: hex
-        default-light: '#ffffff'
-        default-dark: '#ffffff'
+        default: '#ffffff'
     -
         id: kpr-table-add-button-background
         title: Add button background
@@ -2401,10 +2395,9 @@ settings:
         id: kpr-list-marker-color-collapsed
         title: Marker color collapsed
         description: "--list-marker-color-collapsed"
-        type: variable-themed-color
+        type: variable-color
         format: hex
-        default-light: '#8a5cf5'
-        default-dark: '#8a5cf5'
+        default: '#8a5cf5'
     -
         id: kpr-list-bullet-border-width
         title: Bullet border width (px)
@@ -3630,10 +3623,9 @@ settings:
         id: kpr-tab-text-color-focused-highlighted
         title: Text color, focused highlighted
         description: "--tab-text-color-focused-highlighted"
-        type: variable-themed-color
+        type: variable-color
         format: hex
-        default-light: '#8a5cf5'
-        default-dark: '#8a5cf5'
+        default: '#8a5cf5'
     -
         id: kpr-tab-text-color-focused-active-current
         title: Text color, focused active current
@@ -4158,8 +4150,8 @@ settings:
         description: "--icon-color and --icon-opacity"
         type: variable-themed-color
         format: rgb-split
-        default-light: rgba(92, 92, 92, 0.85)
-        default-dark: rgba(179, 179, 179, 0.85)
+        default-light: #5c5c5cd9
+        default-dark: #b3b3b3d9
         opacity: true
     -
         id: kpr-icon-color-hover
@@ -4167,8 +4159,8 @@ settings:
         description: "--icon-color-hover and --icon-opacity-hover"
         type: variable-themed-color
         format: rgb-split
-        default-light: rgba(92, 92, 92, 1)
-        default-dark: rgba(179, 179, 179, 1)
+        default-light: #5c5c5c
+        default-dark: #b3b3b3
         opacity: true
     -
         id: kpr-icon-color-active
@@ -4311,10 +4303,9 @@ settings:
         id: kpr-nav-item-color-highlighted
         title: Item color, highlighted
         description: "--nav-item-color-highlighted"
-        type: variable-themed-color
+        type: variable-color
         format: hex
-        default-light: "#8a5cf5"
-        default-dark: "#8a5cf5"
+        default: "#8a5cf5"
     -
         id: kpr-nav-item-background-hover
         title: Item background, hover
@@ -4337,10 +4328,9 @@ settings:
         id: kpr-nav-item-background-selected
         title: Item background, selected
         description: "--nav-item-background-selected"
-        type: variable-themed-color
+        type: variable-color
         format: hex
-        default-light: "#8a5cf526"
-        default-dark: "#8a5cf526"
+        default: "#8a5cf526"
         opacity: true
     -
         id: kpr-nav-item-padding
@@ -4870,10 +4860,9 @@ settings:
         id: kpr-pill-color-remove-hover
         title: Color, remove + hover
         description: "--pill-color-remove-hover"
-        type: variable-themed-color
+        type: variable-color
         format: hex
-        default-light: "#9873f7"
-        default-dark: "#9873f7"
+        default: "#9873f7"
     -
         id: kpr-pill-decoration
         title: Decoration
