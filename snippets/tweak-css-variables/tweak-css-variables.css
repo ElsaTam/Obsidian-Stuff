@@ -575,6 +575,295 @@ settings:
 
 
     -
+        id: header-theme
+        title: Color mappings
+        type: heading
+        level: 1
+        collapsed: true
+
+    -
+        id: header-backgrounds
+        title: Backgrounds
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: kpr-tweak-background
+        title: Use custom background variables
+        type: class-toggle
+        default: false
+    - 
+        id: kpr-background-primary
+        title: Background primary
+        description: "--background-primary (from --color-base-00)"
+        type: variable-themed-color
+        format: hex
+        default-light: '#ffffff'
+        default-dark: '#1e1e1e'
+    - 
+        id: kpr-background-primary-alt
+        title: Background primary alt
+        description: "--background-primary-alt (from --color-base-10)"
+        type: variable-themed-color
+        format: hex
+        default-light: '#fafafa'
+        default-dark: '#242424'
+    - 
+        id: kpr-background-secondary
+        title: Background secondary
+        description: "--background-secondary (from --color-base-20)"
+        type: variable-themed-color
+        format: hex
+        default-light: '#f6f6f6'
+        default-dark: '#262626'
+    - 
+        id: kpr-background-modifier-hover
+        title: Background modifier hover
+        description: "--background-modifier-hover (from --mono-rgb-100 opacity 0.075)"
+        type: variable-themed-color
+        format: hex
+        default-light: '#00000013'
+        default-dark: '#ffffff13'
+        opacity: true
+    - 
+        id: kpr-background-modifier-active-hover
+        title: Background modifier active hover
+        description: "--background-modifier-hactive-over (from --interactive-accent-hsl opacity 0.15)"
+        type: variable-color
+        format: hex
+        default: '#8a5cf526'
+        opacity: true
+    - 
+        id: kpr-background-modifier-border
+        title: Background modifier border
+        description: "--background-modifier-border (from --color-base-30)"
+        type: variable-themed-color
+        format: hex
+        default-light: '#e0e0e0'
+        default-dark: '#363636'
+    - 
+        id: kpr-background-modifier-border-hover
+        title: Background modifier border hover
+        description: "--background-modifier-border-hover (from --color-base-35)"
+        type: variable-themed-color
+        format: hex
+        default-light: '#d4d4d4'
+        default-dark: '#3f3f3f'
+    - 
+        id: kpr-background-modifier-border-focus
+        title: Background modifier border focus
+        description: "--background-modifier-border-focus (from --color-base-40)"
+        type: variable-themed-color
+        format: hex
+        default-light: '#bdbdbd'
+        default-dark: '#555555'
+    - 
+        id: kpr-background-modifier-error
+        title: Background modifier error
+        description: "--background-modifier-error (from --color-red) and --background-modifier-error-rgb (from --color-red-rgb)"
+        type: variable-themed-color
+        format: hex
+        alt-format:
+            -
+                id: background-modifier-error-rgb
+                format: rgb-values
+        default-light: '#e93147'
+        default-dark: '#fb464c'
+    - 
+        id: kpr-background-modifier-error-hover
+        title: Background modifier error hover
+        description: "--background-modifier-error-hover (from --color-red)"
+        type: variable-themed-color
+        format: hex
+        default-light: '#e93147'
+        default-dark: '#fb464c'
+    - 
+        id: kpr-background-modifier-success
+        title: Background modifier success
+        description: "--background-modifier-success (from --color-green) and --background-modifier-success-rgb (from --color-green-rgb)"
+        type: variable-themed-color
+        format: hex
+        alt-format:
+            -
+                id: background-modifier-success-rgb
+                format: rgb-values
+        default-light: '#08b94e'
+        default-dark: '#44cf6e'
+    - 
+        id: kpr-background-modifier-message
+        title: Background modifier message
+        description: "--background-modifier-message"
+        type: variable-color
+        format: hex
+        default: '#000000e6'
+        opacity: true
+    - 
+        id: kpr-background-modifier-form-field
+        title: Background modifier form field
+        description: "--background-modifier-error-hover (from --color-base-00)"
+        type: variable-themed-color
+        format: hex
+        default-light: '#ffffff'
+        default-dark: '#1e1e1e'
+
+    -
+        id: header-text
+        title: Text
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: kpr-tweak-text
+        title: Use custom text variables
+        type: class-toggle
+        default: false
+    - 
+        id: kpr-text-normal
+        title: Text normal
+        description: "--text-normal (from --color-base-100)"
+        type: variable-themed-color
+        format: hex
+        default-light: '#222222'
+        default-dark: '#dadada'
+    - 
+        id: kpr-text-muted
+        title: Text muted
+        description: "--text-muted (from --color-base-70)"
+        type: variable-themed-color
+        format: hex
+        default-light: '#5c5c5c'
+        default-dark: '#b3b3b3'
+    - 
+        id: kpr-text-faint
+        title: Text faint
+        description: "--text-faint (from --color-base-50)"
+        type: variable-themed-color
+        format: hex
+        default-light: '#ababab'
+        default-dark: '#666666'
+    - 
+        id: kpr-text-on-accent
+        title: Text on accent
+        description: "--text-on-accent"
+        type: variable-color
+        format: hex
+        default: '#ffffff'
+    - 
+        id: kpr-text-on-accent-inverted
+        title: Text on accent inverted
+        description: "--text-on-accent-inverted"
+        type: variable-color
+        format: hex
+        default: '#000000'
+    - 
+        id: kpr-text-error
+        title: Text error
+        description: "--text-error (from --color-red)"
+        type: variable-themed-color
+        format: hex
+        default-light: '#e93147'
+        default-dark: '#fb464c'
+    - 
+        id: kpr-text-warning
+        title: Text warning
+        description: "--text-warning (from --color-orange)"
+        type: variable-themed-color
+        format: hex
+        default-light: '#ec7500'
+        default-dark: '#e9973f'
+    - 
+        id: kpr-text-success
+        title: Text success
+        description: "--text-success (from --color-green)"
+        type: variable-themed-color
+        format: hex
+        default-light: '#08b94e'
+        default-dark: '#44cf6e'
+    - 
+        id: kpr-text-success
+        title: Text success
+        description: "--text-success (from --color-accent-hsl opacity 0.2)"
+        type: variable-themed-color
+        format: hex
+        default-light: '#8a5cf533'
+        default-dark: '#8a5cf533'
+        opacity: true
+    - 
+        id: kpr-text-highlight-bg-rgb
+        title: Highlight background
+        description: "--text-highlight-bg-rgb and --text-highlight-bg"
+        type: variable-color
+        format: rgb-values
+        default: '#ffd000'
+    - 
+        id: kpr-text-accent
+        title: Text accent
+        description: "--text-accent (from --color-accent)"
+        type: variable-themed-color
+        format: hex
+        default-light: '#8a5cf5'
+        default-dark: '#8a5cf5'
+    - 
+        id: kpr-text-accent-hover
+        title: Text accent hover
+        description: "--text-accent (from --color-accent-2)"
+        type: variable-themed-color
+        format: hex
+        default-light: '#a68af9'
+        default-dark: '#c5b6fc'
+    - 
+        id: kpr-interactive-normal
+        title: Interactive normal
+        description: "--interactive-normal (from --color-base-00)"
+        type: variable-themed-color
+        format: hex
+        default-light: '#ffffff'
+        default-dark: '#1e1e1e'
+    - 
+        id: kpr-interactive-hover
+        title: Interactive hover
+        description: "--interactive-hover (from --color-base-10)"
+        type: variable-themed-color
+        format: hex
+        default-light: '#fcfcfc'
+        default-dark: '#242424'
+    - 
+        id: kpr-interactive-accent-hsl
+        title: Interactive accent, HSL values
+        description: "--interactive-accent-hsl (from --color-accent-hsl)"
+        type: variable-themed-color
+        format: hsl-values
+        default-light: '#8a5cf5'
+        default-dark: '#8a5cf5'
+    - 
+        id: kpr-interactive-accent
+        title: Interactive accent
+        description: "--interactive-accent (from --color-accent-1)"
+        type: variable-themed-color
+        format: hsl-values
+        default-light: '#9873f7'
+        default-dark: '#a68af9'
+    - 
+        id: kpr-interactive-accent-hover
+        title: Interactive accent hover
+        description: "--interactive-accent-hover (from --color-accent-2)"
+        type: variable-themed-color
+        format: hsl-values
+        default-light: '#a68af9'
+        default-dark: '#c5b6fc'
+
+
+
+
+
+
+
+
+
+
+
+
+    -
         id: header-containers
         title: Containers
         type: heading
@@ -2298,7 +2587,7 @@ settings:
     -
         id: kpr-link-unresolved-decoration-color
         title: Unresolved decoration color
-        description: "--link-unresolved-decoration-color (from --interactive-accent-hsl with opacity 0.3)"
+        description: "--link-unresolved-decoration-color (from --interactive-accent-hsl opacity 0.3)"
         type: variable-color
         format: hex
         default: '#8a5cf5'
@@ -2520,7 +2809,7 @@ settings:
     -
         id: kpr-tag-background
         title: Background color
-        description: "--tag-background (from --interactive-accent-hsl with opacity 0.1)"
+        description: "--tag-background (from --interactive-accent-hsl opacity 0.1)"
         type: variable-color
         format: hex
         default: '#8a5cf51a'
@@ -2528,7 +2817,7 @@ settings:
     -
         id: kpr-tag-background-hover
         title: Background color, hover
-        description: "--tag-background-hover (from --interactive-accent-hsl with opacity 0.2)"
+        description: "--tag-background-hover (from --interactive-accent-hsl opacity 0.2)"
         type: variable-color
         format: hex
         default: '#8a5cf533'
@@ -2536,7 +2825,7 @@ settings:
     -
         id: kpr-tag-border-color
         title: Border color
-        description: "--tag-border-color (from --interactive-accent-hsl with opacity 0.15)"
+        description: "--tag-border-color (from --interactive-accent-hsl opacity 0.15)"
         type: variable-color
         format: hex
         default: '#8a5cf526'
@@ -2544,7 +2833,7 @@ settings:
     -
         id: kpr-tag-border-color-hover
         title: Border color, hover
-        description: "--tag-border-color-hover (from --interactive-accent-hsl with opacity 0.15)"
+        description: "--tag-border-color-hover (from --interactive-accent-hsl opacity 0.15)"
         type: variable-color
         format: hex
         default: '#8a5cf526'
@@ -3469,7 +3758,7 @@ settings:
     -
         id: kpr-scrollbar-active-thumb-bg
         title: Scrollbar active thumb background
-        description: "--scrollbar-active-thumb-bg (from --mono-rgb-100 with opacity 0.2)"
+        description: "--scrollbar-active-thumb-bg (from --mono-rgb-100 opacity 0.2)"
         type: variable-themed-color
         format: hex
         default-light: '#00000033'
@@ -3478,7 +3767,7 @@ settings:
     -
         id: kpr-scrollbar-bg
         title: Scrollbar background
-        description: "--scrollbar-bg (from --mono-rgb-100 with opacity 0.05)"
+        description: "--scrollbar-bg (from --mono-rgb-100 opacity 0.05)"
         type: variable-themed-color
         format: hex
         default-light: '#0000000d'
@@ -3487,7 +3776,7 @@ settings:
     -
         id: kpr-scrollbar-thumb-bg
         title: Scrollbar thumb background
-        description: "--scrollbar-thumb-bg (from --mono-rgb-100 with opacity 0.1)"
+        description: "--scrollbar-thumb-bg (from --mono-rgb-100 opacity 0.1)"
         type: variable-themed-color
         format: hex
         default-light: '#0000001a'
@@ -4168,7 +4457,7 @@ settings:
     -
         id: kpr-indentation-guide-color
         title: Color
-        description: "--indentation-guide-color (from --mono-rgb-100 with opacity 0.12)"
+        description: "--indentation-guide-color (from --mono-rgb-100 opacity 0.12)"
         type: variable-themed-color
         format: hex
         default-light: "#0000001f"
@@ -4177,7 +4466,7 @@ settings:
     -
         id: kpr-indentation-guide-color-active
         title: Color active
-        description: "--indentation-guide-color-active (from --mono-rgb-100 with opacity 0.3)"
+        description: "--indentation-guide-color-active (from --mono-rgb-100 opacity 0.3)"
         type: variable-themed-color
         format: hex
         default-light: "#0000004d"
@@ -4289,7 +4578,7 @@ settings:
     -
         id: kpr-nav-item-background-selected
         title: Item background, selected
-        description: "--nav-item-background-selected (from --color-accent-hsl with opacity 0.15)"
+        description: "--nav-item-background-selected (from --color-accent-hsl opacity 0.15)"
         type: variable-color
         format: hex
         default: "#8a5cf526"
@@ -5239,7 +5528,7 @@ settings:
     -
         id: kpr-workspace-background-translucent
         title: Color
-        description: "--workspace-background-translucent (from --mono-rgb-0 with opacity 0.6)"
+        description: "--workspace-background-translucent (from --mono-rgb-0 opacity 0.6)"
         type: variable-themed-color
         format: hex
         default-light: "#ffffff99"
@@ -5251,6 +5540,7 @@ settings:
 */
 
 /* Base */
+
 /* Radiuses */
 .kpr-tweak-radius {
     --kpr-radius-s: 4px;
@@ -5513,6 +5803,120 @@ settings:
 }
 
 
+
+/* Color mappings */
+
+/* Backgrounds */
+.kpr-tweak-background {
+    --kpr-background-modifier-active-hover: #8a5cf526;
+    --kpr-background-modifier-message: #000000e6;
+    &.theme-light {
+        --kpr-background-primary: #ffffff;
+        --kpr-background-primary-alt: #fafafa;
+        --kpr-background-secondary: #f6f6f6;
+        --kpr-background-modifier-hover: #00000013;
+        --kpr-background-modifier-border: #e0e0e0;
+        --kpr-background-modifier-border-hover: #d4d4d4;
+        --kpr-background-modifier-border-focus: #bdbdbd;
+        --kpr-background-modifier-error-rgb: 233, 49, 71;
+        --kpr-background-modifier-error: #e93147;
+        --kpr-background-modifier-error-hover: #e93147;
+        --kpr-background-modifier-success-rgb: 8, 185, 78;
+        --kpr-background-modifier-success: #08b94e;
+        --kpr-background-modifier-form-field: #ffffff;
+    }
+    &.theme-dark {
+        --kpr-background-primary: #1e1e1e;
+        --kpr-background-primary-alt: #242424;
+        --kpr-background-secondary: #262626;
+        --kpr-background-modifier-hover: #ffffff13;
+        --kpr-background-modifier-border: #363636;
+        --kpr-background-modifier-border-hover: #3f3f3f;
+        --kpr-background-modifier-border-focus: #555555;
+        --kpr-background-modifier-error-rgb: 251, 70, 76;
+        --kpr-background-modifier-error: #fb464c;
+        --kpr-background-modifier-error-hover: #fb464c;
+        --kpr-background-modifier-success-rgb: 68, 207, 110;
+        --kpr-background-modifier-success: #44cf6e;
+        --kpr-background-modifier-form-field: #1e1e1e;
+    }
+
+    & {
+        --background-primary: var(--kpr-background-primary);
+        --background-primary-alt: var(--kpr-background-primary-alt);
+        --background-secondary: var(--kpr-background-secondary);
+        --background-modifier-hover: var(--kpr-background-modifier-hover);
+        --background-modifier-active-hover: var(--kpr-background-modifier-active-hover);
+        --background-modifier-border: var(--kpr-background-modifier-border);
+        --background-modifier-border-hover: var(--kpr-background-modifier-border-hover);
+        --background-modifier-border-focus: var(--kpr-background-modifier-border-focus);
+        --background-modifier-error-rgb: var(--kpr-background-modifier-error-rgb);
+        --background-modifier-error: var(--kpr-background-modifier-error);
+        --background-modifier-error-hover: var(--kpr-background-modifier-error-hover);
+        --background-modifier-success-rgb: var(--kpr-background-modifier-success-rgb);
+        --background-modifier-success: var(--kpr-background-modifier-success);
+        --background-modifier-message: var(--kpr-background-modifier-message);
+        --background-modifier-form-field: var(--kpr-background-modifier-form-field);
+    }
+}
+
+/* Text */
+.kpr-tweak-text {
+    --kpr-text-on-accent: #ffffff;
+    --kpr-text-on-accent-inverted: #000000;
+    --kpr-text-selection: #8a5cf533;
+    --kpr-text-highlight-bg-rgb: 255, 208, 0;
+    --kpr-text-accent: #8a5cf5;
+    --kpr-interactive-accent-hsl: 258, 88%, 66%;
+
+    &.theme-light {
+        --kpr-text-normal: #222222;
+        --kpr-text-muted: #5c5c5c;
+        --kpr-text-faint: #ababab;
+        --kpr-text-error: #e93147;
+        --kpr-text-warning: #ec7500;
+        --kpr-text-success: #08b94e;
+        --kpr-text-accent-hover: #a68af9;
+        --kpr-interactive-normal: #ffffff;
+        --kpr-interactive-hover: #fcfcfc;
+        --kpr-interactive-accent: #9873f7;
+        --kpr-interactive-accent-hover: #a68af9;
+    }
+    &.theme-dark {
+        --kpr-text-normal: #dadada;
+        --kpr-text-muted: #b3b3b3;
+        --kpr-text-faint: #666666;
+        --kpr-text-error: #fb464c;
+        --kpr-text-warning: #e9973f;
+        --kpr-text-success: #44cf6e;
+        --kpr-text-accent-hover: #c5b6fc;
+        --kpr-interactive-normal: #1e1e1e;
+        --kpr-interactive-hover: #242424;
+        --kpr-interactive-accent: #a68af9;
+        --kpr-interactive-accent-hover: #c5b6fc;
+    }
+
+    & {
+        --text-normal: var(--kpr-text-normal);
+        --text-muted: var(--kpr-text-muted);
+        --text-faint: var(--kpr-text-faint) ;
+        --text-on-accent: var(--kpr-text-on-accent);
+        --text-on-accent-inverted: var(--kpr-text-on-accent-inverted);
+        --text-error: var(--kpr-text-error);
+        --text-warning: var(--kpr-text-warning);
+        --text-success: var(--kpr-text-success);
+        --text-selection: var(--kpr-text-selection);
+        --text-highlight-bg-rgb: var(--kpr-text-highlight-bg-rgb);
+        --text-accent: var(--kpr-text-accent);
+        --text-accent-hover: var(--kpr-text-accent-hover);
+        --interactive-normal: var(--kpr-interactive-normal);
+        --interactive-hover: var(--kpr-interactive-hover);
+        --interactive-accent-hsl: var(--kpr-interactive-accent-hsl);
+        --interactive-accent: var(--kpr-interactive-accent);
+        --interactive-accent-hover: var(--kpr-interactive-accent-hover);
+    }
+    
+}
 
 
 /* Containers */
