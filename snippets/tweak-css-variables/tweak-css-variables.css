@@ -3378,6 +3378,72 @@ settings:
         description: "--tab-stacked-shadow"
         type: variable-text
         default: -8px 0 8px 0 rgba(0, 0, 0, 0.05)
+        
+    -
+        id: header-titlebar
+        title: Window frame (titlebar)
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: use-custom-settings-titlebar
+        title: Use custom titlebar
+        type: class-toggle
+        default: false
+    -
+        id: custom-titlebar-background
+        title: Background color
+        description: "--titlebar-background"
+        type: variable-themed-color
+        format: hex
+        default-light: '#f6f6f6'
+        default-dark: '#262626'
+    -
+        id: custom-titlebar-background-focused
+        title: Background color, focused
+        description: "--titlebar-background-focused"
+        type: variable-themed-color
+        format: hex
+        default-light: '#fcfcfc'
+        default-dark: '#363636'
+    -
+        id: custom-titlebar-border-width
+        title: Border width (px)
+        description: "--titlebar-border-width"
+        type: variable-number
+        default: 0
+        format: px
+    -
+        id: custom-titlebar-border-color
+        title: Border color
+        description: "--titlebar-border-color"
+        type: variable-themed-color
+        format: hex
+        default-light: '#e0e0e0'
+        default-dark: '#363636'
+    -
+        id: custom-titlebar-text-color
+        title: Text color
+        description: "--titlebar-text-color"
+        type: variable-themed-color
+        format: hex
+        default-light: '#5c5c5c'
+        default-dark: '#b3b3b3'
+    -
+        id: custom-titlebar-text-color-focused
+        title: Text color, focused
+        description: "--titlebar-text-color-focused"
+        type: variable-themed-color
+        format: hex
+        default-light: '#222222'
+        default-dark: '#dadada'
+    -
+        id: custom-titlebar-text-weight
+        title: Text weight
+        description: "--titlebar-text-weight"
+        type: variable-number
+        default: 700
+
 
 
         
@@ -3460,7 +3526,7 @@ settings:
         default: false
     -
         id: custom-graph-controls-width
-        title: Controls width
+        title: Controls width (px)
         description: "--graph-controls-width"
         type: variable-number
         default: 240
@@ -5883,6 +5949,37 @@ body {
             --tab-stacked-text-transform: var(--custom-tab-stacked-text-transform);
             --tab-stacked-text-writing-mode: var(--custom-tab-stacked-text-writing-mode);
             --tab-stacked-shadow: var(--custom-tab-stacked-shadow);
+        }
+    }
+
+    /* Window frame */
+    & {
+        --custom-titlebar-border-width: 0px;
+        --custom-titlebar-text-weight: 700;
+
+        &.theme-light {
+            --custom-titlebar-background: #f6f6f6; /* --color-base-20 */
+            --custom-titlebar-background-focused: #fcfcfc; /* --color-base-05 */
+            --custom-titlebar-border-color: #e0e0e0; /* --color-base-30 */
+            --custom-titlebar-text-color: #5c5c5c; /* --color-base-70 */
+            --custom-titlebar-text-color-focused: #222222; /* --color-base-100 */
+        }
+        &.theme-dark {
+            --custom-titlebar-background: #262626;
+            --custom-titlebar-background-focused: #363636; /* --color-base-30 */
+            --custom-titlebar-border-color: #363636;
+            --custom-titlebar-text-color: #b3b3b3;
+            --custom-titlebar-text-color-focused: #dadada;
+        }
+
+        &.use-custom-settings-titlebar {
+            --titlebar-background: var(--custom-titlebar-background);
+            --titlebar-background-focused: var(--custom-titlebar-background-focused);
+            --titlebar-border-width: var(--custom-titlebar-border-width);
+            --titlebar-border-color: var(--custom-titlebar-border-color);
+            --titlebar-text-color: var(--custom-titlebar-text-color);
+            --titlebar-text-color-focused: var(--custom-titlebar-text-color-focused);
+            --titlebar-text-weight: var(--custom-titlebar-text-weight);
         }
     }
 }
