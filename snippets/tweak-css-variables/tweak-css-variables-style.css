@@ -1,0 +1,138 @@
+.setting-item-heading[data-id="tweak-css-variables"] .setting-item-name .style-settings-filter-result-count::before {
+    content: '';
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/6/62/CSS3_logo.svg');
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-size: contain;
+    display: inline-block;
+    height: 1em;
+    width: 1em;
+    margin-inline-end: var(--size-4-2);
+    margin-bottom: -2px;
+}
+
+
+.setting-item-heading[data-id="tweak-css-variables"]:not(.is-collapsed) + .style-settings-container {
+
+    
+    /* Color the headers */
+    --h1-color: var(--color-blue);
+    & {
+        --current-h1-color: hsl(from var(--h1-color) h calc(s * 1) l);
+    }
+    & > .style-settings-container {
+        --current-h1-color: hsl(from var(--h1-color) h calc(s * 0.5) l);
+    }
+    & > .style-settings-container > .style-settings-container {
+        --current-h1-color: hsl(from var(--h1-color) h calc(s * 0.3) l);
+    }
+    & .style-settings-heading .setting-item-name {
+        color: var(--current-h1-color);
+    }
+
+    /* Layout to see the hiearchical structure */
+    & .style-settings-container {
+        margin-left: 0;
+        padding: var(--size-4-1) var(--size-2-3) 0 var(--size-4-6);
+        border-left: 1px solid var(--current-h1-color);
+    }
+
+    /* Disable the settings when not used */
+    & .setting-item.mod-toggle:has(.checkbox-container:not(.is-enabled)) ~ :is(.setting-item, .style-settings-container) {
+        .setting-item-info,
+        input,
+        .pickr,
+        .pickr-reset,
+        .clickable-icon,
+        .slider,
+        select {
+            opacity: 0.5;
+            pointer-events: none;
+        }
+    }
+
+
+    /* More compact color pickers */
+    --pickr-size: 1em;
+    & .pickr button {
+        width: var(--pickr-size);
+        height: var(--pickr-size);
+        &::after,
+        &::before {
+            border-radius: 50%;
+        }
+    }
+    & .pickr-reset button {
+        padding: 4px;
+        margin-left: 8px;
+        height: fit-content;
+        & svg {
+            width: var(--pickr-size);
+            height: var(--pickr-size);
+        }
+    }
+    & .themed-color-wrapper {
+        display: flex;
+        gap: 8px;
+        & > div {
+            margin: 0;
+            padding: calc(var(--pickr-size) * 0.3);
+        }
+    }
+    
+
+    /* Default values info as a tooltip */
+    & .setting-item {
+        & .setting-item-info {
+            position: relative;
+            & .setting-item-description div {
+                display: none;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                right: 0;
+                max-width: 70%;
+                background: var(--background-secondary);
+                padding: 5px;
+                border-radius: var(--radius-s);
+                box-shadow: shadow-s;
+            }
+        }
+        & .setting-item-control {
+            flex: none;
+        }
+        &:has(.clickable-icon[aria-label*="Restore"]:hover, .pickr-reset button:hover) .setting-item-description div {
+            display: block;
+        }
+    }
+
+    /* Title and description on the same line */
+    .setting-item-info:has(.setting-item-description:not(:empty)) {
+        & > div {
+            display: inline;
+        }
+        & .setting-item-name {
+
+            &::after {
+                content: "";
+                border-right: 1px solid var(--color-base-30);
+                margin: 0 5px;
+                vertical-align: middle;
+            }
+        }
+    }
+
+    /* Color the "Use custom ..." items */
+    .mod-toggle .setting-item-name {
+        color: var(--color-orange);
+        font-weight: var(--font-bold);
+    }
+
+    
+
+
+}
+
+.nothing {
+    border: 1px solid red;
+}
