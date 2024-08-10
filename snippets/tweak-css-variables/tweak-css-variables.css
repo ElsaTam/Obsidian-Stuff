@@ -1992,7 +1992,7 @@ settings:
         id: custom-list-marker-color
         title: Marker color
         description: "--list-marker-color"
-        type: variable-theme-color
+        type: variable-themed-color
         format: hex
         default-light: '#ababab'
         default-dark: '#666666'
@@ -2000,7 +2000,7 @@ settings:
         id: custom-list-marker-color-hover
         title: Marker color hover
         description: "--list-marker-color-hover"
-        type: variable-theme-color
+        type: variable-themed-color
         format: hex
         default-light: '#5c5c5c'
         default-dark: '#b3b3b3'
@@ -2008,7 +2008,7 @@ settings:
         id: custom-list-marker-color-collapsed
         title: Marker color collapsed
         description: "--list-marker-color-collapsed"
-        type: variable-theme-color
+        type: variable-themed-color
         format: hex
         default-light: '#8a5cf5'
         default-dark: '#8a5cf5'
@@ -2040,7 +2040,7 @@ settings:
         id: custom-list-bullet-border-color
         title: Bullet border color
         description: "--list-bullet-border (color)"
-        type: variable-theme-color
+        type: variable-themed-color
         format: hex
         default-light: '#ababab'
         default-dark: '#666666'
@@ -2118,6 +2118,117 @@ settings:
         type: variable-number
         default: 0
         format: rem
+
+    -
+        id: header-tag
+        title: Tags
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: use-custom-settings-tag
+        title: Use custom tags
+        type: class-toggle
+        default: false
+    -
+        id: custom-tag-size
+        title: Size (em)
+        description: "--tag-size"
+        type: variable-number
+        default: 0.875
+        format: em
+    -
+        id: custom-tag-color
+        title: Text color
+        description: "--tag-color"
+        type: variable-color
+        format: hex
+        default: '#ababab'
+    -
+        id: custom-tag-color-hover
+        title: Text color, hover
+        description: "--tag-color-hover"
+        type: variable-color
+        format: hex
+        default: '#ababab'
+    -
+        id: custom-tag-decoration
+        title: Decoration
+        description: "--tag-decoration"
+        type: variable-text
+        default: none
+    -
+        id: custom-tag-decoration-hover
+        title: Decoration, hover
+        description: "--tag-decoration-hover"
+        type: variable-text
+        default: none
+    -
+        id: custom-tag-background
+        title: Background color
+        description: "--tag-background"
+        type: variable-color
+        format: hex
+        default: '#8a5cf51a'
+        opacity: true
+    -
+        id: custom-tag-background-hover
+        title: Background color, hover
+        description: "--tag-background-hover"
+        type: variable-color
+        format: hex
+        default: '#8a5cf533'
+        opacity: true
+    -
+        id: custom-tag-border-color
+        title: Border color
+        description: "--tag-border-color"
+        type: variable-color
+        format: hex
+        default: '#8a5cf526'
+        opacity: true
+    -
+        id: custom-tag-border-color-hover
+        title: Border color, hover
+        description: "--tag-border-color-hover"
+        type: variable-color
+        format: hex
+        default: '#8a5cf526'
+        opacity: true
+    -
+        id: custom-tag-border-width
+        title: Border width (px)
+        description: "--tag-border-width"
+        type: variable-number
+        default: 0
+        format: px
+    -
+        id: custom-tag-padding-x
+        title: Padding X (em)
+        description: "--tag-padding-x"
+        type: variable-number
+        default: 0.65
+        format: em
+    -
+        id: custom-tag-padding-y
+        title: Padding Y (em)
+        description: "--tag-padding-y"
+        type: variable-number
+        default: 0.25
+        format: em
+    -
+        id: custom-tag-radius
+        title: Radius (em)
+        description: "--tag-radius"
+        type: variable-number
+        default: 2
+        format: em
+    -
+        id: custom-tag-weight
+        title: Weight
+        description: "--tag-weight"
+        type: variable-text
+        default: inherit
 
 
 
@@ -5272,6 +5383,41 @@ body {
         &.use-custom-settings-paragraphs {
             --p-spacing: var(--custom-p-spacing);
             --p-spacing-empty: var(--custom-p-spacing-empty);
+        }
+    }
+
+    /* Tags */
+    & {
+        --custom-tag-size: 0.875em;
+        --custom-tag-color: #a68af9;
+        --custom-tag-color-hover: #a68af9;
+        --custom-tag-decoration: none;
+        --custom-tag-decoration-hover: none;
+        --custom-tag-background: #8a5cf51a;
+        --custom-tag-background-hover: #8a5cf533;
+        --custom-tag-border-color: #8a5cf526;
+        --custom-tag-border-color-hover: #8a5cf526;
+        --custom-tag-border-width: 0px;
+        --custom-tag-padding-x: 0.65em;
+        --custom-tag-padding-y: 0.25em;
+        --custom-tag-radius: 2em;
+        --custom-tag-weight: inherit;
+
+        &.use-custom-settings-tag {
+            --tag-size: var(--custom-tag-size);
+            --tag-color: var(--custom-tag-color);
+            --tag-color-hover: var(--custom-tag-color-hover);
+            --tag-decoration: var(--custom-tag-decoration);
+            --tag-decoration-hover: var(--custom-tag-decoration-hover);
+            --tag-background: var(--custom-tag-background);
+            --tag-background-hover: var(--custom-tag-background-hover);
+            --tag-border-color: var(--custom-tag-border-color);
+            --tag-border-color-hover: var(--custom-tag-border-color-hover);
+            --tag-border-width: var(--custom-tag-border-width);
+            --tag-padding-x: var(--custom-tag-padding-x);
+            --tag-padding-y: var(--custom-tag-padding-y);
+            --tag-radius: var(--custom-tag-radius);
+            --tag-weight: var(--custom-tag-weight);
         }
     }
 }

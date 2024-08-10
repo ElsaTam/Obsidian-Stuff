@@ -20,7 +20,7 @@ Expose the css variables with the Style Setting plugin.
   - [x] Code
   - [x] Embeds
   - [x] Tables
-- Typography
+- [x] Typography
   - [x] General
   - [x] Font sizes
     - [x] Relative font sizes
@@ -32,7 +32,7 @@ Expose the css variables with the Style Setting plugin.
   - [x] Links
   - [x] Lists
   - [x] Paragraphs
-  - [ ] Tags
+  - [x] Tags
 - [x] Inputs
   - [x] General
   - [x] Buttons
