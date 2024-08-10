@@ -17,7 +17,7 @@ Expose the css variables with the Style Setting plugin.
   - [x] Move the declaration of all custom variables inside the block `.use-custom-settings-...`
 - [x] Make accent color unique (not themed)
 - [ ] Create a better outline (settings structure)
-- [ ] Add the chains of variables in the descriptions
+- [x] Add the chains of variables in the descriptions
 - [ ] Create a css for a more readable settings section
 - [ ] Debug
 - [ ] Update this readme

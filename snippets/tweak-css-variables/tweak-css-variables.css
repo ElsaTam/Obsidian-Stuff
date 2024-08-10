@@ -604,7 +604,7 @@ settings:
     - 
         id: kpr-blockquote-border-color
         title: Border color
-        description: "--blockquote-border-color"
+        description: "--blockquote-border-color (from --interactive-accent)"
         type: variable-color
         format: hex
         default: '#8a5cf5'
@@ -664,36 +664,14 @@ settings:
         max: 1
     -
         id: kpr-callout-padding-top
-        title: Padding top (px)
-        description: "--callout-padding (top)"
-        type: variable-number
-        default: 12
-        format: px
-    -
-        id: kpr-callout-padding-right
-        title: Padding right (px)
-        description: "--callout-padding (right)"
-        type: variable-number
-        default: 12
-        format: px
-    -
-        id: kpr-callout-padding-bottom
-        title: Padding bottom (px)
-        description: "--callout-padding (bottom)"
-        type: variable-number
-        default: 12
-        format: px
-    -
-        id: kpr-callout-padding-left
-        title: Padding left (px)
-        description: "--callout-padding (left)"
-        type: variable-number
-        default: 24
-        format: px
+        title: Padding
+        description: "--callout-padding (from --size-4-3 --size-4-3 --size-4-3 --size-4-6)"
+        type: variable-text
+        default: 12px 12px 12px 24px
     -
         id: kpr-callout-radius
         title: Radius
-        description: "--callout-radius"
+        description: "--callout-radius (from --radius-s)"
         type: variable-number
         default: 4
         format: px
@@ -713,37 +691,15 @@ settings:
     -
         id: kpr-callout-title-weight
         title: Title weight
-        description: "--callout-title-weight"
+        description: "--callout-title-weight (from --font-weight + --bold-modifier)"
         type: variable-number
         default: 600
     -
-        id: kpr-callout-content-padding-top
-        title: Content padding top (px)
-        description: "--callout-content-padding (top)"
-        type: variable-number
+        id: kpr-callout-content-padding
+        title: Content padding
+        description: "--callout-content-padding"
+        type: variable-text
         default: 0
-        format: px
-    -
-        id: kpr-callout-content-padding-right
-        title: Content padding right (px)
-        description: "--callout-content-padding (right)"
-        type: variable-number
-        default: 0
-        format: px
-    -
-        id: kpr-callout-content-padding-bottom
-        title: Content padding bottom (px)
-        description: "--callout-content-padding (bottom)"
-        type: variable-number
-        default: 0
-        format: px
-    -
-        id: kpr-callout-content-padding-left
-        title: Content padding left (px)
-        description: "--callout-content-padding (left)"
-        type: variable-number
-        default: 0
-        format: px
     -
         id: kpr-callout-content-background
         title: Content background
@@ -761,27 +717,27 @@ settings:
         level: 3
         collapsed: true
     -
-        id: kpr-callout-default
-        title: default
-        description: "--callout-default"
-        type: variable-themed-color
-        format: rgb-values
-        opacity: true
-        default-light: '#086ddd'
-        default-dark: '#027aff'
-    -
         id: kpr-callout-bug
         title: bug
-        description: "--callout-bug"
+        description: "--callout-bug (from --color-red-rgb)"
         type: variable-themed-color
         format: rgb-values
         opacity: true
         default-light: '#e93147'
         default-dark: '#fb464c'
     -
+        id: kpr-callout-default
+        title: default
+        description: "--callout-default (from --color-blue-rgb)"
+        type: variable-themed-color
+        format: rgb-values
+        opacity: true
+        default-light: '#086ddd'
+        default-dark: '#027aff'
+    -
         id: kpr-callout-error
         title: error
-        description: "--callout-error"
+        description: "--callout-error (from --color-red-rgb)"
         type: variable-themed-color
         format: rgb-values
         opacity: true
@@ -790,7 +746,7 @@ settings:
     -
         id: kpr-callout-example
         title: example
-        description: "--callout-example"
+        description: "--callout-example (from --color-purple-rgb)"
         type: variable-themed-color
         format: rgb-values
         opacity: true
@@ -799,7 +755,7 @@ settings:
     -
         id: kpr-callout-fail
         title: fail
-        description: "--callout-fail"
+        description: "--callout-fail (from --color-red-rgb)"
         type: variable-themed-color
         format: rgb-values
         opacity: true
@@ -808,7 +764,7 @@ settings:
     -
         id: kpr-callout-important
         title: important
-        description: "--callout-important"
+        description: "--callout-important (from --color-cyan-rgb)"
         type: variable-themed-color
         format: rgb-values
         opacity: true
@@ -817,7 +773,7 @@ settings:
     -
         id: kpr-callout-info
         title: info
-        description: "--callout-info"
+        description: "--callout-info (from --color-blue-rgb)"
         type: variable-themed-color
         format: rgb-values
         opacity: true
@@ -826,7 +782,7 @@ settings:
     -
         id: kpr-callout-question
         title: question
-        description: "--callout-question"
+        description: "--callout-question (from --color-orange-rgb)"
         type: variable-themed-color
         format: rgb-values
         opacity: true
@@ -843,7 +799,7 @@ settings:
     -
         id: kpr-callout-success
         title: success
-        description: "--callout-success"
+        description: "--callout-success (from --color-green-rgb)"
         type: variable-themed-color
         format: rgb-values
         opacity: true
@@ -852,7 +808,7 @@ settings:
     -
         id: kpr-callout-summary
         title: summary
-        description: "--callout-summary"
+        description: "--callout-summary (from --color-cyan-rgb)"
         type: variable-themed-color
         format: rgb-values
         opacity: true
@@ -861,7 +817,7 @@ settings:
     -
         id: kpr-callout-tip
         title: tip
-        description: "--callout-tip"
+        description: "--callout-tip (from --color-cyan-rgb)"
         type: variable-themed-color
         format: rgb-values
         opacity: true
@@ -870,7 +826,7 @@ settings:
     -
         id: kpr-callout-todo
         title: todo
-        description: "--callout-todo"
+        description: "--callout-todo (from --color-blue-rgb)"
         type: variable-themed-color
         format: rgb-values
         opacity: true
@@ -879,7 +835,7 @@ settings:
     -
         id: kpr-callout-warning
         title: warning
-        description: "--callout-warning"
+        description: "--callout-warning (from --color-orange-rgb)"
         type: variable-themed-color
         format: rgb-values
         opacity: true
@@ -900,7 +856,7 @@ settings:
     -
         id: kpr-canvas-background
         title: Background
-        description: "--canvas-background"
+        description: "--canvas-background (from --background-primary)"
         type: variable-themed-color
         format: hex
         opacity: true
@@ -909,7 +865,7 @@ settings:
     -
         id: kpr-canvas-card-label-color
         title: Card label color
-        description: "--canvas-card-label-color"
+        description: "--canvas-card-label-color (from --text-faint)"
         type: variable-themed-color
         format: hex
         opacity: true
@@ -918,7 +874,7 @@ settings:
     -
         id: kpr-canvas-dot-pattern
         title: Dot pattern
-        description: "--canvas-dot-pattern"
+        description: "--canvas-dot-pattern (from --color-base-30)"
         type: variable-themed-color
         format: hex
         opacity: true
@@ -934,7 +890,7 @@ settings:
     -
         id: kpr-canvas-color-1
         title: Color 1
-        description: "--canvas-color-1"
+        description: "--canvas-color-1 (from --color-red-rgb)"
         type: variable-themed-color
         format: rgb-values
         opacity: true
@@ -943,7 +899,7 @@ settings:
     -
         id: kpr-canvas-color-2
         title: Color 2
-        description: "--canvas-color-2"
+        description: "--canvas-color-2 (from --color-orange-rgb)"
         type: variable-themed-color
         format: rgb-values
         opacity: true
@@ -952,7 +908,7 @@ settings:
     -
         id: kpr-canvas-color-3
         title: Color 3
-        description: "--canvas-color-3"
+        description: "--canvas-color-3 (from --color-yellow-rgb)"
         type: variable-themed-color
         format: rgb-values
         opacity: true
@@ -961,7 +917,7 @@ settings:
     -
         id: kpr-canvas-color-4
         title: Color 4
-        description: "--canvas-color-4"
+        description: "--canvas-color-4 (from --color-green-rgb)"
         type: variable-themed-color
         format: rgb-values
         opacity: true
@@ -970,7 +926,7 @@ settings:
     -
         id: kpr-canvas-color-5
         title: Color 5
-        description: "--canvas-color-5"
+        description: "--canvas-color-5 (from --color-cyan-rgb)"
         type: variable-themed-color
         format: rgb-values
         opacity: true
@@ -979,7 +935,7 @@ settings:
     -
         id: kpr-canvas-color-6
         title: Color 6
-        description: "--canvas-color-6"
+        description: "--canvas-color-6 (from --color-purple-rgb)"
         type: variable-themed-color
         format: rgb-values
         opacity: true
@@ -1015,21 +971,21 @@ settings:
     -
         id: kpr-code-radius
         title: Radius (px)
-        description: "--code-radius"
+        description: "--code-radius (from --radius-s)"
         type: variable-number
         default: 4
         format: px
     -
         id: kpr-code-size
         title: Font size (px)
-        description: "--code-size"
+        description: "--code-size (from --font-smaller)"
         type: variable-number
         default: 0.875
         format: em
     -
         id: kpr-code-background
         title: Background
-        description: "--code-background"
+        description: "--code-background (from --background-primary-alt)"
         type: variable-themed-color
         format: hex
         opacity: true
@@ -1045,7 +1001,7 @@ settings:
     -
         id: kpr-code-normal
         title: Normal
-        description: "--code-normal"
+        description: "--code-normal (from --text-muted)"
         type: variable-themed-color
         format: hex
         opacity: true
@@ -1054,7 +1010,7 @@ settings:
     -
         id: kpr-code-comment
         title: Comment
-        description: "--code-comment"
+        description: "--code-comment (from --text-faint)"
         type: variable-themed-color
         format: hex
         opacity: true
@@ -1063,7 +1019,7 @@ settings:
     -
         id: kpr-code-function
         title: Function
-        description: "--code-function"
+        description: "--code-function (from --color-yellow)"
         type: variable-themed-color
         format: hex
         opacity: true
@@ -1072,7 +1028,7 @@ settings:
     -
         id: kpr-code-important
         title: Important
-        description: "--code-important"
+        description: "--code-important (from --color-orange)"
         type: variable-themed-color
         format: hex
         opacity: true
@@ -1081,7 +1037,7 @@ settings:
     -
         id: kpr-code-keyword
         title: Keyword
-        description: "--code-keyword"
+        description: "--code-keyword (from --color-pink)"
         type: variable-themed-color
         format: hex
         opacity: true
@@ -1090,7 +1046,7 @@ settings:
     -
         id: kpr-code-operator
         title: Operator
-        description: "--code-operator"
+        description: "--code-operator (from --color-red)"
         type: variable-themed-color
         format: hex
         opacity: true
@@ -1099,7 +1055,7 @@ settings:
     -
         id: kpr-code-property
         title: Property
-        description: "--code-property"
+        description: "--code-property (from --color-cyan)"
         type: variable-themed-color
         format: hex
         opacity: true
@@ -1108,7 +1064,7 @@ settings:
     -
         id: kpr-code-punctuation
         title: Punctuation
-        description: "--code-punctuation"
+        description: "--code-punctuation (from --text-muted)"
         type: variable-themed-color
         format: hex
         opacity: true
@@ -1117,7 +1073,7 @@ settings:
     -
         id: kpr-code-string
         title: String
-        description: "--code-string"
+        description: "--code-string (from --color-green)"
         type: variable-themed-color
         format: hex
         opacity: true
@@ -1126,7 +1082,7 @@ settings:
     -
         id: kpr-code-tag
         title: Tag
-        description: "--code-tag"
+        description: "--code-tag (from --color-red)"
         type: variable-themed-color
         format: hex
         opacity: true
@@ -1135,7 +1091,7 @@ settings:
     -
         id: kpr-code-value
         title: Value
-        description: "--code-value"
+        description: "--code-value (from --color-purple)"
         type: variable-themed-color
         format: hex
         opacity: true
@@ -1177,7 +1133,7 @@ settings:
     -
         id: kpr-embed-border-color
         title: color
-        description: "--embed-border-start/end/top/bottom (color)"
+        description: "--embed-border-start/end/top/bottom (color) (from --interactive-accent)"
         type: variable-color
         format: hex
         default: '#8a5cf5'
@@ -1252,7 +1208,7 @@ settings:
     -
         id: kpr-embed-padding
         title: Padding
-        description: "--embed-padding"
+        description: "--embed-padding (from 0 0 0 --size-4-6)"
         type: variable-text
         default: 0 0 0 24px
 
@@ -1286,7 +1242,7 @@ settings:
     -
         id: kpr-table-border-color
         title: Border color
-        description: "--table-border-color"
+        description: "--table-border-color (from --background-modifier-border)"
         type: variable-themed-color
         format: hex
         default-light: '#e0e0e0'
@@ -1309,7 +1265,7 @@ settings:
     -
         id: kpr-table-header-background
         title: Header background
-        description: "--table-header-background"
+        description: "--table-header-background (from --table-background)"
         type: variable-themed-color
         format: hex
         default-light: '#00000000'
@@ -1327,14 +1283,14 @@ settings:
     -
         id: kpr-table-header-border-width
         title: Header border width (px)
-        description: "--table-header-border-width"
+        description: "--table-header-border-width (from --table-border-width)"
         type: variable-number
         default: 1
         format: px
     -
         id: kpr-table-header-border-color
         title: Header border color
-        description: "--table-header-border-color"
+        description: "--table-header-border-color (from --table-border-color)"
         type: variable-themed-color
         format: hex
         default-light: '#e0e0e0'
@@ -1348,20 +1304,20 @@ settings:
     -
         id: kpr-table-header-size
         title: Header size (px)
-        description: "--table-header-size"
+        description: "--table-header-size (from --table-text-size)"
         type: variable-number
         default: 16
         format: px
     -
         id: kpr-table-header-weight
         title: Header weight
-        description: "--table-header-weight"
+        description: "--table-header-weight (from --font-weight + --bold-modifier)"
         type: variable-number
         default: 600
     -
         id: kpr-table-header-color
         title: Header color
-        description: "--table-header-color"
+        description: "--table-header-color (from --text-normal)"
         type: variable-themed-color
         format: hex
         default-light: '#222222'
@@ -1369,13 +1325,13 @@ settings:
     -
         id: kpr-table-line-height
         title: Line height
-        description: "--table-line-height"
+        description: "--table-line-height (from --line-height-tight)"
         type: variable-number
         default: 1.3
     -
         id: kpr-table-text-size
         title: Text size (px)
-        description: "--table-text-size"
+        description: "--table-text-size (from --font-text-size)"
         type: variable-number
         default: 16
         format: px
@@ -1402,7 +1358,7 @@ settings:
     -
         id: kpr-table-column-alt-background
         title: Column alt background
-        description: "--table-column-alt-background"
+        description: "--table-column-alt-background (from --table-background)"
         type: variable-themed-color
         format: hex
         default-light: '#00000000'
@@ -1411,21 +1367,21 @@ settings:
     -
         id: kpr-table-column-first-border-width
         title: Column first border width
-        description: "--table-column-first-border-width"
+        description: "--table-column-first-border-width (from --table-border-width)"
         type: variable-number
         default: 1
         format: px
     -
         id: kpr-table-column-last-border-width
         title: Column last border width
-        description: "--table-column-last-border-width"
+        description: "--table-column-last-border-width (from --table-border-width)"
         type: variable-number
         default: 1
         format: px
     -
         id: kpr-table-row-background-hover
         title: Row background, hover
-        description: "--table-row-background-hover"
+        description: "--table-row-background-hover (from --table-background)"
         type: variable-themed-color
         format: hex
         default-light: '#00000000'
@@ -1434,7 +1390,7 @@ settings:
     -
         id: kpr-table-row-alt-background
         title: Row alt background
-        description: "--table-row-alt-background"
+        description: "--table-row-alt-background (from --table-background)"
         type: variable-themed-color
         format: hex
         default-light: '#00000000'
@@ -1443,7 +1399,7 @@ settings:
     -
         id: kpr-table-row-alt-background-hover
         title: Row alt background, hover
-        description: "--table-row-alt-background-hover"
+        description: "--table-row-alt-background-hover (from --table-background)"
         type: variable-themed-color
         format: hex
         default-light: '#00000000'
@@ -1452,14 +1408,14 @@ settings:
     -
         id: kpr-table-row-last-border-width
         title: Row last border width (px)
-        description: "--table-row-last-border-width"
+        description: "--table-row-last-border-width (from --table-border-width)"
         type: variable-number
         default: 1
         format: px
     -
         id: kpr-table-selection
         title: Selection
-        description: "--table-selection"
+        description: "--table-selection (from --color-accent-hsl)"
         type: variable-color
         format: hex
         default: '#8a5cf51a'
@@ -1467,7 +1423,7 @@ settings:
     -
         id: kpr-table-selection-blend-mode-theme-light
         title: Selection blend mode (light theme)
-        description: "--table-selection-blend-mode"
+        description: "--table-selection-blend-mode (from --highlight-mix-blend-mode)"
         type: variable-select
         default: darken
         options:
@@ -1492,7 +1448,7 @@ settings:
     -
         id: kpr-table-selection-blend-mode-theme-dark
         title: Selection blend mode (dark theme)
-        description: "--table-selection-blend-mode"
+        description: "--table-selection-blend-mode (from --highlight-mix-blend-mode)"
         type: variable-select
         default: lighten
         options:
@@ -1517,7 +1473,7 @@ settings:
     -
         id: kpr-table-selection-border-color
         title: Selection border color
-        description: "--table-selection-border-color"
+        description: "--table-selection-border-color (from --interactive-accent)"
         type: variable-color
         format: hex
         default: '#9873f7'
@@ -1553,14 +1509,14 @@ settings:
     -
         id: kpr-table-drag-handle-background-active
         title: Drag handle background, active
-        description: "--table-drag-handle-background-active"
+        description: "--table-drag-handle-background-active (from --table-selection-border-color)"
         type: variable-color
         format: hex
         default: '#9873f7'
     -
         id: kpr-table-drag-handle-color
         title: Drag handle color
-        description: "--table-drag-handle-color"
+        description: "--table-drag-handle-color (from --text-faint)"
         type: variable-themed-color
         format: hex
         default-light: '#ababab'
@@ -1568,7 +1524,7 @@ settings:
     -
         id: kpr-table-drag-handle-color-active
         title: Drag handle color, active
-        description: "--table-drag-handle-color-active"
+        description: "--table-drag-handle-color-active (--text-on-accent)"
         type: variable-color
         format: hex
         default: '#ffffff'
@@ -1584,14 +1540,14 @@ settings:
     -
         id: kpr-table-add-button-border-width
         title: Add button  border width (px)
-        description: "--table-add-button-border-width"
+        description: "--table-add-button-border-width (from --table-border-width)"
         type: variable-number
         default: 1
         format: px
     -
         id: kpr-table-add-button-border-color
         title: Add button border color
-        description: "--table-add-button-border-color"
+        description: "--table-add-button-border-color (from --background-modifier-border)"
         type: variable-themed-color
         format: hex
         default-light: '#e0e0e0'
@@ -1627,6 +1583,12 @@ settings:
         default-light: '#'
         default-dark: '#'
     -
+        id: kpr-bold-weight
+        title: Bold weight
+        description: "--bold-weight (from --font-weight + --bold-modifier)"
+        type: variable-number
+        default: 600
+    -
         id: kpr-italic-color
         title: Italic color
         description: "--italic-color, default inherit"
@@ -1637,7 +1599,7 @@ settings:
     -
         id: kpr-caret-color
         title: Caret color
-        description: "--caret-color"
+        description: "--caret-color (from --text-normal)"
         type: variable-themed-color
         format: hex
         default-light: '#222222'
@@ -1737,7 +1699,7 @@ settings:
     -
         id: kpr-footnote-size
         title: Footnote (em)
-        description: "--footnote-size"
+        description: "--footnote-size (from --font-smaller)"
         type: variable-number
         default: 0.875
         format: em
@@ -1753,6 +1715,12 @@ settings:
         title: Use custom font weights
         type: class-toggle
         default: false
+    -
+        id: kpr-font-weight
+        title: weight
+        description: "--font-weight (from --font-normal)"
+        type: variable-number
+        default: 400
     -
         id: kpr-font-thin
         title: thin
@@ -1774,7 +1742,7 @@ settings:
     -
         id: kpr-font-normal
         title: normal
-        description: "--font-normal, cascading to --font-weight"
+        description: "--font-normal"
         type: variable-number
         default: 400
     -
@@ -1822,7 +1790,7 @@ settings:
     -
         id: kpr-heading-formatting
         title: Heading formatting
-        description: "--heading-formatting"
+        description: "--heading-formatting (from --text-faint)"
         type: variable-themed-color
         format: hex
         default-light: '#ababab'
@@ -1830,7 +1798,7 @@ settings:
     -
         id: kpr-heading-spacing
         title: Heading spacing (rem)
-        description: "--heading-spacing"
+        description: "--heading-spacing (from --p-spacing * 2.5)"
         type: variable-number
         default: 2.5
         format: rem
@@ -2077,7 +2045,7 @@ settings:
     -
         id: kpr-h5-line-height
         title: Line height
-        description: "--h5-line-height"
+        description: "--h5-line-height (from --line-height-normal)"
         type: variable-number
         default: 1.5
     -
@@ -2132,7 +2100,7 @@ settings:
     -
         id: kpr-h6-line-height
         title: Line height
-        description: "--h6-line-height"
+        description: "--h6-line-height (from --line-height-normal)"
         type: variable-number
         default: 1.5
     -
@@ -2179,7 +2147,7 @@ settings:
     -
         id: kpr-inline-title-color
         title: Color
-        description: "--inline-title-color, default inherit"
+        description: "--inline-title-color (from --h1-color)"
         type: variable-themed-color
         format: hex
         default-light: '#'
@@ -2187,26 +2155,26 @@ settings:
     -
         id: kpr-inline-title-font
         title: Font family
-        description: "--inline-title-font"
+        description: "--inline-title-font (from --h1-font)"
         type: variable-text
         default: ''
     -
         id: kpr-inline-title-line-height
         title: Line height
-        description: "--inline-title-line-height"
+        description: "--inline-title-line-height (from --h1-line-height)"
         type: variable-number
         default: 1.2
     -
         id: kpr-inline-title-size
         title: Size (em)
-        description: "--inline-title-size"
+        description: "--inline-title-size (from --h1-size)"
         type: variable-number
         default: 1.802
         format: em
     -
         id: kpr-inline-title-style
         title: Font style
-        description: "--inline-title-style"
+        description: "--inline-title-style (from --h1-style)"
         type: variable-select
         default: normal
         options:
@@ -2216,13 +2184,13 @@ settings:
     -
         id: kpr-inline-title-variant
         title: Font variant
-        description: "--inline-title-variant"
+        description: "--inline-title-variant (from --h1-variant)"
         type: variable-text
         default: normal
     -
         id: kpr-inline-title-weight
         title: Weight
-        description: "--inline-title-weight"
+        description: "--inline-title-weight (from --h1-weight)"
         type: variable-number
         default: 700
     -
@@ -2247,7 +2215,7 @@ settings:
     -
         id: kpr-link-color
         title: Color
-        description: "--link-color and --link-color-hover"
+        description: "--link-color (from --text-accent) and --link-color-hover (from --text-accent-hover)"
         type: variable-color
         format: hex
         default: '#8a5cf5'
@@ -2272,13 +2240,13 @@ settings:
     -
         id: kpr-link-weight
         title: Weight
-        description: "--link-weight"
-        type: variable-text
-        default: inherit
+        description: "--link-weight (from --font-weight)"
+        type: variable-number
+        default: 400
     -
         id: kpr-link-external-color
         title: External color
-        description: "--link-external-color and --link-external-color-hover"
+        description: "--link-external-color (from --text-accent) and --link-external-color-hover (from --text-accent-hover)"
         type: variable-color
         format: hex
         default: '#8a5cf5'
@@ -2303,7 +2271,7 @@ settings:
     -
         id: kpr-link-unresolved-color
         title: Unresolved color
-        description: "--link-unresolved-color"
+        description: "--link-unresolved-color (from --text-accent)"
         type: variable-color
         format: hex
         default: '#8a5cf5'
@@ -2330,7 +2298,7 @@ settings:
     -
         id: kpr-link-unresolved-decoration-color
         title: Unresolved decoration color
-        description: "--link-unresolved-decoration-color"
+        description: "--link-unresolved-decoration-color (from --interactive-accent-hsl with opacity 0.3)"
         type: variable-color
         format: hex
         default: '#8a5cf5'
@@ -2378,7 +2346,7 @@ settings:
     -
         id: kpr-list-marker-color
         title: Marker color
-        description: "--list-marker-color"
+        description: "--list-marker-color (from --text-faint)"
         type: variable-themed-color
         format: hex
         default-light: '#ababab'
@@ -2386,7 +2354,7 @@ settings:
     -
         id: kpr-list-marker-color-hover
         title: Marker color hover
-        description: "--list-marker-color-hover"
+        description: "--list-marker-color-hover (from --text-muted)"
         type: variable-themed-color
         format: hex
         default-light: '#5c5c5c'
@@ -2394,7 +2362,7 @@ settings:
     -
         id: kpr-list-marker-color-collapsed
         title: Marker color collapsed
-        description: "--list-marker-color-collapsed"
+        description: "--list-marker-color-collapsed (from --text-accent)"
         type: variable-color
         format: hex
         default: '#8a5cf5'
@@ -2519,21 +2487,21 @@ settings:
     -
         id: kpr-tag-size
         title: Size (em)
-        description: "--tag-size"
+        description: "--tag-size (from --font-smaller)"
         type: variable-number
         default: 0.875
         format: em
     -
         id: kpr-tag-color
         title: Text color
-        description: "--tag-color"
+        description: "--tag-color (from --text-accent)"
         type: variable-color
         format: hex
         default: '#ababab'
     -
         id: kpr-tag-color-hover
         title: Text color, hover
-        description: "--tag-color-hover"
+        description: "--tag-color-hover (from --text-accent)"
         type: variable-color
         format: hex
         default: '#ababab'
@@ -2552,7 +2520,7 @@ settings:
     -
         id: kpr-tag-background
         title: Background color
-        description: "--tag-background"
+        description: "--tag-background (from --interactive-accent-hsl with opacity 0.1)"
         type: variable-color
         format: hex
         default: '#8a5cf51a'
@@ -2560,7 +2528,7 @@ settings:
     -
         id: kpr-tag-background-hover
         title: Background color, hover
-        description: "--tag-background-hover"
+        description: "--tag-background-hover (from --interactive-accent-hsl with opacity 0.2)"
         type: variable-color
         format: hex
         default: '#8a5cf533'
@@ -2568,7 +2536,7 @@ settings:
     -
         id: kpr-tag-border-color
         title: Border color
-        description: "--tag-border-color"
+        description: "--tag-border-color (from --interactive-accent-hsl with opacity 0.15)"
         type: variable-color
         format: hex
         default: '#8a5cf526'
@@ -2576,7 +2544,7 @@ settings:
     -
         id: kpr-tag-border-color-hover
         title: Border color, hover
-        description: "--tag-border-color-hover"
+        description: "--tag-border-color-hover (from --interactive-accent-hsl with opacity 0.15)"
         type: variable-color
         format: hex
         default: '#8a5cf526'
@@ -2620,7 +2588,6 @@ settings:
 
 
 
-
         
     -
         id: header-inputs
@@ -2657,7 +2624,7 @@ settings:
     -
         id: kpr-input-font-weight
         title: Font weight
-        description: "--input-font-weight"
+        description: "--input-font-weight (from --font-normal)"
         type: variable-number
         default: 400
     -
@@ -2682,7 +2649,7 @@ settings:
     -
         id: kpr-button-radius
         title: Radius (px)
-        description: "--button-radius"
+        description: "--button-radius (from --input-radius)"
         type: variable-number
         default: 5
         format: px
@@ -2701,21 +2668,21 @@ settings:
     -
         id: kpr-checkbox-radius
         title: Radius (px)
-        description: "--checkbox-radius"
+        description: "--checkbox-radius (from --radius-s)"
         type: variable-number
         default: 4
         format: px
     -
         id: kpr-checkbox-size
         title: Size (px)
-        description: "--checkbox-size"
+        description: "--checkbox-size (from --font-text-size)"
         type: variable-number
         default: 16
         format: px
     -
         id: kpr-checkbox-marker-color
         title: Marker color
-        description: "--checkbox-marker-color"
+        description: "--checkbox-marker-color (from --background-primary)"
         type: variable-themed-color
         format: hex
         default-light: '#ffffff'
@@ -2723,14 +2690,14 @@ settings:
     -
         id: kpr-checkbox-color
         title: Color
-        description: "--checkbox-color"
+        description: "--checkbox-color (from --interactive-accent) and --checkbox-color-hover  (from --interactive-accent-hover)"
         type: variable-color
         format: hex
         default: '#8a5cf5'
     -
         id: kpr-checkbox-border-color
         title: Border color
-        description: "--checkbox-border-color"
+        description: "--checkbox-border-color (from --text-faint) and --checkbox-border-color-hover (from --text-muted)"
         type: variable-themed-color
         format: hex
         default-light: '#ababab'
@@ -2751,7 +2718,7 @@ settings:
     -
         id: kpr-checklist-done-color
         title: Checklist done color
-        description: "--checklist-done-color"
+        description: "--checklist-done-color (from --text-muted)"
         type: variable-themed-color
         format: hex
         default-light: '#5c5c5c'
@@ -2769,41 +2736,37 @@ settings:
         type: class-toggle
         default: false
     -
-        id: kpr-dropdown-padding-top
-        title: Padding top (em)
-        description: "--dropdown-padding (top)"
-        type: variable-number
-        default: 0
-        format: em
-    -
-        id: kpr-dropdown-padding-right
-        title: Padding right (em)
-        description: "--dropdown-padding (right)"
-        type: variable-number
-        default: 1.9
-        format: em
-    -
-        id: kpr-dropdown-padding-bottom
-        title: Padding bottom (em)
-        description: "--dropdown-padding (bottom)"
-        type: variable-number
-        default: 0
-        format: em
-    -
-        id: kpr-dropdown-padding-left
-        title: Padding left (em)
-        description: "--dropdown-padding (left)"
-        type: variable-number
-        default: 0.8
-        format: em
-    -
         id: kpr-dropdown-background
         title: Background
-        description: "--dropdown-background"
+        description: "--dropdown-background (from --interactive-normal) and --dropdown-background-hover (from --interactive-hover)"
         type: variable-themed-color
         format: hex
         default-light: '#ffffff'
         default-dark: '#1e1e1e'
+    -
+        id: kpr-dropdown-background-blend-mode
+        title: Background blend mode
+        description: "--dropdown-background-blend-mode"
+        type: variable-text
+        default: hard-light
+    -
+        id: kpr-dropdown-background-position
+        title: Background position
+        description: "--dropdown-background-position"
+        type: variable-text
+        default: "right 0.5em top 50%, 0 0"
+    -
+        id: kpr-dropdown-background-size
+        title: Background size
+        description: "--dropdown-background-size"
+        type: variable-text
+        default: "1em auto, 100%"
+    -
+        id: kpr-dropdown-padding
+        title: Padding
+        description: "--dropdown-padding"
+        type: variable-text
+        default: 0 1.9em 0 0.8em
 
     -
         id: header-sliders
@@ -2826,7 +2789,7 @@ settings:
     -
         id: kpr-slider-thumb-border-color
         title: Thumb border color
-        description: "--slider-thumb-border-color"
+        description: "--slider-thumb-border-color (from --background-modifier-border-hover)"
         type: variable-themed-color
         format: hex
         default-light: '#d4d4d4'
@@ -2862,20 +2825,20 @@ settings:
         max: 50
         format: "%"
     -
+        id: kpr-slider-track-background
+        title: Track background
+        description: "--slider-track-background (from --background-modifier-border)"
+        type: variable-themed-color
+        format: hex
+        default-light: '#e0e0e0'
+        default-dark: '#363636'
+    -
         id: kpr-slider-track-height
         title: Track height (px)
         description: "--slider-track-height"
         type: variable-number
         default: 3
         format: px
-    -
-        id: kpr-slider-track-background
-        title: Track background
-        description: "--slider-track-background"
-        type: variable-themed-color
-        format: hex
-        default-light: '#e0e0e0'
-        default-dark: '#363636'
 
     -
         id: header-toggle
@@ -2930,7 +2893,6 @@ settings:
         type: variable-number
         default: 18
         format: px
-
     -
         id: header-toggles-thumb
         title: Thumb
@@ -3044,7 +3006,7 @@ settings:
     -
         id: kpr-modal-background
         title: Background
-        description: "--modal-background"
+        description: "--modal-background (from --background-primary)"
         type: variable-themed-color
         format: hex
         default-light: '#ffffff'
@@ -3091,14 +3053,14 @@ settings:
     -
         id: kpr-modal-border-width
         title: Border width (px)
-        description: "--modal-border-width"
+        description: "--modal-border-width (from --border-width)"
         type: variable-number
         default: 1
         format: px
     -
         id: kpr-modal-border-color
         title: Border color
-        description: "--modal-border-color"
+        description: "--modal-border-color (from --color-base-40, fallback --background-modifier-border-focus)"
         type: variable-themed-color
         format: hex
         default-light: '#bdbdbd'
@@ -3106,7 +3068,7 @@ settings:
     -
         id: kpr-modal-radius
         title: Radius (px)
-        description: "--modal-radius"
+        description: "--modal-radius (from --radius-l)"
         type: variable-number
         default: 12
         format: px
@@ -3167,7 +3129,7 @@ settings:
     -
         id: kpr-popover-font-size
         title: Font size (px)
-        description: "--popover-font-size"
+        description: "--popover-font-size (from --font-text-size)"
         type: variable-number
         default: 16
         format: px
@@ -3219,7 +3181,7 @@ settings:
     -
         id: kpr-divider-color
         title: Color
-        description: "--divider-color"
+        description: "--divider-color (from --background-modifier-border)"
         type: variable-themed-color
         format: hex
         default-light: '#e0e0e0'
@@ -3227,7 +3189,7 @@ settings:
     -
         id: kpr-divider-color-hover
         title: Color hover
-        description: "--divider-color-hover"
+        description: "--divider-color-hover (from --interactive-accent)"
         type: variable-color
         format: hex
         default: '#8a5cf5'
@@ -3267,13 +3229,13 @@ settings:
     -
         id: kpr-file-margins
         title: Margins
-        description: "--file-margins"
+        description: "--file-margins (from --size-4-8)"
         type: variable-text
         default: 32px 32px 32px 32px
     -
         id: kpr-file-header-font-size
         title: Header font size (px)
-        description: "--file-header-font-size"
+        description: "--file-header-font-size (from --font-ui-small)"
         type: variable-number
         default: 13
         format: px
@@ -3286,7 +3248,7 @@ settings:
     -
         id: kpr-file-header-border-width
         title: Border width (px)
-        description: "--file-header-border (width)"
+        description: "--file-header-border (width) (from --border-width)"
         type: variable-number
         default: 1
         format: px
@@ -3412,7 +3374,7 @@ settings:
     -
         id: kpr-pdf-background
         title: PDF background
-        description: "--pdf-background"
+        description: "--pdf-background (from --background-primary)"
         type: variable-themed-color
         format: hex
         default-light: '#ffffff'
@@ -3420,7 +3382,7 @@ settings:
     -
         id: kpr-pdf-page-background
         title: Page background
-        description: "--pdf-page-background"
+        description: "--pdf-page-background (from --background-primary)"
         type: variable-themed-color
         format: hex
         default-light: '#ffffff'
@@ -3440,7 +3402,7 @@ settings:
     -
         id: kpr-pdf-sidebar-background
         title: Sidebar background
-        description: "--pdf-sidebar-background"
+        description: "--pdf-sidebar-background (from --background-primary)"
         type: variable-themed-color
         format: hex
         default-light: '#ffffff'
@@ -3466,7 +3428,7 @@ settings:
     -
         id: kpr-ribbon-background
         title: Background
-        description: "--ribbon-background"
+        description: "--ribbon-background (from --background-secondary)"
         type: variable-themed-color
         format: hex
         default-light: '#f6f6f6'
@@ -3474,7 +3436,7 @@ settings:
     -
         id: kpr-ribbon-background-collapsed
         title: Background collapsed
-        description: "--ribbon-background-collapsed"
+        description: "--ribbon-background-collapsed (from --background-primary)"
         type: variable-themed-color
         format: hex
         default-light: '#ffffff'
@@ -3489,7 +3451,7 @@ settings:
     -
         id: kpr-ribbon-padding
         title: Padding
-        description: "--ribbon-padding"
+        description: "--ribbon-padding (from --size-4-2 --size-4-1 --size-4-3)"
         type: variable-text
         default: 8px 4px 12px
         
@@ -3507,7 +3469,7 @@ settings:
     -
         id: kpr-scrollbar-active-thumb-bg
         title: Scrollbar active thumb background
-        description: "--scrollbar-active-thumb-bg"
+        description: "--scrollbar-active-thumb-bg (from --mono-rgb-100 with opacity 0.2)"
         type: variable-themed-color
         format: hex
         default-light: '#00000033'
@@ -3516,7 +3478,7 @@ settings:
     -
         id: kpr-scrollbar-bg
         title: Scrollbar background
-        description: "--scrollbar-bg"
+        description: "--scrollbar-bg (from --mono-rgb-100 with opacity 0.05)"
         type: variable-themed-color
         format: hex
         default-light: '#0000000d'
@@ -3525,7 +3487,7 @@ settings:
     -
         id: kpr-scrollbar-thumb-bg
         title: Scrollbar thumb background
-        description: "--scrollbar-thumb-bg"
+        description: "--scrollbar-thumb-bg (from --mono-rgb-100 with opacity 0.1)"
         type: variable-themed-color
         format: hex
         default-light: '#0000001a'
@@ -3546,7 +3508,7 @@ settings:
     -
         id: kpr-sidebar-markdown-font-size
         title: Markdown font size (px)
-        description: "--sidebar-markdown-font-size"
+        description: "--sidebar-markdown-font-size (from --font-text-size * 0.9)"
         type: variable-number
         default: 14.4
         format: px
@@ -3582,7 +3544,7 @@ settings:
     -
         id: kpr-tab-background-active
         title: Background active
-        description: "--tab-background-active"
+        description: "--tab-background-active (from --background-primary)"
         type: variable-themed-color
         format: hex
         default-light: '#ffffff'
@@ -3590,7 +3552,7 @@ settings:
     -
         id: kpr-tab-text-color
         title: Text color
-        description: "--tab-text-color"
+        description: "--tab-text-color (from --text-faint)"
         type: variable-themed-color
         format: hex
         default-light: '#ababab'
@@ -3598,7 +3560,7 @@ settings:
     -
         id: kpr-tab-text-color-active
         title: Text color, active
-        description: "--tab-text-color-active"
+        description: "--tab-text-color-active (from --text-muted)"
         type: variable-themed-color
         format: hex
         default-light: '#5c5c5c'
@@ -3606,7 +3568,7 @@ settings:
     -
         id: kpr-tab-text-color-focused
         title: Text color, focused
-        description: "--tab-text-color-focused"
+        description: "--tab-text-color-focused (from --text-muted)"
         type: variable-themed-color
         format: hex
         default-light: '#5c5c5c'
@@ -3614,7 +3576,7 @@ settings:
     -
         id: kpr-tab-text-color-focused-active
         title: Text color, focused active
-        description: "--tab-text-color-focused-active"
+        description: "--tab-text-color-focused-active (from --text-muted)"
         type: variable-themed-color
         format: hex
         default-light: '#5c5c5c'
@@ -3622,14 +3584,14 @@ settings:
     -
         id: kpr-tab-text-color-focused-highlighted
         title: Text color, focused highlighted
-        description: "--tab-text-color-focused-highlighted"
+        description: "--tab-text-color-focused-highlighted (from --text-accent)"
         type: variable-color
         format: hex
         default: '#8a5cf5'
     -
         id: kpr-tab-text-color-focused-active-current
         title: Text color, focused active current
-        description: "--tab-text-color-focused-active-current"
+        description: "--tab-text-color-focused-active-current (from --text-normal)"
         type: variable-themed-color
         format: hex
         default-light: '#222222'
@@ -3637,7 +3599,7 @@ settings:
     -
         id: kpr-tab-font-size
         title: Font size (px)
-        description: "--tab-font-size"
+        description: "--tab-font-size (from --font-ui-small)"
         type: variable-number
         default: 13
         format: px
@@ -3650,7 +3612,7 @@ settings:
     -
         id: kpr-tab-container-background
         title: Container background
-        description: "--tab-container-background"
+        description: "--tab-container-background (from --background-secondary)"
         type: variable-themed-color
         format: hex
         default-light: '#f6f6f6'
@@ -3658,7 +3620,7 @@ settings:
     -
         id: kpr-tab-divider-color
         title: Divider color
-        description: "--tab-divider-color"
+        description: "--tab-divider-color (from --background-modifier-border-hover)"
         type: variable-themed-color
         format: hex
         default-light: '#d4d4d4'
@@ -3666,7 +3628,7 @@ settings:
     -
         id: kpr-tab-outline-color
         title: Outline color
-        description: "--tab-outline-color"
+        description: "--tab-outline-color (from --divider-color)"
         type: variable-themed-color
         format: hex
         default-light: '#e0e0e0'
@@ -3688,7 +3650,7 @@ settings:
     -
         id: kpr-tab-radius
         title: Radius (px)
-        description: "--tab-radius"
+        description: "--tab-radius (from --radius-s)"
         type: variable-number
         default: 4
         format: px
@@ -3734,14 +3696,14 @@ settings:
     -
         id: kpr-tab-stacked-header-width
         title: Header width (px)
-        description: "--tab-stacked-header-width"
+        description: "--tab-stacked-header-width (from --header-height)"
         type: variable-number
         default: 40
         format: px
     -
         id: kpr-tab-stacked-font-size
         title: Font size (px)
-        description: "--tab-stacked-font-size"
+        description: "--tab-stacked-font-size (from --font-ui-small)"
         type: variable-number
         default: 13
         format: px
@@ -3803,7 +3765,7 @@ settings:
     -
         id: kpr-titlebar-background
         title: Background color
-        description: "--titlebar-background"
+        description: "--titlebar-background (from --background-secondary)"
         type: variable-themed-color
         format: hex
         default-light: '#f6f6f6'
@@ -3811,7 +3773,7 @@ settings:
     -
         id: kpr-titlebar-background-focused
         title: Background color, focused
-        description: "--titlebar-background-focused"
+        description: "--titlebar-background-focused (from --background-secondary-alt)"
         type: variable-themed-color
         format: hex
         default-light: '#fcfcfc'
@@ -3826,7 +3788,7 @@ settings:
     -
         id: kpr-titlebar-border-color
         title: Border color
-        description: "--titlebar-border-color"
+        description: "--titlebar-border-color (from --background-modifier-border)"
         type: variable-themed-color
         format: hex
         default-light: '#e0e0e0'
@@ -3834,7 +3796,7 @@ settings:
     -
         id: kpr-titlebar-text-color
         title: Text color
-        description: "--titlebar-text-color"
+        description: "--titlebar-text-color (from --text-muted)"
         type: variable-themed-color
         format: hex
         default-light: '#5c5c5c'
@@ -3842,7 +3804,7 @@ settings:
     -
         id: kpr-titlebar-text-color-focused
         title: Text color, focused
-        description: "--titlebar-text-color-focused"
+        description: "--titlebar-text-color-focused (from --text-normal)"
         type: variable-themed-color
         format: hex
         default-light: '#222222'
@@ -3850,7 +3812,7 @@ settings:
     -
         id: kpr-titlebar-text-weight
         title: Text weight
-        description: "--titlebar-text-weight"
+        description: "--titlebar-text-weight (from --font-bold)"
         type: variable-number
         default: 700
 
@@ -3882,7 +3844,7 @@ settings:
     -
         id: kpr-collapse-icon-color
         title: Color
-        description: "--collapse-icon-color"
+        description: "--collapse-icon-color (from --text-faint)"
         type: variable-themed-color
         format: hex
         default-light: '#ababab'
@@ -3890,7 +3852,7 @@ settings:
     -
         id: kpr-collapse-icon-color-collapsed
         title: Color collapsed
-        description: "--collapse-icon-color-collapsed"
+        description: "--collapse-icon-color-collapsed (from --text-accent)"
         type: variable-color
         format: hex
         default: '#8a5cf5'
@@ -3944,7 +3906,7 @@ settings:
     -
         id: kpr-graph-text
         title: Text color
-        description: "--graph-text"
+        description: "--graph-text (from --text-normal)"
         type: variable-themed-color
         format: hex
         default-light: '#222222'
@@ -3952,7 +3914,7 @@ settings:
     -
         id: kpr-graph-line
         title: Line color
-        description: "--graph-line"
+        description: "--graph-line (from --color-base-35, fallback --background-modifier-border-focus)"
         type: variable-themed-color
         format: hex
         default-light: '#d4d4d4'
@@ -3960,7 +3922,7 @@ settings:
     -
         id: kpr-graph-node
         title: Node color
-        description: "--graph-node"
+        description: "--graph-node (from --text-muted)"
         type: variable-themed-color
         format: hex
         default-light: '#5c5c5c'
@@ -3968,7 +3930,7 @@ settings:
     -
         id: kpr-graph-node-unresolved
         title: Unresolved node color
-        description: "--graph-node-unresolved"
+        description: "--graph-node-unresolved (from --text-faint)"
         type: variable-themed-color
         format: hex
         default-light: '#ababab'
@@ -3976,14 +3938,14 @@ settings:
     -
         id: kpr-graph-node-focused
         title: Node focused
-        description: "--graph-node-focused"
+        description: "--graph-node-focused (from --text-accent)"
         type: variable-color
         format: hex
         default: '#8a5cf5'
     -
         id: kpr-graph-node-tag
         title: Tag node color
-        description: "--graph-node-tag"
+        description: "--graph-node-tag (from --color-green)"
         type: variable-themed-color
         format: hex
         default-light: '#08b94e'
@@ -3991,7 +3953,7 @@ settings:
     -
         id: kpr-graph-node-attachment
         title: Attachment node color
-        description: "--graph-node-attachment"
+        description: "--graph-node-attachment (from --color-yellow)"
         type: variable-themed-color
         format: hex
         default-light: '#e0ac00'
@@ -4011,7 +3973,7 @@ settings:
     -
         id: kpr-hr-color
         title: Color
-        description: "--hr-color"
+        description: "--hr-color (from --background-modifier-border)"
         type: variable-themed-color
         format: hex
         default-light: '#e0e0e0'
@@ -4134,7 +4096,7 @@ settings:
     -
         id: kpr-clickable-icon-radius
         title: Clickable icon radius (px)
-        description: "--clickable-icon-radius"
+        description: "--clickable-icon-radius (from --radius-s)"
         type: variable-number
         default: 4
         format: px
@@ -4147,7 +4109,7 @@ settings:
     -
         id: kpr-icon-color
         title: Icon color
-        description: "--icon-color and --icon-opacity"
+        description: "--icon-color (from --text-muted) and --icon-opacity"
         type: variable-themed-color
         format: rgb-split
         default-light: #5c5c5cd9
@@ -4156,7 +4118,7 @@ settings:
     -
         id: kpr-icon-color-hover
         title: Icon color hover
-        description: "--icon-color-hover and --icon-opacity-hover"
+        description: "--icon-color-hover (from --text-muted) and --icon-opacity-hover"
         type: variable-themed-color
         format: rgb-split
         default-light: #5c5c5c
@@ -4165,14 +4127,14 @@ settings:
     -
         id: kpr-icon-color-active
         title: Icon color active
-        description: "--icon-color-active and --icon-opacity-active"
+        description: "--icon-color-active (from --text-accent) and --icon-opacity-active"
         type: variable-color
         format: rgb-split
         default: '#8a5cf5'
     -
         id: kpr-icon-color-focused
         title: Icon color focused
-        description: "--icon-color-focused"
+        description: "--icon-color-focused (from --text-normal)"
         type: variable-themed-color
         format: hex
         default-light: "#222222"
@@ -4204,6 +4166,24 @@ settings:
         default: 1
         format: px
     -
+        id: kpr-indentation-guide-color
+        title: Color
+        description: "--indentation-guide-color (from --mono-rgb-100 with opacity 0.12)"
+        type: variable-themed-color
+        format: hex
+        default-light: "#0000001f"
+        default-dark: "#ffffff1f"
+        opacity: true
+    -
+        id: kpr-indentation-guide-color-active
+        title: Color active
+        description: "--indentation-guide-color-active (from --mono-rgb-100 with opacity 0.3)"
+        type: variable-themed-color
+        format: hex
+        default-light: "#0000004d"
+        default-dark: "#ffffff4d"
+        opacity: true
+    -
         id: kpr-indentation-guide-editing-indent
         title: Editing indent (em)
         description: "--indentation-guide-editing-indent"
@@ -4224,24 +4204,6 @@ settings:
         type: variable-number
         default: 0.25
         format: em
-    -
-        id: kpr-indentation-guide-color
-        title: Color
-        description: "--indentation-guide-color"
-        type: variable-themed-color
-        format: hex
-        default-light: "#0000001f"
-        default-dark: "#ffffff1f"
-        opacity: true
-    -
-        id: kpr-indentation-guide-color-active
-        title: Color active
-        description: "--indentation-guide-color-active"
-        type: variable-themed-color
-        format: hex
-        default-light: "#0000004d"
-        default-dark: "#ffffff4d"
-        opacity: true
         
     -
         id: header-nav
@@ -4263,14 +4225,14 @@ settings:
     -
         id: kpr-nav-item-size
         title: Item size (px)
-        description: "--nav-item-size"
+        description: "--nav-item-size (from --font-ui-small)"
         type: variable-number
         default: 13
         format: px
     -
         id: kpr-nav-item-color
         title: Item color
-        description: "--nav-item-color"
+        description: "--nav-item-color (from --text-muted)"
         type: variable-themed-color
         format: hex
         default-light: "#5c5c5c"
@@ -4278,7 +4240,7 @@ settings:
     -
         id: kpr-nav-item-color-hover
         title: Item color, hover
-        description: "--nav-item-color-hover"
+        description: "--nav-item-color-hover (from --text-normal)"
         type: variable-themed-color
         format: hex
         default-light: "#222222"
@@ -4286,7 +4248,7 @@ settings:
     -
         id: kpr-nav-item-color-active
         title: Item color, active
-        description: "--nav-item-color-active"
+        description: "--nav-item-color-active (from --text-normal)"
         type: variable-themed-color
         format: hex
         default-light: "#222222"
@@ -4294,7 +4256,7 @@ settings:
     -
         id: kpr-nav-item-color-selected
         title: Item color, selected
-        description: "--nav-item-color-selected"
+        description: "--nav-item-color-selected (from --text-normal)"
         type: variable-themed-color
         format: hex
         default-light: "#222222"
@@ -4302,14 +4264,14 @@ settings:
     -
         id: kpr-nav-item-color-highlighted
         title: Item color, highlighted
-        description: "--nav-item-color-highlighted"
+        description: "--nav-item-color-highlighted (from --text-accent)"
         type: variable-color
         format: hex
         default: "#8a5cf5"
     -
         id: kpr-nav-item-background-hover
         title: Item background, hover
-        description: "--nav-item-background-hover"
+        description: "--nav-item-background-hover (from --background-modifier-hover)"
         type: variable-themed-color
         format: hex
         default-light: "#00000013"
@@ -4318,7 +4280,7 @@ settings:
     -
         id: kpr-nav-item-background-active
         title: Item background, active
-        description: "--nav-item-background-active"
+        description: "--nav-item-background-active (from --background-modifier-hover)"
         type: variable-themed-color
         format: hex
         default-light: "#00000013"
@@ -4327,7 +4289,7 @@ settings:
     -
         id: kpr-nav-item-background-selected
         title: Item background, selected
-        description: "--nav-item-background-selected"
+        description: "--nav-item-background-selected (from --color-accent-hsl with opacity 0.15)"
         type: variable-color
         format: hex
         default: "#8a5cf526"
@@ -4335,26 +4297,26 @@ settings:
     -
         id: kpr-nav-item-padding
         title: Item padding
-        description: "--nav-item-padding"
+        description: "--nav-item-padding (from --size-4-1 --size-4-2 --size-4-1 --size-4-6)"
         type: variable-text
         default: 4px 8px 4px 8px
     -
         id: kpr-nav-item-parent-padding
         title: Item parent padding
-        description: "--nav-item-parent-padding"
+        description: "--nav-item-parent-padding (from --nav-item-padding)"
         type: variable-text
         default: 4px 8px 4px 8px
     -
         id: kpr-nav-item-children-padding-start
         title: Item children padding start (px)
-        description: "--nav-item-children-padding-start"
+        description: "--nav-item-children-padding-start (from --size-2-2)"
         type: variable-number
         default: 4
         format: px
     -
         id: kpr-nav-item-children-margin-start
         title: Item children margin start (px)
-        description: "--nav-item-children-margin-start"
+        description: "--nav-item-children-margin-start (from --size-4-3)"
         type: variable-number
         default: 12
         format: px
@@ -4400,14 +4362,14 @@ settings:
     -
         id: kpr-nav-indentation-guide-width
         title: Indentation guides width (px)
-        description: "--nav-indentation-guide-width"
+        description: "--nav-indentation-guide-width (from --indentation-guide-width)"
         type: variable-number
         default: 1
         format: px
     -
         id: kpr-nav-indentation-guide-color
         title: Indentation guides color
-        description: "--nav-indentation-guide-color"
+        description: "--nav-indentation-guide-color (from --indentation-guide-color)"
         type: variable-themed-color
         format: hex
         default-light: "#0000001f"
@@ -4415,7 +4377,7 @@ settings:
     -
         id: kpr-nav-collapse-icon-color
         title: Collapse icon color
-        description: "--nav-collapse-icon-color"
+        description: "--nav-collapse-icon-color (from --collapse-icon-color)"
         type: variable-themed-color
         format: hex
         default-light: "#ababab"
@@ -4423,7 +4385,7 @@ settings:
     -
         id: kpr-nav-collapse-icon-color-collapsed
         title: Collapse icon color, collapsed
-        description: "--nav-collapse-icon-color-collapsed"
+        description: "--nav-collapse-icon-color-collapsed (from --text-faint)"
         type: variable-themed-color
         format: hex
         default-light: "#ababab"
@@ -4437,7 +4399,7 @@ settings:
     -
         id: kpr-nav-heading-color
         title: Headings color
-        description: "--nav-heading-color"
+        description: "--nav-heading-color (from --text-normal)"
         type: variable-themed-color
         format: hex
         default-light: "#222222"
@@ -4445,7 +4407,7 @@ settings:
     -
         id: kpr-nav-heading-color-hover
         title: Headings color, hover
-        description: "--nav-heading-color-hover"
+        description: "--nav-heading-color-hover (from --text-normal)"
         type: variable-themed-color
         format: hex
         default-light: "#222222"
@@ -4453,7 +4415,7 @@ settings:
     -
         id: kpr-nav-heading-color-collapsed
         title: Headings color, collapsed
-        description: "--nav-heading-color-collapsed"
+        description: "--nav-heading-color-collapsed (from --text-faint)"
         type: variable-themed-color
         format: hex
         default-light: "#ababab"
@@ -4461,7 +4423,7 @@ settings:
     -
         id: kpr-nav-heading-color-collapsed-hover
         title: Headings color, collapsed + hover
-        description: "--nav-heading-color-collapsed-hover"
+        description: "--nav-heading-color-collapsed-hover (from --text-muted)"
         type: variable-themed-color
         format: hex
         default-light: "#ababab"
@@ -4469,13 +4431,13 @@ settings:
     -
         id: kpr-nav-heading-weight
         title: Headings weight
-        description: "--nav-heading-weight"
+        description: "--nav-heading-weight (from --font-medium)"
         type: variable-number
         default: 500
     -
         id: kpr-nav-heading-weight-hover
         title: Headings weight, hover
-        description: "--nav-heading-weight-hover"
+        description: "--nav-heading-weight-hover (from --font-medium)"
         type: variable-number
         default: 500
         
@@ -4554,7 +4516,7 @@ settings:
     -
         id: kpr-metadata-padding
         title: Padding
-        description: "--metadata-padding"
+        description: "--metadata-padding (from --size-4-2 0)"
         type: variable-text
         default: 8px 0
     -
@@ -4573,7 +4535,7 @@ settings:
     -
         id: kpr-metadata-border-color
         title: Border color
-        description: "--metadata-border-color"
+        description: "--metadata-border-color (from --background-modifier-border)"
         type: variable-themed-color
         format: hex
         default-light: "#e0e0e0"
@@ -4595,7 +4557,7 @@ settings:
     -
         id: kpr-metadata-divider-color
         title: Divider color
-        description: "--metadata-divider-color"
+        description: "--metadata-divider-color (from --background-modifier-border)"
         type: variable-themed-color
         format: hex
         default-light: "#e0e0e0"
@@ -4679,7 +4641,7 @@ settings:
     -
         id: kpr-metadata-property-background-active
         title: Property background, active
-        description: "--metadata-property-background-active"
+        description: "--metadata-property-background-active (from --background-modifier-hover)"
         type: variable-themed-color
         format: hex
         default-light: "#00000013"
@@ -4703,7 +4665,7 @@ settings:
     -
         id: kpr-metadata-label-background-active
         title: Label background, active
-        description: "--metadata-label-background-active"
+        description: "--metadata-label-background-active (from --background-modifier-hover)"
         type: variable-themed-color
         format: hex
         default-light: "#00000013"
@@ -4712,7 +4674,7 @@ settings:
     -
         id: kpr-metadata-label-font-size
         title: Label font size (em)
-        description: "--metadata-label-font-size"
+        description: "--metadata-label-font-size (from --font-smaller)"
         type: variable-number
         default: 0.875
         format: em
@@ -4725,7 +4687,7 @@ settings:
     -
         id: kpr-metadata-label-text-color
         title: Label text color
-        description: "--metadata-label-text-color"
+        description: "--metadata-label-text-color (from --text-muted)"
         type: variable-themed-color
         format: hex
         default-light: "#5c5c5c"
@@ -4733,7 +4695,7 @@ settings:
     -
         id: kpr-metadata-label-text-color-hover
         title: Label text color, hover
-        description: "--metadata-label-text-color-hover"
+        description: "--metadata-label-text-color-hover (from --text-muted)"
         type: variable-themed-color
         format: hex
         default-light: "#5c5c5c"
@@ -4754,14 +4716,14 @@ settings:
     -
         id: kpr-metadata-input-height
         title: Input height (px)
-        description: "--metadata-input-height"
+        description: "--metadata-input-height (from --font-text-size * 1.75)"
         type: variable-number
         default: 28
         format: px
     -
         id: kpr-metadata-input-text-color
         title: Input text color
-        description: "--metadata-input-text-color"
+        description: "--metadata-input-text-color (from --text-normal)"
         type: variable-themed-color
         format: hex
         default-light: "#222222"
@@ -4769,7 +4731,7 @@ settings:
     -
         id: kpr-metadata-input-font-size
         title: Input font size (em)
-        description: "--metadata-input-font-size"
+        description: "--metadata-input-font-size (from --font-smaller)"
         type: variable-number
         default: 0.875
         format: em
@@ -4794,7 +4756,7 @@ settings:
     -
         id: kpr-metadata-input-background-active
         title: Input background, active
-        description: "--metadata-input-background-active"
+        description: "--metadata-input-background-active (from --background-modifier-hover)"
         type: variable-themed-color
         format: hex
         default-light: "#00000013"
@@ -4809,14 +4771,14 @@ settings:
     -
         id: kpr-metadata-sidebar-label-font-size
         title: Sidebar label font size (px)
-        description: "--metadata-sidebar-label-font-size"
+        description: "--metadata-sidebar-label-font-size (from --font-ui-small)"
         type: variable-number
         default: 13
         format: px
     -
         id: kpr-metadata-sidebar-input-font-size
         title: Sidebar input font size (px)
-        description: "--metadata-sidebar-input-font-size"
+        description: "--metadata-sidebar-input-font-size (from --font-ui-small)"
         type: variable-number
         default: 13
         format: px
@@ -4835,7 +4797,7 @@ settings:
     -
         id: kpr-pill-color
         title: Color
-        description: "--pill-color"
+        description: "--pill-color (from --text-muted)"
         type: variable-themed-color
         format: hex
         default-light: "#5c5c5c"
@@ -4843,7 +4805,7 @@ settings:
     -
         id: kpr-pill-color-hover
         title: Color, hover
-        description: "--pill-color-hover"
+        description: "--pill-color-hover (from --text-normal)"
         type: variable-themed-color
         format: hex
         default-light: "#222222"
@@ -4851,7 +4813,7 @@ settings:
     -
         id: kpr-pill-color-remove
         title: Color, remove
-        description: "--pill-color-remove"
+        description: "--pill-color-remove (from --text-faint)"
         type: variable-themed-color
         format: hex
         default-light: "#ababab"
@@ -4859,7 +4821,7 @@ settings:
     -
         id: kpr-pill-color-remove-hover
         title: Color, remove + hover
-        description: "--pill-color-remove-hover"
+        description: "--pill-color-remove-hover (from --text-accent)"
         type: variable-color
         format: hex
         default: "#9873f7"
@@ -4896,7 +4858,7 @@ settings:
     -
         id: kpr-pill-border-color
         title: Border color
-        description: "--pill-border-color"
+        description: "--pill-border-color (from --background-modifier-border)"
         type: variable-themed-color
         format: hex
         default-light: "#e0e0e0"
@@ -4904,7 +4866,7 @@ settings:
     -
         id: kpr-pill-border-color-hover
         title: Border color, hover
-        description: "--pill-border-color-hover"
+        description: "--pill-border-color-hover (from --background-modifier-border-hover)"
         type: variable-themed-color
         format: hex
         default-light: "#d4d4d4"
@@ -4912,7 +4874,7 @@ settings:
     -
         id: kpr-pill-border-width
         title: Border width (px)
-        description: "--pill-border-width"
+        description: "--pill-border-width (from --border-width)"
         type: variable-number
         default: 1
         format: px
@@ -4986,14 +4948,14 @@ settings:
     -
         id: kpr-prompt-border-width
         title: Border width (px)
-        description: "--prompt-border-width"
+        description: "--prompt-border-width (from --border-width)"
         type: variable-number
         default: 1
         format: px
     -
         id: kpr-prompt-border-color
         title: Border color
-        description: "--prompt-border-color"
+        description: "--prompt-border-color (from --color-base-40, fallback --background-modifier-border-focus)"
         type: variable-themed-color
         format: hex
         default-light: "#bdbdbd"
@@ -5013,7 +4975,7 @@ settings:
     -
         id: kpr-search-clear-button-color
         title: Clear button color
-        description: "--search-clear-button-color"
+        description: "--search-clear-button-color (from --text-muted)"
         type: variable-themed-color
         format: hex
         default-light: "#5c5c5c"
@@ -5028,7 +4990,7 @@ settings:
     -
         id: kpr-search-icon-color
         title: Icon color
-        description: "--search-icon-color"
+        description: "--search-icon-color (from --text-muted)"
         type: variable-themed-color
         format: hex
         default-light: "#5c5c5c"
@@ -5043,7 +5005,7 @@ settings:
     -
         id: kpr-search-result-background
         title: Result background
-        description: "--search-result-background"
+        description: "--search-result-background (from --background-primary)"
         type: variable-themed-color
         format: hex
         default-light: "#ffffff"
@@ -5063,23 +5025,15 @@ settings:
     -
         id: kpr-status-bar-background
         title: Background
-        description: "--status-bar-background"
+        description: "--status-bar-background (from --background-secondary)"
         type: variable-themed-color
         format: hex
         default-light: "#f6f6f6"
         default-dark: "#262626"
     -
-        id: kpr-status-bar-text-color
-        title: Text color
-        description: "--status-bar-text-color"
-        type: variable-themed-color
-        format: hex
-        default-light: "#5c5c5c"
-        default-dark: "#b3b3b3"
-    -
         id: kpr-status-bar-border-color
         title: Border color
-        description: "--status-bar-border-color"
+        description: "--status-bar-border-color (from --divider-color)"
         type: variable-themed-color
         format: hex
         default-light: "#e0e0e0"
@@ -5093,14 +5047,22 @@ settings:
     -
         id: kpr-status-bar-font-size
         title: Font size (px)
-        description: "--status-bar-font-size"
+        description: "--status-bar-font-size (from --font-ui-smaller)"
         type: variable-number
         default: 12
         format: px
     -
+        id: kpr-status-bar-text-color
+        title: Text color
+        description: "--status-bar-text-color (from --text-muted)"
+        type: variable-themed-color
+        format: hex
+        default-light: "#5c5c5c"
+        default-dark: "#b3b3b3"
+    -
         id: kpr-status-bar-radius
         title: Radius
-        description: "--status-bar-radius"
+        description: "--status-bar-radius (from --radius-m 0 0 0)"
         type: variable-text
         default: 8px 0 0 0
         
@@ -5127,7 +5089,7 @@ settings:
     -
         id: kpr-sync-avatar-color-1
         title: Coler 1
-        description: "--sync-avatar-color-1
+        description: "--sync-avatar-color-1 (from --color-red)"
         type: variable-themed-color
         format: hex
         default-light: "#e93147"
@@ -5135,7 +5097,7 @@ settings:
     -
         id: kpr-sync-avatar-color-2
         title: Coler 2
-        description: "--sync-avatar-color-2"
+        description: "--sync-avatar-color-2 (from --color-orange)"
         type: variable-themed-color
         format: hex
         default-light: "#ec7500"
@@ -5143,7 +5105,7 @@ settings:
     -
         id: kpr-sync-avatar-color-3
         title: Coler 3
-        description: "--sync-avatar-color-3
+        description: "--sync-avatar-color-3 (from --color-yellow)"
         type: variable-themed-color
         format: hex
         default-light: "#e0ac00"
@@ -5151,7 +5113,7 @@ settings:
     -
         id: kpr-sync-avatar-color-4
         title: Coler 4
-        description: "--sync-avatar-color-4
+        description: "--sync-avatar-color-4 (from --color-green)"
         type: variable-themed-color
         format: hex
         default-light: "#08b94e"
@@ -5159,7 +5121,7 @@ settings:
     -
         id: kpr-sync-avatar-color-5
         title: Coler 5
-        description: "--sync-avatar-color-5
+        description: "--sync-avatar-color-5 (from --color-cyan)"
         type: variable-themed-color
         format: hex
         default-light: "#00bfbc"
@@ -5167,7 +5129,7 @@ settings:
     -
         id: kpr-sync-avatar-color-6
         title: Coler 6
-        description: "--sync-avatar-color-6
+        description: "--sync-avatar-color-6 (from --color-blue)"
         type: variable-themed-color
         format: hex
         default-light: "#086ddd"
@@ -5175,7 +5137,7 @@ settings:
     -
         id: kpr-sync-avatar-color-7
         title: Coler 7
-        description: "--sync-avatar-color-7
+        description: "--sync-avatar-color-7 (from --color-purple)"
         type: variable-themed-color
         format: hex
         default-light: "#7852ee"
@@ -5183,7 +5145,7 @@ settings:
     -
         id: kpr-sync-avatar-color-8
         title: Coler 8
-        description: "--sync-avatar-color-8
+        description: "--sync-avatar-color-8 (from --color-pink)"
         type: variable-themed-color
         format: hex
         default-light: "#d53984"
@@ -5203,20 +5165,20 @@ settings:
     -
         id: kpr-vault-profile-font-size
         title: Font size (px)
-        description: "--vault-profile-font-size"
+        description: "--vault-profile-font-size (from --font-ui-small)"
         type: variable-number
         default: 13
         format: px
     -
         id: kpr-vault-profile-font-weight
         title: Font weight
-        description: "--vault-profile-font-weight"
+        description: "--vault-profile-font-weight (from --font-medium)"
         type: variable-number
         default: 500
     -
         id: kpr-vault-profile-color
         title: Color
-        description: "--vault-profile-color
+        description: "--vault-profile-color (from --text-normal)"
         type: variable-themed-color
         format: hex
         default-light: "#222222"
@@ -5224,7 +5186,7 @@ settings:
     -
         id: kpr-vault-profile-color-hover
         title: Color, hover
-        description: "--vault-profile-color-hover
+        description: "--vault-profile-color-hover (from --vault-profile-color)"
         type: variable-themed-color
         format: hex
         default-light: "#222222"
@@ -5244,20 +5206,20 @@ settings:
     -
         id: kpr-vault-name-font-size
         title: Font size (px)
-        description: "--vault-name-font-size"
+        description: "--vault-name-font-size (from --font-ui-small)"
         type: variable-number
         default: 13
         format: px
     -
         id: kpr-vault-name-font-weight
         title: Font weight
-        description: "--vault-name-font-weight"
+        description: "--vault-name-font-weight (from --font-medium)"
         type: variable-number
         default: 500
     -
         id: kpr-vault-name-color
         title: Color
-        description: "--vault-name-color
+        description: "--vault-name-color (from --text-normal)"
         type: variable-themed-color
         format: hex
         default-light: "#222222"
@@ -5277,7 +5239,7 @@ settings:
     -
         id: kpr-workspace-background-translucent
         title: Color
-        description: "--workspace-background-translucent
+        description: "--workspace-background-translucent (from --mono-rgb-0 with opacity 0.6)"
         type: variable-themed-color
         format: hex
         default-light: "#ffffff99"
@@ -5577,18 +5539,12 @@ settings:
 .kpr-tweak-callout {
     --kpr-callout-border-width: 0px;
     --kpr-callout-border-opacity: 0.25;
-    --kpr-callout-padding-top: 12px;
-    --kpr-callout-padding-right: 12px;
-    --kpr-callout-padding-bottom: 12px;
-    --kpr-callout-padding-left: 24px;
+    --kpr-callout-padding: 12px 12px 12px 24px;
     --kpr-callout-radius: 4px;
     --kpr-callout-title-padding: 0;
     --kpr-callout-title-size: inherit;
     --kpr-callout-title-weight: 600;
-    --kpr-callout-content-padding-top: 0;
-    --kpr-callout-content-padding-right: 0;
-    --kpr-callout-content-padding-bottom: 0;
-    --kpr-callout-content-padding-left: 0;
+    --kpr-callout-content-padding: 0;
     --kpr-callout-content-background: #00000000;
     --kpr-callout-quote: 158, 158, 158;
 
@@ -5626,20 +5582,12 @@ settings:
     & {
         --callout-border-width: var(--kpr-callout-border-width);
         --callout-border-opacity: var(--kpr-callout-border-opacity);
-        --callout-padding:
-            var(--kpr-callout-padding-top)
-            var(--kpr-callout-padding-right)
-            var(--kpr-callout-padding-bottom)
-            var(--kpr-callout-padding-left);
+        --callout-padding: var(--kpr-callout-padding);
         --callout-radius: var(--kpr-callout-radius);
         --callout-title-padding: var(--kpr-callout-title-padding);
         --callout-title-size: var(--kpr-callout-title-size);
         --callout-title-weight: var(--kpr-callout-title-weight);
-        --callout-content-padding:
-            var(--kpr-callout-content-padding-top)
-            var(--kpr-callout-content-padding-right)
-            var(--kpr-callout-content-padding-bottom)
-            var(--kpr-callout-content-padding-left);
+        --callout-content-padding: var(--kpr-callout-content-padding);
         --callout-content-background: var(--kpr-callout-content-background);
         --callout-bug: var(--kpr-callout-bug);
         --callout-default: var(--kpr-callout-default);
@@ -5891,6 +5839,7 @@ settings:
 .kpr-tweak-typography {
     --kpr-font-weight: 400;
     --kpr-bold-modifier: 200;
+    --kpr-bold-weight: 600;
     --kpr-line-height-normal: 1.5;
     --kpr-line-height-tight: 1.3;
     &.theme-light {
@@ -5904,6 +5853,7 @@ settings:
         --font-weight: var(--kpr-font-weight);
         --bold-modifier: var(--kpr-bold-modifier);
         --bold-color: var(--kpr-bold-color);
+        --bold-weight: var(--kpr-bold-weight);
         --italic-color: var(--kpr-italic-color);
         --caret-color: var(--kpr-caret-color);
         --line-height-normal: var(--kpr-line-height-normal);
@@ -6267,10 +6217,10 @@ settings:
 
 /* Dropdowns */
 .kpr-tweak-dropdown {
-    --kpr-dropdown-padding-top: 0;
-    --kpr-dropdown-padding-right: 1.9em;
-    --kpr-dropdown-padding-bottom: 0;
-    --kpr-dropdown-padding-left: 0.8em;
+    --kpr-dropdown-padding: 0 1.9em 0 0.8em;
+    --kpr-dropdown-background-blend-mode: hard-light;
+    --kpr-dropdown-background-position: right 0.5em top 50%, 0 0;
+    --kpr-dropdown-background-size: 1em auto, 100%;
     &.theme-light {
         --kpr-dropdown-background: #ffffff; /* --color-base-00 */
     }
@@ -6280,11 +6230,10 @@ settings:
 
     & {
         --dropdown-background: var(--kpr-dropdown-background);
-        --dropdown-padding:
-            var(--kpr-dropdown-padding-top)
-            var(--kpr-dropdown-padding-right)
-            var(--kpr-dropdown-padding-bottom)
-            var(--kpr-dropdown-padding-left);
+        --dropdown-background-blend-mode: var(--kpr-dropdown-background-blend-mode);
+        --dropdown-background-position: var(--kpr-dropdown-background-position);
+        --dropdown-background-size: var(--kpr-dropdown-background-size);
+        --dropdown-padding: var(--kpr-dropdown-padding);
         &.theme-light {
             --dropdown-background-hover: hsl(from var(--dropdown-background) h s calc(l * 98 / 100)); /* --color-base-10 */
         }
@@ -6313,13 +6262,13 @@ settings:
 
     & {
         --slider-thumb-border-width: var(--kpr-slider-thumb-border-width);
+        --slider-thumb-border-color: var(--kpr-slider-thumb-border-color);
         --slider-thumb-height: var(--kpr-slider-thumb-height);
         --slider-thumb-width: var(--kpr-slider-thumb-width);
         --slider-thumb-y: var(--kpr-slider-thumb-y);
         --slider-thumb-radius: var(--kpr-slider-thumb-radius);
-        --slider-track-height: var(--kpr-slider-track-height);
-        --slider-thumb-border-color: var(--kpr-slider-thumb-border-color);
         --slider-track-background: var(--kpr-slider-track-background);
+        --slider-track-height: var(--kpr-slider-track-height);
     }
 }
 
