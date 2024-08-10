@@ -168,6 +168,399 @@ settings:
         type: variable-number
         default: 72
         format: px
+        
+    -
+        id: header-color-base
+        title: Color base
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: use-custom-settings-color-base
+        title: Use custom color base
+        type: class-toggle
+        default: false
+    - 
+        id: custom-color-base-00
+        title: Color base 00
+        description: "--color-base-00"
+        type: variable-themed-color
+        format: hex
+        default-light: '#ffffff'
+        default-dark: '#1e1e1e'
+    - 
+        id: custom-color-base-05
+        title: Color base 05
+        description: "--color-base-05"
+        type: variable-themed-color
+        format: hex
+        default-light: '#fcfcfc'
+        default-dark: '#212121'
+    - 
+        id: custom-color-base-10
+        title: Color base 10
+        description: "--color-base-10"
+        type: variable-themed-color
+        format: hex
+        default-light: '#fafafa'
+        default-dark: '#242424'
+    - 
+        id: custom-color-base-20
+        title: Color base 20
+        description: "--color-base-20"
+        type: variable-themed-color
+        format: hex
+        default-light: '#f6f6f6'
+        default-dark: '#262626'
+    - 
+        id: custom-color-base-25
+        title: Color base 25
+        description: "--color-base-25"
+        type: variable-themed-color
+        format: hex
+        default-light: '#e3e3e3'
+        default-dark: '#2a2a2a'
+    - 
+        id: custom-color-base-30
+        title: Color base 30
+        description: "--color-base-30"
+        type: variable-themed-color
+        format: hex
+        default-light: '#e0e0e0'
+        default-dark: '#363636'
+    - 
+        id: custom-color-base-35
+        title: Color base 35
+        description: "--color-base-35"
+        type: variable-themed-color
+        format: hex
+        default-light: '#d4d4d4'
+        default-dark: '#3f3f3f'
+    - 
+        id: custom-color-base-40
+        title: Color base 40
+        description: "--color-base-40"
+        type: variable-themed-color
+        format: hex
+        default-light: '#bdbdbd'
+        default-dark: '#555555'
+    - 
+        id: custom-color-base-50
+        title: Color base 50
+        description: "--color-base-50"
+        type: variable-themed-color
+        format: hex
+        default-light: '#ababab'
+        default-dark: '#666666'
+    - 
+        id: custom-color-base-60
+        title: Color base 60
+        description: "--color-base-60"
+        type: variable-themed-color
+        format: hex
+        default-light: '#707070'
+        default-dark: '#999999'
+    - 
+        id: custom-color-base-70
+        title: Color base 70
+        description: "--color-base-70"
+        type: variable-themed-color
+        format: hex
+        default-light: '#5c5c5c'
+        default-dark: '#b3b3b3'
+    - 
+        id: custom-color-base-100
+        title: Color base 100
+        description: "--color-base-100"
+        type: variable-themed-color
+        format: hex
+        default-light: '#222222'
+        default-dark: '#dadada'
+        
+    -
+        id: header-color-palette
+        title: Color palette
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: use-custom-settings-color-palette
+        title: Use custom color palette
+        type: class-toggle
+        default: false
+    - 
+        id: custom-mono-rgb-0
+        title: "Mono RGB, 0%"
+        description: "--mono-rgb-0"
+        type: variable-themed-color
+        format: rgb-values
+        default-light: '#000000'
+        default-dark: '#ffffff'
+    - 
+        id: custom-mono-rgb-100
+        title: "Mono RGB, 100%"
+        description: "--mono-rgb-100"
+        type: variable-themed-color
+        format: rgb-values
+        default-light: '#ffffff'
+        default-dark: '#000000'
+    - 
+        id: custom-color-red
+        title: Red
+        description: "--color-red, --color-red-rgb"
+        type: variable-themed-color
+        format: hex
+        alt-format:
+            -
+                id: color-red-rgb
+                format: rgb-values
+        default-light: '#e93147'
+        default-dark: '#fb464c'
+    - 
+        id: custom-color-orange
+        title: Orange
+        description: "--color-orange, --color-orange-rgb"
+        type: variable-themed-color
+        format: hex
+        alt-format:
+            -
+                id: color-orange-rgb
+                format: rgb-values
+        default-light: '#ec7500'
+        default-dark: '#e9973f'
+    - 
+        id: custom-color-yellow
+        title: Yellow
+        description: "--color-yellow, --color-yellow-rgb"
+        type: variable-themed-color
+        format: hex
+        alt-format:
+            -
+                id: color-yellow-rgb
+                format: rgb-values
+        default-light: '#e0ac00'
+        default-dark: '#e0de71'
+    - 
+        id: custom-color-green
+        title: Green
+        description: "--color-green, --color-green-rgb"
+        type: variable-themed-color
+        format: hex
+        alt-format:
+            -
+                id: color-green-rgb
+                format: rgb-values
+        default-light: '#08b94e'
+        default-dark: '#44cf6e'
+    - 
+        id: custom-color-cyan
+        title: Cyan
+        description: "--color-cyan, --color-cyan-rgb"
+        type: variable-themed-color
+        format: hex
+        alt-format:
+            -
+                id: color-cyan-rgb
+                format: rgb-values
+        default-light: '#00bfbc'
+        default-dark: '#53dfdd'
+    - 
+        id: custom-color-blue
+        title: Blue
+        description: "--color-blue, --color-blue-rgb"
+        type: variable-themed-color
+        format: hex
+        alt-format:
+            -
+                id: color-blue-rgb
+                format: rgb-values
+        default-light: '#086ddd'
+        default-dark: '#027aff'
+    - 
+        id: custom-color-purple
+        title: Purple
+        description: "--color-purple, --color-purple-rgb"
+        type: variable-themed-color
+        format: hex
+        alt-format:
+            -
+                id: color-purple-rgb
+                format: rgb-values
+        default-light: '#7852ee'
+        default-dark: '#a882ff'
+    - 
+        id: custom-color-pink
+        title: Pink
+        description: "--color-pink, --color-pink-rgb"
+        type: variable-themed-color
+        format: hex
+        alt-format:
+            -
+                id: color-purple-rgb
+                format: rgb-values
+        default-light: '#d53984'
+        default-dark: '#fa99cd'
+
+    -
+        id: header-font
+        title: Fonts
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: use-custom-settings-font
+        title: Use custom fonts
+        type: class-toggle
+        default: false
+    - 
+        id: info-font
+        title: Information
+        description: "Obsidian has specific variables to change the base font variables (`--font-xxx-theme` and `--font-xxx-override`). This method insure that we always hav web safe fonts as a fallback. This snippet uses the `-override` variables, but if you develop a theme in the end make sure to use the `-theme` variables."
+        type: info-text
+        markdown: true
+    -
+        id: custom-font-interface-override
+        title: Font interface
+        description: "--font-interface-override"
+        type: variable-text
+        default: '??'
+    -
+        id: custom-font-text-override
+        title: Font text
+        description: "--font-text-override"
+        type: variable-text
+        default: '??'
+    -
+        id: custom-font-print-override
+        title: Font print
+        description: "--font-print-override"
+        type: variable-text
+        default: '??'
+    -
+        id: custom-font-monospace-override
+        title: Font monospace
+        description: "--font-monospace-override"
+        type: variable-text
+        default: '??'
+
+    -
+        id: header-shadow
+        title: Shadows
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: use-custom-settings-shadow
+        title: Use custom shadows
+        type: class-toggle
+        default: false
+    -
+        id: custom-input-shadow-theme-light
+        title: Input shadow (light theme)
+        description: "--input-shadow"
+        type: variable-text
+        default: inset 0 0 0 1px rgba(0, 0, 0, 0.12), 0 2px 3px 0 rgba(0,0,0,.05), 0 1px 1.5px 0 rgba(0,0,0,.03), 0 1px 2px 0 rgba(0,0,0,.04), 0 0 0 0 transparent
+    -
+        id: custom-input-shadow-theme-dark
+        title: Input shadow (dark theme)
+        description: "--input-shadow"
+        type: variable-text
+        default: inset 0 0.5px 0.5px 0.5px rgba(255, 255, 255, 0.09), 0 2px 4px 0 rgba(0,0,0,.15), 0 1px 1.5px 0 rgba(0,0,0,.1), 0 1px 2px 0 rgba(0,0,0,.2), 0 0 0 0 transparent
+    -
+        id: custom-input-shadow-hover-theme-light
+        title: Input shadow, hover (light theme)
+        description: "--input-shadow-hover"
+        type: variable-text
+        default: inset 0 0 0 1px rgba(0, 0, 0, 0.17), 0 2px 3px 0 rgba(0,0,0,.1), 0 1px 1.5px 0 rgba(0,0,0,.03), 0 1px 2px 0 rgba(0,0,0,.04), 0 0 0 0 transparent
+    -
+        id: custom-input-shadow-hover-theme-dark
+        title: Input shadow, hover (dark theme)
+        description: "--input-shadow-hover"
+        type: variable-text
+        default: inset 0 0.5px 1px 0.5px rgba(255, 255, 255, 0.16), 0 2px 3px 0 rgba(0,0,0,.3), 0 1px 1.5px 0 rgba(0,0,0,.2), 0 1px 2px 0 rgba(0,0,0,.4), 0 0 0 0 transparent
+    -
+        id: custom-shadow-s-theme-light
+        title: Shadow small (light theme)
+        description: "--shadow-s"
+        type: variable-text
+        default: 0px 1px 2px rgba(0, 0, 0, 0.028), 0px 3.4px 6.7px rgba(0, 0, 0, .042), 0px 15px 30px rgba(0, 0, 0, .07)
+    -
+        id: custom-shadow-s-theme-dark
+        title: Shadow small (dark theme)
+        description: "--shadow-s"
+        type: variable-text
+        default: 0px 1px 2px rgba(0, 0, 0, 0.121), 0px 3.4px 6.7px rgba(0, 0, 0, 0.179), 0px 15px 30px rgba(0, 0, 0, 0.3)
+    -
+        id: custom-shadow-l-theme-light
+        title: Shadow large (light theme)
+        description: "--shadow-l"
+        type: variable-text
+        default: 0px 1.8px 7.3px rgba(0, 0, 0, 0.071), 0px 6.3px 24.7px rgba(0, 0, 0, 0.112), 0px 30px 90px rgba(0, 0, 0, 0.2)
+    -
+        id: custom-shadow-l-theme-dark
+        title: Shadow large (dark theme)
+        description: "--shadow-l"
+        type: variable-text
+        default: 0px 1.8px 7.3px rgba(0, 0, 0, 0.071), 0px 6.3px 24.7px rgba(0, 0, 0, 0.112), 0px 30px 90px rgba(0, 0, 0, 0.2)
+
+    -
+        id: header-base-other
+        title: Other
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: use-custom-settings-base-other
+        title: Use custom other base variables
+        type: class-toggle
+        default: false
+    - 
+        id: custom-background-modifier-message
+        title: Background modifier message
+        description: "--background-modifier-message"
+        type: variable-color
+        format: hex
+        default: '#000000e6'
+        opacity: true
+    - 
+        id: custom-background-modifier-box-shadow
+        title: Background modifier box-shadow
+        description: "--background-modifier-box-shadow"
+        type: variable-themed-color
+        format: hex
+        default-light: '#0000001a'
+        default-dark: '#0000004d'
+        opacity: true
+    - 
+        id: custom-background-modifier-cover
+        title: Background modifier cover
+        description: "--background-modifier-cover"
+        type: variable-themed-color
+        format: hex
+        default-light: '#dcdcdc66'
+        default-dark: '#0a0a0a66'
+        opacity: true
+    - 
+        id: custom-text-on-accent
+        title: Text color on accent
+        description: "--text-on-accent"
+        type: variable-color
+        format: hex
+        default: '#ffffff'
+    - 
+        id: custom-text-on-accent-inverted
+        title: Text color on accent inverted
+        description: "--text-on-accent-inverted"
+        type: variable-color
+        format: hex
+        default: '#000000'
+    - 
+        id: custom-text-highlight-bg-rgb
+        title: Text highlight background rgb
+        description: "--text-highlight-bg-rgb"
+        type: variable-color
+        format: rgb-values
+        default: '#ffd000'
 
 
 
@@ -4932,6 +5325,215 @@ body {
             --size-4-12: var(--custom-size-4-12);
             --size-4-16: var(--custom-size-4-16);
             --size-4-18: var(--custom-size-4-18);
+        }
+    }
+
+    /* Color base */
+    & {
+        &.theme-light {
+            --custom-color-base-00: #ffffff;
+            --custom-color-base-05: #fcfcfc;
+            --custom-color-base-10: #fafafa;
+            --custom-color-base-20: #f6f6f6;
+            --custom-color-base-25: #e3e3e3;
+            --custom-color-base-30: #e0e0e0;
+            --custom-color-base-35: #d4d4d4;
+            --custom-color-base-40: #bdbdbd;
+            --custom-color-base-50: #ababab;
+            --custom-color-base-60: #707070;
+            --custom-color-base-70: #5c5c5c;
+            --custom-color-base-100: #222222;
+        }
+        &.theme-dark {
+            --custom-color-base-00: #1e1e1e;
+            --custom-color-base-05: #212121;
+            --custom-color-base-10: #242424;
+            --custom-color-base-20: #262626;
+            --custom-color-base-25: #2a2a2a;
+            --custom-color-base-30: #363636;
+            --custom-color-base-35: #3f3f3f;
+            --custom-color-base-40: #555555;
+            --custom-color-base-50: #666666;
+            --custom-color-base-60: #999999;
+            --custom-color-base-70: #b3b3b3;
+            --custom-color-base-100: #dadada;
+        }
+
+        &.use-custom-settings-color-base:is(.theme-light, .theme-dark) {
+            --color-base-00: var(--custom-color-base-00);
+            --color-base-05: var(--custom-color-base-05);
+            --color-base-10: var(--custom-color-base-10);
+            --color-base-20: var(--custom-color-base-20);
+            --color-base-25: var(--custom-color-base-25);
+            --color-base-30: var(--custom-color-base-30);
+            --color-base-35: var(--custom-color-base-35);
+            --color-base-40: var(--custom-color-base-40);
+            --color-base-50: var(--custom-color-base-50);
+            --color-base-60: var(--custom-color-base-60);
+            --color-base-70: var(--custom-color-base-70);
+            --color-base-100: var(--custom-color-base-100);
+        }
+    }
+
+    /* Color palette */
+    & {
+        &.theme-light {
+            --custom-mono-rgb-0: 255, 255, 255;
+            --custom-mono-rgb-100: 0, 0, 0;
+            --custom-color-red-rgb: 233, 49, 71;
+            --custom-color-red: #e93147;
+            --custom-color-orange-rgb: 236, 117, 0;
+            --custom-color-orange: #ec7500;
+            --custom-color-yellow-rgb: 224, 172, 0;
+            --custom-color-yellow: #e0ac00;
+            --custom-color-green-rgb: 8, 185, 78;
+            --custom-color-green: #08b94e;
+            --custom-color-cyan-rgb: 0, 191, 188;
+            --custom-color-cyan: #00bfbc;
+            --custom-color-blue-rgb: 8, 109, 221;
+            --custom-color-blue: #086ddd;
+            --custom-color-purple-rgb: 120, 82, 238;
+            --custom-color-purple: #7852ee;
+            --custom-color-pink-rgb: 213, 57, 132;
+            --custom-color-pink: #d53984;
+        }
+        &.theme-dark {
+            --custom-mono-rgb-0: 0, 0, 0;
+            --custom-mono-rgb-100: 255, 255, 255;
+            --custom-color-red-rgb: 251, 70, 76;
+            --custom-color-red: #fb464c;
+            --custom-color-orange-rgb: 233, 151, 63;
+            --custom-color-orange: #e9973f;
+            --custom-color-yellow-rgb: 224, 222, 113;
+            --custom-color-yellow: #e0de71;
+            --custom-color-green-rgb: 68, 207, 110;
+            --custom-color-green: #44cf6e;
+            --custom-color-cyan-rgb: 83, 223, 221;
+            --custom-color-cyan: #53dfdd;
+            --custom-color-blue-rgb: 2, 122, 255;
+            --custom-color-blue: #027aff;
+            --custom-color-purple-rgb: 168, 130, 255;
+            --custom-color-purple: #a882ff;
+            --custom-color-pink-rgb: 250, 153, 205;
+            --custom-color-pink: #fa99cd;
+        }
+
+        &.use-custom-settings-color-palette:is(.theme-light, .theme-dark) {
+            --mono-rgb-0: var(--custom-mono-rgb-0);
+            --mono-rgb-100: var(--custom-mono-rgb-100);
+            --color-red-rgb: var(--custom-color-red-rgb);
+            --color-red: var(--custom-color-red);
+            --color-orange-rgb: var(--custom-color-orange-rgb);
+            --color-orange: var(--custom-color-orange);
+            --color-yellow-rgb: var(--custom-color-yellow-rgb);
+            --color-yellow: var(--custom-color-yellow);
+            --color-green-rgb: var(--custom-color-green-rgb);
+            --color-green: var(--custom-color-green);
+            --color-cyan-rgb: var(--custom-color-cyan-rgb);
+            --color-cyan: var(--custom-color-cyan);
+            --color-blue-rgb: var(--custom-color-blue-rgb);
+            --color-blue: var(--custom-color-blue);
+            --color-purple-rgb: var(--custom-color-purple-rgb);
+            --color-purple: var(--custom-color-purple);
+            --color-pink-rgb: var(--custom-color-pink-rgb);
+            --color-pink: var(--custom-color-pink);
+        }
+    }
+
+    /* Font */
+    & {
+        --custom-font-interface-override: '??';
+        --custom-font-text-override: '??';
+        --custom-font-print-override: '??';
+        --custom-font-monospace-override: '??';
+
+        &.use-custom-settings-font {
+            --font-interface-override: var(--custom-font-interface-override);
+            --font-text-override: var(--custom-font-text-override);
+            --font-print-override: var(--custom-font-print-override);
+            --font-monospace-override: var(--custom-font-monospace-override);
+        }
+    }
+
+    /* Shadows */
+    & {
+        &.theme-light {
+            --custom-input-shadow-theme-light: inset 0 0 0 1px rgba(0, 0, 0, 0.12),
+                  0 2px 3px 0 rgba(0,0,0,.05),
+                  0 1px 1.5px 0 rgba(0,0,0,.03),
+                  0 1px 2px 0 rgba(0,0,0,.04),
+                  0 0 0 0 transparent;
+            --custom-input-shadow-hover-theme-light: inset 0 0 0 1px rgba(0, 0, 0, 0.17),
+                  0 2px 3px 0 rgba(0,0,0,.1),
+                  0 1px 1.5px 0 rgba(0,0,0,.03),
+                  0 1px 2px 0 rgba(0,0,0,.04),
+                  0 0 0 0 transparent;
+            --custom-shadow-s-theme-light: 0px 1px 2px rgba(0, 0, 0, 0.028),
+                  0px 3.4px 6.7px rgba(0, 0, 0, .042),
+                  0px 15px 30px rgba(0, 0, 0, .07);
+            --custom-shadow-l-theme-light: 0px 1.8px 7.3px rgba(0, 0, 0, 0.071),
+                  0px 6.3px 24.7px rgba(0, 0, 0, 0.112),
+                  0px 30px 90px rgba(0, 0, 0, 0.2);
+        }
+        &.theme-dark {
+            --custom-input-shadow-theme-dark: inset 0 0.5px 0.5px 0.5px rgba(255, 255, 255, 0.09),
+                  0 2px 4px 0 rgba(0,0,0,.15),
+                  0 1px 1.5px 0 rgba(0,0,0,.1),
+                  0 1px 2px 0 rgba(0,0,0,.2),
+                  0 0 0 0 transparent;
+            --custom-input-shadow-hover-theme-dark: inset 0 0.5px 1px 0.5px rgba(255, 255, 255, 0.16),
+                  0 2px 3px 0 rgba(0,0,0,.3),
+                  0 1px 1.5px 0 rgba(0,0,0,.2),
+                  0 1px 2px 0 rgba(0,0,0,.4),
+                  0 0 0 0 transparent;
+            --custom-shadow-s-theme-dark: 0px 1px 2px rgba(0, 0, 0, 0.121),
+                  0px 3.4px 6.7px rgba(0, 0, 0, 0.179),
+                  0px 15px 30px rgba(0, 0, 0, 0.3);
+            --custom-shadow-l-theme-dark: 0px 1.8px 7.3px rgba(0, 0, 0, 0.071),
+                  0px 6.3px 24.7px rgba(0, 0, 0, 0.112),
+                  0px 30px 90px rgba(0, 0, 0, 0.2);
+        }
+
+        &.use-custom-settings-shadows.theme-light {
+            --input-shadow: var(--custom-input-shadow-theme-light);
+            --input-shadow-hover: var(--custom-input-shadow-hover-theme-light);
+            --input-shadow-s: var(--custom-input-shadow-s-theme-light);
+            --input-shadow-l: var(--custom-input-shadow-l-theme-light);
+        }
+        &.use-custom-settings-shadows.theme-dark {
+            --input-shadow: var(--custom-input-shadow-theme-dark);
+            --input-shadow-hover: var(--custom-input-shadow-hover-theme-dark);
+            --input-shadow-s: var(--custom-input-shadow-s-theme-dark);
+            --input-shadow-l: var(--custom-input-shadow-l-theme-dark);
+        }
+    }
+
+    /* Other */
+    & {
+        --custom-background-modifier-message: #000000e6;
+        --custom-text-on-accent: #ffffff;
+        --custom-text-on-accent-inverted: #000000;
+        --custom-text-highlight-bg-rgb: 255, 208, 0; /* #ffd000 */
+        
+        &.theme-light {
+            --custom-background-modifier-box-shadow: #0000001a;
+            --custom-background-modifier-cover: #dcdcdc66;
+        }
+        &.theme-dark {
+            --custom-background-modifier-box-shadow: #0000004d;
+            --custom-background-modifier-cover: #0a0a0a66;
+        }
+
+        &.use-custom-settings-base-other {
+            --background-modifier-message: var(--custom-background-modifier-message);
+            --text-on-accent: var(--custom-text-on-accent);
+            --text-on-accent-inverted: var(--custom-text-on-accent-inverted);
+            --text-highlight-bg-rgb: var(--custom-text-highlight-bg-rgb);
+            
+            &:is(.theme-light, .theme-dark) {
+                --background-modifier-box-shadow: var(--custom-background-modifier-box-shadow);
+                --background-modifier-cover: var(--custom-background-modifier-cover);
+            }
         }
     }
 }
