@@ -12,9 +12,9 @@ Expose the css variables with the Style Setting plugin.
 
 - [x] Add all the variables to the snippet
 - [ ] Clean the code
-  - [ ] Create one toggle per input
+  - [x] Create one toggle per input
   - [ ] Rename with better names
-  - [ ] Move the declaration of all custom variables inside the block `.use-custom-settings-...`
+  - [x] Move the declaration of all custom variables inside the block `.use-custom-settings-...`
 - [ ] Create a better outline (settings structure)
 - [ ] Add the chains of variables in the descriptions
 - [ ] Create a css for a more readable settings section
