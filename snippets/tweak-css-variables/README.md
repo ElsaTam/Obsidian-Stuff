@@ -13,13 +13,13 @@ Expose the css variables with the Style Setting plugin.
 - Base variables
   - [x] Radiuses
   - [x] Layout sizing
-- Containers
+- [x] Containers
   - [x] Blockquotes
   - [x] Callouts
   - [x] Canvas
   - [x] Code
   - [x] Embeds
-  - [ ] Tables
+  - [x] Tables
 - Typography
   - [x] General
   - [x] Font sizes

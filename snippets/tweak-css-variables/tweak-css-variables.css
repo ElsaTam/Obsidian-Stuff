@@ -865,6 +865,350 @@ settings:
         type: variable-text
         default: 0 0 0 24px
 
+    -
+        id: header-table
+        title: Tables
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: use-custom-settings-table
+        title: Use custom tables
+        type: class-toggle
+        default: false
+    -
+        id: custom-table-background
+        title: Backround
+        description: "--table-background"
+        type: variable-themed-color
+        format: hex
+        default-light: '#00000000'
+        default-dark: '#00000000'
+        opacity: true
+    -
+        id: custom-table-border-width
+        title: Border width (px)
+        description: "--table-border-width"
+        type: variable-number
+        default: 1
+        format: px
+    -
+        id: custom-table-border-color
+        title: Border color
+        description: "--table-border-color"
+        type: variable-themed-color
+        format: hex
+        default-light: '#e0e0e0'
+        default-dark: '#363636'
+    -
+        id: custom-table-white-space
+        title: White space
+        description: "--table-white-space"
+        type: variable-select
+        default: break-spaces
+        options:
+            - normal
+            - nowrap
+            - pre
+            - pre-wrap
+            - pre-line
+            - break-spaces
+            - collapse balance
+            - preserve nowrap
+    -
+        id: custom-table-header-background
+        title: Header background
+        description: "--table-header-background"
+        type: variable-themed-color
+        format: hex
+        default-light: '#00000000'
+        default-dark: '#00000000'
+        opacity: true
+    -
+        id: custom-table-header-background-hover
+        title: Header background, hover
+        description: "--table-header-background-hover"
+        type: variable-themed-color
+        format: hex
+        default-light: '#00000000'
+        default-dark: '#00000000'
+        opacity: true
+    -
+        id: custom-table-header-border-width
+        title: Header border width (px)
+        description: "--table-header-border-width"
+        type: variable-number
+        default: 1
+        format: px
+    -
+        id: custom-table-header-border-color
+        title: Header border color
+        description: "--table-header-border-color"
+        type: variable-themed-color
+        format: hex
+        default-light: '#e0e0e0'
+        default-dark: '#363636'
+    -
+        id: custom-table-header-font
+        title: Header font
+        description: "--table-header-font"
+        type: variable-text
+        default: inherit
+    -
+        id: custom-table-header-size
+        title: Header size (px)
+        description: "--table-header-size"
+        type: variable-number
+        default: 16
+        format: px
+    -
+        id: custom-table-header-weight
+        title: Header weight
+        description: "--table-header-weight"
+        type: variable-number
+        default: 600
+    -
+        id: custom-table-header-color
+        title: Header color
+        description: "--table-header-color"
+        type: variable-themed-color
+        format: hex
+        default-light: '#222222'
+        default-dark: '#dadada'
+    -
+        id: custom-table-line-height
+        title: Line height
+        description: "--table-line-height"
+        type: variable-number
+        default: 1.3
+    -
+        id: custom-table-text-size
+        title: Text size (px)
+        description: "--table-text-size"
+        type: variable-number
+        default: 16
+        format: px
+    -
+        id: custom-table-text-color
+        title: Text color
+        description: "--table-text-color"
+        type: variable-themed-color
+        format: hex
+        default-light: '#222222'
+        default-dark: '#dadada'
+    -
+        id: custom-table-column-min-width
+        title: Column min width
+        description: "--table-column-min-width"
+        type: variable-text
+        default: 6ch
+    -
+        id: custom-table-column-max-width
+        title: Column max width
+        description: "--table-column-max-width"
+        type: variable-text
+        default: none
+    -
+        id: custom-table-column-alt-background
+        title: Column alt background
+        description: "--table-column-alt-background"
+        type: variable-themed-color
+        format: hex
+        default-light: '#00000000'
+        default-dark: '#00000000'
+        opacity: true
+    -
+        id: custom-table-column-first-border-width
+        title: Column first border width
+        description: "--table-column-first-border-width"
+        type: variable-number
+        default: 1
+        format: px
+    -
+        id: custom-table-column-last-border-width
+        title: Column last border width
+        description: "--table-column-last-border-width"
+        type: variable-number
+        default: 1
+        format: px
+    -
+        id: custom-table-row-background-hover
+        title: Row background, hover
+        description: "--table-row-background-hover"
+        type: variable-themed-color
+        format: hex
+        default-light: '#00000000'
+        default-dark: '#00000000'
+        opacity: true
+    -
+        id: custom-table-row-alt-background
+        title: Row alt background
+        description: "--table-row-alt-background"
+        type: variable-themed-color
+        format: hex
+        default-light: '#00000000'
+        default-dark: '#00000000'
+        opacity: true
+    -
+        id: custom-table-row-alt-background-hover
+        title: Row alt background, hover
+        description: "--table-row-alt-background-hover"
+        type: variable-themed-color
+        format: hex
+        default-light: '#00000000'
+        default-dark: '#00000000'
+        opacity: true
+    -
+        id: custom-table-row-last-border-width
+        title: Row last border width (px)
+        description: "--table-row-last-border-width"
+        type: variable-number
+        default: 1
+        format: px
+    -
+        id: custom-table-selection
+        title: Selection
+        description: "--table-selection"
+        type: variable-themed-color
+        format: hex
+        default-light: '#8a5cf51a'
+        default-dark: '#8a5cf51a'
+        opacity: true
+    -
+        id: custom-table-selection-blend-mode-theme-light
+        title: Selection blend mode (light theme)
+        description: "--table-selection-blend-mode"
+        type: variable-select
+        default: darken
+        options:
+            - normal
+            - multiply
+            - screen
+            - overlay
+            - darken
+            - lighten
+            - color-dodge
+            - color-burn
+            - hard-light
+            - soft-light
+            - difference
+            - exclusion
+            - hue
+            - saturation
+            - color
+            - luminosity
+            - plus-darker
+            - plus-lighter
+    -
+        id: custom-table-selection-blend-mode-theme-dark
+        title: Selection blend mode (dark theme)
+        description: "--table-selection-blend-mode"
+        type: variable-select
+        default: lighten
+        options:
+            - normal
+            - multiply
+            - screen
+            - overlay
+            - darken
+            - lighten
+            - color-dodge
+            - color-burn
+            - hard-light
+            - soft-light
+            - difference
+            - exclusion
+            - hue
+            - saturation
+            - color
+            - luminosity
+            - plus-darker
+            - plus-lighter
+    -
+        id: custom-table-selection-border-color
+        title: Selection border color
+        description: "--table-selection-border-color"
+        type: variable-themed-color
+        format: hex
+        default-light: '#9873f7'
+        default-dark: '#9873f7'
+    -
+        id: custom-table-selection-border-width
+        title: Selection border width (px)
+        description: "--table-selection-border-width"
+        type: variable-number
+        default: 2
+        format: px
+    -
+        id: custom-table-selection-border-radius
+        title: Selection border radius (px)
+        description: "--table-selection-border-radius"
+        type: variable-number
+        default: 4
+        format: px
+    -
+        id: custom-table-cell-vertical-alignment
+        title: Cell vertical alignment
+        description: "--table-cell-vertical-alignment"
+        type: variable-text
+        default: top
+    -
+        id: custom-table-drag-handle-background
+        title: Drag handle background
+        description: "--table-drag-handle-background"
+        type: variable-themed-color
+        format: hex
+        default-light: '#00000000'
+        default-dark: '#00000000'
+        opacity: true
+    -
+        id: custom-table-drag-handle-background-active
+        title: Drag handle background, active
+        description: "--table-drag-handle-background-active"
+        type: variable-themed-color
+        format: hex
+        default-light: '#9873f7'
+        default-dark: '#9873f7'
+    -
+        id: custom-table-drag-handle-color
+        title: Drag handle color
+        description: "--table-drag-handle-color"
+        type: variable-themed-color
+        format: hex
+        default-light: '#ababab'
+        default-dark: '#666666'
+    -
+        id: custom-table-drag-handle-color-active
+        title: Drag handle color, active
+        description: "--table-drag-handle-color-active"
+        type: variable-themed-color
+        format: hex
+        default-light: '#ffffff'
+        default-dark: '#ffffff'
+    -
+        id: custom-table-add-button-background
+        title: Add button background
+        description: "--table-add-button-background"
+        type: variable-themed-color
+        format: hex
+        default-light: '#00000000'
+        default-dark: '#00000000'
+        opacity: true
+    -
+        id: custom-table-add-button-border-width
+        title: Add button  border width (px)
+        description: "--table-add-button-border-width"
+        type: variable-number
+        default: 1
+        format: px
+    -
+        id: custom-table-add-button-border-color
+        title: Add button border color
+        description: "--table-add-button-border-color"
+        type: variable-themed-color
+        format: hex
+        default-light: '#e0e0e0'
+        default-dark: '#363636'
 
 
 
@@ -4549,6 +4893,102 @@ body {
                 var(--custom-embed-border-bottom-style)
                 var(--custom-embed-border-color);
             --embed-padding: var(--custom-embed-padding);
+        }
+    }
+
+    /* Tables */
+    & {
+        --custom-table-background: transparent;
+        --custom-table-border-width: 1px;
+        --custom-table-white-space: break-spaces;
+        --custom-table-header-background: transparent;
+        --custom-table-header-background-hover: inherit;
+        --custom-table-header-border-width: 1px;
+        --custom-table-header-font: inherit;
+        --custom-table-header-size: 16px;
+        --custom-table-header-weight: 600;
+        --custom-table-line-height: 1.3;
+        --custom-table-text-size: 16px;
+        --custom-table-column-min-width: 6ch;
+        --custom-table-column-max-width: none;
+        --custom-table-column-alt-background: transparent;
+        --custom-table-column-first-border-width: 1px;
+        --custom-table-column-last-border-width: 1px;
+        --custom-table-row-background-hover: transparent;
+        --custom-table-row-alt-background: transparent;
+        --custom-table-row-alt-background-hover: transparent;
+        --custom-table-row-last-border-width: 1px;
+        --custom-table-selection: #8a5cf51a;
+        --custom-table-selection-border-color: #9873f7;
+        --custom-table-selection-border-width: 2px;
+        --custom-table-selection-border-radius: 4px;
+        --custom-table-cell-vertical-alignment: top;
+        --custom-table-drag-handle-background: transparent;
+        --custom-table-drag-handle-color-active: #ffffff;
+        --custom-table-add-button-background: transparent;
+        --custom-table-add-button-border-width: 1px;
+        
+        &.theme-light {
+            --custom-table-border-color: #e0e0e0; /* --color-base-30 */
+            --custom-table-header-border-color: #e0e0e0; /* --color-base-30 */
+            --custom-table-header-color: #222222; /* --color-base-100 */
+            --custom-table-text-color: #222222;
+            --custom-table-selection-blend-mode-theme-light: darken;
+            --custom-table-drag-handle-color: #ababab; /* --color-base-50 */
+            --custom-table-add-button-border-color: #e0e0e0; /* --color-base-30 */
+        }
+        &.theme-dark {
+            --custom-table-border-color: #363636;
+            --custom-table-header-border-color: #363636;
+            --custom-table-header-color: #dadada;
+            --custom-table-text-color: #dadada;
+            --custom-table-selection-blend-mode-theme-dark: lighten;
+            --custom-table-drag-handle-color: #666666;
+            --custom-table-add-button-border-color: #363636;
+        }
+
+        &.use-custom-settings-table {
+            --table-background: var(--custom-table-background);
+            --table-border-width: var(--custom-table-border-width);
+            --table-border-color: var(--custom-table-border-color);
+            --table-white-space: var(--custom-table-white-space);
+            --table-header-background: var(--custom-table-header-background);
+            --table-header-background-hover: var(--custom-table-header-background-hover);
+            --table-header-border-width: var(--custom-table-header-border-width);
+            --table-header-border-color: var(--custom-table-header-border-color);
+            --table-header-font: var(--custom-table-header-font);
+            --table-header-size: var(--custom-table-header-size);
+            --table-header-weight: var(--custom-table-header-weight);
+            --table-header-color: var(--custom-table-header-color);
+            --table-line-height: var(--custom-table-line-height);
+            --table-text-size: var(--custom-table-text-size);
+            --table-text-color: var(--custom-table-text-color);
+            --table-column-min-width: var(--custom-table-column-min-width);
+            --table-column-max-width: var(--custom-table-column-max-width);
+            --table-column-alt-background: var(--custom-table-column-alt-background);
+            --table-column-first-border-width: var(--custom-table-column-first-border-width);
+            --table-column-last-border-width: var(--custom-table-column-last-border-width);
+            --table-row-background-hover: var(--custom-table-row-background-hover);
+            --table-row-alt-background: var(--custom-table-row-alt-background);
+            --table-row-alt-background-hover: var(--custom-table-row-alt-background-hover);
+            --table-row-last-border-width: var(--custom-table-row-last-border-width);
+            --table-selection: var(--custom-table-selection);
+            &.theme-light {
+                --table-selection-blend-mode: var(--custom-table-selection-blend-mode-theme-light);
+            }
+            &.theme-dark {
+                --table-selection-blend-mode: var(--custom-table-selection-blend-mode-theme-dark);
+            }
+            --table-selection-border-color: var(--custom-table-selection-border-color);
+            --table-selection-border-width: var(--custom-table-selection-border-width);
+            --table-selection-border-radius: var(--custom-table-selection-border-radius);
+            --table-cell-vertical-alignment: var(--custom-table-cell-vertical-alignment);
+            --table-drag-handle-background: var(--custom-table-drag-handle-background);
+            --table-drag-handle-color: var(--custom-table-drag-handle-color);
+            --table-drag-handle-color-active: var(--custom-table-drag-handle-color-active);
+            --table-add-button-background: var(--custom-table-add-button-background);
+            --table-add-button-border-width: var(--custom-table-add-button-border-width);
+            --table-add-button-border-color: var(--custom-table-add-button-border-color);
         }
     }
 }
