@@ -4781,7 +4781,49 @@ settings:
         format: hex
         default-light: "#d53984"
         default-dark: "#fa99cd"
+        
+    -
+        id: header-status-vault-profile
+        title: Vault profile
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: use-custom-settings-vault-profile
+        title: Use custom vault profile
+        type: class-toggle
+        default: false
+    -
+        id: custom-vault-profile-font-size
+        title: Font size (px)
+        description: "--vault-profile-font-size"
+        type: variable-number
+        default: 13
+        format: px
+    -
+        id: custom-vault-profile-font-weight
+        title: Font weight
+        description: "--vault-profile-font-weight"
+        type: variable-number
+        default: 500
+    -
+        id: custom-vault-profile-color
+        title: Color
+        description: "--vault-profile-color
+        type: variable-themed-color
+        format: hex
+        default-light: "#222222"
+        default-dark: "#dadada"
+    -
+        id: custom-vault-profile-color-hover
+        title: Color, hover
+        description: "--vault-profile-color-hover
+        type: variable-themed-color
+        format: hex
+        default-light: "#222222"
+        default-dark: "#dadada"
     
+        
         
 */
 
@@ -6497,6 +6539,28 @@ body {
             --sync-avatar-color-6: var(--custom-sync-avatar-color-6);
             --sync-avatar-color-7: var(--custom-sync-avatar-color-7);
             --sync-avatar-color-8: var(--custom-sync-avatar-color-8);
+        }
+    }
+    
+    /* Vault profile */
+    & {
+        --custom-vault-profile-font-size: 13px;
+        --custom-vault-profile-font-weight: 500;
+
+        &.theme-light {
+            --custom-vault-profile-color: #222222; /* --color-base-100 */
+            --custom-vault-profile-color-hover: #222222; /* --color-base-100 */
+        }
+        &.theme-dark {
+            --custom-vault-profile-color: #dadada;
+            --custom-vault-profile-color-hover: #dadada;
+        }
+
+        &.use-custom-settings-vault-profile {
+            --vault-profile-font-size: var(--custom-vault-profile-font-size);
+            --vault-profile-font-weight: var(--custom-vault-profile-font-weight);
+            --vault-profile-color: var(--custom-vault-profile-color);
+            --vault-profile-color-hover: var(--custom-vault-profile-color-hover);
         }
     }
 }
