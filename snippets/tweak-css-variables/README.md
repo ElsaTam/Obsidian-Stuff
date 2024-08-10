@@ -10,68 +10,16 @@ Expose the css variables with the Style Setting plugin.
 
 # Advancement
 
-- Base variables
-  - [x] Radiuses
-  - [x] Layout sizing
-- [x] Containers
-  - [x] Blockquotes
-  - [x] Callouts
-  - [x] Canvas
-  - [x] Code
-  - [x] Embeds
-  - [x] Tables
-- [x] Typography
-  - [x] General
-  - [x] Font sizes
-    - [x] Relative font sizes
-    - [x] UI font sizes
-  - [x] Font weights
-  - [x] Headings
-  - [x] Inline title
-  - [x] Line heights
-  - [x] Links
-  - [x] Lists
-  - [x] Paragraphs
-  - [x] Tags
-- [x] Inputs
-  - [x] General
-  - [x] Buttons
-  - [x] Checkboxes
-  - [x] Dropdowns
-  - [x] Sliders
-  - [x] Toggles
-- [x] Modals
-  - [x] Dialogs
-  - [x] Modals
-  - [x] Popovers
-- Layout
-  - [x] Dividers
-  - [x] File layout
-  - [x] Horizontal rules
-  - [x] Z-index
-  - [x] PDF view
-  - [x] Ribbon
-  - [x] Scrollbars
-  - [x] Sidebar
-  - [x] Tabs
-  - [x] Stacked tabs
-  - [x] Window frame
-  - [x] Workspace
-- [x] Misc
-  - [x] Collapse icons
-  - [x] Dragging
-  - [x] Graph
-  - [x] Icons
-  - [x] Indentation guide
-  - [x] File navigator
-  - [x] Metadata
-  - [x] Multi-select pills
-  - [x] Prompts
-  - [x] Search
-  - [x] Status bar
-  - [x] Sync
-  - [x] Vault profile
-  - [x] Vault name
+- [x] Add all the variables to the snippet
+- [ ] Clean the code
+  - [ ] Create one toggle per input
+  - [ ] Rename with better names
+  - [ ] Move the declaration of all custom variables inside the block `.use-custom-settings-...`
+- [ ] Create a better outline (settings structure)
+- [ ] Add the chains of variables in the descriptions
+- [ ] Create a css for a more readable settings section
+- [ ] Debug
+- [ ] Update this readme
 
 # Screenshots
 
