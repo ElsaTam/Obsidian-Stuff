@@ -1,10 +1,11 @@
 > [!CAUTION]
 > Work in progress.
 
+I created this snippet while learning about all the CSS variables that Obsidian gives us control over. 
+
 > [!WARNING]
-> - Only thought for PC, not mobile.
+> - Only thought for PC, not mobile, not print.
 > - Default values use the Obsidian default theme.
-> - Coarse control granularity over the enable/disable custom settings. As it is a WIP tool, for now I make it easier for me to debug, not for other to use. It will come at some point.
 
 Expose the css variables with the Style Setting plugin.
 

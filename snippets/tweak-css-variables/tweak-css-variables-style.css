@@ -51,6 +51,19 @@
         }
     }
 
+    /* Change the color of the "Enable styling" text */
+    & .setting-item.mod-toggle {
+        &:has(.checkbox-container:not(.is-enabled)) .setting-item-name {
+            color: var(--color-orange);
+        }
+        &:has(.checkbox-container.is-enabled) .setting-item-name {
+            color: var(--color-green);
+        }
+        & .setting-item-name {
+            font-weight: var(--font-bold);
+        }
+    }
+
 
     /* More compact color pickers */
     --pickr-size: 1em;
@@ -92,10 +105,10 @@
                 transform: translateY(-50%);
                 right: 0;
                 max-width: 70%;
-                background: var(--background-secondary);
+                background: var(--background-primary-alt);
                 padding: 5px;
                 border-radius: var(--radius-s);
-                box-shadow: shadow-s;
+                box-shadow: var(--shadow-s);
             }
         }
         & .setting-item-control {
@@ -107,7 +120,7 @@
     }
 
     /* Title and description on the same line */
-    .setting-item-info:has(.setting-item-description:not(:empty)) {
+    & .setting-item:not(.style-settings-info-text) .setting-item-info:has(.setting-item-description:not(:empty)) {
         & > div {
             display: inline;
         }
@@ -121,18 +134,4 @@
             }
         }
     }
-
-    /* Color the "Use custom ..." items */
-    .mod-toggle .setting-item-name {
-        color: var(--color-orange);
-        font-weight: var(--font-bold);
-    }
-
-    
-
-
-}
-
-.nothing {
-    border: 1px solid red;
 }
