@@ -1368,7 +1368,7 @@ settings:
 
 
     -
-        id: header-foundations
+        id: header-editor
         title: Editor
         type: heading
         level: 1
@@ -1404,10 +1404,8 @@ settings:
         id: kpr-blockquote-border-thickness
         title: Left border thickness (px)
         description: "--blockquote-border-thickness"
-        type: variable-number-slider
+        type: variable-number
         default: 2
-        min: 0
-        max: 20
         format: px
     - 
         id: kpr-blockquote-border-color
@@ -1462,13 +1460,14 @@ settings:
     -
         id: kpr-callout-border-opacity
         title: Border opacity
-        description: "--callout-border-width"
+        description: "--callout-border-opacity"
         type: variable-number-slider
         default: 0.25
         min: 0
         max: 1
+        step: 0.01
     -
-        id: kpr-callout-padding-top
+        id: kpr-callout-padding
         title: Padding
         description: "--callout-padding (from --size-4-3 --size-4-3 --size-4-3 --size-4-6)"
         type: variable-text
@@ -1495,11 +1494,11 @@ settings:
     -
         id: kpr-callout-title-color
         title: Title text color
-        description: "--callout-title-color, default inherit"
+        description: "--callout-title-color (from inherit)"
         type: variable-themed-color
         format: hex
-        default-light: '#'
-        default-dark: '#'
+        default-light: "#222222"
+        default-dark: "#dadada"
     -
         id: kpr-callout-title-padding
         title: Title padding (px)
@@ -1552,7 +1551,6 @@ settings:
         description: "--callout-bug (from --color-red-rgb)"
         type: variable-themed-color
         format: rgb-values
-        opacity: true
         default-light: '#e93147'
         default-dark: '#fb464c'
     -
@@ -1561,7 +1559,6 @@ settings:
         description: "--callout-default (from --color-blue-rgb)"
         type: variable-themed-color
         format: rgb-values
-        opacity: true
         default-light: '#086ddd'
         default-dark: '#027aff'
     -
@@ -1570,7 +1567,6 @@ settings:
         description: "--callout-error (from --color-red-rgb)"
         type: variable-themed-color
         format: rgb-values
-        opacity: true
         default-light: '#e93147'
         default-dark: '#fb464c'
     -
@@ -1579,7 +1575,6 @@ settings:
         description: "--callout-example (from --color-purple-rgb)"
         type: variable-themed-color
         format: rgb-values
-        opacity: true
         default-light: '#7852ee'
         default-dark: '#a882ff'
     -
@@ -1588,7 +1583,6 @@ settings:
         description: "--callout-fail (from --color-red-rgb)"
         type: variable-themed-color
         format: rgb-values
-        opacity: true
         default-light: '#e93147'
         default-dark: '#fb464c'
     -
@@ -1597,7 +1591,6 @@ settings:
         description: "--callout-important (from --color-cyan-rgb)"
         type: variable-themed-color
         format: rgb-values
-        opacity: true
         default-light: '#00bfbc'
         default-dark: '#53dfdd'
     -
@@ -1606,7 +1599,6 @@ settings:
         description: "--callout-info (from --color-blue-rgb)"
         type: variable-themed-color
         format: rgb-values
-        opacity: true
         default-light: '#086ddd'
         default-dark: '#027aff'
     -
@@ -1615,7 +1607,6 @@ settings:
         description: "--callout-question (from --color-orange-rgb)"
         type: variable-themed-color
         format: rgb-values
-        opacity: true
         default-light: '#ec7500'
         default-dark: '#e9973f'
     -
@@ -1624,7 +1615,6 @@ settings:
         description: "--callout-success (from --color-green-rgb)"
         type: variable-themed-color
         format: rgb-values
-        opacity: true
         default-light: '#08b94e'
         default-dark: '#44cf6e'
     -
@@ -1633,7 +1623,6 @@ settings:
         description: "--callout-summary (from --color-cyan-rgb)"
         type: variable-themed-color
         format: rgb-values
-        opacity: true
         default-light: '#00bfbc'
         default-dark: '#53dfdd'
     -
@@ -1642,7 +1631,6 @@ settings:
         description: "--callout-tip (from --color-cyan-rgb)"
         type: variable-themed-color
         format: rgb-values
-        opacity: true
         default-light: '#00bfbc'
         default-dark: '#53dfdd'
     -
@@ -1651,7 +1639,6 @@ settings:
         description: "--callout-todo (from --color-blue-rgb)"
         type: variable-themed-color
         format: rgb-values
-        opacity: true
         default-light: '#086ddd'
         default-dark: '#027aff'
     -
@@ -1660,7 +1647,6 @@ settings:
         description: "--callout-warning (from --color-orange-rgb)"
         type: variable-themed-color
         format: rgb-values
-        opacity: true
         default-light: '#ec7500'
         default-dark: '#e9973f'
     -
@@ -1669,7 +1655,6 @@ settings:
         description: "--callout-quote"
         type: variable-color
         format: rgb-values
-        opacity: true
         default: '#9e9e9e'
         
 
@@ -2065,17 +2050,17 @@ settings:
     -
         id: kpr-h1-color
         title: Text color
-        description: "--h1-color, default inherit"
+        description: "--h1-color (from inherit)"
         type: variable-themed-color
         format: hex
-        default-light: '#'
-        default-dark: '#'
+        default-light: "#222222"
+        default-dark: "#dadada"
     -
         id: kpr-h1-font
         title: Font family
         description: "--h1-font"
         type: variable-text
-        default: ''
+        default: inherit
     -
         id: kpr-h1-line-height
         title: Line height
@@ -2120,17 +2105,17 @@ settings:
     -
         id: kpr-h2-color
         title: Text color
-        description: "--h2-color, default inherit"
+        description: "--h2-color (from inherit)"
         type: variable-themed-color
         format: hex
-        default-light: '#'
-        default-dark: '#'
+        default-light: "#222222"
+        default-dark: "#dadada"
     -
         id: kpr-h2-font
         title: Font family
         description: "--h2-font"
         type: variable-text
-        default: ''
+        default: inherit
     -
         id: kpr-h2-line-height
         title: Line height
@@ -2175,17 +2160,17 @@ settings:
     -
         id: kpr-h3-color
         title: Text color
-        description: "--h3-color, default inherit"
+        description: "--h3-color (from inherit)"
         type: variable-themed-color
         format: hex
-        default-light: '#'
-        default-dark: '#'
+        default-light: "#222222"
+        default-dark: "#dadada"
     -
         id: kpr-h3-font
         title: Font family
         description: "--h3-font"
         type: variable-text
-        default: ''
+        default: inherit
     -
         id: kpr-h3-line-height
         title: Line height
@@ -2230,17 +2215,17 @@ settings:
     -
         id: kpr-h4-color
         title: Text color
-        description: "--h4-color, default inherit"
+        description: "--h4-color (from inherit)"
         type: variable-themed-color
         format: hex
-        default-light: '#'
-        default-dark: '#'
+        default-light: "#222222"
+        default-dark: "#dadada"
     -
         id: kpr-h4-font
         title: Font family
         description: "--h4-font"
         type: variable-text
-        default: ''
+        default: inherit
     -
         id: kpr-h4-line-height
         title: Line height
@@ -2285,17 +2270,17 @@ settings:
     -
         id: kpr-h5-color
         title: Text color
-        description: "--h5-color, default inherit"
+        description: "--h5-color (from inherit)"
         type: variable-themed-color
         format: hex
-        default-light: '#'
-        default-dark: '#'
+        default-light: "#222222"
+        default-dark: "#dadada"
     -
         id: kpr-h5-font
         title: Font family
         description: "--h5-font"
         type: variable-text
-        default: ''
+        default: inherit
     -
         id: kpr-h5-line-height
         title: Line height
@@ -2340,17 +2325,17 @@ settings:
     -
         id: kpr-h6-color
         title: Text color
-        description: "--h6-color, default inherit"
+        description: "--h6-color (from inherit)"
         type: variable-themed-color
         format: hex
-        default-light: '#'
-        default-dark: '#'
+        default-light: "#222222"
+        default-dark: "#dadada"
     -
         id: kpr-h6-font
         title: Font family
         description: "--h6-font"
         type: variable-text
-        default: ''
+        default: inherit
     -
         id: kpr-h6-line-height
         title: Line height
@@ -2445,8 +2430,8 @@ settings:
         description: "--inline-title-color (from --h1-color)"
         type: variable-themed-color
         format: hex
-        default-light: '#'
-        default-dark: '#'
+        default-light: "#222222"
+        default-dark: "#dadada"
     -
         id: kpr-inline-title-font
         title: Font family
@@ -2560,6 +2545,7 @@ settings:
         default: 0.7
         min: 0
         max: 1
+        step: 0.01
     -
         id: kpr-link-unresolved-filter
         title: Unresolved link filter, e.g. hue-rotate
@@ -2627,28 +2613,28 @@ settings:
         id: kpr-list-indent
         title: Indentation width for nested items (em)
         description: "--list-indent"
-        type: variable-number-slider
+        type: variable-number
         default: 2.25
         format: em
     -
         id: kpr-list-indent-editing
         title: Indent width in Live Preview (em)
         description: "--list-indent-editing"
-        type: variable-number-slider
+        type: variable-number
         default: 0.75
         format: em
     -
         id: kpr-list-indent-source
         title: Indent width is source mode (em)
         description: "--list-indent-source"
-        type: variable-number-slider
+        type: variable-number
         default: 0
         format: em
     -
         id: kpr-list-spacing
         title: Vertical spacing between list items (em)
         description: "--list-spacing"
-        type: variable-number-slider
+        type: variable-number
         default: 0.075
         format: em
     -
@@ -2673,7 +2659,7 @@ settings:
         description: "--list-marker-color-collapsed (from --text-accent)"
         type: variable-color
         format: hex
-        default: '#8a5cf5'
+        default: '#a68af9'
     -
         id: kpr-list-bullet-border-width
         title: Bullet border width (px)
@@ -2708,11 +2694,11 @@ settings:
         default-dark: '#666666'
     -
         id: kpr-list-bullet-end-padding
-        title: Padding after the bullet (em)
+        title: Padding after the bullet (rem)
         description: "--list-bullet-end-padding"
         type: variable-number
         default: 1.3
-        format: em
+        format: rem
     -
         id: kpr-list-bullet-radius
         title: Bullet radius (%)
@@ -3025,7 +3011,7 @@ settings:
         opacity: true
     -
         id: header-metadata-label
-        title: Labels
+        title: Label
         type: heading
         level: 4
         collapsed: true
@@ -3092,7 +3078,7 @@ settings:
         format: em
     -
         id: header-metadata-input
-        title: Inputs
+        title: Input
         type: heading
         level: 4
         collapsed: true
@@ -4538,7 +4524,7 @@ settings:
         default: 70
     -
         id: kpr-layer-dragged-item
-        title: Tooltip
+        title: Dragged item
         description: "--layer-dragged-item"
         type: variable-number
         default: 80
@@ -5003,19 +4989,19 @@ settings:
     -
         id: kpr-bold-color
         title: Bold text color
-        description: "--bold-color, default inherit"
+        description: "--bold-color (from inherit)"
         type: variable-themed-color
         format: hex
-        default-light: '#'
-        default-dark: '#'
+        default-light: "#222222"
+        default-dark: "#dadada"
     -
         id: kpr-italic-color
         title: Italic text color
-        description: "--italic-color, default inherit"
+        description: "--italic-color (from inherit)"
         type: variable-themed-color
         format: hex
-        default-light: '#'
-        default-dark: '#'
+        default-light: "#222222"
+        default-dark: "#dadada"
         
     -
         id: header-line-heights
@@ -6415,6 +6401,7 @@ settings:
     --kpr-callout-border-opacity: 0.25;
     --kpr-callout-padding: 12px 12px 12px 24px;
     --kpr-callout-radius: 4px;
+    --kpr-callout-title-color: inherit;
     --kpr-callout-title-padding: 0;
     --kpr-callout-title-size: inherit;
     --kpr-callout-title-weight: 600;
@@ -6462,6 +6449,7 @@ settings:
         --callout-radius: var(--kpr-callout-radius);
         &.theme-light { --callout-blend-mode: var(--kpr-callout-blend-mode-theme-light); }
         &.theme-dark { --callout-blend-mode: var(--kpr-callout-blend-mode-theme-dark); }
+        --callout-title-color: var(--kpr-callout-title-color);
         --callout-title-padding: var(--kpr-callout-title-padding);
         --callout-title-size: var(--kpr-callout-title-size);
         --callout-title-weight: var(--kpr-callout-title-weight);
@@ -6613,6 +6601,18 @@ settings:
 
 /* Headings */
 .kpr-tweak-heading {
+    --kpr-h1-color: inherit;
+    --kpr-h2-color: inherit;
+    --kpr-h3-color: inherit;
+    --kpr-h4-color: inherit;
+    --kpr-h5-color: inherit;
+    --kpr-h6-color: inherit;
+    --kpr-h1-font: inherit;
+    --kpr-h2-font: inherit;
+    --kpr-h3-font: inherit;
+    --kpr-h4-font: inherit;
+    --kpr-h5-font: inherit;
+    --kpr-h6-font: inherit;
     --kpr-h1-line-height: 1.2;
     --kpr-h2-line-height: 1.2;
     --kpr-h3-line-height: 1.3;
@@ -6644,10 +6644,23 @@ settings:
     --kpr-h5-weight: 600;
     --kpr-h6-weight: 600;
 
+
     &.theme-light {
+        --kpr-h1-color: #222222;
+        --kpr-h2-color: #222222;
+        --kpr-h3-color: #222222;
+        --kpr-h4-color: #222222;
+        --kpr-h5-color: #222222;
+        --kpr-h6-color: #222222;
         --kpr-heading-formatting: #ababab; /* --color-base-50 */
     }
     &.theme-dark {
+        --kpr-h1-color: #dadada;
+        --kpr-h2-color: #dadada;
+        --kpr-h3-color: #dadada;
+        --kpr-h4-color: #dadada;
+        --kpr-h5-color: #dadada;
+        --kpr-h6-color: #dadada;
         --kpr-heading-formatting: #666666;
     }
 
@@ -6716,12 +6729,20 @@ settings:
 
 /* Inline title */
 .kpr-tweak-inline-title {
+    --kpr-inline-title-font: inherit;
     --kpr-inline-title-line-height: 1.2;
     --kpr-inline-title-size: var(--h1-size);
     --kpr-inline-title-style: var(--h1-style);
     --kpr-inline-title-variant: var(--h1-variant);
     --kpr-inline-title-weight: var(--h1-weight);
     --kpr-inline-title-margin-bottom: 0.5em;
+
+    &.theme-light {
+        --kpr-inline-title-color: #222222;
+    }
+    &.theme-dark {
+        --kpr-inline-title-color: #dadada;
+    }
 
     & {
         --inline-title-color: var(--kpr-inline-title-color);
@@ -6778,7 +6799,7 @@ settings:
     --kpr-list-indent-editing: 0.75em;
     --kpr-list-indent-source: 0;
     --kpr-list-spacing: 0.075em;
-    --kpr-list-marker-color-collapsed: #8a5cf5;
+    --kpr-list-marker-color-collapsed: #a68af9;
     --kpr-list-bullet-border-width: 1px;
     --kpr-list-bullet-border-style: none;
     --kpr-list-bullet-radius: 50%;
@@ -7619,6 +7640,15 @@ settings:
     --kpr-font-weight: 400;
     --kpr-bold-modifier: 200;
     --kpr-bold-weight: 600;
+
+    &.theme-light {
+        --kpr-bold-color: #222222;
+        --kpr-italic-color: #222222;
+    }
+    &.theme-dark {
+        --kpr-bold-color: #dadada;
+        --kpr-italic-color: #dadada;
+    }
 
     & {
         --font-weight: var(--kpr-font-weight);
