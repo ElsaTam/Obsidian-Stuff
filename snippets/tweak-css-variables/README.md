@@ -1,5 +1,5 @@
 > [!CAUTION]
-> Work in progress.
+> Work in progress. Still debugging.
 
 I created this snippet while learning about all the CSS variables that Obsidian gives us control over. [The documentation](https://docs.obsidian.md/Reference/CSS+variables/CSS+variables), while very useful, doesn't show how the variables are connected. So I looked at the Obsidian base css code and created the snippet along the road so I could change and see how the variables impact the final theme.
 

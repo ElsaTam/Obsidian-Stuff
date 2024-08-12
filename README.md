@@ -36,4 +36,6 @@ If you would like to be contacted in case I update a snippet, so you can downloa
 
 ## [Tweak CSS Variables](snippets/tweak-css-variables/)
 
+Expose more than 500 CSS variables through the Style Setting Plugin.
+
 ![tweak-css-variables](snippets/tweak-css-variables/screenshots/base_colors.png)
