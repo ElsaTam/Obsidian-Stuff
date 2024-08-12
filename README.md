@@ -26,15 +26,14 @@ If you would like to be contacted in case I update a snippet, so you can downloa
 
 # Available Snippets
 
-## [List style type](snippets/list-style-type/)
+## [List styling](snippets/list-styling/)
 
-![list-style-type](snippets/list-style-type/screenshots/banner.png)
+![list-styling](snippets/list-styling/screenshots/banner.png)
 
 ## [Note accent colors](snippets/note-accent-colors/)
 
-![list-style-type](snippets/note-accent-colors/screenshots/banner.png)
+![note-accent-colors](snippets/note-accent-colors/screenshots/banner.png)
 
 ## [Tweak CSS Variables](snippets/tweak-css-variables/)
 
-> [!CAUTION]
-> WIP
+![tweak-css-variables](snippets/tweak-css-variables/screenshots/base_colors.png)

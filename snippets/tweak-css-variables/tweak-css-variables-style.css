@@ -1,4 +1,9 @@
-/* Ad a CSS icon */
+/* GPLv3 license
+Tweak CSS Variables, settings styling
+Author: ElsaTam (Kapirklaa in Discord)
+*/
+
+/* Add a CSS icon */
 .setting-item-heading[data-id="tweak-css-variables"] .setting-item-name .style-settings-filter-result-count::before {
     content: '';
     background-image: url('https://upload.wikimedia.org/wikipedia/commons/6/62/CSS3_logo.svg');
