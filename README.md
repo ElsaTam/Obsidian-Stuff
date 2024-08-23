@@ -39,3 +39,9 @@ If you would like to be contacted in case I update a snippet, so you can downloa
 Expose more than 500 CSS variables through the Style Setting Plugin.
 
 ![tweak-css-variables](snippets/tweak-css-variables/screenshots/base_colors.png)
+
+## [Newspaper](snippets/newspaper/)
+
+Add a vintage newspaper style to your notes!
+
+![showcase](snippets/newspaper/screenshots/banner.png)
