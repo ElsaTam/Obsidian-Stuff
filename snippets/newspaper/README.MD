@@ -10,7 +10,7 @@ Add a vintage newspaper style to your notes!
 The snippet comes in two versions:
 - [`newspaper.css`](newspaper.css): add multiple cssclass to choose only the ones you need
   - `newspaper`: mainly changes fonts, and add the horizontal borders.
-  - `columns-2`, `columns-3` and `columns-4`: create a multiple columns layout (2, 3 or 4 columns). Header of level 1 are used to stop the column and restart again, as well as any element with the attribute `alt="span"`, so you can use images that span over all columns by writing `![[image.png|span]]`. If you wish to add other headers level to also break the column layout, add them in line 100 (example: `:is(h1, h2, h3)`).
+  - `columns-2`, `columns-3` and `columns-4`: create a multiple columns layout (2, 3 or 4 columns) **in reading view**. Header of level 1 are used to stop the column and restart again, as well as any element with the attribute `alt="span"`, so you can use images that span over all columns by writing `![[image.png|span]]`. If you wish to add other headers level to also break the column layout, add them in line 100 (example: `:is(h1, h2, h3)`).
   - `wide-page`: makes the page of non readable length so it expends full width.
   - `black-and-white`: turns the page in black and white.
 - [`newspaper-all-in-one.css`](newspaper-all-in-one.css): add only one cssclass `newspaper` which is a combination of `newspaper` + `columns-3` + `wide-page` + `black-and-white` from the aforementioned snippet, so you don't need to specify all of them everytime.
