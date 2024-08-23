@@ -30,3 +30,6 @@ In the screenshot, I'm using a transparent background to add a paper effect. Thi
 
 Both `newspaper` and `black-and-white` cssclasses are ready to welcome a background image (however if you use both at the same time, only the newspaper one will be applied).
 
+# Future theme
+
+This snippet will be part of the theme I'm currently working on (still as cssclasses, not as a default note) if I end up finishing it one day. The snippet will stay available here as a standalone. So no worries.
