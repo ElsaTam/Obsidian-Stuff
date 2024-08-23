@@ -5,7 +5,7 @@ Add a vintage newspaper style to your notes!
 # Usage
 
 > [!IMPORTANT]
-> Use **only one** snippet at a time in your vault.
+> Use ***only one snippet at a time*** in your vault.
 
 The snippet comes in two versions:
 - [`newspaper.css`](newspaper.css): add multiple cssclass to choose only the ones you need
