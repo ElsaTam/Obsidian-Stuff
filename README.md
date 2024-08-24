@@ -45,3 +45,7 @@ Expose more than 500 CSS variables through the Style Setting Plugin.
 Add a vintage newspaper style to your notes!
 
 ![showcase](snippets/newspaper/screenshots/showcase.png)
+
+## [Callouts](snippets/callouts/)
+
+Add several new callouts layouts.
