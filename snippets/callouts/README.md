@@ -20,6 +20,8 @@ An other possible conflict is if other themes are using the same keywords than m
 
 ## Clue
 
+**FILE**: [callout-clue.css](callout-clue.css)
+
 Add a small clue to your notes, and awake the detective that sleeps in you.
 
 The snippet comes in several variations, 4 different tapes image (a, b, c, d), and 4 different paper images (a, b, c, d).  You can mix variants together, like `tape-b` and `paper-d`.
