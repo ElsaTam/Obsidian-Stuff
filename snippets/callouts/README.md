@@ -38,14 +38,14 @@ When folded, only the tape is visible.
 ![clue-a](screenshots/clue-a.png)
 
 ```md
-> [!clue|tape-a paper-a]- Clue
+> [!clue|tape-a paper-a]+ Clue
 > The red-bearded man was seen at 2am at the docks.
 ```
 
 or
 
 ```md
-> [!clue]- Clue
+> [!clue]+ Clue
 > The red-bearded man was seen at 2am at the docks.
 ```
 
@@ -54,7 +54,7 @@ or
 ![clue-b](screenshots/clue-b.png)
 
 ```md
-> [!clue|tape-b paper-b]- Clue
+> [!clue|tape-b paper-b]+ Clue
 > The red-bearded man was seen at 2am at the docks.
 ```
 
@@ -63,7 +63,7 @@ or
 ![clue-c](screenshots/clue-c.png)
 
 ```md
-> [!clue|tape-c paper-c]- Clue
+> [!clue|tape-c paper-c]+ Clue
 > The red-bearded man was seen at 2am at the docks.
 ```
 
@@ -72,6 +72,6 @@ or
 ![clue-d](screenshots/clue-d.png)
 
 ```md
-> [!clue|tape-d paper-d]- Clue
+> [!clue|tape-d paper-d]+ Clue
 > The red-bearded man was seen at 2am at the docks.
 ```
