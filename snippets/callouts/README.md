@@ -132,3 +132,23 @@ This is a simple snippet that automatically set the first image to float right a
 > 
 > Lives alone in a small apartment. Sparse and modest living conditions. No close family or friends, isolated. Seen meeting with a known felon, possibly her handler. Surveillance shows reluctance and anxiety during interactions. Seems desperate to escape but feels trapped. Detective suspects threats or blackmail used against her.
 ```
+
+
+## Grid
+
+**FILE**: [callout-grid.css](callout-grid.css)
+
+Small snippet that applies a grid-layout to the content. You can set the callout to display 2 to 6 columns. Replace `x` by the desired number in the following: `> [!grid|x-col]`.
+
+![grid](screenshots/grid.png)
+
+```md
+> [!grid|3-col]+
+> Why is Emma involved with these criminals? ...
+>
+> What leverage does her handler have over her? ...
+>
+> Her handler is always nearby, watching. ...
+>
+> What kind of criminal network are they a part of? ...
+```
