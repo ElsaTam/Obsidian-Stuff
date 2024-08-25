@@ -75,3 +75,28 @@ or
 > [!clue|tape-d paper-d]+ Clue
 > The red-bearded man was seen at 2am at the docks.
 ```
+
+## Letter
+
+Write elegant handwritten letters directly into your vault.
+
+I deleted vertical spacing between paragraph to have equal line heigths. If you wish to change that, just change the variable `--p-spacing` in the snippet. The background lines will adapt, as they are computed per paragraph and not on the entire callout.
+
+![letter](screenshots/letter.png)
+
+```md
+> [!letter]+ Johnny Cash’s love letter to June Carter
+> June 23 1994
+>
+> Odense, Denmark.
+>
+> Happy Birthday Princess,
+>
+> We get old and get used to each other. We think alike. We read each others minds. We know what the other wants without asking. Sometimes we irritate each other a little bit. Maybe sometimes take each other for granted.
+>
+> But once in awhile, like today, I meditate on it and realize how lucky I am to share my life with the greatest woman I ever met. You still fascinate and inspire me. You influence me for the better. You’re the object of my desire, the #1 Earthly reason for my existence. I love you very much.
+>
+> Happy Birthday Princess.
+>
+> John
+```
