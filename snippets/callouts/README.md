@@ -114,3 +114,21 @@ You can specify three sizes in the callout:
 > [!pinned|medium]+ Chapter 1: Little blue hood
 > Detective Johnson discovers a series of crimes linked to Emma, a young woman who always wears a blue hooded sweatshirt. After investigation, he understands that she is forced to work for someone else.
 ```
+
+
+## Profile
+
+**FILE**: [callout-profile.css](callout-profile.css)
+
+This is a simple snippet that automatically set the first image to float right and of fixed min-width (default is 150px). You must keep the image as the first element, otherwise it will not be affected by the snippet.
+
+![profile](screenshots/profile.png)
+
+```md
+> [!profile]+ Emma
+> ![[Emma.jpg]]
+> 
+> Emma, mid-twenties, slender build, around 5'6". Long brown hair, usually tied back. Pale complexion, dark circles under eyes. Often wears simple clothes, jeans, and a blue hoodie. Keeps a low profile, avoids eye contact. Nervous habits, bites her nails, fidgets with her hands. Soft-spoken, rarely raises voice. Appears guarded, always looking over her shoulder. Sense of sadness, eyes often downcast. Carries a worn-out notebook everywhere, possibly used for her forced writing.
+> 
+> Lives alone in a small apartment. Sparse and modest living conditions. No close family or friends, isolated. Seen meeting with a known felon, possibly her handler. Surveillance shows reluctance and anxiety during interactions. Seems desperate to escape but feels trapped. Detective suspects threats or blackmail used against her.
+```

@@ -21,3 +21,4 @@ Letter background
 **License**: https://www.freepik.com/legal/terms-of-use
 **Used in**:
 - callout-letter.css (modified, secondary element)
+
