@@ -102,6 +102,39 @@ Author: ElsaTam (Kapirklaa in Discord)
     }
 }
 
+/* Fixes for themes */
+
+/* Primary *//*
+.callout[data-callout="letter"] {
+    --callout-title-color: var(--callout-color);
+}/**/
+
+/* Prism *//*
+body:not(.pt-disable-callout-styling) .callout:not(.cg-note-toolbar-callout)[data-callout="letter"] {
+    border: none;
+    .callout-title {
+        position: unset;
+        border-top-left-radius: var(--callout-radius);
+        border-top-right-radius: var(--callout-radius);
+    }
+    .callout-content {
+        margin-top: 0;
+    }
+}/**/
+
+/* ShibaInu *//*
+.shib-callout-toggle.shib-callout-style-2 .callout.is-collapsible:not(.is-collapsed)[data-callout="letter"],
+.shib-callout-toggle.shib-callout-style-3 .callout.is-collapsible:not(.is-collapsed)[data-callout="letter"],
+body:not(.shib-callout-toggle) .callout.is-collapsible:not(.is-collapsed)[data-callout="letter"] {
+    padding: 0;
+}/**/
+
+/* WY Console *//*
+.callout[data-callout="letter"] .callout-icon::after,
+.callout[data-callout="letter"] .callout-fold::after {
+    background-color: var(--col-pr-txt-quote);
+}/**/
+
 
 
 @font-face {
