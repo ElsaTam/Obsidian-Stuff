@@ -22,8 +22,6 @@ An other possible conflict is if other themes are using the same keywords than m
 
 **FILE**: [callout-clue.css](callout-clue.css)
 
-Add a small clue to your notes, and awake the detective that sleeps in you.
-
 The snippet comes in several variations, 4 different tapes image (a, b, c, d), and 4 different paper images (a, b, c, d).  You can mix variants together, like `tape-b` and `paper-d`.
 
 Versions A are used by default for both tape and paper, in case you don't specify anything. You can change that in the snippet, search for the comment `/* default */` and change value here.
@@ -80,8 +78,6 @@ or
 
 **FILE**: [callout-letter.css](callout-letter.css)
 
-Write elegant handwritten letters directly into your vault.
-
 I deleted vertical spacing between paragraph to have equal line heigths. If you wish to change that, just change the variable `--p-spacing` in the snippet. The background lines will adapt, as they are computed per paragraph and not on the entire callout.
 
 ![letter](screenshots/letter.png)
@@ -101,4 +97,20 @@ I deleted vertical spacing between paragraph to have equal line heigths. If you 
 > Happy Birthday Princess.
 >
 > John
+```
+
+## Pinned
+
+**FILE**: [callout-pinned.css](callout-pinned.css)
+
+You can specify three sizes in the callout:
+- `small` (200px)
+- `medium` (300px)
+- `large` (100%)
+
+![pinned](screenshots/pinned.png)
+
+```md
+> [!pinned|medium]+ Chapter 1: Little blue hood
+> Detective Johnson discovers a series of crimes linked to Emma, a young woman who always wears a blue hooded sweatshirt. After investigation, he understands that she is forced to work for someone else.
 ```

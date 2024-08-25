@@ -1,0 +1,11 @@
+SOURCE
+------
+
+https://www.fontsquirrel.com/fonts/Secret-Typewriter
+
+
+
+LICENSE COPY
+------------
+
+"My Fonts Are free to use personal and commercial works to. But you can't sell them direktly. Please don't make illegal copies of th fonts. Thankx and regards: Koczman Bálint (Cpr.Sparhelt)"

@@ -29,8 +29,8 @@ Author: ElsaTam (Kapirklaa in Discord)
     --callout-title-weight: var(--font-weight);
     --letter-lines-opacity: 0.5;
     --letter-lines-thickness: 1px;
-    --letter-header-font: "Tangerine", cursive;
-    --letter-body-font: "Homemade Apple", cursive;
+    --letter-font-header: "Tangerine", cursive;
+    --letter-font-body: "Homemade Apple", cursive;
     --line-height-normal: 2.5;
     --font-text-size: 1.2em;
     --p-spacing: 0;
@@ -44,7 +44,7 @@ Author: ElsaTam (Kapirklaa in Discord)
         background: linear-gradient(to right, rgba(var(--callout-color), 0.1), transparent);
         padding: var(--callout-padding);
         padding-bottom: var(--size-4-3);
-        font-family: var(--letter-header-font);
+        font-family: var(--letter-font-header);
         font-weight: var(--callout-title-weight);
         align-items: center;
         gap: 1rem;
@@ -77,7 +77,7 @@ Author: ElsaTam (Kapirklaa in Discord)
     /* Content */
     .callout-content {
         padding: var(--callout-padding);
-        font-family: var(--letter-body-font);
+        font-family: var(--letter-font-body);
         background-image: var(--paper-texture);
         background-repeat: repeat;
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.5) inset, 0 0 7px rgba(0, 0, 0, 0.5) inset;
