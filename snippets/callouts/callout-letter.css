@@ -99,7 +99,6 @@ Author: ElsaTam (Kapirklaa in Discord)
             transparent);
         background-size: 100% calc(var(--calc-line-height) + var(--letter-lines-thickness));
         background-repeat: repeat;
-        mix-blend-mode: color;
     }
 }
 
