@@ -78,6 +78,8 @@ or
 
 ## Letter
 
+**FILE**: [callout-letter.css](callout-letter.css)
+
 Write elegant handwritten letters directly into your vault.
 
 I deleted vertical spacing between paragraph to have equal line heigths. If you wish to change that, just change the variable `--p-spacing` in the snippet. The background lines will adapt, as they are computed per paragraph and not on the entire callout.
