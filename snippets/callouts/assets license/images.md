@@ -22,3 +22,10 @@ Letter background
 **Used in**:
 - callout-letter.css (modified, secondary element)
 
+Anatomy body schema
+-------------------
+
+**Source**: https://commons.wikimedia.org/wiki/File:Human_body_with_blank_labels.svg
+**License**: This file is made available under the Creative Commons [CC0 1.0 Universal Public Domain Dedication](https://creativecommons.org/publicdomain/zero/1.0/deed.en).
+**Use in**:
+- callout-autopsy.css (modified)
