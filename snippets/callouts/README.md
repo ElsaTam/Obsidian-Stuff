@@ -177,7 +177,7 @@ Small snippet that applies a grid-layout to the content. You can set the callout
 
 **FILE**: [callout-autopsy.css](callout-autopsy.css)
 
-This snippet is more complex than others. It let you write in an autopsy report for your fiction.
+This snippet is more complex than others. It let you write in an autopsy report for your fiction. I took all of my inspiration from this [Reddit resource](https://www.reddit.com/r/Eberron/comments/o8ssdi/template_for_a_crown_necromancers_report_coroner/) that I tried to copy as best as I could.
 
 Let's start with the screenshots to give you an idea of the result, and scroll down to see how it really works.
 
@@ -281,7 +281,7 @@ Let's start with the screenshots to give you an idea of the result, and scroll d
 > > [!recommendations]+ Recommendations
 > > The manner of death is classified as homicide. Further investigation is recommended to identify the perpetrator and motive behind this crime.
 > 
-> > [!footnote|no-dots] Footnote
+> > [!footnote|no-dots hr] Footnote
 > > I'm sorry Jay. I know I liked this girl... Get the ▮▮▮▮▮▮▮ who did it.
 > 
 > > [!date] Date
@@ -386,7 +386,7 @@ Let's start with the screenshots to give you an idea of the result, and scroll d
 > > [!recommendations]+ Recommendations
 > > 
 > 
-> > [!footnote|no-dots] Footnote
+> > [!footnote|no-dots hr] Footnote
 > > 
 > 
 > > [!date] Date
@@ -420,7 +420,7 @@ Grid is 6 columns, following the following layout:
 ### Optional styles from the markdown
 
 The snippet let you have just a few controls over the style of the final result, by using callouts metadata: `> [!callout-id|callout-metadata-1 callout-metadata-2]`. Followings are available:
-- `hr`: add a bottom double border under the section (in example: `remarks` section)
+- `hr`: add a bottom double border under the section (in example: `remarks` and `footnote` sections)
 - `inline`: inline in the same flow the title of the section and its content (in example: `redisence` and `occupation` sections)
 - `no-dots`: remove the dotted lines under the text (in example: `footnote` section)
 
