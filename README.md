@@ -49,3 +49,6 @@ Add a vintage newspaper style to your notes!
 ## [Callouts](snippets/callouts/)
 
 Add several new callouts layouts.
+(text in the autopsy report is blurred because it can be sensitive content, it's not part of the snippet)
+
+![callouts](snippets/callouts/screenshots/callouts-banner.png)
