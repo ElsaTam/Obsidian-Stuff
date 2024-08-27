@@ -52,3 +52,11 @@ Add several new callouts layouts.
 (text in the autopsy report is blurred because it can be sensitive content, it's not part of the snippet)
 
 ![callouts](snippets/callouts/screenshots/callouts-banner.png)
+
+# Other Stuff
+
+## [Fate Core RPG: Combat Tracker](metabind/fate-combat-tracker/)
+
+Keep track of NPCs aspects, status and health during a combat with the Fate Core System.
+
+![fate-combat-tracker](metabind/fate-combat-tracker/screenshots/overview.png)

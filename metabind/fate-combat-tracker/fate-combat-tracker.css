@@ -27,16 +27,37 @@
 /* UNTIL HERE. FOLLOWING LINES ARE NOT ABOUT THE LOGO */
 
 
+
+
+
+
+.theme-dark .fate-combat-tracker {
+    --color-grey-rgb: 100, 100, 100;
+}
+.theme-light .fate-combat-tracker {
+    --color-grey-rgb: 200, 200, 200;
+}
+
 /* NOTE */
 .fate-combat-tracker {
+    /* Default */
     --fate-color-rgb: var(--color-blue-rgb);
     --fate-color: rgb(var(--fate-color-rgb));
 
+    /* No health */
+    .callout[data-callout="fate-npc"]:not(:has(.callout[data-callout="fate-health"] .checkbox-container:not(.is-enabled))) {
+        --fate-color: var(--color-red);
+        --fate-color-rgb: var(--color-red-rgb);
+    }
+
+    /* Taken out */
+    .callout[data-callout="fate-npc"]:has(.mb-input-type-toggle.npc-out .is-enabled),
+    .callout[data-callout="fate-npc"]:has(.mb-input-type-toggle.npc-out .is-enabled):not(:has(.callout[data-callout="fate-health"] .checkbox-container:not(.is-enabled))) {
+        --fate-color-rgb: var(--color-grey-rgb);
+        --fate-color: rgb(var( --fate-color-rgb));
+    }
+
     --input-radius: 0;
-    --toggle-radius: 0;
-    --toggle-thumb-radius: 0;
-    --interactive-accent: var(--fate-color);
-    --checkbox-color: var(--fate-color);
 
 
     .metadata-property[data-property-key="sheetsPrevFolder"],
@@ -86,16 +107,41 @@
     }
 
 
+    /* Transform Toogle as Checkboxes */
+    --toggle-border-width: 1px;
+    --toggle-width: calc(var(--toggle-thumb-height) + var(--toggle-border-width) * 2);
+    --toggle-radius: 0;
+    --toggle-thumb-radius: 0;
+    --toggle-thumb-color: transparent;
+    .checkbox-container {
+        border: var(--toggle-border-width) solid var(--fate-color);
+    }
+    .checkbox-container.is-enabled {
+        --toggle-thumb-color: var(--fate-color);
+    }
+    .checkbox-container::after,
+    .checkbox-container.is-enabled::after,
+    .checkbox-container.is-enabled:active::after {
+        transition: none;
+        left: 0;
+        right: 0;
+        transform: none;
+        margin: 0;
+    }
 
 
 
+
+    /* Tracking sheet */
     .callout[data-callout="fate-npc"] {
-        --callout-radius: 0;
-        --callout-color: var(--fate-color-rgb);
-        --callout-icon: lucide-skull;
+        --callout-blend-mode: normal;
         --callout-border-width: 1px;
+        --callout-color: var(--fate-color-rgb);
+        --callout-icon: lucide-user;
         --callout-padding: var(--size-4-2);
+        --callout-radius: 0;
         --callout-title-background: var(--fate-color-rgb);
+        --callout-title-size: var(--font-text-size);
 
         --table-border-width: 0px;
         --table-header-border-width: 0px;
@@ -104,6 +150,7 @@
         --table-row-last-border-width: 0px;
 
         padding: 0;
+        position: relative;
         
         .callout {
             --callout-color: var(--fate-color-rgb);
@@ -150,7 +197,7 @@
         }
 
         .callout[data-callout="fate-aspects"] {
-            --callout-icon: lucide-user;
+            --callout-icon: lucide-smile;
         }
 
         .callout[data-callout="fate-health"] {
@@ -164,17 +211,60 @@
         table {
             margin: 0 auto;
         }
-    }
 
-    .callout[data-callout="fate-npc"]:not(:has(.callout[data-callout="fate-health"] .checkbox-container:not(.is-enabled))) {
-        --checkbox-color: var(--color-red);
-        --interactive-accent: var(--color-red);
-        --callout-color: var(--color-red-rgb);
+        /* "Taken out" toggle */
+        p:has(code > .mb-input-type-toggle.npc-out) {
+            --callout-icon: lucide-skull;
+            --h-line-height: calc(var(--line-height-tight) * var(--callout-title-size) + var(--callout-padding) * 2);
+            position: absolute;
+            left: calc(var(--toggle-border-width) + var(--size-4-2));
+            top: calc(var(--h-line-height) * 0.5);
+            transform: translateY(-50%);
+            margin: 0;
 
-        .callout {
-            --callout-color: var(--color-red-rgb);
+            code { padding: 0; }
+            .checkbox-container {  border: var(--toggle-border-width) solid var(--text-normal); }
+        }
+        .npc-out .checkbox-container.is-enabled {
+            --toggle-thumb-color: var(--color-red);
+        }
+
+        &:has(.npc-out .is-enabled){
+            .callout-icon svg { display: none; }
+            .callout-icon {
+                width: var(--icon-size);
+                height: var(--icon-size);
+                position: relative;
+            }
+            .callout-icon::after {
+                content: "";
+                position: absolute;
+                top: 1px;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                display: block;
+                -webkit-mask-image: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-skull"><path d="m12.5 17-.5-1-.5 1h1z"/><path d="M15 22a1 1 0 0 0 1-1v-1a2 2 0 0 0 1.56-3.25 8 8 0 1 0-11.12 0A2 2 0 0 0 8 20v1a1 1 0 0 0 1 1z"/><circle cx="15" cy="12" r="1"/><circle cx="9" cy="12" r="1"/></svg>');
+                -webkit-mask-size: 100%;
+                -webkit-mask-position: 50% 50%;
+                -webkit-mask-repeat: no-repeat;
+                background-color: var(--text-muted);
+            }
+            .callout-content {
+                height: 0px;
+                overflow: hidden;
+                padding: 0;
+            }
+        }
+        &:has(.npc-out .is-enabled),
+        &:has(.npc-out .is-enabled) .callout-title {
+            color: var(--text-muted);
+        }
+        .npc-out .checkbox-container {
+            transform: translateY(calc(var(--toggle-border-width) * 2));
         }
     }
 
 
 }
+

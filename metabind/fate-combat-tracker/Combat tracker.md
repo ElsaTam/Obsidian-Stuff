@@ -157,6 +157,7 @@ function render(nNPCs, sheetsFolder, sheetsPrefix) {
 		let calloutEnemy = mdBuilder.createCallout(fileBaseName, "fate-npc", "");
 		
 		calloutEnemy.createParagraph(name);
+		calloutEnemy.createParagraph("Take out `" + `INPUT[toggle(class(npc-out)):${note}#takenOut]` + "`");
 		
 		let calloutAspects = calloutEnemy.createCallout("Character aspects", "fate-aspects", "");
 		let headers = ['', 'Name'];

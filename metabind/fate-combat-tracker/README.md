@@ -37,7 +37,7 @@ You can now fill up any information that happens during a fight.
 
 When a NPC doesn't have anymore Stress or Consequence box to check, the block turns red.
 
-![out](screenshots/out.jpg)
+![injured](screenshots/injured.jpg)
 
 Corresponding frontmatter is updated
 ```md
@@ -73,8 +73,13 @@ otherAspects:
   - type: Consequence
     value: 6
     name: Gouged out eye
+takenOut: false
 ---
 ```
+
+And if you want to take an NPC out from the fight, click the "Taken out" button. This will grey out the block as well as removing the whole content so you have more space for the remaining characters still fighting.
+
+![taken-out](screenshots/taken-out.png)
 
 ## Known issues
 
@@ -84,6 +89,6 @@ otherAspects:
 
 ## Future features
 
-- **Take out NPCs**: I want to add the possibility to take an NPC out of combat with a toggle. This will add the possibility to say when a NPC is dead, has left or surrendered, and will give the possibility to reduce such blocks to only the title so it doesn't take useless space.
-- **Collapsible sections**: for now, I haven't found how to create collapsible callouts with the JS Engine. But I'm hoping to be able to do that at some point.
+- **Collapsible sections**: For now, I haven't found how to create collapsible callouts with the JS Engine. But I'm hoping to be able to do that at some point. The "Taken out" checkbox can be used as such but that's not is primary purpose.
 - **Customizable Meta Bind template**: The specific sub-code that is used to create the Metabind elements is currently hidden in all the rest of the JS Engine code. My goal is to extract this part in another place and inject it in the final code. This way, it will be easier for anyone to modify the layout and the inputs, and adapt the tracker to other needs/systems.
+- **Reset tracking sheet**: Add a button to reset all values to their default.
