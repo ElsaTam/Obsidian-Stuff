@@ -86,3 +86,4 @@ otherAspects:
 
 - **Take out NPCs**: I want to add the possibility to take an NPC out of combat with a toggle. This will add the possibility to say when a NPC is dead, has left or surrendered, and will give the possibility to reduce such blocks to only the title so it doesn't take useless space.
 - **Collapsible sections**: for now, I haven't found how to create collapsible callouts with the JS Engine. But I'm hoping to be able to do that at some point.
+- **Customizable Meta Bind template**: The specific sub-code that is used to create the Metabind elements is currently hidden in all the rest of the JS Engine code. My goal is to extract this part in another place and inject it in the final code. This way, it will be easier for anyone to modify the layout and the inputs, and adapt the tracker to other needs/systems.
