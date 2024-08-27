@@ -6,6 +6,14 @@ Homemade Apple
 **Used in**:
 - callout-letter.css
 
+ProFont
+-------
+
+**Source**: https://tobiasjung.name/profont/index.php
+**License**: ProFont is published using the [MIT license](https://opensource.org/license/mit) (since 2014), allowing you to copy and modify ProFont without limitation (see included LICENSE file for more information).
+**Used in**:
+- callout-screen.css
+
 Secret Typewriter
 -----------------
 

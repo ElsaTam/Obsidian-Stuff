@@ -469,3 +469,68 @@ Colors are set as follow:
 ```
 
 You can copy this code in a new snippet and change them to override the default if you do not wish to search for them into the code (or avoid loosing them in case you update the snippet later).
+
+## Screen
+
+**FILE**: [callout-screen.css](callout-screen.css)
+
+You can now create a old-retro-glowing-green screen with this new callout.
+Works best in dark mode, I think.
+
+![screen](screenshots/screen.png)
+
+```md
+> [!screen]+ Leaked Conversation Log, August 21, 2024
+> Source: Dark Web Forum - “Silencer’s Haven”
+> 
+> **Aaron Grant** (11:45 PM): Need you to take care of the girl. She’s becoming a liability. Seen talking to a cop recently. You know what to do.
+>
+> **Kraken** (11:47 PM): Understood. When and where?
+>
+> **Aaron Grant** (11:48 PM): Tomorrow night. Usual place. Warehouse on 5th and Elm, near the docks. Back entrance. Make it clean. No mess, no traces.
+>
+> **Kraken** (11:49 PM) Got it. What about her stuff?
+> 
+> **Aaron Grant** (11:50 PM) Burn everything. Papers, phone, any evidence she might have. Nothing should lead back to us. You’ll find a burner cell in the usual drop spot for confirmation. Code: 8924. Use it to send me the all-clear once it’s done.
+>
+> **Kraken** (11:51 PM): Understood. Payment?
+>
+> **Aaron Grant** (11:52 PM): Same as before. Cash drop at the old train station, locker 24. You’ll have it by Friday. Don’t screw this up. We can’t afford any more attention.
+>
+> **Kraken** (11:53 PM): Consider it done. She won’t be a problem anymore.
+```
+
+## Email
+
+Use this snippet to create email-like callouts. Any nested callout will be given the visual effect of an input, so best is to keep them at the beginning. To have a separator, add `sep` as an option of your last nested callout, this will give it a bottom border.
+
+You can choose colors from the [Obsidian extended color palette](https://docs.obsidian.md/Reference/CSS+variables/Foundations/Colors#Extended%20colors), like so: `> ![email|color]`. Available colors are red, orange, yellow, green, cyan, blue, purple, and pink. If no color is provided, the email callout will be grey.
+
+**FILE**: [callout-email.css](callout-email.css)
+
+![email](screenshots/email.png)
+
+```md
+> [!email]+ 
+> > [!note] Subject
+> > Need help, Off the record
+>
+> > [!note] From
+> > Jay Johnson
+>
+> > [!note] To
+> > Steeven Brown
+>
+> > [!note|sep] At
+> > August 25, 2024, 05:43 AM
+> 
+> Steev,
+>
+> I can’t go through official channels on this one. I found out where Emma’s killer will be this Friday —  old train station, locker 24. I want to catch him and take him down myself. Problem is, I can’t risk having the cops involved. They’ll only slow me down with red tape and protocols.
+>
+> I need you there, just in case things go south. Your medical expertise could be crucial if anyone gets hurt, including the killer. I need to keep him alive. I trust you to keep this off the books.
+> Emma’s death is on my shoulders, and I have to make this right. Can you be there Friday evening, ready to step in if needed?
+>
+> Let me know ASAP.
+> Jay
+```
