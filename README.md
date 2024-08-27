@@ -1,4 +1,16 @@
-Since I started to spend some time on the Obsidian Discord server, I saw a lot of very cool ideas of customization that are often resolved with css snippets. I try  as much as I can to help to make these ideas work, and sometimes I end up with a nice working code that can be adapted with the Style Settings plugin. When I think these snippets could be of use for other people, might be updated frequently, or are worth keeping because they contain tricky targets/rules, I choose to store them here.
+Since I started to spend some time on the Obsidian Discord server, I saw a lot of very cool ideas of customization that are often resolved with css snippets. I try  as much as I can to help to make these ideas work, and sometimes I end up with a nice working codes. When I think these snippets/templates could be of use for other people, might be updated frequently, or are worth keeping because they contain tricky targets/rules, I choose to store them here.
+
+- [Installation](#installation)
+- [Updates](#updates)
+- [Contact](#contact)
+- [Available Snippets](#available-snippets)
+   * [List styling](#list-styling)
+   * [Note accent colors](#note-accent-colors)
+   * [Tweak CSS Variables](#tweak-css-variables)
+   * [Newspaper](#newspaper)
+   * [Callouts](#callouts)
+- [Other Stuff](#other-stuff)
+   * [Fate Core RPG: Combat Tracker](#fate-core-rpg-combat-tracker)
 
 > [!WARNING]
 > I do not promise they will be all working perfectly. We are often only two people trying it, so it's not the best beta test ever made. But I'm staying as much available as I can to fix things if there is any issue.
