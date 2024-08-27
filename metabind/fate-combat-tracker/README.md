@@ -1,4 +1,4 @@
-I recently starting to DM on the [Fate Core](https://fate-srd.com/fate-core) system, and at some point we had our first fight. I'm terrible at DMing combat scenes, even more keeping track of everything that is going on.
+I recently started to DM on the [Fate Core](https://fate-srd.com/fate-core) system, and at some point we had our first fight. I'm terrible at DMing combat scenes, even more keeping track of everything that is going on.
 
 So I decided to create a tool with Obsidian, [Meta Bind](https://github.com/mProjectsCode/obsidian-meta-bind-plugin) and the [JS Engine](https://github.com/mProjectsCode/obsidian-js-engine-plugin).
 
