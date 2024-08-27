@@ -1,0 +1,180 @@
+/* IF YOU DON'T WANT THE LOGO IN THE BACKGROUND, REMOVE FROM HERE */
+/*
+    Fate™ is a trademark of Evil Hat Productions, LLC. The Powered by Fate logo is © Evil Hat Productions, LLC and is used with permission.
+    https://fate-srd.com/official-licensing-fate
+*/
+.fate-combat-tracker::before {
+    content: '';
+    position: fixed;
+    top: 0; right: 0; bottom: 0; left: 0;
+    left: 0;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    z-index: -1;
+}
+.theme-light .fate-combat-tracker::before {
+    background-image: url(https://fate-srd.com/_next/static/media/Powered-by-Fate-Final-Light-BG.bf091fab.svg);
+    opacity: 0.1;
+}
+.theme-dark .fate-combat-tracker::before {
+    background-image: url(https://fate-srd.com/_next/static/media/Powered-by-Fate-Final-Dark-BG.fcd87670.svg);
+    opacity: 0.01;
+}
+.fate-combat-tracker {
+    z-index: 0;
+}
+/* UNTIL HERE. FOLLOWING LINES ARE NOT ABOUT THE LOGO */
+
+
+/* NOTE */
+.fate-combat-tracker {
+    --fate-color-rgb: var(--color-blue-rgb);
+    --fate-color: rgb(var(--fate-color-rgb));
+
+    --input-radius: 0;
+    --toggle-radius: 0;
+    --toggle-thumb-radius: 0;
+    --interactive-accent: var(--fate-color);
+    --checkbox-color: var(--fate-color);
+
+
+    .metadata-property[data-property-key="sheetsPrevFolder"],
+    .metadata-property[data-property-key="sheetsPrevPrefix"] {
+        display: none;
+    }
+
+
+    h2 {
+        text-align: center;
+    }
+
+    .mb-button-block {
+        --mb-border-radius: 0;
+        --interactive-normal: var(--fate-color);
+        --interactive-hover: color-mix(in srgb, var(--fate-color), rgb(var(--mono-rgb-100)) 20%);
+        --icon-size: 30px;
+        --input-height: calc(var(--icon-size) + var(--size-4-3));
+
+
+        code {
+            font-family: var(--font-text);
+        }
+
+        .mb-button-group {
+            display: flex;
+            justify-content: center;
+        }
+
+        .mb-button:hover svg {
+            transform: scale(1.1);
+        }
+        
+        svg {
+            stroke-width: 2.5;
+        }
+
+        .mb-icon-wrapper {
+            min-height: var(--icon-size);
+            min-width: var(--icon-size);
+        }
+
+        button {
+            font-size: 0;
+            gap: 0;
+        }
+    }
+
+
+
+
+
+    .callout[data-callout="fate-npc"] {
+        --callout-radius: 0;
+        --callout-color: var(--fate-color-rgb);
+        --callout-icon: lucide-skull;
+        --callout-border-width: 1px;
+        --callout-padding: var(--size-4-2);
+        --callout-title-background: var(--fate-color-rgb);
+
+        --table-border-width: 0px;
+        --table-header-border-width: 0px;
+        --table-column-first-border-width: 0px;
+        --table-column-last-border-width: 0px;
+        --table-row-last-border-width: 0px;
+
+        padding: 0;
+        
+        .callout {
+            --callout-color: var(--fate-color-rgb);
+            padding: 0;
+            --callout-blend-mode: normal;
+            background: var(--background-primary);
+        }
+
+        .callout-title {
+            background-color: rgb(var(--callout-color));
+            color: var(--text-normal);
+            text-transform: uppercase;
+            padding: var(--callout-padding);
+            justify-content: center;
+
+            .callout-icon svg {
+                color: inherit;
+            }
+
+        }
+
+        .callout-content {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: var(--size-4-3);
+            padding: var(--callout-padding);
+        }
+
+        
+        .callout-content > *:not(.callout),
+        .callout[data-callout="fate-other"] {
+            grid-column: 1 / -1;
+        }
+
+        .callout {
+            margin: 0;
+            --s: 10px;
+            clip-path: polygon(var(--s) 0%, 100% 0%, 100% 100%, 0% 100%, 0% var(--s));
+
+            .callout-title {
+                --s: calc(10px - var(--callout-border-width));
+                clip-path: polygon(var(--s) 0%, 100% 0%, 100% calc(100% - var(--s)), calc(100% - var(--s)) 100%, 0% 100%, 0% var(--s));
+            }
+        }
+
+        .callout[data-callout="fate-aspects"] {
+            --callout-icon: lucide-user;
+        }
+
+        .callout[data-callout="fate-health"] {
+            --callout-icon: lucide-heart-pulse;
+        }
+
+        .callout[data-callout="fate-other"] {
+            --callout-icon: lucide-plus;
+        }
+
+        table {
+            margin: 0 auto;
+        }
+    }
+
+    .callout[data-callout="fate-npc"]:not(:has(.callout[data-callout="fate-health"] .checkbox-container:not(.is-enabled))) {
+        --checkbox-color: var(--color-red);
+        --interactive-accent: var(--color-red);
+        --callout-color: var(--color-red-rgb);
+
+        .callout {
+            --callout-color: var(--color-red-rgb);
+        }
+    }
+
+
+}
