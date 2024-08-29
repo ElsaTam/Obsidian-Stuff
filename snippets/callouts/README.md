@@ -21,6 +21,7 @@ You will find in this folder several snippets to add new stylized callouts to yo
       + [Controlling colors](#controlling-colors)
    * [Screen](#screen)
    * [Email](#email)
+   * [Timeline](#timeline)
 
 # Usage
 
@@ -504,11 +505,11 @@ Works best in dark mode, I think.
 
 ## Email
 
+**FILE**: [callout-email.css](callout-email.css)
+
 Use this snippet to create email-like callouts. Any nested callout will be given the visual effect of an input, so best is to keep them at the beginning. To have a separator, add `sep` as an option of your last nested callout, this will give it a bottom border.
 
 You can choose colors from the [Obsidian extended color palette](https://docs.obsidian.md/Reference/CSS+variables/Foundations/Colors#Extended%20colors), like so: `> ![email|color]`. Available colors are red, orange, yellow, green, cyan, blue, purple, and pink. If no color is provided, the email callout will be grey.
-
-**FILE**: [callout-email.css](callout-email.css)
 
 ![email](screenshots/email.png)
 
@@ -536,3 +537,111 @@ You can choose colors from the [Obsidian extended color palette](https://docs.ob
 > Let me know ASAP.
 > Jay
 ```
+
+## Timeline
+
+**FILE**: [callout-timeline.css](callout-timeline.css)
+
+Use this snippet to create a timeline. Several options are available.:
+- At the first level timeline callout `> ![timeline|option]`:
+  - `no-icon`: remove all icons from callout title, the main and the nested ones.
+  - `red`, `orange`, `yellow`, `green`, `cyan`, `blue`, `purple`, and `pink`: use the corresponding [extended color](https://docs.obsidian.md/Reference/CSS+variables/Foundations/Colors#Extended%20colors) to color the timeline.
+  - `numbered`: add increasing numbers inside the bullets for each item.
+  - `horizontal`: make the timeline horizontal (vertical by default).
+- In nested callouts:
+  - `no-icon`: remove the icon of this callout.
+  - `red`, `orange`, `yellow`, `green`, `cyan`, `blue`, `purple`, and `pink`: color this callout with the given color. Using a callout with an existing default color will also change its color, you don't have to specify it for callouts such as bug, abstract, example, quote, etc. Unless you want to change the default.
+  - `skip`: don't count this block in the numbering (require `numbered` at the first level callout)
+
+Note that inside the timeline callout, you can use what you want. All blocks will be transformed into "date cards", not only callouts. So paragraphs, blockquotes, code, etc., they all work. But callouts are the only one you can add options to.
+
+![timeline-vertical](screenshots/timeline-vertical.png)
+
+```md
+> [!timeline|numbered blue] Calculus course progress
+> > ### Limits and Continuity
+> > $$\lim_{x \to c} f(x)$$
+>
+> > [!note]+ Techniques for finding limits
+> > - Direct substitution
+> > - Factoring and simplifying
+> > - Rationalizing
+> > - Limits involving infinity
+>
+> > [!note] Continuity
+> > - Definition of continuity at a point
+> > - Continuity on an interval
+> > - Intermediate Value Theorem
+> 
+> > [!important]
+> > Homework 1
+> 
+> > ### Derivatives
+> > $$f'(x) = \lim_{h \to 0} \frac{f(x+h) - f(x)}{h}$$
+> 
+> > [!note|skip]+ Differentiation rules
+> > - Power rule: $(x^n)' = nx^{n-1}$
+> > - Constant multiple rule: $(cf(x))' = cf'(x)$
+> > - Sum and difference rules: $(f(x) \pm g(x))' = f'(x) \pm g'(x)$
+> > - Product rule: $(f(x)g(x))' = f'(x)g(x) + f(x)g'(x)$
+> > - Quotient rule: $\left(\frac{f(x)}{g(x)}\right)' = \frac{f'(x)g(x) - f(x)g'(x)}{[g(x)]^2}$
+> > - Chain rule: $(f(g(x)))' = f'(g(x)) \cdot g'(x)$
+> 
+> ```py
+> from sympy import symbols, diff
+> x = symbols('x')
+> f = 3_x**2 + 2_x + 1
+> f_prime = diff(f, x)
+> print(f_prime)
+> ```
+>
+> Implicit differentiation
+>
+> > [!important|red]
+> > **Exam**
+> 
+> > ### Applications of Derivatives
+> > $f''(x), f'''(x), \ldots$
+> 
+> > [!note]+ Finding local extrema (maxima and minima)
+> > - Critical points
+> > - First Derivative Test
+> > - Second Derivative Test
+```
+
+![timeline-horizontal](screenshots/timeline-horizontal.png)
+
+```md
+> [!timeline|orange horizontal no-icon] Dune movies
+> > [!note]+ Dune (1984)
+> > David Lynch's Adaptation That Feels Both Rushed & Overextended
+> > ![[Dune (1984).jpg|100]]
+> 
+> > [!note]+ Dune (2000)
+> > A Very Faithful Miniseries Held Back By Its Digital Limitations 
+> > ![[Dune (2000).jpg|100]]
+> 
+> > [!note]+ Children Of Dune (2003) 
+> > A TV Miniseries That Merges Children Of Dune & Dune Messiah Into One Story
+> > ![[Children Of Dune (2003).jpg|100]]
+> 
+> > [!note]+ Jodorowsky's Dune (2013)
+> > A Mesmerizing Documentary About What Could Have Been
+> > ![[Jodorowsky's Dune (2013).jpg|100]]
+> 
+> > [!note]+ Dune (2021) 
+> > A Sci-Fi Epic That Adapts The First Half Of The Novel 
+> > ![[Dune (2021).jpg|100]]
+> 
+> > [!note]+ Dune: Part 2 (2024) 
+> > Director Denis Villeneuve's Masterpiece & The Best Sci-Fi Film In Years
+> > ![[Dune Part 2 (2024).jpeg|100]]
+```
+
+## Timeline (variant)
+
+**FILE**: [callout-timeline-variant.css](callout-timeline-variant.css)
+
+This is another style variant of the timeline callout, more adapted to my personal theme. Options are exactly the same.
+
+
