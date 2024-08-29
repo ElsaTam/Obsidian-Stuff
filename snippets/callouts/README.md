@@ -22,6 +22,7 @@ You will find in this folder several snippets to add new stylized callouts to yo
    * [Screen](#screen)
    * [Email](#email)
    * [Timeline](#timeline)
+   * [Timeline (variant)](#timeline-variant)
 
 # Usage
 
@@ -644,4 +645,25 @@ Note that inside the timeline callout, you can use what you want. All blocks wil
 
 This is another style variant of the timeline callout, more adapted to my personal theme. Options are exactly the same.
 
+![timeline-variant](screenshots/timeline-variant.png)
 
+```md
+> [!timeline|green numbered]
+> > [!note|skip no-icon yellow] August 18
+> > Detective Jay Johnson starts his investigation concerning the "girl in a blue hoodie"
+> 
+> > [!note]+ August 21, 11:45 PM
+> > Conversation between the handler (alias: Aaron Grant), and the contract killer (alias: Kraken)
+> 
+> > [!note] August 22, 10:00 AM
+> > Estimated time of Emma's death
+> 
+> > [!date] August 24, 02:00 PM
+> > Emma's autopsy by Steeven Brown
+> 
+> > [!date] August 25, 05:43 AM
+> > Johnson asks Steeven Brown for help
+> 
+> > [!danger|skip]+ August 30
+> > Kraken should get his payment at the old train station, locker 24
+```
