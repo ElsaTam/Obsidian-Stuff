@@ -645,6 +645,9 @@ Note that inside the timeline callout, you can use what you want. All blocks wil
 
 This is another style variant of the timeline callout, more adapted to my personal theme. Options are exactly the same.
 
+> [!WARNING]
+> Do not use both timeline snippets at the same time, they are in conflict.
+
 ![timeline-variant](screenshots/timeline-variant.png)
 
 ```md
