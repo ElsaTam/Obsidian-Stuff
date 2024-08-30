@@ -23,6 +23,7 @@ You will find in this folder several snippets to add new stylized callouts to yo
    * [Email](#email)
    * [Timeline](#timeline)
    * [Timeline (variant)](#timeline-variant)
+   * [Comic](#comic)
 
 # Usage
 
@@ -670,3 +671,51 @@ This is another style variant of the timeline callout, more adapted to my person
 > > [!danger|skip]+ August 30
 > > Kraken should get his payment at the old train station, locker 24
 ```
+
+
+## Comic
+
+**FILE**: [callout-comic.css](callout-comic.css)
+
+If you like comics, this snippet can be for you. Inside a `comic` callout, add `comic-panel` nested callouts with two blocks only: one image, and one short text. See the schema after the example code for reference.
+
+You can use the option `straight` to use only straight borders instead of the default that add a hand drawn effect: `> [!comic|straight]`.
+
+On the panels, you can add the option `|overflow` to let an image slightly overflow the content from the top. See last panel of the example. Only use this feature with transparent images.
+
+![comic](screenshots/comic.png)
+
+```md
+> [!comic]
+> > [!comic-panel]
+> > ![[Spiderman 1.png]]
+> > 
+> > Something’s not right...
+> 
+> > [!comic-panel]
+> > ![[Spiderman 2.png]]
+> > 
+> > Okay, Peter, let's bounce!
+> 
+> > [!comic-panel]
+> > ![[Spiderman 3.png]]
+> > 
+> > Note to self: figure out a cooler catchphrase.
+> 
+> > [!comic-panel]
+> > ![[Spiderman 4.png]]
+> > 
+> > Wait a second... is that who I think it is?
+> 
+> > [!comic-panel]
+> > ![[Spiderman 5.png]]
+> > 
+> > Well, hello to you...
+> 
+> > [!comic-panel|overflow]
+> > ![[Iron man.png]]
+> > 
+> > I'm just here to test transparency!
+```
+
+![comic-layout](screenshots/comic-layout.png)

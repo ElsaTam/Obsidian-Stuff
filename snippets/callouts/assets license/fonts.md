@@ -37,3 +37,13 @@ TT2020StyleE
 **License**: The font is licensed under the [SIL Open Font License](https://openfontlicense.org/#5667e9e4), version 1.1.
 **Used in**
 - callout-pinned.css
+
+VTC Letterer Pro
+----------------
+
+**Source**: https://www.fontsquirrel.com/fonts/VTC-Letterer-Pro
+**License (copy)**: "This typeface is what I like to call Distro-Ware.
+Which means you can do whatever ya want with the type-
+face with the sole exception or re-selling it."
+**Used in**:
+- callout-comic.css
