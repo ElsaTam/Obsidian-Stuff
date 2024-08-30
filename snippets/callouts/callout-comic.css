@@ -67,6 +67,30 @@ Author: ElsaTam (Kapirklaa in Discord)
     }
 }
 
+.callout[data-callout="comic-panel"][data-callout-metadata~="bubble"] {
+    > .callout-content > *:not(:has(img)) {
+        border-radius: 17px;
+        --g: 4px; /* gap with the boundaries */
+        --s: 1px; /* hard shadow size */
+        padding: 3px;
+        width: 100px;
+        margin: auto;
+        height: fit-content;
+        max-width: calc(100% - var(--g) * 2 - var(--s));
+        right: calc(var(--g) + var(--s));
+        top: var(--g);
+        bottom: calc(var(--g) + var(--s));
+        left: var(--g);
+        border: 1px solid rgb(var(--comic-color));
+        box-shadow: 1px 1px 0px 1px #000000;
+    }
+
+    &[data-callout-metadata~="top"] > .callout-content > *:not(:has(img)) { bottom: unset; }
+    &[data-callout-metadata~="bottom"] > .callout-content > *:not(:has(img)) { top: unset; }
+    &[data-callout-metadata~="left"] > .callout-content > *:not(:has(img)) { right: unset; }
+    &[data-callout-metadata~="right"] > .callout-content > *:not(:has(img)) { left: unset; }
+}
+
 .callout[data-callout="comic-panel"][data-callout-metadata~="overflow"] {
     --g: 3px; /* small gap to avoid touching other panels */
     --b: 5px; /* border-width */

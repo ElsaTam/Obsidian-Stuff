@@ -685,6 +685,8 @@ There is an option to turn everything black and white: `> [!comic|no-color]`.
 
 On the panels, you can add the option `|overflow` to let an image slightly overflow the content from the top. See last panel of the example. Only use this feature with transparent images.
 
+On each panels, you can also add the option `|bubble` combined with `top`, `bottom`, `left`, `right` keywords. By default, a bubble will be centered in the middle of the panel. If you specify only one axis, it wil stay centered on the other one. To place the buble in a corner, specify the two axis, like so: `|bubble top right`
+
 ![comic](screenshots/comic.png)
 
 ```md
@@ -694,7 +696,7 @@ On the panels, you can add the option `|overflow` to let an image slightly overf
 > > 
 > > Something’s not right...
 > 
-> > [!comic-panel]
+> > [!comic-panel|bubble top left]
 > > ![[Spiderman 2.png]]
 > > 
 > > Okay, Peter, let's bounce!
@@ -704,12 +706,12 @@ On the panels, you can add the option `|overflow` to let an image slightly overf
 > > 
 > > Note to self: figure out a cooler catchphrase.
 > 
-> > [!comic-panel]
+> > [!comic-panel|bubble left]
 > > ![[Spiderman 4.png]]
 > > 
 > > Wait a second... is that who I think it is?
 > 
-> > [!comic-panel]
+> > [!comic-panel|bubble bottom left]
 > > ![[Spiderman 5.png]]
 > > 
 > > Well, hello to you...
