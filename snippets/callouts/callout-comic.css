@@ -127,6 +127,10 @@ Author: ElsaTam (Kapirklaa in Discord)
     &, img { filter: invert(1); }
 }
 
+.callout[data-callout="comic"][data-callout-metadata~="no-color"] img {
+    filter: grayscale(100);
+}
+
 
 /* Border variables */
 .callout[data-callout="comic"] {

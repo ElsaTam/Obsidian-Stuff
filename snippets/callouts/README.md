@@ -681,6 +681,8 @@ If you like comics, this snippet can be for you. Inside a `comic` callout, add `
 
 You can use the option `straight` to use only straight borders instead of the default that add a hand drawn effect: `> [!comic|straight]`.
 
+There is an option to turn everything black and white: `> [!comic|no-color]`.
+
 On the panels, you can add the option `|overflow` to let an image slightly overflow the content from the top. See last panel of the example. Only use this feature with transparent images.
 
 ![comic](screenshots/comic.png)
