@@ -24,6 +24,9 @@ You will find in this folder several snippets to add new stylized callouts to yo
    * [Timeline](#timeline)
    * [Timeline (variant)](#timeline-variant)
    * [Comic](#comic)
+   * [Cards deck](#cards-deck)
+      + [With images](#with-images)
+      + [With embeds (not a callout)](#with-embeds-not-a-callout) - requires dataviewjs
 
 # Usage
 
