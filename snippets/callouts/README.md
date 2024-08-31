@@ -27,6 +27,7 @@ You will find in this folder several snippets to add new stylized callouts to yo
    * [Cards deck](#cards-deck)
       + [With images](#with-images)
       + [With embeds (not a callout)](#with-embeds-not-a-callout) - requires dataviewjs
+   * [Film strip](#film-strip)
 
 # Usage
 
@@ -730,7 +731,7 @@ On each panels, you can also add the option `|bubble` combined with `top`, `bott
 
 ## Cards deck
 
-**FILE**: [callout-cards-deck.css](callout-cards-deck.css.css)
+**FILE**: [callout-cards-deck.css](callout-cards-deck.css)
 
 Add as many images or embed note previews as you need in a dynamic hoverable horizontal layout.
 
@@ -810,3 +811,30 @@ dv.el("p", embeds, { cls: "dataview-cards-deck dataview-wide" })
 
 **Note on the dataview code**
 If you use a different dataviewjs code to embed your cards, the snippet mught not work properly. I'm still beginner when it comes to dataviewjs and I noticed so maybe there are other ways to fetch all notes. If you use an other code and the snippet breaks, please contact me and provide the code. I will try to adapt the snippet to make it works for your code.
+
+
+## Film strip
+
+**FILE**: [callout-film-strip.css](callout-film-strip.css)
+
+If you are a movie lover and would like a nice way to add pictures to your movie note, the film-strip callout might interest you.
+
+Just add a bunch of images without breaking any line to put them in the same strip. Create an empty line with only one chevron `>` before starting to add pictures again, and it will create a new strip.
+
+You can use the option `|wide` to extend the strip full length of the main area, overflowing out of the editor, without changing the editor width.
+
+![film-strip](screenshots/film-strip.png)
+
+```md
+> [!film-strip|wide] Images from Fosse/Verdon
+> ![[Image1.jpg]]
+> ![[Image2.jpg]]
+> ![[Image3.jpg]]
+> ![[Image4.jpg]]
+> ![[Image5.jpg]]
+> ![[Image6.jpg]]
+> ![[Image7.jpg]]
+> ![[Image8.jpg]]
+> ![[Image9.jpg]]
+> ![[Image10.jpg]]
+```
