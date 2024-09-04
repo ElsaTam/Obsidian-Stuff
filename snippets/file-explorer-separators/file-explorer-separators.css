@@ -1,0 +1,60 @@
+.nav-folder:has(> :is(
+        [data-path="01 - Ressources"],
+        [data-path="03 - Scénarios"],
+        [data-path="50 - A classer"],
+        [data-path="99 - Meta"]
+        /* HERE, change and add first folders that are after a separator */
+    )) {
+    position: relative;
+
+    --sep-vertical-spacing: 10px;   /* set to 0 for normal spacing */
+    --sep-text-color: currentColor; /* color of the separator text */
+    --sep-line-color: currentColor; /* color of the separator line */
+    --sep-line-thickness: 1px;      /* thickness of the separator line */
+    --sep-line-style: solid;        /* style of the separator line */
+
+
+    &::before {
+        content: "";
+        --padding-x: 10px;
+        margin-inline-start: calc(24px - var(--padding-x));
+        padding: 0 var(--padding-x);
+        background-color: var(--background-secondary); /* if needed change it to match the file explorer background */
+        display: block;
+        width: fit-content;
+        color: var(--sep-text-color);
+        
+        margin-top: var(--sep-vertical-spacing);
+        margin-bottom: var(--sep-vertical-spacing);
+        
+        /* Optional horizontal margin */
+        /* margin-right: auto; margin-left: auto; /* Uncomment for centering */
+        /* margin-left: auto; /* Uncomment for righ alignment */
+    }
+
+    &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: calc(0.5em * var(--line-height-tight));
+        width: 100%; /* change for something smaller if you don't want the divider to span full length */
+        height: 0;
+        border-top: var(--sep-line-thickness) var(--sep-line-style) var(--sep-line-color);
+        z-index: -1;
+
+        /* Remove the -webkit-mask-image for no gradient */
+        -webkit-mask-image: linear-gradient(to right,
+          transparent,
+            black 100px,
+            black calc(100% - 100px),
+            transparent
+        );
+    }
+}
+
+
+/* HERE, write for each folder the content (text, unicode characters or svg) of the separator */
+.nav-folder:has(> [data-path="01 - Ressources"])::before { content: "HRP"; }
+.nav-folder:has(> [data-path="03 - Scénarios"])::before { content: "🎲 RP 🎲"; }
+.nav-folder:has(> [data-path="50 - A classer"])::before { content: "ᛩ Workflow ᚹ"; }
+.nav-folder:has(> [data-path="99 - Meta"])::before { content: "✶ Other ✶"; }

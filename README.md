@@ -9,6 +9,7 @@ Since I started to spend some time on the Obsidian Discord server, I saw a lot o
    * [Tweak CSS Variables](#tweak-css-variables)
    * [Newspaper](#newspaper)
    * [Callouts](#callouts)
+   * [File Explorer Separators](#file-explorer-separators)
 - [Other Stuff](#other-stuff)
    * [Fate Core RPG: Combat Tracker](#fate-core-rpg-combat-tracker)
 
@@ -64,6 +65,12 @@ Add several new callouts layouts.
 (text in the autopsy report is blurred because it can be sensitive content, it's not part of the snippet)
 
 ![callouts](snippets/callouts/screenshots/callouts-banner.png)
+
+## [File explorer separators](snippets/file-explorer-separators/)
+
+Add separators in your file explorer
+
+![file-explorer-separator](snippets/file-explorer-separators/screenshots/default.png)
 
 # Other Stuff
 
