@@ -19,6 +19,7 @@ You will find in this folder several snippets to add new stylized callouts to yo
       + [The body schema and its checkboxes](#the-body-schema-and-its-checkboxes)
       + [Specific elements behaviors](#specific-elements-behaviors)
       + [Controlling colors](#controlling-colors)
+      + [Other use cases](#other-use-cases)
    * [Screen](#screen)
    * [Email](#email)
    * [Timeline](#timeline)
