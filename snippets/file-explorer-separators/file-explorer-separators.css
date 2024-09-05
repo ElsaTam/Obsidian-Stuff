@@ -6,6 +6,7 @@
         /* HERE, change and add first folders that are after a separator */
     )) {
     position: relative;
+    z-index: 1;
 
     --sep-vertical-spacing: 10px;   /* set to 0 for normal spacing */
     --sep-text-color: currentColor; /* color of the separator text */
