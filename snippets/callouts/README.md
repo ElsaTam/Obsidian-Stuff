@@ -62,7 +62,7 @@ When folded, only the tape is visible.
 
 ### Tape A, Paper A (default)
 
-<a target="_blank" rel="noopener noreferrer" href="/ElsaTam/Obsidian-Stuff/blob/main/snippets/callouts/screenshots/clue-a.png"><img src="https://raw.githubusercontent.com/ElsaTam/Obsidian-Stuff/main/snippets/callouts/screenshots/clue-a.png" width="400"></a>
+<a target="_blank" rel="noopener noreferrer" href="https://github.com/ElsaTam/Obsidian-Stuff/blob/main/snippets/callouts/screenshots/clue-a.png"><img src="https://raw.githubusercontent.com/ElsaTam/Obsidian-Stuff/main/snippets/callouts/screenshots/clue-a.png" width="400"></a>
 
 ```md
 > [!clue|tape-a paper-a]+ Clue
@@ -78,7 +78,7 @@ or
 
 ### Tape B, Paper B
 
-<a target="_blank" rel="noopener noreferrer" href="/ElsaTam/Obsidian-Stuff/blob/main/snippets/callouts/screenshots/clue-b.png"><img src="https://raw.githubusercontent.com/ElsaTam/Obsidian-Stuff/main/snippets/callouts/screenshots/clue-b.png" width="400"></a>
+<a target="_blank" rel="noopener noreferrer" href="https://github.com/ElsaTam/Obsidian-Stuff/blob/main/snippets/callouts/screenshots/clue-b.png"><img src="https://raw.githubusercontent.com/ElsaTam/Obsidian-Stuff/main/snippets/callouts/screenshots/clue-b.png" width="400"></a>
 
 ```md
 > [!clue|tape-b paper-b]+ Clue
@@ -87,7 +87,7 @@ or
 
 ### Tape C, Paper C
 
-<a target="_blank" rel="noopener noreferrer" href="/ElsaTam/Obsidian-Stuff/blob/main/snippets/callouts/screenshots/clue-c.png"><img src="https://raw.githubusercontent.com/ElsaTam/Obsidian-Stuff/main/snippets/callouts/screenshots/clue-c.png" width="400"></a>
+<a target="_blank" rel="noopener noreferrer" href="https://github.com/ElsaTam/Obsidian-Stuff/blob/main/snippets/callouts/screenshots/clue-c.png"><img src="https://raw.githubusercontent.com/ElsaTam/Obsidian-Stuff/main/snippets/callouts/screenshots/clue-c.png" width="400"></a>
 
 ```md
 > [!clue|tape-c paper-c]+ Clue
@@ -96,7 +96,7 @@ or
 
 ### Tape D, Paper D
 
-<a target="_blank" rel="noopener noreferrer" href="/ElsaTam/Obsidian-Stuff/blob/main/snippets/callouts/screenshots/clue-d.png"><img src="https://raw.githubusercontent.com/ElsaTam/Obsidian-Stuff/main/snippets/callouts/screenshots/clue-d.png" width="400"></a>
+<a target="_blank" rel="noopener noreferrer" href="https://github.com/ElsaTam/Obsidian-Stuff/blob/main/snippets/callouts/screenshots/clue-d.png"><img src="https://raw.githubusercontent.com/ElsaTam/Obsidian-Stuff/main/snippets/callouts/screenshots/clue-d.png" width="400"></a>
 
 ```md
 > [!clue|tape-d paper-d]+ Clue
@@ -151,7 +151,7 @@ You can specify three sizes in the callout:
 
 This is a simple snippet that automatically set the first image to float right and of fixed min-width (default is 150px). You must keep the image as the first element, otherwise it will not be affected by the snippet.
 
-<a target="_blank" rel="noopener noreferrer" href="/ElsaTam/Obsidian-Stuff/blob/main/snippets/callouts/screenshots/profile.png"><img src="https://raw.githubusercontent.com/ElsaTam/Obsidian-Stuff/main/snippets/callouts/screenshots/profile.png" width="450"></a>
+<a target="_blank" rel="noopener noreferrer" href="https://github.com/ElsaTam/Obsidian-Stuff/blob/main/snippets/callouts/screenshots/profile.png"><img src="https://raw.githubusercontent.com/ElsaTam/Obsidian-Stuff/main/snippets/callouts/screenshots/profile.png" width="450"></a>
 
 ```md
 > [!profile]+ Emma
@@ -169,7 +169,7 @@ This is a simple snippet that automatically set the first image to float right a
 
 Small snippet that applies a grid-layout to the content. You can set the callout to display 2 to 6 columns. Replace `x` by the desired number in the following: `> [!grid|x-col]`.
 
-<a target="_blank" rel="noopener noreferrer" href="/ElsaTam/Obsidian-Stuff/blob/main/snippets/callouts/screenshots/grid.png"><img src="https://raw.githubusercontent.com/ElsaTam/Obsidian-Stuff/main/snippets/callouts/screenshots/grid.png" width="450"></a>
+<a target="_blank" rel="noopener noreferrer" href="https://github.com/ElsaTam/Obsidian-Stuff/blob/main/snippets/callouts/screenshots/grid.png"><img src="https://raw.githubusercontent.com/ElsaTam/Obsidian-Stuff/main/snippets/callouts/screenshots/grid.png" width="450"></a>
 
 ```md
 > [!grid|3-col]+
@@ -416,7 +416,7 @@ This snippet works with a grid layout inside the main calout's `.callout-content
 
 Grid is 6 columns, following the following layout:
 
-<a target="_blank" rel="noopener noreferrer" href="/ElsaTam/Obsidian-Stuff/blob/main/snippets/callouts/screenshots/autopsy-layout.png"><img src="https://raw.githubusercontent.com/ElsaTam/Obsidian-Stuff/main/snippets/callouts/screenshots/autopsy-layout.png" width="200"></a>
+<a target="_blank" rel="noopener noreferrer" href="https://github.com/ElsaTam/Obsidian-Stuff/blob/main/snippets/callouts/screenshots/autopsy-layout.png"><img src="https://raw.githubusercontent.com/ElsaTam/Obsidian-Stuff/main/snippets/callouts/screenshots/autopsy-layout.png" width="200"></a>
 
 **What you *can* do without modifying the CSS**
 - Change the names of the displayed sections, as they come from the callout title.
@@ -486,7 +486,7 @@ You can play with the code and change the template area names/distribution.
 
 Lunairee had an amazing idea to turn this callout into something for a complete different purpose that works just as good, and made an nice spec sheet with it.
 
-<a target="_blank" rel="noopener noreferrer" href="/ElsaTam/Obsidian-Stuff/blob/main/snippets/callouts/screenshots/autopsy-lunairee.png"><img src="https://raw.githubusercontent.com/ElsaTam/Obsidian-Stuff/main/snippets/callouts/screenshots/autopsy-lunairee.png" width="300"></a>
+<a target="_blank" rel="noopener noreferrer" href="https://github.com/ElsaTam/Obsidian-Stuff/blob/main/snippets/callouts/screenshots/autopsy-lunairee.png"><img src="https://raw.githubusercontent.com/ElsaTam/Obsidian-Stuff/main/snippets/callouts/screenshots/autopsy-lunairee.png" width="300"></a>
 
 ## Screen
 
@@ -570,7 +570,7 @@ Use this snippet to create a timeline. Several options are available.:
 
 Note that inside the timeline callout, you can use what you want. All blocks will be transformed into "date cards", not only callouts. So paragraphs, blockquotes, code, etc., they all work. But callouts are the only one you can add options to.
 
-<a target="_blank" rel="noopener noreferrer" href="/ElsaTam/Obsidian-Stuff/blob/main/snippets/callouts/screenshots/timeline-vertical.png"><img src="https://raw.githubusercontent.com/ElsaTam/Obsidian-Stuff/main/snippets/callouts/screenshots/timeline-vertical.png" width="400"></a>
+<a target="_blank" rel="noopener noreferrer" href="https://github.com/ElsaTam/Obsidian-Stuff/blob/main/snippets/callouts/screenshots/timeline-vertical.png"><img src="https://raw.githubusercontent.com/ElsaTam/Obsidian-Stuff/main/snippets/callouts/screenshots/timeline-vertical.png" width="400"></a>
 
 ```md
 > [!timeline|numbered blue] Calculus course progress
@@ -624,7 +624,7 @@ Note that inside the timeline callout, you can use what you want. All blocks wil
 > > - Second Derivative Test
 ```
 
-<a target="_blank" rel="noopener noreferrer" href="/ElsaTam/Obsidian-Stuff/blob/main/snippets/callouts/screenshots/timeline-horizontal.png"><img src="https://raw.githubusercontent.com/ElsaTam/Obsidian-Stuff/main/snippets/callouts/screenshots/timeline-horizontal.png" width="500"></a>
+<a target="_blank" rel="noopener noreferrer" href="https://github.com/ElsaTam/Obsidian-Stuff/blob/main/snippets/callouts/screenshots/timeline-horizontal.png"><img src="https://raw.githubusercontent.com/ElsaTam/Obsidian-Stuff/main/snippets/callouts/screenshots/timeline-horizontal.png" width="500"></a>
 
 ```md
 > [!timeline|orange horizontal no-icon] Dune movies
@@ -662,7 +662,7 @@ This is another style variant of the timeline callout, more adapted to my person
 > [!WARNING]
 > Do not use both timeline snippets at the same time, they are in conflict.
 
-<a target="_blank" rel="noopener noreferrer" href="/ElsaTam/Obsidian-Stuff/blob/main/snippets/callouts/screenshots/timeline-variant.png"><img src="https://raw.githubusercontent.com/ElsaTam/Obsidian-Stuff/main/snippets/callouts/screenshots/timeline-variant.png" width="400"></a>
+<a target="_blank" rel="noopener noreferrer" href="https://github.com/ElsaTam/Obsidian-Stuff/blob/main/snippets/callouts/screenshots/timeline-variant.png"><img src="https://raw.githubusercontent.com/ElsaTam/Obsidian-Stuff/main/snippets/callouts/screenshots/timeline-variant.png" width="400"></a>
 
 ```md
 > [!timeline|green numbered]
@@ -735,7 +735,7 @@ On each panels, you can also add the option `|bubble` combined with `top`, `bott
 > > I'm just here to test transparency!
 ```
 
-<a target="_blank" rel="noopener noreferrer" href="/ElsaTam/Obsidian-Stuff/blob/main/snippets/callouts/screenshots/comic-layout.png"><img src="https://raw.githubusercontent.com/ElsaTam/Obsidian-Stuff/main/snippets/callouts/screenshots/comic-layout.png" width="250"></a>
+<a target="_blank" rel="noopener noreferrer" href="https://github.com/ElsaTam/Obsidian-Stuff/blob/main/snippets/callouts/screenshots/comic-layout.png"><img src="https://raw.githubusercontent.com/ElsaTam/Obsidian-Stuff/main/snippets/callouts/screenshots/comic-layout.png" width="250"></a>
 
 
 ## Cards deck
@@ -752,7 +752,7 @@ Add as many images or embed note previews as you need in a dynamic hoverable hor
 Use a `cards-deck` callout in which any block (between to empty lines `> `) containing an image will be changed into a deck of cards. **Do not add empty lines between images from the same deck**.
 If there are 2 paragraphs or more (a deck being a paragraph), an additional styling to create this "inside" effect will be added (as in the example). If only one paragraph is found, there is no need to separate the deck from the rest of the content and no "inside" effect is added.
 
-<a target="_blank" rel="noopener noreferrer" href="/ElsaTam/Obsidian-Stuff/blob/main/snippets/callouts/screenshots/card-decks-images.gif"><img src="https://raw.githubusercontent.com/ElsaTam/Obsidian-Stuff/main/snippets/callouts/screenshots/card-decks-images.gif" width="500"></a>
+<a target="_blank" rel="noopener noreferrer" href="https://github.com/ElsaTam/Obsidian-Stuff/blob/main/snippets/callouts/screenshots/card-decks-images.gif"><img src="https://raw.githubusercontent.com/ElsaTam/Obsidian-Stuff/main/snippets/callouts/screenshots/card-decks-images.gif" width="500"></a>
 
 (images from [SugarySweetSprites](https://www.deviantart.com/sugarysweetsprites/art/Cluedo-Cards-633344381))
 
