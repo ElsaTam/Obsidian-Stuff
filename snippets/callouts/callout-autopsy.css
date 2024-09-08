@@ -307,7 +307,7 @@ Author: ElsaTam (Kapirklaa in Discord)
     padding-top: 16px;
 }/**/
 
-/* WY Console */
+/* WY Console *//*
 .callout[data-callout="autopsy"] {
     --col-pr-bckg-checkbox-empty: var(--checkbox-color-unchecked);
     --col-pr-txt-checkbox-full: var(--checklist-done-color);

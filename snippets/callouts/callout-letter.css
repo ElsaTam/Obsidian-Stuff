@@ -104,6 +104,17 @@ Author: ElsaTam (Kapirklaa in Discord)
 
 /* Fixes for themes */
 
+/* Minimal (outline callout style) *//*
+.callouts-outlined .callout[data-callout="letter"] .callout-title {
+    margin-top: unset;
+    z-index: unset;
+    width: unset;
+    padding: var(--callout-padding);
+    margin-left: unset;
+    letter-spacing: unset;
+    font-variant-caps: normal;
+}/**/
+
 /* Primary *//*
 .callout[data-callout="letter"] {
     --callout-title-color: var(--callout-color);
