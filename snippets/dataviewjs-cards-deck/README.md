@@ -8,8 +8,8 @@ You can embed notes in a list with [dataviewjs](https://github.com/blacksmithgu/
 ````md
 ```dataviewjs
 let result = await dv.query(`LIST FROM "Path/To/Folder" SORT file.name`)
-let places = result.value.values
-let embeds = places.map(p => "[" + dv.fileLink(p.path, true) + "](<" + p.path + ">)")
+let values = result.value.values
+let embeds = values.map(v => "[" + dv.fileLink(v.path, true) + "](<" + v.path + ">)")
 dv.el("p", embeds, { cls: "dataview-cards-deck dataview-wide" })
 ```
 ````
@@ -42,10 +42,9 @@ You can also query images from the files properties and embed them inside a link
 ````md
 ```dataviewjs
 let result = await dv.query(`TABLE image FROM "Path/To/Folder" WHERE image`);
-let places = result.value.values;
-console.log(places);
-let embeds = places.map(p => "[" + dv.fileLink(p[1].path, true) + "](<" + p[0].path + ">)");
-dv.el("p", embeds, { cls: "dataview-cards-deck", attr: { id: "dataview-id-places" } });
+let values = result.value.values;
+let embeds = values.map(v => "[" + dv.fileLink(v[1].path, true) + "](<" + v[0].path + ">)");
+dv.el("p", embeds, { cls: "dataview-cards-deck" });
 ```
 ````
 
