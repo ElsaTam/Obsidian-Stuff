@@ -748,8 +748,6 @@ Add as many images or embed note previews as you need in a dynamic hoverable hor
 > [!NOTE]
 > The gifs might seem slow, but the recorded effect was actually really smooth on my computer. It's just the gif effect that can make it seem like lagging.
 
-### With images
-
 Use a `cards-deck` callout in which any block (between to empty lines `> `) containing an image will be changed into a deck of cards. **Do not add empty lines between images from the same deck**.
 If there are 2 paragraphs or more (a deck being a paragraph), an additional styling to create this "inside" effect will be added (as in the example). If only one paragraph is found, there is no need to separate the deck from the rest of the content and no "inside" effect is added.
 
@@ -778,51 +776,8 @@ If there are 2 paragraphs or more (a deck being a paragraph), an additional styl
 > ![[image.png]]
 ```
 
-### With embeds (not a callout)
-
-You can embed notes in a list with [dataviewjs](https://github.com/blacksmithgu/obsidian-dataview) and add to the containing element the class `dataview-cards-deck` in order to the snippet to take effect.
-In case you have a lot of notes, you can add the class `dataview-wide` and the card decks will take the full length, without changing the readable line length of your editor.
-
-```
-      | Lorem ipsum dolor sit amet. Nam vel    |
-      | sed felis egestas. Nulla lacinia in    |
-      | nisl vel ornare.                       |
-+----------------------------------------------------+
-| .dataview-cards-deck.dataview-wide                 |
-+----------------------------------------------------+
-      | Interdum et malesuada fames ac ante.   |
-      | Maecenas dictum tortor aliquet. Cras   |
-      | eu facilisis justo. Quisque turpis     |
-      | ipsum, finibus                         |
-      | +------------------------------------+ |
-      | | .dataview-cards-deck               | |
-      | +------------------------------------+ |
-      | In est risus, posuere porta luctus.    |
-      | Aenean tincidunt porttitor varius. Sed |
-      | nec lectus vel eros molestie.          |
-```
-
-**Note on performances**
-The rendered cards are only meant to be note preview. In order to improve performance, the snippet uses `content` and `content-visibility` properties. The style of your note might therefore be affected if they are using any cascading properties, but I think this is a good trade-off for small note previews.
-
-The translation and scaling are only done using `transform` properties, which are trigerring only composite operations.
-
-In case the snippet is still slow, you can remove the rules found at the end of the code. They add style to the hovering effect (like color change, etc), but are not mandatory to keep the snippet working. So it is safe to remove, it wil decrease the number of layout/paint operations.
-
-![cards-decks-embeds](screenshots/card-decks-embeds.gif)
-
-````md
-```dataviewjs
-let result = await dv.query(`LIST FROM "07 - Lieux/Agora" WHERE type="lieu" SORT file.name`)
-let places = result.value.values
-let embeds = places.map(p => "[" + dv.fileLink(p.path, true) + "](<" + p.path + ">)")
-dv.el("p", embeds, { cls: "dataview-cards-deck dataview-wide" })
-```
-````
-
-**Note on the dataview code**
-If you use a different dataviewjs code to embed your cards, the snippet mught not work properly. I'm still beginner when it comes to dataviewjs and I noticed so maybe there are other ways to fetch all notes. If you use an other code and the snippet breaks, please contact me and provide the code. I will try to adapt the snippet to make it works for your code.
-
+> [!NOTE]
+> For a dataviewjs syntax with automating population of the deck, see https://github.com/ElsaTam/Obsidian-Stuff/blob/main/snippets/dataviewjs-cards-deck/README.md.
 
 ## Film strip
 
