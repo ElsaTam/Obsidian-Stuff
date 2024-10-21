@@ -1,3 +1,8 @@
+/* GPLv3 license
+Family Tree
+Author: ElsaTam (Kapirklaa in Discord)
+*/
+
 ul:has(> li > .tag[href='#family-tree']) {
     --list-spacing: 0;
     --list-indent: 0;
