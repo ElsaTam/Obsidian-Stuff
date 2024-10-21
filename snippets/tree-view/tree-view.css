@@ -1,3 +1,8 @@
+/* GPLv3 license
+Tree View
+Author: ElsaTam (Kapirklaa in Discord)
+*/
+
 .markdown-rendered ul:not(:is(ul ul)) {
     --indentation-guide-reading-indent: -0.8em;
     --indentation-guide-width: 2px;
