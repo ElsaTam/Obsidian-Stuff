@@ -1,3 +1,8 @@
+/* GPLv3 license
+File Explorer Separators
+Author: ElsaTam (Kapirklaa in Discord)
+*/
+
 .nav-folder:has(> :is(
         [data-path="01 - Ressources"],
         [data-path="03 - Scénarios"],
