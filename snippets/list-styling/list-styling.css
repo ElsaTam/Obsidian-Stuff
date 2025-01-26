@@ -403,7 +403,7 @@ body:not(.list-style-enable-unique-bullet) .markdown-preview-view {
 .markdown-source-view.is-live-preview {
     
     &, & .cm-line:not(.HyperMD-list-line) {
-        counter-reset: listdepth1 listdepth2 listdepth3 listdepth4 listdepth5 listdepth6;
+        counter-set: listdepth1 listdepth2 listdepth3 listdepth4 listdepth5 listdepth6;
     }
     & :is(.HyperMD-list-line-1, .HyperMD-list-line-2, .HyperMD-list-line-3, .HyperMD-list-line-4, .HyperMD-list-line-5, .HyperMD-list-line-6) .list-number::after {
         content: "";
