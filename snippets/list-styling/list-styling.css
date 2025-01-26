@@ -402,49 +402,34 @@ body:not(.list-style-enable-unique-bullet) .markdown-preview-view {
 /* ---      Increment the counter of level n every time we create a new item at level n --- */
 .markdown-source-view.is-live-preview {
     
-    &, & .cm-line:not(.HyperMD-list-line):has(+ .HyperMD-list-line) {
+    &, & .cm-line:not(.HyperMD-list-line) {
         counter-reset: listdepth1 listdepth2 listdepth3 listdepth4 listdepth5 listdepth6;
     }
+    & :is(.HyperMD-list-line-1, .HyperMD-list-line-2, .HyperMD-list-line-3, .HyperMD-list-line-4, .HyperMD-list-line-5, .HyperMD-list-line-6) .list-number::after {
+        content: "";
+    }
     & .HyperMD-list-line-1 {
-        & .list-number::after {
-            content: "";
-            counter-increment: listdepth1;
-        }
-        & { counter-reset: listdepth2; }
+        counter-increment: listdepth1;
+        counter-set: listdepth2 listdepth3 listdepth4 listdepth5 listdepth6;
     }
     & .HyperMD-list-line-2 {
-        & .list-number::after {
-            content: "";
-            counter-increment: listdepth2;
-        }
-        & { counter-reset: listdepth3; }
+        counter-increment: listdepth2;
+        counter-set: listdepth3 listdepth4 listdepth5 listdepth6;
     }
     & .HyperMD-list-line-3 {
-        & .list-number::after {
-            content: "";
-            counter-increment: listdepth3;
-        }
-        & { counter-reset: listdepth4; }
+        counter-increment: listdepth3;
+        counter-set: listdepth4 listdepth5 listdepth6;
     }
     & .HyperMD-list-line-4 {
-        & .list-number::after {
-            content: "";
-            counter-increment: listdepth4;
-        }
-        & { counter-reset: listdepth5; }
+        counter-increment: listdepth4;
+        counter-set: listdepth5 listdepth6;
     }
     & .HyperMD-list-line-5 {
-        & .list-number::after {
-            content: "";
-            counter-increment: listdepth5;
-        }
-        & { counter-reset: listdepth6; }
+        counter-increment: listdepth5;
+        counter-set: listdepth6;
     }
     & .HyperMD-list-line-6 {
-        & .list-number::after {
-            content: "";
-            counter-increment: listdepth6;
-        }
+        counter-increment: listdepth6;
     }
 }
 
