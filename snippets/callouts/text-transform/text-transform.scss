@@ -1,0 +1,57 @@
+/* GPLv3 license
+Flexcyon - Text Transform
+Author: bladeacer (@data_in_void in Discord)
+*/
+@mixin callout-text-transform($transform) {
+
+    div.callout[data-callout-metadata*="#{$transform}-all"],
+    div.callout[data-callout-metadata*="#{$transform}-title"] {
+        div.callout-title .callout-title-inner {
+            @if $transform =="caps" {
+                text-transform: capitalize;
+            }
+
+            @else {
+                text-transform: $transform;
+            }
+        }
+    }
+
+    div.callout[data-callout-metadata*="#{$transform}-all"],
+    div.callout[data-callout-metadata*="#{$transform}-content"] {
+        div.callout-content * {
+            @if $transform =="caps" {
+                text-transform: capitalize;
+            }
+
+            @else {
+                text-transform: $transform;
+            }
+
+            * {
+                @if $transform =="caps" {
+                    text-transform: capitalize;
+                }
+
+                @else {
+                    text-transform: $transform;
+                }
+            }
+
+            code[class*="language-"],
+            pre[class*="language-"] {
+                @if $transform =="caps" {
+                    text-transform: capitalize;
+                }
+
+                @else {
+                    text-transform: $transform;
+                }
+            }
+        }
+    }
+}
+
+@include callout-text-transform(uppercase);
+@include callout-text-transform(lowercase);
+@include callout-text-transform(caps);

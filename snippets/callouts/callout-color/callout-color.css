@@ -1,0 +1,103 @@
+/* GPLv3 license
+Flexcyon - Callout Colors
+Author: bladeacer (@data_in_void in Discord)
+*/
+body {
+  --flexcyon-callout-bg-opacity: 20%;
+}
+
+div.callout[data-callout-metadata*=all-yellow],
+div.callout[data-callout-metadata*=bg-yellow] {
+  background-color: rgba(var(--color-yellow-rgb), var(--flexcyon-callout-bg-opacity));
+}
+
+div.callout[data-callout-metadata*=all-yellow] .callout-title,
+div.callout[data-callout-metadata*=all-yellow] .callout-icon .svg-icon,
+div.callout[data-callout-metadata*=title-yellow] .callout-title,
+div.callout[data-callout-metadata*=title-yellow] .callout-icon .svg-icon {
+  color: var(--color-yellow);
+}
+
+div.callout[data-callout-metadata*=all-blue],
+div.callout[data-callout-metadata*=bg-blue] {
+  background-color: rgba(var(--color-blue-rgb), var(--flexcyon-callout-bg-opacity));
+}
+
+div.callout[data-callout-metadata*=all-blue] .callout-title,
+div.callout[data-callout-metadata*=all-blue] .callout-icon .svg-icon,
+div.callout[data-callout-metadata*=title-blue] .callout-title,
+div.callout[data-callout-metadata*=title-blue] .callout-icon .svg-icon {
+  color: var(--color-blue);
+}
+
+div.callout[data-callout-metadata*=all-purple],
+div.callout[data-callout-metadata*=bg-purple] {
+  background-color: rgba(var(--color-purple-rgb), var(--flexcyon-callout-bg-opacity));
+}
+
+div.callout[data-callout-metadata*=all-purple] .callout-title,
+div.callout[data-callout-metadata*=all-purple] .callout-icon .svg-icon,
+div.callout[data-callout-metadata*=title-purple] .callout-title,
+div.callout[data-callout-metadata*=title-purple] .callout-icon .svg-icon {
+  color: var(--color-purple);
+}
+
+div.callout[data-callout-metadata*=all-red],
+div.callout[data-callout-metadata*=bg-red] {
+  background-color: rgba(var(--color-red-rgb), var(--flexcyon-callout-bg-opacity));
+}
+
+div.callout[data-callout-metadata*=all-red] .callout-title,
+div.callout[data-callout-metadata*=all-red] .callout-icon .svg-icon,
+div.callout[data-callout-metadata*=title-red] .callout-title,
+div.callout[data-callout-metadata*=title-red] .callout-icon .svg-icon {
+  color: var(--color-red);
+}
+
+div.callout[data-callout-metadata*=all-cyan],
+div.callout[data-callout-metadata*=bg-cyan] {
+  background-color: rgba(var(--color-cyan-rgb), var(--flexcyon-callout-bg-opacity));
+}
+
+div.callout[data-callout-metadata*=all-cyan] .callout-title,
+div.callout[data-callout-metadata*=all-cyan] .callout-icon .svg-icon,
+div.callout[data-callout-metadata*=title-cyan] .callout-title,
+div.callout[data-callout-metadata*=title-cyan] .callout-icon .svg-icon {
+  color: var(--color-cyan);
+}
+
+div.callout[data-callout-metadata*=all-pink],
+div.callout[data-callout-metadata*=bg-pink] {
+  background-color: rgba(var(--color-pink-rgb), var(--flexcyon-callout-bg-opacity));
+}
+
+div.callout[data-callout-metadata*=all-pink] .callout-title,
+div.callout[data-callout-metadata*=all-pink] .callout-icon .svg-icon,
+div.callout[data-callout-metadata*=title-pink] .callout-title,
+div.callout[data-callout-metadata*=title-pink] .callout-icon .svg-icon {
+  color: var(--color-pink);
+}
+
+div.callout[data-callout-metadata*=all-green],
+div.callout[data-callout-metadata*=bg-green] {
+  background-color: rgba(var(--color-green-rgb), var(--flexcyon-callout-bg-opacity));
+}
+
+div.callout[data-callout-metadata*=all-green] .callout-title,
+div.callout[data-callout-metadata*=all-green] .callout-icon .svg-icon,
+div.callout[data-callout-metadata*=title-green] .callout-title,
+div.callout[data-callout-metadata*=title-green] .callout-icon .svg-icon {
+  color: var(--color-green);
+}
+
+div.callout[data-callout-metadata*=all-orange],
+div.callout[data-callout-metadata*=bg-orange] {
+  background-color: rgba(var(--color-orange-rgb), var(--flexcyon-callout-bg-opacity));
+}
+
+div.callout[data-callout-metadata*=all-orange] .callout-title,
+div.callout[data-callout-metadata*=all-orange] .callout-icon .svg-icon,
+div.callout[data-callout-metadata*=title-orange] .callout-title,
+div.callout[data-callout-metadata*=title-orange] .callout-icon .svg-icon {
+  color: var(--color-orange);
+}

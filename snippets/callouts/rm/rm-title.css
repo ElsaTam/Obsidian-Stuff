@@ -1,0 +1,5 @@
+div.callout[data-callout-metadata*="no-title"] {
+    .callout-title-inner {
+        display: none;
+    }
+}

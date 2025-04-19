@@ -1,0 +1,23 @@
+/* GPLv3 license
+Flexcyon - Vertical LTR
+Author: bladeacer (@data_in_void in Discord)
+*/
+div.callout[data-callout-metadata*="vertical-ltr"] {
+    div.callout-content {
+        writing-mode: vertical-lr;
+        overflow: scroll;
+        max-width: 95%;
+        padding-top: 2vh;
+        padding-bottom: 0px !important;
+        line-height: 1.667;
+        margin: auto;
+        min-height: 0 !important;
+        max-height: 85vh;
+        text-indent: 1rem;
+
+        :is(h1, h2, h3, h4, h5, h6) {
+            margin-top: 0;
+            line-height: 1.667;
+        }
+    }
+}

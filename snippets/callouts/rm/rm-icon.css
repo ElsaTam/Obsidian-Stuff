@@ -1,0 +1,5 @@
+div.callout[data-callout-metadata*="no-icon"] {
+    .callout-icon {
+        display: none;
+    }
+}

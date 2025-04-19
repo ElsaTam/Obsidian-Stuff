@@ -1,0 +1,54 @@
+/* GPLv3 license
+Flexcyon - Horizontal Alignment
+Author: bladeacer (@data_in_void in Discord)
+*/
+
+div.callout[data-callout-metadata*=center-all] div.callout-title,
+div.callout[data-callout-metadata*=center-title] div.callout-title {
+  justify-content: center;
+}
+
+div.callout[data-callout-metadata*=center-all] div.callout-content,
+div.callout[data-callout-metadata*=center-content] div.callout-content {
+  text-align: center;
+}
+
+div.callout[data-callout-metadata*=rtl-all] div.callout-title *,
+div.callout[data-callout-metadata*=rtl-all] div.callout-title,
+div.callout[data-callout-metadata*=rtl-title] div.callout-title *,
+div.callout[data-callout-metadata*=rtl-title] div.callout-title {
+  direction: rtl !important;
+  unicode-bidi: bidi-override;
+}
+
+div.callout[data-callout-metadata*=rtl-all] div.callout-content *,
+div.callout[data-callout-metadata*=rtl-content] div.callout-content * {
+  direction: rtl !important;
+  unicode-bidi: bidi-override;
+}
+div.callout[data-callout-metadata*=rtl-all] div.callout-content code[class*=language-],
+div.callout[data-callout-metadata*=rtl-all] div.callout-content pre[class*=language-],
+div.callout[data-callout-metadata*=rtl-content] div.callout-content code[class*=language-],
+div.callout[data-callout-metadata*=rtl-content] div.callout-content pre[class*=language-] {
+  text-align: right;
+}
+
+div.callout[data-callout-metadata*=ltr-all] div.callout-title *,
+div.callout[data-callout-metadata*=ltr-all] div.callout-title,
+div.callout[data-callout-metadata*=ltr-title] div.callout-title *,
+div.callout[data-callout-metadata*=ltr-title] div.callout-title {
+  direction: ltr !important;
+  unicode-bidi: bidi-override;
+}
+
+div.callout[data-callout-metadata*=ltr-all] div.callout-content *,
+div.callout[data-callout-metadata*=ltr-content] div.callout-content * {
+  direction: ltr !important;
+  unicode-bidi: bidi-override;
+}
+div.callout[data-callout-metadata*=ltr-all] div.callout-content code[class*=language-],
+div.callout[data-callout-metadata*=ltr-all] div.callout-content pre[class*=language-],
+div.callout[data-callout-metadata*=ltr-content] div.callout-content code[class*=language-],
+div.callout[data-callout-metadata*=ltr-content] div.callout-content pre[class*=language-] {
+  text-align: left;
+}

@@ -1,0 +1,85 @@
+/* GPLv3 license
+Flexcyon - New Tab ASCII Art with Style settings support
+Author: bladeacer (@data_in_void in Discord)
+*/
+
+/* @settings
+name: Flexcyon Snippets - ASCII Art
+id: flexcyon-snippets-1
+settings:
+  - title: Enable ASCII Art
+    type: class-toggle
+    id: flexcyon-ascii-enable
+    default: true
+  - title: ASCII Art
+    id: flexcyon-ascii-art
+    description: ASCII art to display in new tab
+    type: variable-text
+    default: " \a\
+    _______________                                       \a\
+    ___  ____/__  /________  ____________  ______________ \a\
+    __  /_   __  /_  _ \\_  |/_/  ___/_  / / /  __ \\_  __ \\ \a\
+    _  __/   _  / /  __/_>  < / /__ _  /_/ // /_/ /  / / / \a\
+    /_/      /_/  \\___//_/|_| \\___/ _\\__, / \\____//_/ /_/ \a\
+                                    /____/                \a\a\a "
+    quotes: true
+  - title: ASCII art font size limit
+    description: The maximum size of the ASCII art
+    id: flexcyon-ascii-max-font-size
+    type: variable-number
+    default: 14
+    format: px
+  - title: ASCII art line height
+    description: The line height of the ASCII art and quotes.
+    id: flexcyon-ascii-line-height
+    type: variable-number
+    default: 1
+*/
+
+body {
+    --flexcyon-ascii-max-font-size: 14px;
+    --flexcyon-ascii-line-height: 1;
+    --flexcyon-ascii-art: " \a\
+_______________                                       \a\
+___  ____/__  /________  ____________  ______________ \a\
+__  /_   __  /_  _ \\_  |/_/  ___/_  / / /  __ \\_  __ \\ \a\
+_  __/   _  / /  __/_>  < / /__ _  /_/ // /_/ /  / / / \a\
+/_/      /_/  \\___//_/|_| \\___/ _\\__, / \\____//_/ /_/ \a\
+                                /____/                \a\a\a ";
+    --flexcyon-new-tab-bg-wrapper: linear-gradient(to right, var(--text-accent), var(--color-blue), var(--color-cyan));
+
+    div.empty-state-action {
+        font-size: 1.05rem;
+        color: var(--text-accent);
+        opacity: 0.95;
+    }
+    div.empty-state-title {
+        font-size: 1.25rem;
+    }
+
+}
+
+body.flexcyon-ascii-enable {
+    div.empty-state-title {
+        display: unset;
+    }
+
+    div.empty-state-container::before {
+        font-family: monospace;
+        content: var(--flexcyon-ascii-art);
+        font-weight: bold;
+        background: var(--flexcyon-new-tab-bg-wrapper);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        line-height: var(--flexcyon-ascii-line-height);
+        white-space: pre;
+        margin-bottom: 2rem;
+        text-align: center;
+        display: inline;
+        font-size: min(calc(3vw - 3.25px), var(--flexcyon-ascii-max-font-size));
+    }
+
+    div.empty-state-container {
+        transform: translateY(-115px);
+    }
+}
