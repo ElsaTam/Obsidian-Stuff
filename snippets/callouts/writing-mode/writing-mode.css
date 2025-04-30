@@ -1,0 +1,12 @@
+/* GPLv3 license
+Flexcyon - Writing Mode
+Author: bladeacer (@data_in_void in Discord)
+*/
+
+.editor-writing .cm-line,
+div.callout[data-callout-metadata*="writing"] .callout-content p {
+    text-indent: 16px;
+    white-space: initial;
+    word-wrap: break-word;
+    margin-block-end: calc(1.25 * var(--p-spacing));
+}

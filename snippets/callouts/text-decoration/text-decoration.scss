@@ -1,0 +1,28 @@
+/* GPLv3 license
+Flexcyon - Text Decoration
+Author: bladeacer (@data_in_void in Discord)
+*/
+
+@mixin callout-text-decor($callout-name) {
+
+    div.callout[data-callout-metadata*="#{$callout-name}-all"],
+    div.callout[data-callout-metadata*="#{$callout-name}-content"] {
+        .callout-content {
+            text-decoration: #{$callout-name};
+        }
+    }
+
+    div.callout[data-callout-metadata*="#{$callout-name}-all"],
+    div.callout[data-callout-metadata*="#{$callout-name}-title"] {
+        .callout-title {
+            text-decoration: #{$callout-name};
+        }
+    }
+}
+
+@include callout-text-decor(dashed);
+@include callout-text-decor(dotted);
+@include callout-text-decor(double);
+@include callout-text-decor(overline);
+@include callout-text-decor(underline);
+@include callout-text-decor(line-through);

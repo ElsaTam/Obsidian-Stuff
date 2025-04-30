@@ -1,0 +1,36 @@
+/* GPLv3 license
+Flexcyon - Accessibility
+Author: bladeacer (@data_in_void in Discord)
+*/
+
+/* @settings
+name: Flexcyon Snippets - Accessibility
+id: flexcyon-snippets-5
+settings:
+  - title: Accessibility
+    type: heading
+    description: Toggle accessibility options
+    level: 5
+  - title: Global brightness ratio
+    type: variable-number
+    id: flexcyon-brightness-ratio
+    default: 1
+  - title: Global contrast ratio
+    type: variable-number
+    id: flexcyon-contrast-ratio
+    default: 1
+  - title: Global saturation ratio
+    type: variable-number
+    id: flexcyon-saturation-ratio
+    default: 1
+*/
+
+body {
+    --flexcyon-contrast-ratio: 1;
+    --flexcyon-brightness-ratio: 1;
+    --flexcyon-saturation-ratio: 1;
+}
+
+body {
+    filter: contrast(var(--flexcyon-contrast-ratio)) brightness(var(--flexcyon-brightness-ratio)) saturate(var(--flexcyon-saturation-ratio));
+}

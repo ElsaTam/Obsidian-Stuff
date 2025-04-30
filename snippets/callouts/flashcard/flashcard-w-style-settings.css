@@ -1,0 +1,58 @@
+/* GPLv3 license
+Flexcyon - Flashcard callout
+Author: bladeacer (@data_in_void in Discord)
+*/
+
+/* @settings
+name: Flexcyon Snippets - Flashcard Callout
+id: flexcyon-snippets-3
+settings:
+  - title: Flashcard callout width
+    id: flexcyon-callouts-flashcard-width
+    description: Configures the width of flashcard callouts
+    type: variable-number
+    default: 250
+    format: px
+  - title: Flashcard callout height
+    id: flexcyon-callouts-flashcard-height
+    description: Configures the height of flashcard callouts
+    type: variable-number
+    default: 250
+    format: px
+*/
+
+div.callout[data-callout-metadata*="flashcard"] {
+    width: var(--flexcyon-callouts-flashcard-width);
+    height: var(--flexcyon-callouts-flashcard-height);
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease-in-out;
+
+    .callout-content {
+        transform: rotateY(180deg);
+        opacity: 0;
+    }
+
+    .callout-title {
+        position: absolute;
+        top: 25%;
+        display: flex;
+        flex-direction: column;
+        /* For stacking content if needed */
+        align-items: center;
+        justify-content: center;
+    }
+
+    &:hover {
+        transform: rotateY(180deg);
+
+        .callout-title {
+            opacity: 0;
+        }
+
+        .callout-content {
+            opacity: 1;
+        }
+    }
+
+}

@@ -1,0 +1,124 @@
+/* GPLv3 license
+Flexcyon - Font Weight
+Author: bladeacer (@data_in_void in Discord)
+*/
+
+div.callout[data-callout-metadata*=w-100-all] .callout-title,
+div.callout[data-callout-metadata*=w-100-title] .callout-title {
+  font-weight: 100;
+}
+
+div.callout[data-callout-metadata*=w-100-all] .callout-content,
+div.callout[data-callout-metadata*=w-100-content] .callout-content {
+  font-weight: 100;
+}
+
+div.callout[data-callout-metadata*=w-200-all] .callout-title,
+div.callout[data-callout-metadata*=w-200-title] .callout-title {
+  font-weight: 200;
+}
+
+div.callout[data-callout-metadata*=w-200-all] .callout-content,
+div.callout[data-callout-metadata*=w-200-content] .callout-content {
+  font-weight: 200;
+}
+
+div.callout[data-callout-metadata*=w-300-all] .callout-title,
+div.callout[data-callout-metadata*=w-300-title] .callout-title {
+  font-weight: 300;
+}
+
+div.callout[data-callout-metadata*=w-300-all] .callout-content,
+div.callout[data-callout-metadata*=w-300-content] .callout-content {
+  font-weight: 300;
+}
+
+div.callout[data-callout-metadata*=w-400-all] .callout-title,
+div.callout[data-callout-metadata*=w-400-title] .callout-title {
+  font-weight: 400;
+}
+
+div.callout[data-callout-metadata*=w-400-all] .callout-content,
+div.callout[data-callout-metadata*=w-400-content] .callout-content {
+  font-weight: 400;
+}
+
+div.callout[data-callout-metadata*=w-500-all] .callout-title,
+div.callout[data-callout-metadata*=w-500-title] .callout-title {
+  font-weight: 500;
+}
+
+div.callout[data-callout-metadata*=w-500-all] .callout-content,
+div.callout[data-callout-metadata*=w-500-content] .callout-content {
+  font-weight: 500;
+}
+
+div.callout[data-callout-metadata*=w-600-all] .callout-title,
+div.callout[data-callout-metadata*=w-600-title] .callout-title {
+  font-weight: 600;
+}
+
+div.callout[data-callout-metadata*=w-600-all] .callout-content,
+div.callout[data-callout-metadata*=w-600-content] .callout-content {
+  font-weight: 600;
+}
+
+div.callout[data-callout-metadata*=w-700-all] .callout-title,
+div.callout[data-callout-metadata*=w-700-title] .callout-title {
+  font-weight: 700;
+}
+
+div.callout[data-callout-metadata*=w-700-all] .callout-content,
+div.callout[data-callout-metadata*=w-700-content] .callout-content {
+  font-weight: 700;
+}
+
+div.callout[data-callout-metadata*=w-800-all] .callout-title,
+div.callout[data-callout-metadata*=w-800-title] .callout-title {
+  font-weight: 800;
+}
+
+div.callout[data-callout-metadata*=w-800-all] .callout-content,
+div.callout[data-callout-metadata*=w-800-content] .callout-content {
+  font-weight: 800;
+}
+
+div.callout[data-callout-metadata*=w-900-all] .callout-title,
+div.callout[data-callout-metadata*=w-900-title] .callout-title {
+  font-weight: 900;
+}
+
+div.callout[data-callout-metadata*=w-900-all] .callout-content,
+div.callout[data-callout-metadata*=w-900-content] .callout-content {
+  font-weight: 900;
+}
+
+div.callout[data-callout-metadata*=w-bold-all] .callout-title,
+div.callout[data-callout-metadata*=w-bold-title] .callout-title {
+  font-weight: bold;
+}
+
+div.callout[data-callout-metadata*=w-bold-all] .callout-content,
+div.callout[data-callout-metadata*=w-bold-content] .callout-content {
+  font-weight: bold;
+}
+
+div.callout[data-callout-metadata*=w-bolder-all] .callout-title,
+div.callout[data-callout-metadata*=w-bolder-title] .callout-title {
+  font-weight: bolder;
+}
+
+div.callout[data-callout-metadata*=w-bolder-all] .callout-content,
+div.callout[data-callout-metadata*=w-bolder-content] .callout-content {
+  font-weight: bolder;
+}
+
+div.callout[data-callout-metadata*=w-lighter-all] .callout-title,
+div.callout[data-callout-metadata*=w-lighter-title] .callout-title {
+  font-weight: lighter;
+}
+
+div.callout[data-callout-metadata*=w-lighter-all] .callout-content,
+div.callout[data-callout-metadata*=w-lighter-content] .callout-content {
+  font-weight: lighter;
+}
