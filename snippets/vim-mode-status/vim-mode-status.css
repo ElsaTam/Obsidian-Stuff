@@ -1,0 +1,74 @@
+/* GPLv3 license
+Flexcyon - Vim Mode Status
+Author: bladeacer (@data_in_void in Discord)
+*/
+
+body {
+  --flexcyon-vim-insert-text: "INSERT";
+  --flexcyon-vim-normal-text: "NORMAL";
+  --flexcyon-vim-command-text: "COMMAND";
+  --flexcyon-vim-bottom-positioning: -4px;
+  --flexcyon-vim-left-positioning: 6px;
+}
+
+body {
+  .markdown-source-view.mod-cm6 .cm-panels.cm-panels-bottom {
+    border-top: unset;
+    padding-top: 6px;
+  }
+
+  .cm-editor .cm-scroller:not(.cm-vimMode) .cm-sizer:has(+ .cm-vimCursorLayer)::before {
+    content: var(--flexcyon-vim-insert-text);
+    bottom: var(--flexcyon-vim-bottom-positioning);
+    left: var(--flexcyon-vim-left-positioning);
+    position: fixed;
+    background-color: var(--color-base-05);
+    color: var(--text-muted);
+    height: 30px;
+    padding: 0px 8px;
+  }
+
+  .cm-editor .cm-scroller.cm-vimMode:not(:has(+ .cm-panels)) .cm-sizer:has(+ .cm-vimCursorLayer)::before {
+    content: var(--flexcyon-vim-normal-text);
+    position: fixed;
+    background-color: var(--color-base-05);
+    bottom: var(--flexcyon-vim-bottom-positioning);
+    left: var(--flexcyon-vim-left-positioning);
+    height: 30px;
+    color: var(--text-muted);
+    padding: 0px 8px;
+  }
+
+  .cm-panels .cm-panel div div:not(.cm-vim-message) span:first-child {
+    bottom: var(--flexcyon-vim-bottom-positioning);
+    left: 75px;
+  }
+
+  .cm-panels .cm-panel {
+    background-color: var(--color-base-00);
+    padding-top: 5px;
+    font-weight: 500;
+  }
+
+  .cm-panels input {
+    transform: translateY(-4px);
+    font-size: 0.9rem;
+    z-index: 16;
+  }
+
+
+  .cm-editor>.cm-scroller+.cm-panels .cm-panel div div:not(.cm-vim-message)::before {
+    content: var(--flexcyon-vim-command-text);
+    bottom: var(--flexcyon-vim-bottom-positioning);
+    padding-right: 4px;
+  }
+
+  .cm-editor>.cm-scroller+.cm-panels .cm-panel div {
+    color: var(--text-muted);
+  }
+
+  div.cm-vim-message {
+    color: var(--color-red) !important;
+    font-weight: bold;
+  }
+}

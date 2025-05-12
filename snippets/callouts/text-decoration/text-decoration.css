@@ -1,0 +1,64 @@
+/* GPLv3 license
+Flexcyon - Text Decoration
+Author: bladeacer (@data_in_void in Discord)
+*/
+
+div.callout[data-callout-metadata*=dashed-all] .callout-content,
+div.callout[data-callout-metadata*=dashed-content] .callout-content {
+  text-decoration: dashed;
+}
+
+div.callout[data-callout-metadata*=dashed-all] .callout-title,
+div.callout[data-callout-metadata*=dashed-title] .callout-title {
+  text-decoration: dashed;
+}
+
+div.callout[data-callout-metadata*=dotted-all] .callout-content,
+div.callout[data-callout-metadata*=dotted-content] .callout-content {
+  text-decoration: dotted;
+}
+
+div.callout[data-callout-metadata*=dotted-all] .callout-title,
+div.callout[data-callout-metadata*=dotted-title] .callout-title {
+  text-decoration: dotted;
+}
+
+div.callout[data-callout-metadata*=double-all] .callout-content,
+div.callout[data-callout-metadata*=double-content] .callout-content {
+  text-decoration: double;
+}
+
+div.callout[data-callout-metadata*=double-all] .callout-title,
+div.callout[data-callout-metadata*=double-title] .callout-title {
+  text-decoration: double;
+}
+
+div.callout[data-callout-metadata*=overline-all] .callout-content,
+div.callout[data-callout-metadata*=overline-content] .callout-content {
+  text-decoration: overline;
+}
+
+div.callout[data-callout-metadata*=overline-all] .callout-title,
+div.callout[data-callout-metadata*=overline-title] .callout-title {
+  text-decoration: overline;
+}
+
+div.callout[data-callout-metadata*=underline-all] .callout-content,
+div.callout[data-callout-metadata*=underline-content] .callout-content {
+  text-decoration: underline;
+}
+
+div.callout[data-callout-metadata*=underline-all] .callout-title,
+div.callout[data-callout-metadata*=underline-title] .callout-title {
+  text-decoration: underline;
+}
+
+div.callout[data-callout-metadata*=line-through-all] .callout-content,
+div.callout[data-callout-metadata*=line-through-content] .callout-content {
+  text-decoration: line-through;
+}
+
+div.callout[data-callout-metadata*=line-through-all] .callout-title,
+div.callout[data-callout-metadata*=line-through-title] .callout-title {
+  text-decoration: line-through;
+}

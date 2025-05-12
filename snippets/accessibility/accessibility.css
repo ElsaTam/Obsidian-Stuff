@@ -1,0 +1,14 @@
+/* GPLv3 license
+Flexcyon - Accessibility
+Author: bladeacer (@data_in_void in Discord)
+*/
+
+body {
+    --flexcyon-contrast-ratio: 1;
+    --flexcyon-brightness-ratio: 1;
+    --flexcyon-saturation-ratio: 1;
+}
+
+body {
+    filter: contrast(var(--flexcyon-contrast-ratio)) brightness(var(--flexcyon-brightness-ratio)) saturate(var(--flexcyon-saturation-ratio));
+}

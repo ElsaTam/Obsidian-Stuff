@@ -1,0 +1,34 @@
+/* GPLv3 license
+Flexcyon - Font Weight
+Author: bladeacer (@data_in_void in Discord)
+*/
+
+@mixin callout-text-font-weight($font-weight) {
+
+    div.callout[data-callout-metadata*="w-#{$font-weight}-all"],
+    div.callout[data-callout-metadata*="w-#{$font-weight}-title"] {
+        .callout-title {
+            font-weight: $font-weight;
+        }
+    }
+
+    div.callout[data-callout-metadata*="w-#{$font-weight}-all"],
+    div.callout[data-callout-metadata*="w-#{$font-weight}-content"] {
+        .callout-content {
+            font-weight: $font-weight;
+        }
+    }
+}
+
+@include callout-text-font-weight(100);
+@include callout-text-font-weight(200);
+@include callout-text-font-weight(300);
+@include callout-text-font-weight(400);
+@include callout-text-font-weight(500);
+@include callout-text-font-weight(600);
+@include callout-text-font-weight(700);
+@include callout-text-font-weight(800);
+@include callout-text-font-weight(900);
+@include callout-text-font-weight(bold);
+@include callout-text-font-weight(bolder);
+@include callout-text-font-weight(lighter);

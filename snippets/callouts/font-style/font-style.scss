@@ -1,0 +1,39 @@
+/* GPLv3 license
+Flexcyon - Font Style
+Author: bladeacer (@data_in_void in Discord)
+*/
+
+div.callout[data-callout-metadata*="tilt-all"],
+div.callout[data-callout-metadata*="tilt-title"] {
+    .callout-title {
+        transform: skewX(-7.5deg);
+    }
+}
+
+div.callout[data-callout-metadata*="tilt-all"],
+div.callout[data-callout-metadata*="tilt-content"] {
+    .callout-content {
+        transform: skewX(-7.5deg);
+    }
+}
+
+
+@mixin callout-font-style($style) {
+
+    div.callout[data-callout-metadata*="#{$style}-all"],
+    div.callout[data-callout-metadata*="#{$style}-title"] {
+        .callout-title {
+            font-style: $style;
+        }
+    }
+
+    div.callout[data-callout-metadata*="#{$style}-all"],
+    div.callout[data-callout-metadata*="#{$style}-content"] {
+        .callout-content {
+            font-style: $style;
+        }
+    }
+}
+
+@include callout-font-style(italic);
+@include callout-font-style(oblique);

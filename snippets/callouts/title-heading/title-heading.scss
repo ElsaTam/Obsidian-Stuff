@@ -1,0 +1,24 @@
+/* GPLv3 license
+Flexcyon - Title Heading
+Author: bladeacer (@data_in_void in Discord)
+*/
+
+@mixin callout-title-heading($heading_no) {
+    div.callout[data-callout-metadata*="#{$heading_no}-title"] {
+        .callout-title {
+            font-size: var(--#{$heading_no}-size);
+            color: var(--#{$heading_no}-color);
+        }
+
+        .callout-icon svg {
+            color: var(--#{$heading_no}-color);
+        }
+    }
+}
+
+@include callout-title-heading(h1);
+@include callout-title-heading(h2);
+@include callout-title-heading(h3);
+@include callout-title-heading(h4);
+@include callout-title-heading(h5);
+@include callout-title-heading(h6);

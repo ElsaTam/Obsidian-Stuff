@@ -1,0 +1,105 @@
+/* GPLv3 license
+Flexcyon - Extended color palette
+Author: bladeacer (@data_in_void in Discord)
+*/
+
+@mixin callout-ext-color($color-name, $color-var) {
+
+    div.callout[data-callout-metadata*="all-#{$color-name}"],
+    div.callout[data-callout-metadata*="bg-#{$color-name}"] {
+        background-color: var(--#{$color-var}-bg);
+    }
+
+    div.callout[data-callout-metadata*="all-#{$color-name}"],
+    div.callout[data-callout-metadata*="title-#{$color-name}"] {
+
+        .callout-title,
+        .callout-icon .svg-icon {
+            color: var(--#{$color-var});
+        }
+    }
+}
+
+@include callout-ext-color("red-blue", "color-red-blue-mix");
+@include callout-ext-color("blue-red", "color-red-blue-mix");
+
+@include callout-ext-color("red-orange", "color-red-orange-mix");
+@include callout-ext-color("orange-red", "color-red-orange-mix");
+
+@include callout-ext-color("red-yellow", "color-red-yellow-mix");
+@include callout-ext-color("yellow-red", "color-red-yellow-mix");
+
+@include callout-ext-color("red-green", "color-red-green-mix");
+@include callout-ext-color("green-red", "color-red-green-mix");
+
+@include callout-ext-color("red-cyan", "color-red-cyan-mix");
+@include callout-ext-color("cyan-red", "color-red-cyan-mix");
+
+@include callout-ext-color("red-purple", "color-red-purple-mix");
+@include callout-ext-color("purple-red", "color-red-purple-mix");
+
+@include callout-ext-color("red-pink", "color-red-pink-mix");
+@include callout-ext-color("pink-red", "color-red-pink-mix");
+
+@include callout-ext-color("orange-yellow", "color-orange-yellow-mix");
+@include callout-ext-color("yellow-orange", "color-orange-yellow-mix");
+
+@include callout-ext-color("orange-green", "color-orange-green-mix");
+@include callout-ext-color("green-orange", "color-orange-green-mix");
+
+@include callout-ext-color("orange-cyan", "color-orange-cyan-mix");
+@include callout-ext-color("cyan-orange", "color-orange-cyan-mix");
+
+@include callout-ext-color("orange-blue", "color-orange-blue-mix");
+@include callout-ext-color("blue-orange", "color-orange-blue-mix");
+
+@include callout-ext-color("orange-purple", "color-orange-purple-mix");
+@include callout-ext-color("purple-orange", "color-orange-purple-mix");
+
+@include callout-ext-color("orange-pink", "color-orange-pink-mix");
+@include callout-ext-color("pink-orange", "color-orange-pink-mix");
+
+@include callout-ext-color("yellow-green", "color-yellow-green-mix");
+@include callout-ext-color("green-yellow", "color-yellow-green-mix");
+
+@include callout-ext-color("yellow-cyan", "color-yellow-cyan-mix");
+@include callout-ext-color("cyan-yellow", "color-yellow-cyan-mix");
+
+@include callout-ext-color("yellow-blue", "color-yellow-blue-mix");
+@include callout-ext-color("blue-yellow", "color-yellow-blue-mix");
+
+@include callout-ext-color("yellow-purple", "color-yellow-purple-mix");
+@include callout-ext-color("purple-yellow", "color-yellow-purple-mix");
+
+@include callout-ext-color("yellow-pink", "color-yellow-pink-mix");
+@include callout-ext-color("pink-yellow", "color-yellow-pink-mix");
+
+@include callout-ext-color("green-cyan", "color-green-cyan-mix");
+@include callout-ext-color("cyan-green", "color-green-cyan-mix");
+
+@include callout-ext-color("green-blue", "color-green-blue-mix");
+@include callout-ext-color("blue-green", "color-green-blue-mix");
+
+@include callout-ext-color("green-purple", "color-green-purple-mix");
+@include callout-ext-color("purple-green", "color-green-purple-mix");
+
+@include callout-ext-color("green-pink", "color-green-pink-mix");
+@include callout-ext-color("pink-green", "color-green-pink-mix");
+
+@include callout-ext-color("cyan-blue", "color-cyan-blue-mix");
+@include callout-ext-color("blue-cyan", "color-cyan-blue-mix");
+
+@include callout-ext-color("cyan-purple", "color-cyan-purple-mix");
+@include callout-ext-color("purple-cyan", "color-cyan-purple-mix");
+
+@include callout-ext-color("cyan-pink", "color-cyan-pink-mix");
+@include callout-ext-color("pink-cyan", "color-cyan-pink-mix");
+
+@include callout-ext-color("blue-purple", "color-blue-purple-mix");
+@include callout-ext-color("purple-blue", "color-blue-purple-mix");
+
+@include callout-ext-color("blue-pink", "color-blue-pink-mix");
+@include callout-ext-color("pink-blue", "color-blue-pink-mix");
+
+@include callout-ext-color("purple-pink", "color-purple-pink-mix");
+@include callout-ext-color("pink-purple", "color-purple-pink-mix");

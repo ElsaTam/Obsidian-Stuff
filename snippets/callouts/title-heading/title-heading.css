@@ -1,0 +1,52 @@
+/* GPLv3 license
+Flexcyon - Title Heading
+Author: bladeacer (@data_in_void in Discord)
+*/
+
+div.callout[data-callout-metadata*=h1-title] .callout-title {
+  font-size: var(--h1-size);
+  color: var(--h1-color);
+}
+div.callout[data-callout-metadata*=h1-title] .callout-icon svg {
+  color: var(--h1-color);
+}
+
+div.callout[data-callout-metadata*=h2-title] .callout-title {
+  font-size: var(--h2-size);
+  color: var(--h2-color);
+}
+div.callout[data-callout-metadata*=h2-title] .callout-icon svg {
+  color: var(--h2-color);
+}
+
+div.callout[data-callout-metadata*=h3-title] .callout-title {
+  font-size: var(--h3-size);
+  color: var(--h3-color);
+}
+div.callout[data-callout-metadata*=h3-title] .callout-icon svg {
+  color: var(--h3-color);
+}
+
+div.callout[data-callout-metadata*=h4-title] .callout-title {
+  font-size: var(--h4-size);
+  color: var(--h4-color);
+}
+div.callout[data-callout-metadata*=h4-title] .callout-icon svg {
+  color: var(--h4-color);
+}
+
+div.callout[data-callout-metadata*=h5-title] .callout-title {
+  font-size: var(--h5-size);
+  color: var(--h5-color);
+}
+div.callout[data-callout-metadata*=h5-title] .callout-icon svg {
+  color: var(--h5-color);
+}
+
+div.callout[data-callout-metadata*=h6-title] .callout-title {
+  font-size: var(--h6-size);
+  color: var(--h6-color);
+}
+div.callout[data-callout-metadata*=h6-title] .callout-icon svg {
+  color: var(--h6-color);
+}

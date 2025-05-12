@@ -1,0 +1,57 @@
+/* GPLv3 license
+Flexcyon - Horizontal Alignment
+Author: bladeacer (@data_in_void in Discord)
+*/
+
+div.callout[data-callout-metadata*="center-all"],
+div.callout[data-callout-metadata*="center-title"] {
+    div.callout-title {
+        justify-content: center;
+    }
+}
+
+div.callout[data-callout-metadata*="center-all"],
+div.callout[data-callout-metadata*="center-content"] {
+    div.callout-content {
+        text-align: center;
+
+    }
+}
+
+@mixin callout-dir($dir) {
+
+    div.callout[data-callout-metadata*="#{$dir}-all"],
+    div.callout[data-callout-metadata*="#{$dir}-title"] {
+
+        div.callout-title *,
+        div.callout-title {
+            direction: $dir !important;
+            unicode-bidi: bidi-override;
+        }
+    }
+
+    div.callout[data-callout-metadata*="#{$dir}-all"],
+    div.callout[data-callout-metadata*="#{$dir}-content"] {
+        div.callout-content {
+            * {
+                direction: $dir !important;
+                unicode-bidi: bidi-override;
+            }
+
+            code[class*="language-"],
+            pre[class*="language-"] {
+                @if $dir =="rtl" {
+                    text-align: right;
+                }
+
+                @else {
+                    text-align: left;
+                }
+            }
+
+        }
+    }
+}
+
+@include callout-dir(rtl);
+@include callout-dir(ltr);

@@ -1,0 +1,46 @@
+/* GPLv3 license
+Flexcyon - Callout Popup. Adopted it from Ukiyo theme
+Author: bladeacer (@data_in_void in Discord)
+*/
+
+body {
+    --flexcyon-callout-pop-animation-duration: 0.2s;
+}
+
+.markdown-reading-view {
+    .callout[data-callout-metadata*="$pop"] {
+        display: block;
+        position: absolute;
+        margin-left: min(-3vw, -40px);
+        transform: translateY(-70px);
+        transition: all var(--flexcyon-callout-pop-animation-duration) ease;
+        width: calc(var(--file-line-width)/2 + min(3vw, 40px));
+        backdrop-filter: blur(20px);
+        z-index: 999;
+
+        .callout-title {
+            margin-top: 3px;
+            margin-left: 22px;
+        }
+    }
+
+    .callout[data-callout-metadata*="$pop"]:hover::before {
+        display: block;
+        border: none;
+        transition: all var(--flexcyon-callout-pop-animation-duration) ease;
+    }
+
+    .callout[data-callout-metadata*="$pop"]::before {
+        visibility: visible;
+        content: ">";
+        display: block;
+        position: absolute;
+        padding: 2px;
+        color: rgb(var(--callout-color));
+        z-index: 1;
+    }
+
+    .callout[data-callout-metadata*="$pop"]:not(:hover) {
+        visibility: hidden;
+    }
+}
